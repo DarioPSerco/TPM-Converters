@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- SYNTHETIC GeoEye-1 native README metadata - NOT real data. See ../SYNTHETIC_FIXTURE_NOTE.md -->
-<isd>
-  <TIL><NUMTILES>1</NUMTILES></TIL>
-  <IMD><IMAGE><SATID>GE01</SATID></IMAGE></IMD>
-</isd>
