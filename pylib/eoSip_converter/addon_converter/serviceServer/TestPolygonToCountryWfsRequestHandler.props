@@ -1,0 +1,11 @@
+#
+# the name of the handler this properties are for
+#
+serverPort=7001
+handlerClass=server.httpHandler.PolygonToCountryWfsRequestHandler
+
+WantLog=false
+APP_PATH=/polygonToCountry
+SHAPEFILE=serviceServer/data/gis/TM_WORLD_BORDERS-0.3.shp
+WANTEDFIELD_INDEX=0,4
+WANTEDFIELD_NAME=FIELD_ID,FIELD_DESCRIPTION

@@ -1,0 +1,21 @@
+GOCE_COLLECTION_DOI_LUT={
+#
+'GOCE Telemetry': '10.5270/esa-7nc8pjp',
+#
+'GOCE Level 1': '10.5270/esa-8sfucze',
+#
+'GOCE Level 2': '10.5270/esa-jfhe2um',
+#
+'GOCE Global Gravity Field Models and Grids': '10.5270/esa-8xb8scs',
+#
+'GOCE Thermosphere Data': '10.5270/esa-l8g67jw',
+#
+'GOCE TEC and ROTI': '10.5270/esa-otce9j2',
+#
+'VT GOCE Data': '10.5270/esa-j340roh',
+
+#
+#
+#
+'GOCE Level 0': 'DOI/AUX_NOM_0_'
+}

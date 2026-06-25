@@ -1,0 +1,6972 @@
+{
+  "type": "FeatureCollection",
+  "name": "SPOT5_Take5_All_sites_with_Day_in_cycle",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Algeria4",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.338240356936939,
+              30.36041585456951,
+              0.0
+            ],
+            [
+              5.959185621032177,
+              30.257643752038479,
+              0.0
+            ],
+            [
+              5.839919274994108,
+              29.719143843686211,
+              0.0
+            ],
+            [
+              5.222123051622237,
+              29.821177296888369,
+              0.0
+            ],
+            [
+              5.338240356936939,
+              30.36041585456951,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "AlsaceFrance",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.047383495066673,
+              48.646382638682297,
+              0.0
+            ],
+            [
+              7.851970416894403,
+              48.526172976112271,
+              0.0
+            ],
+            [
+              7.668760280198266,
+              47.992723984508963,
+              0.0
+            ],
+            [
+              6.871885630195183,
+              48.111767304214077,
+              0.0
+            ],
+            [
+              7.047383495066673,
+              48.646382638682297,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "AnGiangVietnam",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.080001654991406,
+              10.768247850510271,
+              0.0
+            ],
+            [
+              105.628607656194504,
+              10.677184538487261,
+              0.0
+            ],
+            [
+              105.536244657007003,
+              10.134718008083301,
+              0.0
+            ],
+            [
+              104.988554019446099,
+              10.22560009438668,
+              0.0
+            ],
+            [
+              105.080001654991406,
+              10.768247850510271,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ApuliaItalia",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.10645530451761,
+              41.376222143482003,
+              0.0
+            ],
+            [
+              16.82117925178574,
+              41.277057325387467,
+              0.0
+            ],
+            [
+              16.68798083615604,
+              40.738627483421929,
+              0.0
+            ],
+            [
+              15.97882890408834,
+              40.836905201675677,
+              0.0
+            ],
+            [
+              16.10645530451761,
+              41.376222143482003,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ArlesFrance",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.466756724467591,
+              44.014469561339098,
+              0.0
+            ],
+            [
+              5.211244337816432,
+              43.911920845642562,
+              0.0
+            ],
+            [
+              5.06724846028622,
+              43.374683774576901,
+              0.0
+            ],
+            [
+              4.329466365326077,
+              43.47623838585082,
+              0.0
+            ],
+            [
+              4.466756724467591,
+              44.014469561339098,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "AuchFranceE",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.618226178628214,
+              43.760149277661966,
+              0.0
+            ],
+            [
+              1.36558444489977,
+              43.683922557321992,
+              0.0
+            ],
+            [
+              1.258034192513189,
+              43.142338352305821,
+              0.0
+            ],
+            [
+              0.517547098601223,
+              43.217820378701269,
+              0.0
+            ],
+            [
+              0.618226178628214,
+              43.760149277661966,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "AuchFranceO",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.019821266319799,
+              43.845806521736748,
+              0.0
+            ],
+            [
+              0.729510028800919,
+              43.773951164107409,
+              0.0
+            ],
+            [
+              0.627761802440709,
+              43.231720207970767,
+              0.0
+            ],
+            [
+              -0.114646646320005,
+              43.302872767013667,
+              0.0
+            ],
+            [
+              -0.019821266319799,
+              43.845806521736748,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BacKanVietnam",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.5769300972172,
+              22.547379367192342,
+              0.0
+            ],
+            [
+              106.1596449943209,
+              22.453907032467999,
+              0.0
+            ],
+            [
+              106.058403986231696,
+              21.91260752874577,
+              0.0
+            ],
+            [
+              105.477832023824604,
+              22.00566211651261,
+              0.0
+            ],
+            [
+              105.5769300972172,
+              22.547379367192342,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BaffinIslandCanada",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -64.332267579637673,
+              67.786811164303373,
+              0.0
+            ],
+            [
+              -62.910337510711422,
+              67.702516828238103,
+              0.0
+            ],
+            [
+              -63.143243907936927,
+              67.164280078307272,
+              0.0
+            ],
+            [
+              -64.53403381848905,
+              67.246714414387654,
+              0.0
+            ],
+            [
+              -64.332267579637673,
+              67.786811164303373,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BagreBurkina",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.941165004430594,
+              11.96822715547396,
+              0.0
+            ],
+            [
+              -0.391388226870925,
+              11.87330527959244,
+              0.0
+            ],
+            [
+              -0.487971730595652,
+              11.33204467529618,
+              0.0
+            ],
+            [
+              -1.036787055365414,
+              11.426592253049661,
+              0.0
+            ],
+            [
+              -0.941165004430594,
+              11.96822715547396,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BaotouChina",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.324451683990603,
+              41.162906877579609,
+              0.0
+            ],
+            [
+              110.040805679181801,
+              41.08102269414109,
+              0.0
+            ],
+            [
+              109.930489082449398,
+              40.539553199184361,
+              0.0
+            ],
+            [
+              109.219853438571803,
+              40.62087061454627,
+              0.0
+            ],
+            [
+              109.324451683990603,
+              41.162906877579609,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BarcelonnetteFrance",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.181625728154409,
+              44.711737234017377,
+              0.0
+            ],
+            [
+              6.931943143537787,
+              44.597477212256457,
+              0.0
+            ],
+            [
+              6.770006666150326,
+              44.062421253024752,
+              0.0
+            ],
+            [
+              6.026436333989995,
+              44.175577700980647,
+              0.0
+            ],
+            [
+              6.181625728154409,
+              44.711737234017377,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BarraxSpain",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.369411239500285,
+              39.367279920554218,
+              0.0
+            ],
+            [
+              -1.674722174260413,
+              39.271337810197593,
+              0.0
+            ],
+            [
+              -1.799792750724019,
+              38.732037974209483,
+              0.0
+            ],
+            [
+              -2.48940728983548,
+              38.827200376703871,
+              0.0
+            ],
+            [
+              -2.369411239500285,
+              39.367279920554218,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BeauceFrance",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.116338578410144,
+              48.444162744717282,
+              0.0
+            ],
+            [
+              1.929421998716048,
+              48.364308753979273,
+              0.0
+            ],
+            [
+              1.806666179609335,
+              47.823162442695597,
+              0.0
+            ],
+            [
+              1.001693118344778,
+              47.902231277479068,
+              0.0
+            ],
+            [
+              1.116338578410144,
+              48.444162744717282,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BeijingChina",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.107384770402902,
+              40.210750301919127,
+              0.0
+            ],
+            [
+              116.812697702336706,
+              40.123945164004162,
+              0.0
+            ],
+            [
+              116.697715971045795,
+              39.583101614055487,
+              0.0
+            ],
+            [
+              115.997805441190906,
+              39.66927427144855,
+              0.0
+            ],
+            [
+              116.107384770402902,
+              40.210750301919127,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Belgium",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.638741697992539,
+              50.92710684611064,
+              0.0
+            ],
+            [
+              5.486996509458769,
+              50.82217041619154,
+              0.0
+            ],
+            [
+              5.318535225003895,
+              50.285965130127742,
+              0.0
+            ],
+            [
+              4.479455250114108,
+              50.389617185959359,
+              0.0
+            ],
+            [
+              4.638741697992539,
+              50.92710684611064,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BerlinGermany",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.31791767584069,
+              52.561303845563451,
+              0.0
+            ],
+            [
+              14.20453598770068,
+              52.480677060982032,
+              0.0
+            ],
+            [
+              14.068655335283211,
+              51.94022952164417,
+              0.0
+            ],
+            [
+              13.192557329957101,
+              52.019957782418288,
+              0.0
+            ],
+            [
+              13.31791767584069,
+              52.561303845563451,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BerlinWGermany",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12.64369264355574,
+              52.614226818074172,
+              0.0
+            ],
+            [
+              13.53252121199942,
+              52.538667528304941,
+              0.0
+            ],
+            [
+              13.40461426961051,
+              51.997527204989588,
+              0.0
+            ],
+            [
+              12.52641155810581,
+              52.072281311576013,
+              0.0
+            ],
+            [
+              12.64369264355574,
+              52.614226818074172,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BialowiezaPoland",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.36219345391693,
+              53.080433381602568,
+              0.0
+            ],
+            [
+              24.249857653210029,
+              52.969551665105953,
+              0.0
+            ],
+            [
+              24.063193061025579,
+              52.43491522948711,
+              0.0
+            ],
+            [
+              23.185803344432149,
+              52.544316947254721,
+              0.0
+            ],
+            [
+              23.36219345391693,
+              53.080433381602568,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BiebrzaPoland",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.487220049530691,
+              53.814936951632411,
+              0.0
+            ],
+            [
+              23.392727795422559,
+              53.710379323972028,
+              0.0
+            ],
+            [
+              23.213139523399811,
+              53.174390764802318,
+              0.0
+            ],
+            [
+              22.318512130870541,
+              53.277552413611758,
+              0.0
+            ],
+            [
+              22.487220049530691,
+              53.814936951632411,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BilyKrizCzech",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.176801365873569,
+              49.804822666545462,
+              0.0
+            ],
+            [
+              19.013727684940751,
+              49.73224466476497,
+              0.0
+            ],
+            [
+              18.898259182053341,
+              49.190456682736041,
+              0.0
+            ],
+            [
+              18.070429687536119,
+              49.262382606835558,
+              0.0
+            ],
+            [
+              18.176801365873569,
+              49.804822666545462,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BolikhamsaiLaos",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.540225012941704,
+              19.01452872071113,
+              0.0
+            ],
+            [
+              104.110709666717597,
+              18.9277850836887,
+              0.0
+            ],
+            [
+              104.018872687294703,
+              18.385104891218251,
+              0.0
+            ],
+            [
+              103.450192611295606,
+              18.47167818946463,
+              0.0
+            ],
+            [
+              103.540225012941704,
+              19.01452872071113,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BordeauxFrance",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.830993659186678,
+              45.251270491222229,
+              0.0
+            ],
+            [
+              -0.061757027420012,
+              45.184885440945678,
+              0.0
+            ],
+            [
+              -0.15843081876608,
+              44.641549920527751,
+              0.0
+            ],
+            [
+              -0.920354578151951,
+              44.707283917858128,
+              0.0
+            ],
+            [
+              -0.830993659186678,
+              45.251270491222229,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BrailaCazasuRomania",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.652449398246251,
+              45.433946409752039,
+              0.0
+            ],
+            [
+              28.41711237712606,
+              45.337004828251928,
+              0.0
+            ],
+            [
+              28.277430691256811,
+              44.798543524264957,
+              0.0
+            ],
+            [
+              27.51967399587139,
+              44.894527582891143,
+              0.0
+            ],
+            [
+              27.652449398246251,
+              45.433946409752039,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Burkina",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.973010538870678,
+              11.47383122876559,
+              0.0
+            ],
+            [
+              -3.422790856984124,
+              11.384711185889531,
+              0.0
+            ],
+            [
+              -3.513496983106124,
+              10.841950864833221,
+              0.0
+            ],
+            [
+              -4.062701632557646,
+              10.930972373626201,
+              0.0
+            ],
+            [
+              -3.973010538870678,
+              11.47383122876559,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Cambodia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.289760993661901,
+              13.21684600055826,
+              0.0
+            ],
+            [
+              105.843200103880505,
+              13.125203157785579,
+              0.0
+            ],
+            [
+              105.749336227935004,
+              12.582966573953,
+              0.0
+            ],
+            [
+              105.197038658435005,
+              12.674371905263961,
+              0.0
+            ],
+            [
+              105.289760993661901,
+              13.21684600055826,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CampecheMexico",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -89.6085319428106,
+              19.116140976862731,
+              0.0
+            ],
+            [
+              -89.037419307211337,
+              19.03302317884944,
+              0.0
+            ],
+            [
+              -89.125584842869031,
+              18.49005226566641,
+              0.0
+            ],
+            [
+              -89.694843926177782,
+              18.57310415572789,
+              0.0
+            ],
+            [
+              -89.6085319428106,
+              19.116140976862731,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CanberraAustralia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              148.833940768744611,
+              -34.984056546016859,
+              0.0
+            ],
+            [
+              149.493553044929001,
+              -35.062442012109358,
+              0.0
+            ],
+            [
+              149.399917284471911,
+              -35.605190069575997,
+              0.0
+            ],
+            [
+              148.735922303928589,
+              -35.526437987562623,
+              0.0
+            ],
+            [
+              148.833940768744611,
+              -34.984056546016859,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CentralAfricanRepublic",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.763568562188599,
+              4.18901619944808,
+              0.0
+            ],
+            [
+              18.303067790784471,
+              4.096601302259532,
+              0.0
+            ],
+            [
+              18.211097726866459,
+              3.555012602183958,
+              0.0
+            ],
+            [
+              17.67184191151528,
+              3.647110728994037,
+              0.0
+            ],
+            [
+              17.763568562188599,
+              4.18901619944808,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CentralKalimantanIndonesia",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.952321708167403,
+              -2.059903873625204,
+              0.0
+            ],
+            [
+              114.491087946556206,
+              -2.151234446206748,
+              0.0
+            ],
+            [
+              114.400213052811907,
+              -2.693349938414392,
+              0.0
+            ],
+            [
+              113.861326955145202,
+              -2.601738779836076,
+              0.0
+            ],
+            [
+              113.952321708167403,
+              -2.059903873625204,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CentralLenaDeltaRussia",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              125.736754605450201,
+              72.702908658580384,
+              0.0
+            ],
+            [
+              127.551603154521004,
+              72.634436974267516,
+              0.0
+            ],
+            [
+              127.302402896887003,
+              72.094397690917305,
+              0.0
+            ],
+            [
+              125.539997135816705,
+              72.160930030436759,
+              0.0
+            ],
+            [
+              125.736754605450201,
+              72.702908658580384,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CentralProvinceCameroon",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.810535664774999,
+              5.117107305748188,
+              0.0
+            ],
+            [
+              11.351194459595989,
+              5.024960220245052,
+              0.0
+            ],
+            [
+              11.259287635889899,
+              4.482902813160788,
+              0.0
+            ],
+            [
+              10.718982232866839,
+              4.57480210430461,
+              0.0
+            ],
+            [
+              10.810535664774999,
+              5.117107305748188,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CentralYamalRussia",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              67.986516470715344,
+              70.537481919614322,
+              0.0
+            ],
+            [
+              69.59746407870027,
+              70.449649737032061,
+              0.0
+            ],
+            [
+              69.321239942171246,
+              69.912320454475662,
+              0.0
+            ],
+            [
+              67.750774588867841,
+              69.997903028053969,
+              0.0
+            ],
+            [
+              67.986516470715344,
+              70.537481919614322,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ChiapasMexico",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.636039733123397,
+              16.780642090147239,
+              0.0
+            ],
+            [
+              -91.074159675037492,
+              16.68579997870075,
+              0.0
+            ],
+            [
+              -91.172971474790003,
+              16.14452560756942,
+              0.0
+            ],
+            [
+              -91.733390100945854,
+              16.238977003281871,
+              0.0
+            ],
+            [
+              -91.636039733123397,
+              16.780642090147239,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Congo2",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.67539337275109,
+              1.146677921231381,
+              0.0
+            ],
+            [
+              16.214593016654291,
+              1.056046433172247,
+              0.0
+            ],
+            [
+              16.124584281718651,
+              0.513347989248835,
+              0.0
+            ],
+            [
+              15.58542932675851,
+              0.603888864922831,
+              0.0
+            ],
+            [
+              15.67539337275109,
+              1.146677921231381,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "DahraSenegal",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -15.666212537578829,
+              15.718886345383011,
+              0.0
+            ],
+            [
+              -15.10616361730831,
+              15.62947028186276,
+              0.0
+            ],
+            [
+              -15.19894379733446,
+              15.08695215309123,
+              0.0
+            ],
+            [
+              -15.757568954636961,
+              15.17617731172812,
+              0.0
+            ],
+            [
+              -15.666212537578829,
+              15.718886345383011,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "DegradCaquetaColombia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.781283627040949,
+              1.81535392503898,
+              0.0
+            ],
+            [
+              -73.242080307163661,
+              1.72447792335144,
+              0.0
+            ],
+            [
+              -73.332345921080503,
+              1.181955555125343,
+              0.0
+            ],
+            [
+              -73.871463224696967,
+              1.272683842088826,
+              0.0
+            ],
+            [
+              -73.781283627040949,
+              1.81535392503898,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "DemminGermany",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12.80325216243191,
+              54.208027384951983,
+              0.0
+            ],
+            [
+              13.72567592883958,
+              54.131432780923902,
+              0.0
+            ],
+            [
+              13.590917102665969,
+              53.590593458856347,
+              0.0
+            ],
+            [
+              12.680154936868909,
+              53.666302820108768,
+              0.0
+            ],
+            [
+              12.80325216243191,
+              54.208027384951983,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "DevonUK",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.262946819499206,
+              51.081391639520007,
+              0.0
+            ],
+            [
+              -3.405623000614493,
+              50.997585105229113,
+              0.0
+            ],
+            [
+              -3.5418619549898,
+              50.457452535463027,
+              0.0
+            ],
+            [
+              -4.389568526258596,
+              50.540355481662012,
+              0.0
+            ],
+            [
+              -4.262946819499206,
+              51.081391639520007,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "DoukkalaMarocco",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.810961444917409,
+              32.986403680910449,
+              0.0
+            ],
+            [
+              -8.169650299725163,
+              32.893585176958361,
+              0.0
+            ],
+            [
+              -8.280901507112484,
+              32.353037186452262,
+              0.0
+            ],
+            [
+              -8.918486819576247,
+              32.445273101466498,
+              0.0
+            ],
+            [
+              -8.810961444917409,
+              32.986403680910449,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "DurangoMexico",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.721299370552401,
+              24.069068229049631,
+              0.0
+            ],
+            [
+              -105.131000496201494,
+              23.980389997119321,
+              0.0
+            ],
+            [
+              -105.228357547864405,
+              23.438321202610702,
+              0.0
+            ],
+            [
+              -105.8162677158154,
+              23.526676854286428,
+              0.0
+            ],
+            [
+              -105.721299370552401,
+              24.069068229049631,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "DynaCoastSouthAfrica",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.391311245245621,
+              -33.898622252757349,
+              0.0
+            ],
+            [
+              19.037716735018151,
+              -34.000791435630212,
+              0.0
+            ],
+            [
+              18.916195444792709,
+              -34.539771685675163,
+              0.0
+            ],
+            [
+              18.265887777263419,
+              -34.436792007467673,
+              0.0
+            ],
+            [
+              18.391311245245621,
+              -33.898622252757349,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EcrinsFrance",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.925612523273039,
+              45.346582537575777,
+              0.0
+            ],
+            [
+              6.685000016928282,
+              45.234008165510019,
+              0.0
+            ],
+            [
+              6.523581173641972,
+              44.698461235337007,
+              0.0
+            ],
+            [
+              5.771114153621414,
+              44.809946782362772,
+              0.0
+            ],
+            [
+              5.925612523273039,
+              45.346582537575777,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EisenwurzenAustria",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.90646033351134,
+              48.050540850741541,
+              0.0
+            ],
+            [
+              14.71206612954742,
+              47.965412373922433,
+              0.0
+            ],
+            [
+              14.455394126900069,
+              46.88470679528276,
+              0.0
+            ],
+            [
+              13.665799011978789,
+              46.968217207730582,
+              0.0
+            ],
+            [
+              13.90646033351134,
+              48.050540850741541,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "FigueresSpain",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2.637606550780869,
+              42.586085936732502,
+              0.0
+            ],
+            [
+              3.368308092069303,
+              42.496009089783833,
+              0.0
+            ],
+            [
+              3.244518387732935,
+              41.95596184591335,
+              0.0
+            ],
+            [
+              2.519863508485559,
+              42.045284611357133,
+              0.0
+            ],
+            [
+              2.637606550780869,
+              42.586085936732502,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "FoggiaItalia",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.19366515385412,
+              41.687257509256419,
+              0.0
+            ],
+            [
+              15.91330298082292,
+              41.593720722860269,
+              0.0
+            ],
+            [
+              15.786800536661341,
+              41.054198916633823,
+              0.0
+            ],
+            [
+              15.07289785327853,
+              41.146942556364912,
+              0.0
+            ],
+            [
+              15.19366515385412,
+              41.687257509256419,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Gabon",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.955094386224962,
+              0.363272072213915,
+              0.0
+            ],
+            [
+              10.494170998257131,
+              0.272756382525579,
+              0.0
+            ],
+            [
+              10.404331131805939,
+              -0.269907361658733,
+              0.0
+            ],
+            [
+              9.865223482040228,
+              -0.179495272307447,
+              0.0
+            ],
+            [
+              9.955094386224962,
+              0.363272072213915,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Germany",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.130616760137061,
+              49.209687576701327,
+              0.0
+            ],
+            [
+              13.95611032100228,
+              49.130144222424278,
+              0.0
+            ],
+            [
+              13.831689765224271,
+              48.589186929076853,
+              0.0
+            ],
+            [
+              13.01491625160782,
+              48.667969454780248,
+              0.0
+            ],
+            [
+              13.130616760137061,
+              49.209687576701327,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Ghana",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.043103532829872,
+              11.067879288138259,
+              0.0
+            ],
+            [
+              -0.494937167982939,
+              10.97347114703518,
+              0.0
+            ],
+            [
+              -0.59067028283304,
+              10.432042699213399,
+              0.0
+            ],
+            [
+              -1.137955698950269,
+              10.52609966884272,
+              0.0
+            ],
+            [
+              -1.043103532829872,
+              11.067879288138259,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "GlacierPlaineMorteSwitzerland",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.181198965820124,
+              46.693297751686863,
+              0.0
+            ],
+            [
+              7.967469832065052,
+              46.613102062686252,
+              0.0
+            ],
+            [
+              7.848294419074336,
+              46.071971136337027,
+              0.0
+            ],
+            [
+              7.069632597184077,
+              46.151473901246561,
+              0.0
+            ],
+            [
+              7.181198965820124,
+              46.693297751686863,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "GotabebNamibia",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.83871831614923,
+              -23.20328743785905,
+              0.0
+            ],
+            [
+              15.42535337810326,
+              -23.293125008202459,
+              0.0
+            ],
+            [
+              15.3289109752626,
+              -23.835318608647281,
+              0.0
+            ],
+            [
+              14.73993336553829,
+              -23.745125432546399,
+              0.0
+            ],
+            [
+              14.83871831614923,
+              -23.20328743785905,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Greenland",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -39.182199655702711,
+              72.910552030269017,
+              0.0
+            ],
+            [
+              -37.361694687300258,
+              72.814373330980033,
+              0.0
+            ],
+            [
+              -37.704090516901388,
+              72.278851389021455,
+              0.0
+            ],
+            [
+              -39.472664007878294,
+              72.37218974419234,
+              0.0
+            ],
+            [
+              -39.182199655702711,
+              72.910552030269017,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "GundlupetIndia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.372184613464285,
+              12.11762669312855,
+              0.0
+            ],
+            [
+              76.922716638201948,
+              12.0239696689223,
+              0.0
+            ],
+            [
+              76.827315706350305,
+              11.48225224569148,
+              0.0
+            ],
+            [
+              76.277783025652099,
+              11.575593052351071,
+              0.0
+            ],
+            [
+              76.372184613464285,
+              12.11762669312855,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Guyana",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.426570712638672,
+              6.699215245482133,
+              0.0
+            ],
+            [
+              -58.883726224654339,
+              6.611185248355529,
+              0.0
+            ],
+            [
+              -58.972077104699594,
+              6.068386295492348,
+              0.0
+            ],
+            [
+              -59.514300949601612,
+              6.156516180767759,
+              0.0
+            ],
+            [
+              -59.426570712638672,
+              6.699215245482133,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "HarapanMerantiIndonesia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.195666848804393,
+              -2.052495126517748,
+              0.0
+            ],
+            [
+              103.734946106216995,
+              -2.143465593634065,
+              0.0
+            ],
+            [
+              103.644502019216205,
+              -2.686064479377639,
+              0.0
+            ],
+            [
+              103.105065870474206,
+              -2.59492165909219,
+              0.0
+            ],
+            [
+              103.195666848804393,
+              -2.052495126517748,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "HettstedtGermany",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.05989867937333,
+              51.965505789391017,
+              0.0
+            ],
+            [
+              11.92636683906332,
+              51.857209498216783,
+              0.0
+            ],
+            [
+              11.74859776861163,
+              51.321863730638562,
+              0.0
+            ],
+            [
+              10.891802954906,
+              51.428773959208158,
+              0.0
+            ],
+            [
+              11.05989867937333,
+              51.965505789391017,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "HyltemossaFajemyrSweden",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.050142140652399,
+              56.311706069693273,
+              0.0
+            ],
+            [
+              14.022124952932099,
+              56.233342569122343,
+              0.0
+            ],
+            [
+              13.876567611634851,
+              55.692967946184808,
+              0.0
+            ],
+            [
+              12.91783145996172,
+              55.770325155479973,
+              0.0
+            ],
+            [
+              13.050142140652399,
+              56.311706069693273,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "HyytialaFinland",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.739280102706161,
+              61.876881817282843,
+              0.0
+            ],
+            [
+              24.88557090512969,
+              61.809477660425458,
+              0.0
+            ],
+            [
+              24.735523571158598,
+              61.268224392732073,
+              0.0
+            ],
+            [
+              23.608824535143931,
+              61.334581666855847,
+              0.0
+            ],
+            [
+              23.739280102706161,
+              61.876881817282843,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "IgarkaRussia",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              86.178982826494945,
+              67.84823938328698,
+              0.0
+            ],
+            [
+              87.602628709186121,
+              67.759488889257568,
+              0.0
+            ],
+            [
+              87.35768922237898,
+              67.222007890077322,
+              0.0
+            ],
+            [
+              85.965174034423214,
+              67.30877897655823,
+              0.0
+            ],
+            [
+              86.178982826494945,
+              67.84823938328698,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "InnerNigerDeltaMali",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.73463824081895,
+              14.814869511374029,
+              0.0
+            ],
+            [
+              -4.176706165199399,
+              14.727999397490111,
+              0.0
+            ],
+            [
+              -4.266509524430278,
+              14.185143264168641,
+              0.0
+            ],
+            [
+              -4.823075640529878,
+              14.271932763205401,
+              0.0
+            ],
+            [
+              -4.73463824081895,
+              14.814869511374029,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "InnsbruckAustria",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.23723706150985,
+              47.613417606202788,
+              0.0
+            ],
+            [
+              12.02945679533341,
+              47.505228576961457,
+              0.0
+            ],
+            [
+              11.867572192212929,
+              46.969439034133487,
+              0.0
+            ],
+            [
+              11.08292148715309,
+              47.07640279293323,
+              0.0
+            ],
+            [
+              11.23723706150985,
+              47.613417606202788,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JaworkiPoland",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.17014615622492,
+              49.712839618388792,
+              0.0
+            ],
+            [
+              21.002404454985601,
+              49.625866619971461,
+              0.0
+            ],
+            [
+              20.865422713598281,
+              49.086084644057507,
+              0.0
+            ],
+            [
+              20.04202640234077,
+              49.172143755036089,
+              0.0
+            ],
+            [
+              20.17014615622492,
+              49.712839618388792,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "KafaTuraEthiopia",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              35.742729937820549,
+              7.831927830638262,
+              0.0
+            ],
+            [
+              36.285511509293833,
+              7.737732643900644,
+              0.0
+            ],
+            [
+              36.191033128599429,
+              7.196522407354444,
+              0.0
+            ],
+            [
+              35.648813302199677,
+              7.290347937565462,
+              0.0
+            ],
+            [
+              35.742729937820549,
+              7.831927830638262,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "KairouanTunisia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.517962693699596,
+              35.815180695097617,
+              0.0
+            ],
+            [
+              10.18071195767339,
+              35.720341012181578,
+              0.0
+            ],
+            [
+              10.06302949254292,
+              35.180462859087932,
+              0.0
+            ],
+            [
+              9.404543765435422,
+              35.274622662975339,
+              0.0
+            ],
+            [
+              9.517962693699596,
+              35.815180695097617,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "KranzbergerGermany",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.33951923620517,
+              48.742894243926592,
+              0.0
+            ],
+            [
+              12.148938358873441,
+              48.633624675880768,
+              0.0
+            ],
+            [
+              11.98173936084655,
+              48.09819680465958,
+              0.0
+            ],
+            [
+              11.180354732853109,
+              48.206183931869568,
+              0.0
+            ],
+            [
+              11.33951923620517,
+              48.742894243926592,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "KronebreenNorway",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.39171630739615,
+              79.171761081900883,
+              0.0
+            ],
+            [
+              14.2594921367472,
+              79.102238667377179,
+              0.0
+            ],
+            [
+              13.84213343863809,
+              78.563252163092386,
+              0.0
+            ],
+            [
+              11.10661885093889,
+              78.62956106210892,
+              0.0
+            ],
+            [
+              11.39171630739615,
+              79.171761081900883,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "KrugerSouthAfrica",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              31.241316913977769,
+              -24.675232709977831,
+              0.0
+            ],
+            [
+              31.83333459092373,
+              -24.771301710474681,
+              0.0
+            ],
+            [
+              31.72886840265987,
+              -25.312227732963699,
+              0.0
+            ],
+            [
+              31.134384136606339,
+              -25.215625360099839,
+              0.0
+            ],
+            [
+              31.241316913977769,
+              -24.675232709977831,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "KudaliarIndia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.469287174242737,
+              18.265385825528149,
+              0.0
+            ],
+            [
+              79.037498050705722,
+              18.1817204824507,
+              0.0
+            ],
+            [
+              78.94924087354164,
+              17.638758380203861,
+              0.0
+            ],
+            [
+              78.382785883599482,
+              17.722363516769459,
+              0.0
+            ],
+            [
+              78.469287174242737,
+              18.265385825528149,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "KytalykRussia",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              146.747810710225508,
+              71.13808596189358,
+              0.0
+            ],
+            [
+              148.403999795460606,
+              71.043305881529463,
+              0.0
+            ],
+            [
+              148.098289422607905,
+              70.507295065823001,
+              0.0
+            ],
+            [
+              146.484802121765,
+              70.599548993803651,
+              0.0
+            ],
+            [
+              146.747810710225508,
+              71.13808596189358,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LakeBalatonHungary",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.428286894719321,
+              47.15724501845343,
+              0.0
+            ],
+            [
+              18.213299506872531,
+              47.047902878464107,
+              0.0
+            ],
+            [
+              18.051198546273191,
+              46.512347177987898,
+              0.0
+            ],
+            [
+              17.273548661568629,
+              46.620458416398563,
+              0.0
+            ],
+            [
+              17.428286894719321,
+              47.15724501845343,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LakeChadCameroon",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.068303257628051,
+              13.282440699616631,
+              0.0
+            ],
+            [
+              14.622333410085711,
+              13.193441700026611,
+              0.0
+            ],
+            [
+              14.53106169965954,
+              12.650741145543989,
+              0.0
+            ],
+            [
+              13.978219467438199,
+              12.739610618575419,
+              0.0
+            ],
+            [
+              14.068303257628051,
+              13.282440699616631,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LakeVictoriaUganda",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              33.575326424105249,
+              0.466594063185677,
+              0.0
+            ],
+            [
+              34.114475155282292,
+              0.37607302429723,
+              0.0
+            ],
+            [
+              34.024603908267892,
+              -0.166667273297388,
+              0.0
+            ],
+            [
+              33.485444310686617,
+              -0.076218218878064,
+              0.0
+            ],
+            [
+              33.575326424105249,
+              0.466594063185677,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LanguedocFrance",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.138529577349372,
+              43.935874219951828,
+              0.0
+            ],
+            [
+              3.884330312959534,
+              43.842384641646618,
+              0.0
+            ],
+            [
+              3.752888174920165,
+              43.303499937292528,
+              0.0
+            ],
+            [
+              3.013859831504284,
+              43.396080549059143,
+              0.0
+            ],
+            [
+              3.138529577349372,
+              43.935874219951828,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LanzhotCzech",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.61244051816897,
+              48.996639268717722,
+              0.0
+            ],
+            [
+              17.42770808809226,
+              48.892390845438698,
+              0.0
+            ],
+            [
+              17.267094731680341,
+              48.355836794656618,
+              0.0
+            ],
+            [
+              16.460068356729678,
+              48.458883451703812,
+              0.0
+            ],
+            [
+              16.61244051816897,
+              48.996639268717722,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LaVictoriaColombia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.901165372647739,
+              6.615720771532845,
+              0.0
+            ],
+            [
+              -74.358499612925854,
+              6.524861189844056,
+              0.0
+            ],
+            [
+              -74.449512109092865,
+              5.982219305579529,
+              0.0
+            ],
+            [
+              -74.99163995385446,
+              6.072958305876515,
+              0.0
+            ],
+            [
+              -74.901165372647739,
+              6.615720771532845,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LitchfieldAustralia",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              130.562869108918107,
+              -12.863523266430709,
+              0.0
+            ],
+            [
+              131.116330214267407,
+              -12.95001280174414,
+              0.0
+            ],
+            [
+              131.028672280162908,
+              -13.492957193716769,
+              0.0
+            ],
+            [
+              130.473968408866796,
+              -13.406433267415791,
+              0.0
+            ],
+            [
+              130.562869108918107,
+              -12.863523266430709,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "LombardyItalia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.464773394891838,
+              45.576720623885208,
+              0.0
+            ],
+            [
+              9.233432510996867,
+              45.487725115676,
+              0.0
+            ],
+            [
+              9.104469909621082,
+              44.947820918333157,
+              0.0
+            ],
+            [
+              8.342879551377944,
+              45.035997588435897,
+              0.0
+            ],
+            [
+              8.464773394891838,
+              45.576720623885208,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Luxembourg",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.799700494725723,
+              50.374068444428168,
+              0.0
+            ],
+            [
+              6.647103724159964,
+              50.304362196959403,
+              0.0
+            ],
+            [
+              6.424337811779821,
+              49.220126460059063,
+              0.0
+            ],
+            [
+              5.595506178461871,
+              49.288626770282526,
+              0.0
+            ],
+            [
+              5.799700494725723,
+              50.374068444428168,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Lybia4",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.14104244669284,
+              28.869955549415241,
+              0.0
+            ],
+            [
+              23.75331872263402,
+              28.76862964642261,
+              0.0
+            ],
+            [
+              23.637493460357,
+              28.229658503065949,
+              0.0
+            ],
+            [
+              23.028145310105671,
+              28.330297024191761,
+              0.0
+            ],
+            [
+              23.14104244669284,
+              28.869955549415241,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "MadredeDiosPeru",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.891054795255855,
+              -12.443097832753621,
+              0.0
+            ],
+            [
+              -69.339115831523671,
+              -12.534781883702269,
+              0.0
+            ],
+            [
+              -69.432084154299062,
+              -13.077205479881631,
+              0.0
+            ],
+            [
+              -69.985146322787941,
+              -12.98527343554761,
+              0.0
+            ],
+            [
+              -69.891054795255855,
+              -12.443097832753621,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "MadridSpain",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.983927332061517,
+              40.734348692070967,
+              0.0
+            ],
+            [
+              -3.273004259705048,
+              40.648132657536863,
+              0.0
+            ],
+            [
+              -3.388164565152695,
+              40.107252193329977,
+              0.0
+            ],
+            [
+              -4.093535962239732,
+              40.192833171705061,
+              0.0
+            ],
+            [
+              -3.983927332061517,
+              40.734348692070967,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Malawi",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              32.871051972841258,
+              -12.984517535480141,
+              0.0
+            ],
+            [
+              33.424461978178613,
+              -13.074627789669821,
+              0.0
+            ],
+            [
+              33.332963032543141,
+              -13.617302039688219,
+              0.0
+            ],
+            [
+              32.778351643989367,
+              -13.52700359754515,
+              0.0
+            ],
+            [
+              32.871051972841258,
+              -12.984517535480141,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ManitobaCanada",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.341928356051454,
+              49.95025080842872,
+              0.0
+            ],
+            [
+              -97.508574672602734,
+              49.85258122070978,
+              0.0
+            ],
+            [
+              -97.662477209466445,
+              49.314753974763839,
+              0.0
+            ],
+            [
+              -98.487021506549411,
+              49.411306649806669,
+              0.0
+            ],
+            [
+              -98.341928356051454,
+              49.95025080842872,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "MantuaItalia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.47402267423737,
+              45.487804264225538,
+              0.0
+            ],
+            [
+              11.23779143059693,
+              45.38537720286589,
+              0.0
+            ],
+            [
+              11.090333640819891,
+              44.84806687360912,
+              0.0
+            ],
+            [
+              10.333407592829751,
+              44.94943688381899,
+              0.0
+            ],
+            [
+              10.47402267423737,
+              45.487804264225538,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "MazandaranIran",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              51.350277305084248,
+              36.752447545245353,
+              0.0
+            ],
+            [
+              52.021183560786547,
+              36.658436503677358,
+              0.0
+            ],
+            [
+              51.903030434506192,
+              36.118489638175959,
+              0.0
+            ],
+            [
+              51.236600603310478,
+              36.211816297539848,
+              0.0
+            ],
+            [
+              51.350277305084248,
+              36.752447545245353,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "MoorreesburgSouthAfrica",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.62174557413455,
+              -32.926094576779228,
+              0.0
+            ],
+            [
+              19.26135524513057,
+              -33.026821037749919,
+              0.0
+            ],
+            [
+              19.142898461542721,
+              -33.566197035080151,
+              0.0
+            ],
+            [
+              18.49955635831461,
+              -33.464706277460749,
+              0.0
+            ],
+            [
+              18.62174557413455,
+              -32.926094576779228,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "MulhouseFrance",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.929424922352213,
+              48.176177759329761,
+              0.0
+            ],
+            [
+              7.727136669312922,
+              48.05674735172326,
+              0.0
+            ],
+            [
+              7.546781349856857,
+              47.522947718180639,
+              0.0
+            ],
+            [
+              6.756656887896289,
+              47.641220294003297,
+              0.0
+            ],
+            [
+              6.929424922352213,
+              48.176177759329761,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NanyukiKenya",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.948830228668129,
+              0.309470623745657,
+              0.0
+            ],
+            [
+              37.487789391120629,
+              0.219120403073625,
+              0.0
+            ],
+            [
+              37.397940947094263,
+              -0.323514160353566,
+              0.0
+            ],
+            [
+              36.85903543565783,
+              -0.233004541774548,
+              0.0
+            ],
+            [
+              36.948830228668129,
+              0.309470623745657,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NdombeCongo",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.855746045618719,
+              -3.123096435428607,
+              0.0
+            ],
+            [
+              19.39531558900407,
+              -3.214498552282788,
+              0.0
+            ],
+            [
+              19.30437345306639,
+              -3.756932005400464,
+              0.0
+            ],
+            [
+              18.764564918683529,
+              -3.665312208655416,
+              0.0
+            ],
+            [
+              18.855746045618719,
+              -3.123096435428607,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NeftaTozeurTunisia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.838045607911794,
+              34.221875516755247,
+              0.0
+            ],
+            [
+              8.489950820628525,
+              34.136134515249147,
+              0.0
+            ],
+            [
+              8.385386654711841,
+              33.594520449890602,
+              0.0
+            ],
+            [
+              7.737516846774324,
+              33.679791993227248,
+              0.0
+            ],
+            [
+              7.838045607911794,
+              34.221875516755247,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NeusiedlerSeeAustria",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.364950459228801,
+              48.272461885042603,
+              0.0
+            ],
+            [
+              17.1692693922326,
+              48.170122468610558,
+              0.0
+            ],
+            [
+              17.013814712864431,
+              47.633078404716812,
+              0.0
+            ],
+            [
+              16.2174469496846,
+              47.734274852217403,
+              0.0
+            ],
+            [
+              16.364950459228801,
+              48.272461885042603,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NorthPoland",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.741727163333991,
+              54.088281577508347,
+              0.0
+            ],
+            [
+              17.652425656019211,
+              53.981734766743102,
+              0.0
+            ],
+            [
+              17.468319087562431,
+              53.446208955525691,
+              0.0
+            ],
+            [
+              16.5686386795775,
+              53.551310724826102,
+              0.0
+            ],
+            [
+              16.741727163333991,
+              54.088281577508347,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NorthWestPoland",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.08593998761085,
+              53.944065385800798,
+              0.0
+            ],
+            [
+              15.997826560870029,
+              53.850066897433088,
+              0.0
+            ],
+            [
+              15.83513575838785,
+              53.311979707387763,
+              0.0
+            ],
+            [
+              14.93443056670114,
+              53.404773630336123,
+              0.0
+            ],
+            [
+              15.08593998761085,
+              53.944065385800798,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NovoProgressoBrazil",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -55.632539602083831,
+              -6.737896729083859,
+              0.0
+            ],
+            [
+              -55.089480035172024,
+              -6.826485622670184,
+              0.0
+            ],
+            [
+              -55.177802951848577,
+              -7.369315244144485,
+              0.0
+            ],
+            [
+              -55.721525405603487,
+              -7.280763414007057,
+              0.0
+            ],
+            [
+              -55.632539602083831,
+              -6.737896729083859,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "OstergotlandSweden",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.223345135776951,
+              58.572878175322153,
+              0.0
+            ],
+            [
+              16.251573916556829,
+              58.477155370774128,
+              0.0
+            ],
+            [
+              16.063903292848408,
+              57.939902003242139,
+              0.0
+            ],
+            [
+              15.050636479185281,
+              58.034164660474502,
+              0.0
+            ],
+            [
+              15.223345135776951,
+              58.572878175322153,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "OttawaCanada",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.091503360623022,
+              45.605456397291533,
+              0.0
+            ],
+            [
+              -75.321595393896871,
+              45.520208050106582,
+              0.0
+            ],
+            [
+              -75.44539366370968,
+              44.979700413191154,
+              0.0
+            ],
+            [
+              -76.208174428807752,
+              45.064196833939988,
+              0.0
+            ],
+            [
+              -76.091503360623022,
+              45.605456397291533,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "OurikelaMali",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.420743362583222,
+              12.49298434143806,
+              0.0
+            ],
+            [
+              -4.868287919105046,
+              12.40699534904887,
+              0.0
+            ],
+            [
+              -4.956276979682497,
+              11.86406725638021,
+              0.0
+            ],
+            [
+              -5.507575738023473,
+              11.950071711647571,
+              0.0
+            ],
+            [
+              -5.420743362583222,
+              12.49298434143806,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "PallasFinland",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.518584581876521,
+              68.250195929830255,
+              0.0
+            ],
+            [
+              24.976555906333061,
+              68.184601876530181,
+              0.0
+            ],
+            [
+              24.78736255074908,
+              67.643732201709781,
+              0.0
+            ],
+            [
+              23.362582554945639,
+              67.707910745490452,
+              0.0
+            ],
+            [
+              23.518584581876521,
+              68.250195929830255,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ParanoaBrasil",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -48.105256538445921,
+              -15.449446068458929,
+              0.0
+            ],
+            [
+              -47.54775442742821,
+              -15.546890452958641,
+              0.0
+            ],
+            [
+              -47.647961944781002,
+              -16.087646568134069,
+              0.0
+            ],
+            [
+              -48.206804841840672,
+              -15.98970866750566,
+              0.0
+            ],
+            [
+              -48.105256538445921,
+              -15.449446068458929,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "PornicFrance",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.325083274305879,
+              47.473904226404663,
+              0.0
+            ],
+            [
+              -1.522173176312725,
+              47.417716378282897,
+              0.0
+            ],
+            [
+              -1.608161598826673,
+              46.873242321323929,
+              0.0
+            ],
+            [
+              -2.403074034576893,
+              46.928875940204762,
+              0.0
+            ],
+            [
+              -2.325083274305879,
+              47.473904226404663,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "PoyangChina",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.905583367146704,
+              29.378709179502891,
+              0.0
+            ],
+            [
+              116.524237752088794,
+              29.292098468464928,
+              0.0
+            ],
+            [
+              116.424293310178001,
+              28.750163291180801,
+              0.0
+            ],
+            [
+              115.808809521515698,
+              28.83639233972341,
+              0.0
+            ],
+            [
+              115.905583367146704,
+              29.378709179502891,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "PunjabIndia",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.691145382810106,
+              30.54548530623963,
+              0.0
+            ],
+            [
+              75.316399946938091,
+              30.455228658486071,
+              0.0
+            ],
+            [
+              75.21108147792259,
+              29.913981974668889,
+              0.0
+            ],
+            [
+              74.589150912706302,
+              30.00375644138331,
+              0.0
+            ],
+            [
+              74.691145382810106,
+              30.54548530623963,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "RailroadValleyUSA",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -115.974651532413503,
+              38.815135148862737,
+              0.0
+            ],
+            [
+              -115.285934892141896,
+              38.716951306987589,
+              0.0
+            ],
+            [
+              -115.412802525250697,
+              38.178057770024907,
+              0.0
+            ],
+            [
+              -116.096611169250096,
+              38.275433515651919,
+              0.0
+            ],
+            [
+              -115.974651532413503,
+              38.815135148862737,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ReunionFrance",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              55.233063346255634,
+              -20.811557615464579,
+              0.0
+            ],
+            [
+              55.808764111719178,
+              -20.906867369333881,
+              0.0
+            ],
+            [
+              55.707926932251972,
+              -21.448159535334931,
+              0.0
+            ],
+            [
+              55.130245643330682,
+              -21.3523854804785,
+              0.0
+            ],
+            [
+              55.233063346255634,
+              -20.811557615464579,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "RioPretoBrazil",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -45.767951228660969,
+              -10.57938380484644,
+              0.0
+            ],
+            [
+              -45.219570372162437,
+              -10.670683947261301,
+              0.0
+            ],
+            [
+              -45.311574003685273,
+              -11.21324075104592,
+              0.0
+            ],
+            [
+              -45.860904382163874,
+              -11.12173211361946,
+              0.0
+            ],
+            [
+              -45.767951228660969,
+              -10.57938380484644,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "RobsonCreekAustralia",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              145.410818270169699,
+              -16.807425205002399,
+              0.0
+            ],
+            [
+              145.973295304632899,
+              -16.901386965959588,
+              0.0
+            ],
+            [
+              145.876151779581591,
+              -17.443153639182992,
+              0.0
+            ],
+            [
+              145.312134670260093,
+              -17.348811718545619,
+              0.0
+            ],
+            [
+              145.410818270169699,
+              -16.807425205002399,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "RuhrGermany",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.756774240076861,
+              51.749572775892503,
+              0.0
+            ],
+            [
+              7.628343776863668,
+              51.673058766311122,
+              0.0
+            ],
+            [
+              7.501511136271304,
+              51.131955438449992,
+              0.0
+            ],
+            [
+              6.640037220948036,
+              51.207677599464851,
+              0.0
+            ],
+            [
+              6.756774240076861,
+              51.749572775892503,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SacramentoRiverUS",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.070969413628305,
+              38.387986275468528,
+              0.0
+            ],
+            [
+              -121.386148016311793,
+              38.290442147546408,
+              0.0
+            ],
+            [
+              -121.511436658027904,
+              37.751371595190321,
+              0.0
+            ],
+            [
+              -122.191446026309606,
+              37.848129098623879,
+              0.0
+            ],
+            [
+              -122.070969413628305,
+              38.387986275468528,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SaintEtienneFrance",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.141482862967379,
+              45.774164036115323,
+              0.0
+            ],
+            [
+              4.910252173520206,
+              45.673691078587737,
+              0.0
+            ],
+            [
+              4.764613423802594,
+              45.135661480052597,
+              0.0
+            ],
+            [
+              4.003003414890599,
+              45.235157798343799,
+              0.0
+            ],
+            [
+              4.141482862967379,
+              45.774164036115323,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SantaremBrazil",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -55.099840531608749,
+              -2.662226897309305,
+              0.0
+            ],
+            [
+              -54.560268005436221,
+              -2.751660996236758,
+              0.0
+            ],
+            [
+              -54.648991587178188,
+              -3.294206367501642,
+              0.0
+            ],
+            [
+              -55.188883875644017,
+              -3.204914593373719,
+              0.0
+            ],
+            [
+              -55.099840531608749,
+              -2.662226897309305,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SarnadesdeRodaoPortugal",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.821349561056358,
+              39.980842704594302,
+              0.0
+            ],
+            [
+              -7.121401192295775,
+              39.881519508601052,
+              0.0
+            ],
+            [
+              -7.251941215898703,
+              39.342984363608693,
+              0.0
+            ],
+            [
+              -7.946700163027854,
+              39.441451547972122,
+              0.0
+            ],
+            [
+              -7.821349561056358,
+              39.980842704594302,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SchiermonnikoogNetherlands",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.839621403638112,
+              53.795616601653613,
+              0.0
+            ],
+            [
+              6.754513391142624,
+              53.726345875930328,
+              0.0
+            ],
+            [
+              6.633246816238421,
+              53.184552844260637,
+              0.0
+            ],
+            [
+              5.729834061371132,
+              53.253094268137858,
+              0.0
+            ],
+            [
+              5.839621403638112,
+              53.795616601653613,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ShandongChina",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.225603830572595,
+              37.141804266288737,
+              0.0
+            ],
+            [
+              116.901306466068505,
+              37.054150138416311,
+              0.0
+            ],
+            [
+              116.790316188641199,
+              36.513121399626677,
+              0.0
+            ],
+            [
+              116.119247999960095,
+              36.600202152184728,
+              0.0
+            ],
+            [
+              116.225603830572595,
+              37.141804266288737,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SierraNevadaColombia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.177974182941298,
+              11.387211528137,
+              0.0
+            ],
+            [
+              -73.628550579303209,
+              11.29474873297047,
+              0.0
+            ],
+            [
+              -73.722500355406424,
+              10.752655009947169,
+              0.0
+            ],
+            [
+              -74.270974896746011,
+              10.84486152486919,
+              0.0
+            ],
+            [
+              -74.177974182941298,
+              11.387211528137,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SjuharadSweden",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12.79460602306977,
+              58.07722398848307,
+              0.0
+            ],
+            [
+              13.814596527762459,
+              58.000969643416838,
+              0.0
+            ],
+            [
+              13.665448236273621,
+              57.460483459009303,
+              0.0
+            ],
+            [
+              12.6603446708646,
+              57.535694022402097,
+              0.0
+            ],
+            [
+              12.79460602306977,
+              58.07722398848307,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SkopjeMacedonia",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.096455986156549,
+              42.394570615643168,
+              0.0
+            ],
+            [
+              21.824242036817822,
+              42.301587833265508,
+              0.0
+            ],
+            [
+              21.697001324571229,
+              41.762039024482043,
+              0.0
+            ],
+            [
+              20.975167169359249,
+              41.854220204044267,
+              0.0
+            ],
+            [
+              21.096455986156549,
+              42.394570615643168,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SlimsRiverCanada",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -139.071008374022909,
+              61.142626597756063,
+              0.0
+            ],
+            [
+              -137.966656711336896,
+              61.032516991603849,
+              0.0
+            ],
+            [
+              -138.19886839270049,
+              60.498508601157063,
+              0.0
+            ],
+            [
+              -139.285767795628288,
+              60.606706887077728,
+              0.0
+            ],
+            [
+              -139.071008374022909,
+              61.142626597756063,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Slovenie",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.74017682468466,
+              46.942708743489042,
+              0.0
+            ],
+            [
+              16.52577726153616,
+              46.844942294509941,
+              0.0
+            ],
+            [
+              16.380888226517339,
+              46.306807881697047,
+              0.0
+            ],
+            [
+              15.602757450915069,
+              46.403556204427836,
+              0.0
+            ],
+            [
+              15.74017682468466,
+              46.942708743489042,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SodankylaFinland",
+        "description": "<day_in_cycle>day_in_cycle=13<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26.038251111164769,
+              67.679524074205077,
+              0.0
+            ],
+            [
+              27.452290720199329,
+              67.592035688971421,
+              0.0
+            ],
+            [
+              27.2123936714423,
+              67.054319261456968,
+              0.0
+            ],
+            [
+              25.829061637407271,
+              67.139876571002816,
+              0.0
+            ],
+            [
+              26.038251111164769,
+              67.679524074205077,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SouthAfrica",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.209002139915011,
+              -27.66991252246677,
+              0.0
+            ],
+            [
+              28.818658066790999,
+              -27.75350250411611,
+              0.0
+            ],
+            [
+              28.72584585869966,
+              -28.296189849964311,
+              0.0
+            ],
+            [
+              28.113161977260109,
+              -28.212300311575081,
+              0.0
+            ],
+            [
+              28.209002139915011,
+              -27.66991252246677,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SouthernCoastIsrael",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              34.491596193896328,
+              31.787127779193501,
+              0.0
+            ],
+            [
+              35.12295048442018,
+              31.687970957429592,
+              0.0
+            ],
+            [
+              35.005952107931478,
+              31.14865971505148,
+              0.0
+            ],
+            [
+              34.37803447544151,
+              31.24712930668781,
+              0.0
+            ],
+            [
+              34.491596193896328,
+              31.787127779193501,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "StitnaCzech",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.647056122979119,
+              49.352508282898278,
+              0.0
+            ],
+            [
+              18.476905630225321,
+              49.283653528777663,
+              0.0
+            ],
+            [
+              18.36814259265013,
+              48.741410827329403,
+              0.0
+            ],
+            [
+              17.547207452260182,
+              48.809697119437821,
+              0.0
+            ],
+            [
+              17.647056122979119,
+              49.352508282898278,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Stockholm",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.537736690077551,
+              59.650874849503161,
+              0.0
+            ],
+            [
+              18.60762501994914,
+              59.5849299064161,
+              0.0
+            ],
+            [
+              18.471039659755629,
+              59.043298676839839,
+              0.0
+            ],
+            [
+              17.417897993635759,
+              59.108338312203841,
+              0.0
+            ],
+            [
+              17.537736690077551,
+              59.650874849503161,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SumatraMinIndonesia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.973340052346003,
+              0.011349380709196,
+              0.0
+            ],
+            [
+              101.512129425791301,
+              -0.079040428894735,
+              0.0
+            ],
+            [
+              101.422485053252103,
+              -0.621396019731702,
+              0.0
+            ],
+            [
+              100.883604225843101,
+              -0.531193408834043,
+              0.0
+            ],
+            [
+              100.973340052346003,
+              0.011349380709196,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "SumatraPSFIndonesia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.539705534681701,
+              1.419324396841082,
+              0.0
+            ],
+            [
+              102.078304495730507,
+              1.328324413743461,
+              0.0
+            ],
+            [
+              101.988021005805294,
+              0.786341583380065,
+              0.0
+            ],
+            [
+              101.449434510578996,
+              0.877084757022894,
+              0.0
+            ],
+            [
+              101.539705534681701,
+              1.419324396841082,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TallinnEstonia",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              24.446528150273309,
+              59.680000225704831,
+              0.0
+            ],
+            [
+              25.515531423537659,
+              59.60663629906503,
+              0.0
+            ],
+            [
+              25.364516952519551,
+              59.06592237616028,
+              0.0
+            ],
+            [
+              24.31215875861459,
+              59.13822477265699,
+              0.0
+            ],
+            [
+              24.446528150273309,
+              59.680000225704831,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Tanzania",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              35.969791313497602,
+              -6.890392843845627,
+              0.0
+            ],
+            [
+              36.511784147330957,
+              -6.983901929375368,
+              0.0
+            ],
+            [
+              36.418248659896697,
+              -7.52561378665042,
+              0.0
+            ],
+            [
+              35.875715891475473,
+              -7.431753688274799,
+              0.0
+            ],
+            [
+              35.969791313497602,
+              -6.890392843845627,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TapajosBrazil",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -55.260249303817709,
+              -3.594455398561254,
+              0.0
+            ],
+            [
+              -54.720098315907762,
+              -3.683659535884529,
+              0.0
+            ],
+            [
+              -54.808656635069028,
+              -4.226299717439587,
+              0.0
+            ],
+            [
+              -55.349203743851312,
+              -4.137210507814171,
+              0.0
+            ],
+            [
+              -55.260249303817709,
+              -3.594455398561254,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TartuEstonia",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26.115211232317979,
+              58.497976251207277,
+              0.0
+            ],
+            [
+              27.144271608109051,
+              58.411130240215883,
+              0.0
+            ],
+            [
+              26.97352999861474,
+              57.872297442807529,
+              0.0
+            ],
+            [
+              25.959562433717771,
+              57.957865437581553,
+              0.0
+            ],
+            [
+              26.115211232317979,
+              58.497976251207277,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TasmaniaAustralia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              146.34497230004331,
+              -42.784905230560327,
+              0.0
+            ],
+            [
+              147.078654880105205,
+              -42.876805136023563,
+              0.0
+            ],
+            [
+              146.955825035370907,
+              -43.417115127955853,
+              0.0
+            ],
+            [
+              146.2158679475844,
+              -43.324390729935637,
+              0.0
+            ],
+            [
+              146.34497230004331,
+              -42.784905230560327,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TensiftMorocco",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.137617230225889,
+              31.747295436319291,
+              0.0
+            ],
+            [
+              -7.505730241428661,
+              31.65124325311201,
+              0.0
+            ],
+            [
+              -7.61911190482933,
+              31.111231666629291,
+              0.0
+            ],
+            [
+              -8.247532691855223,
+              31.206660063890801,
+              0.0
+            ],
+            [
+              -8.137617230225889,
+              31.747295436319291,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TeshekpukLakeAlaska",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -154.540125065723203,
+              71.031280994720021,
+              0.0
+            ],
+            [
+              -152.886604309660299,
+              70.947951535317486,
+              0.0
+            ],
+            [
+              -153.156832229982086,
+              70.40992648054565,
+              0.0
+            ],
+            [
+              -154.767476915734903,
+              70.491074129164218,
+              0.0
+            ],
+            [
+              -154.540125065723203,
+              71.031280994720021,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TheNetherlands",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.396902867531449,
+              52.371912292690183,
+              0.0
+            ],
+            [
+              5.273020345035133,
+              52.268382420584707,
+              0.0
+            ],
+            [
+              5.101175285966081,
+              51.732021856627398,
+              0.0
+            ],
+            [
+              4.235062935171976,
+              51.834235898088579,
+              0.0
+            ],
+            [
+              4.396902867531449,
+              52.371912292690183,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TonglingChina",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117.390847080842093,
+              31.16085564109606,
+              0.0
+            ],
+            [
+              118.019376619325101,
+              31.067189714316271,
+              0.0
+            ],
+            [
+              117.909457141991894,
+              30.5266338840093,
+              0.0
+            ],
+            [
+              117.284319094594395,
+              30.61973542208742,
+              0.0
+            ],
+            [
+              117.390847080842093,
+              31.16085564109606,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ToulaRussia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.836081773252737,
+              53.938177425846447,
+              0.0
+            ],
+            [
+              37.752485876778103,
+              53.861306104126513,
+              0.0
+            ],
+            [
+              37.61818293206133,
+              53.320476350574438,
+              0.0
+            ],
+            [
+              36.713248865540187,
+              53.396467675156273,
+              0.0
+            ],
+            [
+              36.836081773252737,
+              53.938177425846447,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ToulouseFrance",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.069208858023747,
+              43.699728802648707,
+              0.0
+            ],
+            [
+              1.815148493038696,
+              43.620415785708992,
+              0.0
+            ],
+            [
+              1.703512206583819,
+              43.079310356288516,
+              0.0
+            ],
+            [
+              0.964406354279743,
+              43.157849188919407,
+              0.0
+            ],
+            [
+              1.069208858023747,
+              43.699728802648707,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "TsuruokaJapan",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              139.559782507305812,
+              39.157395155620513,
+              0.0
+            ],
+            [
+              140.25508426008949,
+              39.073804252944939,
+              0.0
+            ],
+            [
+              140.145970129334103,
+              38.532369443025587,
+              0.0
+            ],
+            [
+              139.455829669656509,
+              38.615413889228563,
+              0.0
+            ],
+            [
+              139.559782507305812,
+              39.157395155620513,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Uganda",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              34.380877412222453,
+              2.895662320609624,
+              0.0
+            ],
+            [
+              34.920389349040413,
+              2.804452760601434,
+              0.0
+            ],
+            [
+              34.829701486985982,
+              2.262048232244186,
+              0.0
+            ],
+            [
+              34.290363746775803,
+              2.353080158662268,
+              0.0
+            ],
+            [
+              34.380877412222453,
+              2.895662320609624,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Ukraine",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              29.66745565946594,
+              50.360268130335889,
+              0.0
+            ],
+            [
+              30.51477374927984,
+              50.291525940504719,
+              0.0
+            ],
+            [
+              30.403767252678229,
+              49.749360618511673,
+              0.0
+            ],
+            [
+              29.565874772876949,
+              49.817503569220463,
+              0.0
+            ],
+            [
+              29.66745565946594,
+              50.360268130335889,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ValenciaSpain",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.729473637414014,
+              39.621113433108121,
+              0.0
+            ],
+            [
+              -0.035063721005072,
+              39.515374540737731,
+              0.0
+            ],
+            [
+              -0.173030304703506,
+              38.978288413216823,
+              0.0
+            ],
+            [
+              -0.862432474290816,
+              39.083063058048772,
+              0.0
+            ],
+            [
+              -0.729473637414014,
+              39.621113433108121,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "VasterbottenSweden",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.088978379633179,
+              66.057066184902297,
+              0.0
+            ],
+            [
+              16.408696474019909,
+              65.960926222992555,
+              0.0
+            ],
+            [
+              16.164306744648279,
+              65.424579071869331,
+              0.0
+            ],
+            [
+              14.8708785805603,
+              65.518725872503595,
+              0.0
+            ],
+            [
+              15.088978379633179,
+              66.057066184902297,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "WageningenNetherlands",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.286953770521648,
+              52.330417828878737,
+              0.0
+            ],
+            [
+              6.159851456364695,
+              52.220340042847447,
+              0.0
+            ],
+            [
+              5.977737745438017,
+              51.685442753591822,
+              0.0
+            ],
+            [
+              5.114684580062912,
+              51.794087147224268,
+              0.0
+            ],
+            [
+              5.286953770521648,
+              52.330417828878737,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "WakoKungoAngola",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.85104165323656,
+              -11.033438044815499,
+              0.0
+            ],
+            [
+              15.4004531421336,
+              -11.12364760762147,
+              0.0
+            ],
+            [
+              15.30946451907298,
+              -11.666373684011591,
+              0.0
+            ],
+            [
+              14.75904069845509,
+              -11.576003736006481,
+              0.0
+            ],
+            [
+              14.85104165323656,
+              -11.033438044815499,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "WaldviertelAustria",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.90113130677187,
+              48.898509923082429,
+              0.0
+            ],
+            [
+              15.71846815109223,
+              48.806354788639418,
+              0.0
+            ],
+            [
+              15.57612624673223,
+              48.267370232185939,
+              0.0
+            ],
+            [
+              14.767186093352191,
+              48.358544778964578,
+              0.0
+            ],
+            [
+              14.90113130677187,
+              48.898509923082429,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ZlatiataBulgaria",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 0,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.699618054058568,
+              43.797968619200233,
+              0.0
+            ],
+            [
+              24.439111488288191,
+              43.688057913394992,
+              0.0
+            ],
+            [
+              24.285909799915238,
+              43.152354183224148,
+              0.0
+            ],
+            [
+              23.55256045710464,
+              43.261123121707527,
+              0.0
+            ],
+            [
+              23.699618054058568,
+              43.797968619200233,
+              0.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

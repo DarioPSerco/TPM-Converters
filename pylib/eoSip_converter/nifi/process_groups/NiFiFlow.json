@@ -1,0 +1,132 @@
+{
+    "revision": {
+        "version": 0
+    },
+    "id": "445839a8-0196-1000-752d-bed653d9c42e",
+    "uri": "http://localhost:8080/nifi-api/process-groups/445839a8-0196-1000-752d-bed653d9c42e",
+    "position": {
+        "x": 0,
+        "y": 0
+    },
+    "permissions": {
+        "canRead": true,
+        "canWrite": true
+    },
+    "bulletins": [
+        {
+            "id": 1,
+            "groupId": "4857161a-0196-1000-98e8-db52193966f3",
+            "sourceId": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+            "timestamp": "11:43:28 UTC",
+            "canRead": true,
+            "bulletin": {
+                "id": 1,
+                "category": "Log Message",
+                "groupId": "4857161a-0196-1000-98e8-db52193966f3",
+                "sourceId": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                "sourceName": "TerraSarXConverter",
+                "level": "ERROR",
+                "message": "PythonProcessor[type=EOSIPConverter, id=f5d91e94-37cf-3962-069a-b77ce66306d5] Failed to commit session StandardProcessSession[id=3]; rolling back: org.apache.nifi.processor.exception.TerminatedTaskException",
+                "timestamp": "11:43:28 UTC",
+                "sourceType": "PROCESSOR"
+            }
+        }
+    ],
+    "component": {
+        "id": "445839a8-0196-1000-752d-bed653d9c42e",
+        "position": {
+            "x": 0,
+            "y": 0
+        },
+        "name": "NiFi Flow",
+        "comments": "",
+        "flowfileConcurrency": "UNBOUNDED",
+        "flowfileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "executionEngine": "INHERITED",
+        "maxConcurrentTasks": 1,
+        "statelessFlowTimeout": "1 min",
+        "runningCount": 10,
+        "stoppedCount": 6,
+        "invalidCount": 11,
+        "disabledCount": 0,
+        "activeRemotePortCount": 0,
+        "inactiveRemotePortCount": 0,
+        "upToDateCount": 0,
+        "locallyModifiedCount": 0,
+        "staleCount": 0,
+        "locallyModifiedAndStaleCount": 0,
+        "syncFailureCount": 0,
+        "localInputPortCount": 0,
+        "localOutputPortCount": 0,
+        "publicInputPortCount": 0,
+        "publicOutputPortCount": 0,
+        "statelessGroupScheduledState": "STOPPED",
+        "inputPortCount": 0,
+        "outputPortCount": 0
+    },
+    "status": {
+        "id": "445839a8-0196-1000-752d-bed653d9c42e",
+        "name": "NiFi Flow",
+        "statsLastRefreshed": "11:48:16 UTC",
+        "aggregateSnapshot": {
+            "id": "445839a8-0196-1000-752d-bed653d9c42e",
+            "name": "NiFi Flow",
+            "statelessActiveThreadCount": 0,
+            "flowFilesIn": 0,
+            "bytesIn": 0,
+            "input": "0 (0 bytes)",
+            "flowFilesQueued": 1670,
+            "bytesQueued": 0,
+            "queued": "1,670 (0 bytes)",
+            "queuedCount": "1,670",
+            "queuedSize": "0 bytes",
+            "bytesRead": 0,
+            "read": "0 bytes",
+            "bytesWritten": 0,
+            "written": "0 bytes",
+            "flowFilesOut": 0,
+            "bytesOut": 0,
+            "output": "0 (0 bytes)",
+            "flowFilesTransferred": 132,
+            "bytesTransferred": 0,
+            "transferred": "132 (0 bytes)",
+            "bytesReceived": 0,
+            "flowFilesReceived": 0,
+            "received": "0 (0 bytes)",
+            "bytesSent": 0,
+            "flowFilesSent": 0,
+            "sent": "0 (0 bytes)",
+            "activeThreadCount": 0,
+            "terminatedThreadCount": 0,
+            "processingNanos": 891917045214,
+            "processingPerformanceStatus": {
+                "identifier": "445839a8-0196-1000-752d-bed653d9c42e",
+                "cpuDuration": 0,
+                "contentReadDuration": 0,
+                "contentWriteDuration": 0,
+                "sessionCommitDuration": 0,
+                "garbageCollectionDuration": 0
+            }
+        }
+    },
+    "runningCount": 10,
+    "stoppedCount": 6,
+    "invalidCount": 11,
+    "disabledCount": 0,
+    "activeRemotePortCount": 0,
+    "inactiveRemotePortCount": 0,
+    "upToDateCount": 0,
+    "locallyModifiedCount": 0,
+    "staleCount": 0,
+    "locallyModifiedAndStaleCount": 0,
+    "syncFailureCount": 0,
+    "localInputPortCount": 0,
+    "localOutputPortCount": 0,
+    "publicInputPortCount": 0,
+    "publicOutputPortCount": 0,
+    "inputPortCount": 0,
+    "outputPortCount": 0
+}

@@ -1,0 +1,1373 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.94165872,
+              63.02838231
+            ],
+            [
+              6.325434,
+              63.02838231
+            ],
+            [
+              6.325434,
+              61.981758
+            ],
+            [
+              5.94165872,
+              61.981758
+            ],
+            [
+              5.94165872,
+              63.02838231
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Alesund",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "105C"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.920322,
+              70.333038
+            ],
+            [
+              19.4527663,
+              70.333038
+            ],
+            [
+              19.4527663,
+              68.97951
+            ],
+            [
+              18.920322,
+              68.97951
+            ],
+            [
+              18.920322,
+              70.333038
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Tromso",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "006"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.717862,
+              59.02767
+            ],
+            [
+              6.034482,
+              59.02767
+            ],
+            [
+              6.034482,
+              58.322178
+            ],
+            [
+              5.717862,
+              58.322178
+            ],
+            [
+              5.717862,
+              59.02767
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Stavanger",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "004"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.46777,
+              59.38317
+            ],
+            [
+              5.766174,
+              59.38317
+            ],
+            [
+              5.766174,
+              58.338738
+            ],
+            [
+              5.46777,
+              58.338738
+            ],
+            [
+              5.46777,
+              59.38317
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Stavanger",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "004"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.228694,
+              61.01397
+            ],
+            [
+              5.56677,
+              61.01397
+            ],
+            [
+              5.56677,
+              59.98275
+            ],
+            [
+              5.228694,
+              59.98275
+            ],
+            [
+              5.228694,
+              61.01397
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Bergen",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "002"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.1349522,
+              59.811534
+            ],
+            [
+              10.442826,
+              59.811534
+            ],
+            [
+              10.442826,
+              59.258754
+            ],
+            [
+              10.1349522,
+              59.258754
+            ],
+            [
+              10.1349522,
+              59.811534
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Drammen",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "107C"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.698022,
+              70.024482
+            ],
+            [
+              19.143738,
+              70.024482
+            ],
+            [
+              19.143738,
+              68.959458
+            ],
+            [
+              18.698022,
+              68.959458
+            ],
+            [
+              18.698022,
+              70.024482
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Tromso",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "006"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.333098,
+              63.718362
+            ],
+            [
+              10.69011,
+              63.718362
+            ],
+            [
+              10.69011,
+              63.322398
+            ],
+            [
+              10.333098,
+              63.322398
+            ],
+            [
+              10.333098,
+              63.718362
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Trondheim",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "003"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.98289,
+              60.0134869
+            ],
+            [
+              10.30311,
+              60.0134869
+            ],
+            [
+              10.30311,
+              58.833918
+            ],
+            [
+              9.98289,
+              58.833918
+            ],
+            [
+              9.98289,
+              60.0134869
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Drammen",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "107C"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.638954,
+              60.080418
+            ],
+            [
+              10.942398,
+              60.080418
+            ],
+            [
+              10.942398,
+              59.676642
+            ],
+            [
+              10.638954,
+              59.676642
+            ],
+            [
+              10.638954,
+              60.080418
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Oslo",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "001"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.88325,
+              60.078582
+            ],
+            [
+              11.194722,
+              60.078582
+            ],
+            [
+              11.194722,
+              59.826078
+            ],
+            [
+              10.88325,
+              59.826078
+            ],
+            [
+              10.88325,
+              60.078582
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Oslo",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "001L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.30092478,
+              60.00345
+            ],
+            [
+              10.647942,
+              60.00345
+            ],
+            [
+              10.647942,
+              59.73687
+            ],
+            [
+              10.30092478,
+              59.73687
+            ],
+            [
+              10.30092478,
+              60.00345
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Oslo",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "001"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.01169,
+              63.730818
+            ],
+            [
+              10.36431,
+              63.730818
+            ],
+            [
+              10.36431,
+              63.282906
+            ],
+            [
+              10.01169,
+              63.282906
+            ],
+            [
+              10.01169,
+              63.730818
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Trondheim",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "003"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.38139152,
+              64.029546
+            ],
+            [
+              10.7582848,
+              64.029546
+            ],
+            [
+              10.7582848,
+              62.94995922
+            ],
+            [
+              10.38139152,
+              62.94995922
+            ],
+            [
+              10.38139152,
+              64.029546
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Trondheim",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "003"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.142118,
+              64.02213
+            ],
+            [
+              10.5004757,
+              64.02213
+            ],
+            [
+              10.5004757,
+              62.955918
+            ],
+            [
+              10.142118,
+              62.955918
+            ],
+            [
+              10.142118,
+              64.02213
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Trondheim",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "003"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.679918,
+              59.026302
+            ],
+            [
+              6.0087129,
+              59.026302
+            ],
+            [
+              6.0087129,
+              58.322358
+            ],
+            [
+              5.679918,
+              58.322358
+            ],
+            [
+              5.679918,
+              59.026302
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Stavanger",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "004"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.719986,
+              59.379498
+            ],
+            [
+              6.009966,
+              59.379498
+            ],
+            [
+              6.009966,
+              58.338486
+            ],
+            [
+              5.719986,
+              58.338486
+            ],
+            [
+              5.719986,
+              59.379498
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Norway",
+        "city": "Stavanger",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "004"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.419654,
+              48.255354
+            ],
+            [
+              7.645914,
+              48.255354
+            ],
+            [
+              7.645914,
+              47.409606
+            ],
+            [
+              7.419654,
+              47.409606
+            ],
+            [
+              7.419654,
+              48.255354
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Germany",
+        "city": "Freiburg im Breisgau",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "027"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.53101091,
+              47.031138
+            ],
+            [
+              6.7495439,
+              47.031138
+            ],
+            [
+              6.7495439,
+              45.988038
+            ],
+            [
+              6.53101091,
+              45.988038
+            ],
+            [
+              6.53101091,
+              47.031138
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "005"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.591598,
+              47.573334
+            ],
+            [
+              8.81127,
+              47.573334
+            ],
+            [
+              8.81127,
+              47.11473
+            ],
+            [
+              8.591598,
+              47.11473
+            ],
+            [
+              8.591598,
+              47.573334
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Zurich",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "001"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.17687,
+              47.079018
+            ],
+            [
+              7.402698,
+              47.079018
+            ],
+            [
+              7.402698,
+              46.819386
+            ],
+            [
+              7.17687,
+              46.819386
+            ],
+            [
+              7.17687,
+              47.079018
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Bern",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "004"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.27422265,
+              47.14723013
+            ],
+            [
+              8.5201516,
+              47.14723013
+            ],
+            [
+              8.5201516,
+              46.92269736
+            ],
+            [
+              8.27422265,
+              46.92269736
+            ],
+            [
+              8.27422265,
+              47.14723013
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Lucerne",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "008K"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.023646,
+              46.26747
+            ],
+            [
+              6.250518,
+              46.26747
+            ],
+            [
+              6.250518,
+              46.125702
+            ],
+            [
+              6.023646,
+              46.125702
+            ],
+            [
+              6.023646,
+              46.26747
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Geneve",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "102L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.38017,
+              47.641986
+            ],
+            [
+              8.625078,
+              47.641986
+            ],
+            [
+              8.625078,
+              47.171322
+            ],
+            [
+              8.38017,
+              47.171322
+            ],
+            [
+              8.38017,
+              47.641986
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Zurich",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "001"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.328034,
+              47.067318
+            ],
+            [
+              7.545546,
+              47.067318
+            ],
+            [
+              7.545546,
+              46.811358
+            ],
+            [
+              7.328034,
+              46.811358
+            ],
+            [
+              7.328034,
+              47.067318
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Bern",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "004"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.17687195,
+              48.027294
+            ],
+            [
+              9.4089809,
+              48.027294
+            ],
+            [
+              9.4089809,
+              46.94893627
+            ],
+            [
+              9.17687195,
+              46.94893627
+            ],
+            [
+              9.17687195,
+              48.027294
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "St Gallen",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "106C"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.38041921,
+              46.676646
+            ],
+            [
+              6.6201566,
+              46.676646
+            ],
+            [
+              6.6201566,
+              46.395414
+            ],
+            [
+              6.38041921,
+              46.395414
+            ],
+            [
+              6.38041921,
+              46.676646
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "005"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.379234,
+              47.576538
+            ],
+            [
+              8.606574,
+              47.576538
+            ],
+            [
+              8.606574,
+              47.147742
+            ],
+            [
+              8.379234,
+              47.147742
+            ],
+            [
+              8.379234,
+              47.576538
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Zurich",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "101L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.79573314,
+              46.031166
+            ],
+            [
+              9.025506,
+              46.031166
+            ],
+            [
+              9.025506,
+              44.950734
+            ],
+            [
+              8.79573314,
+              44.950734
+            ],
+            [
+              8.79573314,
+              46.031166
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Lugano",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "1071L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.99479154,
+              47.026494
+            ],
+            [
+              9.2359825,
+              47.026494
+            ],
+            [
+              9.2359825,
+              45.97894671
+            ],
+            [
+              8.99479154,
+              45.97894671
+            ],
+            [
+              8.99479154,
+              47.026494
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Lugano",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "1071L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.92533,
+              46.416942
+            ],
+            [
+              6.138594,
+              46.416942
+            ],
+            [
+              6.138594,
+              46.061478
+            ],
+            [
+              5.92533,
+              46.061478
+            ],
+            [
+              5.92533,
+              46.416942
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Geneve",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "002"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.78855708,
+              48.022758
+            ],
+            [
+              9.0108844,
+              48.022758
+            ],
+            [
+              9.0108844,
+              45.957798
+            ],
+            [
+              8.78855708,
+              45.957798
+            ],
+            [
+              8.78855708,
+              48.022758
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Lugano",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "1071L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.592842,
+              46.66995
+            ],
+            [
+              6.825654,
+              46.66995
+            ],
+            [
+              6.825654,
+              46.42011
+            ],
+            [
+              6.592842,
+              46.42011
+            ],
+            [
+              6.592842,
+              46.66995
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "005"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.122862,
+              46.419462
+            ],
+            [
+              6.341166,
+              46.419462
+            ],
+            [
+              6.341166,
+              46.069866
+            ],
+            [
+              6.122862,
+              46.069866
+            ],
+            [
+              6.122862,
+              46.419462
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Geneve",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "102L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.45170774,
+              47.75234433
+            ],
+            [
+              7.702146,
+              47.75234433
+            ],
+            [
+              7.702146,
+              47.367774
+            ],
+            [
+              7.45170774,
+              47.367774
+            ],
+            [
+              7.45170774,
+              47.75234433
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Basle",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "103K"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.58861873,
+              47.62509155
+            ],
+            [
+              8.8581906,
+              47.62509155
+            ],
+            [
+              8.8581906,
+              47.05805518
+            ],
+            [
+              8.58861873,
+              47.05805518
+            ],
+            [
+              8.58861873,
+              47.62509155
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Zurich",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "101L"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.385886,
+              47.103102
+            ],
+            [
+              7.61175,
+              47.103102
+            ],
+            [
+              7.61175,
+              46.82151
+            ],
+            [
+              7.385886,
+              46.82151
+            ],
+            [
+              7.385886,
+              47.103102
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Bern",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "004"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.586874,
+              47.71737
+            ],
+            [
+              7.81101,
+              47.71737
+            ],
+            [
+              7.81101,
+              47.375946
+            ],
+            [
+              7.586874,
+              47.375946
+            ],
+            [
+              7.586874,
+              47.71737
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "country": "Switzerland",
+        "city": "Basle",
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_datase",
+        "luzId": "103K"
+      }
+    }
+  ]
+}

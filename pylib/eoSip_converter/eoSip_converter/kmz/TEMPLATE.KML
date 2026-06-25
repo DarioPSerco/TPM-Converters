@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2">
+<Document>
+	<name>PRODUCT_NAME</name>
+	<open>1</open>
+	  <LookAt>
+		<longitude>PRODUCT_CENTER_LONGITUDE</longitude>
+		<latitude>PRODUCT_CENTER_LATITUDE</latitude>
+		<altitude>100000</altitude>
+		<heading>0</heading>
+		<tilt>4.565276383769988</tilt>
+		<range>0</range>
+		<altitudeMode>relativeToGround</altitudeMode>
+	  </LookAt>
+	
+	<Style id="src_footprint_normal">
+		<LineStyle>
+			<color>ffCE8F72</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="src_footprint_highlight">
+		<IconStyle id="mystyle">
+			<Icon>
+				<scale>1.0</scale>
+			</Icon>
+		</IconStyle>
+		<LineStyle>
+			<color>ffEEAF92</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="src_footprint">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#src_footprint_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#src_footprint_highlight</styleUrl>
+		</Pair>
+	</StyleMap>	
+	
+	
+	<Style id="src_extract_footprint_normal">
+		<LineStyle>
+			<color>ffC76915</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="src_extract_footprint_highlight">
+		<IconStyle id="mystyle">
+			<Icon>
+				<scale>1.0</scale>
+			</Icon>
+		</IconStyle>
+		<LineStyle>
+			<color>ffD77925</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>	
+	<StyleMap id="src_extract_footprint">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#src_extract_footprint_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#src_extract_footprint_highlight</styleUrl>
+		</Pair>
+	</StyleMap>	
+	
+
+	
+	
+	<Style id="tiles_footprint_normal">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff9E9F9E</color>
+			<scale>0.8</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff7E7F7E</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>	
+	<Style id="tiles_footprint_highlight">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff9E9F9E</color>
+			<scale>0.8</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff9E9F9E</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>	
+	<StyleMap id="tiles_footprint">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#tiles_footprint_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#tiles_footprint_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	
+		
+	<Style id="product_footprint_normal">
+		<LineStyle>
+			<color>ff1767E5</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>	
+	<Style id="product_footprint_highlight">
+		<LineStyle>
+			<color>ff17A3E8</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>bf00ffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>	
+	<StyleMap id="product_footprint">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#product_footprint_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#product_footprint_highlight</styleUrl>
+		</Pair>
+	</StyleMap>	
+
+	<Style id="product_name">
+		<IconStyle>
+			<Icon>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff1767E5</color>
+		</LabelStyle>
+	</Style>
+	
+	
+	<Style id="fauchee_footprint">
+		<LineStyle>
+			<color>ffaaaaaa</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>20000000</color>
+		</PolyStyle>
+	</Style>
+	
+	
+	
+	
+	<gx:Tour>
+	<name>Start Animation</name>
+	<visibility>1</visibility>
+	<gx:Playlist>
+
+	
+		<gx:AnimatedUpdate>
+          <gx:duration>0.5</gx:duration>
+          <Update>
+            <targetHref/>
+            <Change>
+			  <Placemark targetId="swath1">
+                <visibility>1</visibility>
+              </Placemark>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>
+	
+        <gx:AnimatedUpdate>
+          <gx:duration>13</gx:duration>
+          <Update>
+            <targetHref/>
+            <Change>
+			  <Placemark targetId="swath1">
+                <visibility>0</visibility>
+              </Placemark>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>
+
+		<gx:FlyTo>
+          <gx:duration>2.0</gx:duration>
+          <gx:flyToMode>bounce</gx:flyToMode>
+          <LookAt>
+		<longitude>PRODUCT_CENTER_LONGITUDE</longitude>
+		<latitude>PRODUCT_CENTER_LATITUDE</latitude>
+		<altitude>0</altitude>
+		<range>1504322.385505117</range>
+		<tilt>39.000000</tilt>
+		<heading>0</heading>
+			<altitudeMode>relativeToGround</altitudeMode>
+          </LookAt>
+        </gx:FlyTo>		
+	
+	
+        <gx:AnimatedUpdate>
+          <gx:duration>0.0</gx:duration>
+          <Update>
+            <targetHref/>
+            <Change>
+              <Placemark targetId="satellite1">
+                <gx:balloonVisibility>1</gx:balloonVisibility>
+              </Placemark>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>
+        
+        <gx:Wait>
+          <gx:duration>4.0</gx:duration>
+        </gx:Wait>
+
+	
+        <gx:AnimatedUpdate>
+          <gx:duration>0.0</gx:duration>
+          <Update>
+            <targetHref/>
+            <Change>
+              <Placemark targetId="satellite1">
+                <gx:balloonVisibility>0</gx:balloonVisibility>
+              </Placemark>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>        
+
+		<gx:FlyTo>
+          <gx:duration>4.0</gx:duration>
+          <gx:flyToMode>bounce</gx:flyToMode>
+		  <LookAt>
+			<longitude>PRODUCT_CENTER_LONGITUDE</longitude>
+			<latitude>PRODUCT_CENTER_LATITUDE</latitude>
+			<altitude>100000</altitude>
+			<heading>0</heading>
+			<tilt>4.565276383769988</tilt>
+			<range>0</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		  </LookAt>
+        </gx:FlyTo>	
+
+	
+		<gx:AnimatedUpdate>
+          <gx:duration>0.0</gx:duration>
+          <Update>
+            <targetHref/>
+            <Change>
+              <Placemark targetId="information">
+                <gx:balloonVisibility>1</gx:balloonVisibility>
+              </Placemark>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>
+
+      </gx:Playlist>
+</gx:Tour>
+	
+	
+	
+		<Folder>
+			<name>Sources</name>
+			<Style>
+				<ListStyle>
+					<listItemType>check</listItemType>
+					<bgColor>00ffffff</bgColor>
+					<maxSnippetLines>2</maxSnippetLines>
+				</ListStyle>
+			</Style>
+			<Folder>
+				<name>Source 1</name>
+				<Placemark>
+					<name>PRODUCT_NAME</name>
+					<Snippet maxLines="0"/>
+					<description>
+					<![CDATA[PRODUCT_DESCRIPTION]]></description>
+					<styleUrl>#src_footprint</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>PRODUCT_LINEAR_RING</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>PRODUCT_NAME</name>
+					<styleUrl>#product_name</styleUrl>
+					<Point>
+						<altitudeMode>absolute</altitudeMode>
+						<coordinates>SCENE_CENTER_POINT</coordinates>
+					</Point>
+				</Placemark>
+				<GroundOverlay>
+					<name>Quick Look</name>
+					<Icon>
+						<href>PRODUCT_BROWSE_HREF</href>
+						<scale>1.0</scale>
+					</Icon>
+					<gx:LatLonQuad>
+						<coordinates>PRODUCT_LINEAR_RING</coordinates>
+					</gx:LatLonQuad>
+				</GroundOverlay>
+			</Folder>
+
+		</Folder>
+
+
+</Document>
+</kml>

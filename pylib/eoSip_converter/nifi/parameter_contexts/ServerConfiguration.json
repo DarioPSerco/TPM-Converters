@@ -1,0 +1,795 @@
+{
+    "revision": {
+        "version": 0
+    },
+    "id": "820811ac-0196-1000-4247-183cbd856d24",
+    "uri": "http://localhost:8080/nifi-api/parameter-contexts/820811ac-0196-1000-4247-183cbd856d24",
+    "permissions": {
+        "canRead": true,
+        "canWrite": true
+    },
+    "component": {
+        "name": "ServerConfiguration",
+        "description": "General setup parameters for the server e.g. input directories, script directories etc.",
+        "parameters": [
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "configsDirectory",
+                    "description": "Directory in which converter configuration files (i.e. ingest_*.cfg) reside",
+                    "sensitive": false,
+                    "value": "/opt/converter/configs",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            },
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "tmpDirectory",
+                    "description": "Root directory to contain all intermediate/temporary products resulting from conversion. Shall contain sub-directories whose name is that of the flowfile UID of the conversion",
+                    "sensitive": false,
+                    "value": "/mount/damps/hsm/PSI/TPM_EOSIP/test_datasets/workspace/tmp",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 2
+                            },
+                            "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                                "referenceType": "PROCESSOR",
+                                "name": "TerraSarXConverter",
+                                "state": "RUN_ONCE",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 1
+                            },
+                            "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                                "referenceType": "PROCESSOR",
+                                "name": "BrandNewTestConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0,
+                                "validationErrors": [
+                                    "'Upstream Connections' is invalid because Processor requires an upstream connection but currently has none"
+                                ]
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "version": 0
+                            },
+                            "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                                "referenceType": "PROCESSOR",
+                                "name": "PlanetscopeConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "name": "Planetscope"
+                            },
+                            "referenceType": "PROCESSOR"
+                        }
+                    ],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            },
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "convertersDirectoryPy2",
+                    "description": "Where the Python 2 converters reside",
+                    "sensitive": false,
+                    "value": "/opt/converter/converters_py2",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            },
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "ingestersDirectory",
+                    "description": "Directory in which eoSip_converter's ingester_*.py modules reside",
+                    "sensitive": false,
+                    "value": "/opt/converter/ingesters",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            },
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "outDirectory",
+                    "description": "Root directory to contain all EOSIP products resulting from conversion. Shall contain sub-directories whose name is that of the flowfile UID of the conversion",
+                    "sensitive": false,
+                    "value": "/mount/damps/hsm/PSI/TPM_EOSIP/test_datasets/workspace/out",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 2
+                            },
+                            "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                                "referenceType": "PROCESSOR",
+                                "name": "TerraSarXConverter",
+                                "state": "RUN_ONCE",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 1
+                            },
+                            "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                                "referenceType": "PROCESSOR",
+                                "name": "BrandNewTestConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0,
+                                "validationErrors": [
+                                    "'Upstream Connections' is invalid because Processor requires an upstream connection but currently has none"
+                                ]
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "version": 0
+                            },
+                            "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                                "referenceType": "PROCESSOR",
+                                "name": "PlanetscopeConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "name": "Planetscope"
+                            },
+                            "referenceType": "PROCESSOR"
+                        }
+                    ],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            },
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "converterParentDirectory",
+                    "description": "Directory in which the eoSip_converter library resides (Python 3/centralised version)",
+                    "sensitive": false,
+                    "value": "/opt/converter/pylib/eoSip_converter",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 2
+                            },
+                            "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                                "referenceType": "PROCESSOR",
+                                "name": "TerraSarXConverter",
+                                "state": "RUN_ONCE",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 1
+                            },
+                            "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                                "referenceType": "PROCESSOR",
+                                "name": "BrandNewTestConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0,
+                                "validationErrors": [
+                                    "'Upstream Connections' is invalid because Processor requires an upstream connection but currently has none"
+                                ]
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "version": 0
+                            },
+                            "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                                "referenceType": "PROCESSOR",
+                                "name": "PlanetscopeConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "name": "Planetscope"
+                            },
+                            "referenceType": "PROCESSOR"
+                        }
+                    ],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            },
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "xmlNodesDirectory",
+                    "description": "xml_nodes directory for use with Python 3 converters and containing all versions (v100, v101, and v200) of the EOSIP versions",
+                    "sensitive": false,
+                    "value": "/opt/converter/pylib/xml_nodes",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 2
+                            },
+                            "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "f5d91e94-37cf-3962-069a-b77ce66306d5",
+                                "referenceType": "PROCESSOR",
+                                "name": "TerraSarXConverter",
+                                "state": "RUN_ONCE",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "clientId": "845e6100-ef70-4461-92d7-bb5e432587ad",
+                                "version": 1
+                            },
+                            "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "4857161a-0196-1000-98e8-db52193966f3",
+                                "id": "a54e7c9d-0196-1000-58e4-fd909af1565b",
+                                "referenceType": "PROCESSOR",
+                                "name": "BrandNewTestConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0,
+                                "validationErrors": [
+                                    "'Upstream Connections' is invalid because Processor requires an upstream connection but currently has none"
+                                ]
+                            },
+                            "processGroup": {
+                                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                                "name": "TerraSar-X"
+                            },
+                            "referenceType": "PROCESSOR"
+                        },
+                        {
+                            "revision": {
+                                "version": 0
+                            },
+                            "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                            "permissions": {
+                                "canRead": true,
+                                "canWrite": true
+                            },
+                            "bulletins": [],
+                            "component": {
+                                "processGroupId": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "id": "a4faa78b-0196-1000-78bf-cb6259145403",
+                                "referenceType": "PROCESSOR",
+                                "name": "PlanetscopeConverter",
+                                "state": "STOPPED",
+                                "activeThreadCount": 0
+                            },
+                            "processGroup": {
+                                "id": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                                "name": "Planetscope"
+                            },
+                            "referenceType": "PROCESSOR"
+                        }
+                    ],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            },
+            {
+                "canWrite": true,
+                "parameter": {
+                    "name": "scriptsDirectory",
+                    "description": "The directory in which bespoke scripts related to EOSIP conversion reside",
+                    "sensitive": false,
+                    "value": "/opt/converter/scripts",
+                    "provided": false,
+                    "referencedAssets": [],
+                    "referencingComponents": [],
+                    "parameterContext": {
+                        "id": "820811ac-0196-1000-4247-183cbd856d24",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "820811ac-0196-1000-4247-183cbd856d24",
+                            "name": "ServerConfiguration"
+                        }
+                    },
+                    "inherited": false
+                }
+            }
+        ],
+        "boundProcessGroups": [
+            {
+                "revision": {
+                    "version": 0
+                },
+                "id": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                "position": {
+                    "x": 416,
+                    "y": 240
+                },
+                "permissions": {
+                    "canRead": true,
+                    "canWrite": true
+                },
+                "component": {
+                    "id": "216d862b-a0cd-3a7c-4aab-c72262b288bd",
+                    "versionedComponentId": "81472582-0196-1000-e7c2-8d5f9dc211c2",
+                    "parentGroupId": "445839a8-0196-1000-752d-bed653d9c42e",
+                    "position": {
+                        "x": 416,
+                        "y": 240
+                    },
+                    "name": "Planetscope",
+                    "comments": "",
+                    "parameterContext": {
+                        "id": "a0a4d168-0196-1000-602d-19c3ac0e3fba",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "a0a4d168-0196-1000-602d-19c3ac0e3fba",
+                            "name": "Planetscope"
+                        }
+                    },
+                    "flowfileConcurrency": "UNBOUNDED",
+                    "flowfileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+                    "defaultFlowFileExpiration": "0 sec",
+                    "defaultBackPressureObjectThreshold": 10000,
+                    "defaultBackPressureDataSizeThreshold": "1 GB",
+                    "executionEngine": "INHERITED",
+                    "maxConcurrentTasks": 1,
+                    "statelessFlowTimeout": "1 min",
+                    "runningCount": 3,
+                    "stoppedCount": 1,
+                    "invalidCount": 0,
+                    "disabledCount": 0,
+                    "activeRemotePortCount": 0,
+                    "inactiveRemotePortCount": 0,
+                    "upToDateCount": 0,
+                    "locallyModifiedCount": 0,
+                    "staleCount": 0,
+                    "locallyModifiedAndStaleCount": 0,
+                    "syncFailureCount": 0,
+                    "localInputPortCount": 1,
+                    "localOutputPortCount": 2,
+                    "publicInputPortCount": 0,
+                    "publicOutputPortCount": 0,
+                    "statelessGroupScheduledState": "STOPPED",
+                    "inputPortCount": 1,
+                    "outputPortCount": 2
+                },
+                "runningCount": 3,
+                "stoppedCount": 1,
+                "invalidCount": 0,
+                "disabledCount": 0,
+                "activeRemotePortCount": 0,
+                "inactiveRemotePortCount": 0,
+                "upToDateCount": 0,
+                "locallyModifiedCount": 0,
+                "staleCount": 0,
+                "locallyModifiedAndStaleCount": 0,
+                "syncFailureCount": 0,
+                "localInputPortCount": 1,
+                "localOutputPortCount": 2,
+                "publicInputPortCount": 0,
+                "publicOutputPortCount": 0,
+                "parameterContext": {
+                    "id": "a0a4d168-0196-1000-602d-19c3ac0e3fba",
+                    "permissions": {
+                        "canRead": true,
+                        "canWrite": true
+                    },
+                    "component": {
+                        "id": "a0a4d168-0196-1000-602d-19c3ac0e3fba",
+                        "name": "Planetscope"
+                    }
+                },
+                "inputPortCount": 1,
+                "outputPortCount": 2
+            },
+            {
+                "revision": {
+                    "version": 0
+                },
+                "id": "4857161a-0196-1000-98e8-db52193966f3",
+                "position": {
+                    "x": -88,
+                    "y": 256
+                },
+                "permissions": {
+                    "canRead": true,
+                    "canWrite": true
+                },
+                "component": {
+                    "id": "4857161a-0196-1000-98e8-db52193966f3",
+                    "versionedComponentId": "97089e3f-4b4f-3a3a-b1a6-88eb9b9b9e98",
+                    "parentGroupId": "445839a8-0196-1000-752d-bed653d9c42e",
+                    "position": {
+                        "x": -88,
+                        "y": 256
+                    },
+                    "name": "TerraSar-X",
+                    "comments": "",
+                    "parameterContext": {
+                        "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                            "name": "TerraSar-X"
+                        }
+                    },
+                    "flowfileConcurrency": "UNBOUNDED",
+                    "flowfileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+                    "defaultFlowFileExpiration": "0 sec",
+                    "defaultBackPressureObjectThreshold": 10000,
+                    "defaultBackPressureDataSizeThreshold": "1 GB",
+                    "executionEngine": "INHERITED",
+                    "maxConcurrentTasks": 1,
+                    "statelessFlowTimeout": "1 min",
+                    "runningCount": 1,
+                    "stoppedCount": 2,
+                    "invalidCount": 2,
+                    "disabledCount": 0,
+                    "activeRemotePortCount": 0,
+                    "inactiveRemotePortCount": 0,
+                    "upToDateCount": 0,
+                    "locallyModifiedCount": 0,
+                    "staleCount": 0,
+                    "locallyModifiedAndStaleCount": 0,
+                    "syncFailureCount": 0,
+                    "localInputPortCount": 1,
+                    "localOutputPortCount": 2,
+                    "publicInputPortCount": 0,
+                    "publicOutputPortCount": 0,
+                    "statelessGroupScheduledState": "STOPPED",
+                    "inputPortCount": 1,
+                    "outputPortCount": 2
+                },
+                "runningCount": 1,
+                "stoppedCount": 2,
+                "invalidCount": 2,
+                "disabledCount": 0,
+                "activeRemotePortCount": 0,
+                "inactiveRemotePortCount": 0,
+                "upToDateCount": 0,
+                "locallyModifiedCount": 0,
+                "staleCount": 0,
+                "locallyModifiedAndStaleCount": 0,
+                "syncFailureCount": 0,
+                "localInputPortCount": 1,
+                "localOutputPortCount": 2,
+                "publicInputPortCount": 0,
+                "publicOutputPortCount": 0,
+                "parameterContext": {
+                    "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                    "permissions": {
+                        "canRead": true,
+                        "canWrite": true
+                    },
+                    "component": {
+                        "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                        "name": "TerraSar-X"
+                    }
+                },
+                "inputPortCount": 1,
+                "outputPortCount": 2
+            },
+            {
+                "revision": {
+                    "version": 0
+                },
+                "id": "81af0b58-0196-1000-b4fb-3a34d692e5e5",
+                "position": {
+                    "x": 1344,
+                    "y": -904
+                },
+                "permissions": {
+                    "canRead": true,
+                    "canWrite": true
+                },
+                "component": {
+                    "id": "81af0b58-0196-1000-b4fb-3a34d692e5e5",
+                    "versionedComponentId": "e77e0602-76ad-361a-928f-32f3dd85ab5a",
+                    "parentGroupId": "445839a8-0196-1000-752d-bed653d9c42e",
+                    "position": {
+                        "x": 1344,
+                        "y": -904
+                    },
+                    "name": "dev",
+                    "comments": "",
+                    "parameterContext": {
+                        "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                        "permissions": {
+                            "canRead": true,
+                            "canWrite": true
+                        },
+                        "component": {
+                            "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                            "name": "TerraSar-X"
+                        }
+                    },
+                    "flowfileConcurrency": "UNBOUNDED",
+                    "flowfileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+                    "defaultFlowFileExpiration": "0 sec",
+                    "defaultBackPressureObjectThreshold": 10000,
+                    "defaultBackPressureDataSizeThreshold": "1 GB",
+                    "executionEngine": "INHERITED",
+                    "maxConcurrentTasks": 1,
+                    "statelessFlowTimeout": "1 min",
+                    "runningCount": 0,
+                    "stoppedCount": 0,
+                    "invalidCount": 2,
+                    "disabledCount": 0,
+                    "activeRemotePortCount": 0,
+                    "inactiveRemotePortCount": 0,
+                    "upToDateCount": 0,
+                    "locallyModifiedCount": 0,
+                    "staleCount": 0,
+                    "locallyModifiedAndStaleCount": 0,
+                    "syncFailureCount": 0,
+                    "localInputPortCount": 0,
+                    "localOutputPortCount": 0,
+                    "publicInputPortCount": 0,
+                    "publicOutputPortCount": 0,
+                    "statelessGroupScheduledState": "STOPPED",
+                    "inputPortCount": 0,
+                    "outputPortCount": 0
+                },
+                "runningCount": 0,
+                "stoppedCount": 0,
+                "invalidCount": 2,
+                "disabledCount": 0,
+                "activeRemotePortCount": 0,
+                "inactiveRemotePortCount": 0,
+                "upToDateCount": 0,
+                "locallyModifiedCount": 0,
+                "staleCount": 0,
+                "locallyModifiedAndStaleCount": 0,
+                "syncFailureCount": 0,
+                "localInputPortCount": 0,
+                "localOutputPortCount": 0,
+                "publicInputPortCount": 0,
+                "publicOutputPortCount": 0,
+                "parameterContext": {
+                    "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                    "permissions": {
+                        "canRead": true,
+                        "canWrite": true
+                    },
+                    "component": {
+                        "id": "48570e7a-0196-1000-de1d-95b03e182f4c",
+                        "name": "TerraSar-X"
+                    }
+                },
+                "inputPortCount": 0,
+                "outputPortCount": 0
+            }
+        ],
+        "inheritedParameterContexts": [],
+        "id": "820811ac-0196-1000-4247-183cbd856d24"
+    }
+}

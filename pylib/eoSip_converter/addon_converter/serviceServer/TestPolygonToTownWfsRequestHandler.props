@@ -1,0 +1,13 @@
+#
+# the name of the handler this properties are for
+#
+serverPort=7004
+handlerClass=server.httpHandler.PolygonToTownWfsRequestHandler
+#
+WantLog=true
+#
+APP_PATH=/polygonToTown
+SHAPEFILE=serviceServer/data/gis/ne_10m_admin_0_countries.shp
+MIN_POPULATION=50000
+GEONAMES_CITIES_RESSOURCE=5000
+GEONAMES_USE_WEIGHT=true

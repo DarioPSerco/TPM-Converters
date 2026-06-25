@@ -1,0 +1,9 @@
+#
+# the name of the handler this properties are for
+#
+serverPort=27005
+handlerClass=server.httpHandler.WorldviewLuzResolverRequestHandler
+
+WantLog=true
+SHAPEFILE=serviceServer/data/urban_atlas_dissemination.shp
+

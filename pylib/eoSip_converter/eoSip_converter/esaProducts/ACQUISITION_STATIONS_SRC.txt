@@ -1,0 +1,168 @@
+#EUROPE
+Budapest (Hungary)	BU	BUD
+Bremerhaven (Germany)	BH	BRH
+Berlin (Germany)	BL	BRL
+Berne (Switzerland)	BN	BRN
+Brest (France)	BR	BRS
+Copenhagen (Denmark)	CH	CPH
+CETP Facility (France)	CT	CTP
+De Bilt (Holland)	DB	DBH
+University of Dundee (United Kingdom)	DD	DDE
+ESRIN, Frascati (Italy)	FR	ESR
+Farnborough (United Kingdom)	FB	FRB
+Fucino (Italy)	FS	FUI
+Grimstadt (Norway)	GR	GRS
+Hamburg (Germany)	HM	HAM
+Helsinki (Finland)	HS	HLS
+KARI (Norway)	KA	KAR
+Kiruna ESRANGE (Sweden)	KS	KSE
+Kiruna Salmijarvi (Sweden)	KS	KSS
+Krakow (Poland)	KK	KRK
+Centre Meteo Lannion (France)	LN	LNN
+Lasham (United Kingdom)	LH	LHM
+La Spezia (Italy)	LZ	LSZ
+Matera (Italy)	MA	MTI
+Matera direct downlink for Telespazio	MT	MTN
+Madrid (Spain)	MD	MAD
+Moscow (Russia)	MW	MSW
+Norrkoping (Sweden)	NK	NRK
+DLR, Neustrelitz (Germany)	NZ	NSG
+Offenbach (Germany)	OF	OFB
+DLR, Oberpfaffenhofen (Germany)	OB	OPF
+Oslo (Norway)	OS	OSL
+Prague (Czech Republic)	PR	PRG
+RAL, Rutherford Appleton Laboratory (United Kingdom)	RA	RAL
+Redu (Belgium)	RD	RDU
+Meteo Office Rome (Italy)	RM	ROM
+Santa Maria Island, Azores (Portugal)	SM	SMR
+Spitzbergen (Norway) (DLR Portable Station)	SP	SPB
+Svalbard (Norway)	SV	SGS
+Scanzano (Italy)	SZ	SZ
+Tiksi (Russia, Siberia)	TI	TKS
+Tromsoe Satellite Station (Norway)	TS	TRS
+Toulouse (France)	TO	TOU
+Traben-Trarbach (Germany)	TC	TTC
+Toulouse Test Site (France)	TE	TTE
+Istanbul (Turkey)	TU	IST
+West Freugh (United Kingdom)	WF	WFR
+Villafranca (Spain)	VF	VFR
+#Africa
+Cairo (Egypt)	CR	CRO
+Hartebeesthoek South Africa)	HB	HBK
+Johannesburg (South Africa)	JO	JOS
+Libreville (Gabon)	LI	LBG
+La Reunion (France)	LR	REP
+Malindi	ML	MLD
+Maspalomas (Spain)	MS	MPS
+Marzuq (Lybya)	MZ	MZQ
+Agrhymet, Niamey (Nigeria)	NM	NMY
+Nairobi (Kenya)	NB	NRB
+Pretoria (South Africa)	PO	PTO
+Tunis (Tunisia)	TN	TNS
+Tripoli (Lybia)	TL	TRI
+#Antartica
+Casey (Australia)	CS	CSY
+McMurdo (USA)	MM	MMR
+O'Higgins (Germany)	TF	OHG
+Palmer (USA)	PL	PLM
+Syowa (Japan)	SY	SYW
+Terranova Bay (Italy)	TB	TNB
+Troll (Norway)	TA	TRA
+#Asia
+Bangkok (Thailand)	TH	BKT
+Beijing (China)	BJ or BE	BJG
+Bishkek, Kyrgystan	BK	BSK or BSH
+Chung-Li (Taiwan)	TW	TWN
+Da-Xing-An-Ling	DX	DAX
+Dhaka (Bangladesh)	DK	DHK
+Dharan (Saudi Arabia)	DS	DSA
+Hanoi (Vietnam)	HN	HNO
+Hatoyama (Japan)	HA	HAJ
+Hiroshima (Japan)	HI	HIS
+Hong Kong (China)	HG	HKG
+Hyderabad (India) - former Shadnadar	SE	HYD
+Islamabad (Pakistan)	IS	ISp
+Jeddah (Saudi Arabia)	JS	JSA
+Khanty-Mansiysk (Russia)	KM	KMY
+Keelung (Taiwan)	KG	KLG
+Kitab (Russia)	KB	KTB
+Kiyose (Japan)	KY	KYS
+Kumamoto (Japan)	KU	KUJ
+Lapan, Jakarta (Indonesia)	JK	JKL
+MACRES, Malaysian RS Centre, Kuala Lumpur (Malaysia)	KL	KLM
+Magadan (Russia)	MG	MGD
+Malaysian Met Department, Selangor (Malaysia)	SL	SLG
+Manila (Philippines)	MN	MNL
+New Dheli (India)	ND	NWD
+Novosibirsk (Russia)	NV	NVB
+Pari Pari (Indonesia)	IN	DKI
+Riyadh (Saudi Arabia)	SA	RSA
+Sendai (Japan)	SN	SND
+Seoul: National University (Korea)	S2	SNU
+Seoul:KMS (Korea)	S1	KMS
+Singapore	SG	SGP
+Taipei (Taiwan)	TP	TPE
+Tel Aviv (Israel)	IR	ISR
+Tokyo:Tokyo University (Japan)	TK	TK1
+Tsukaba (Japan)	TJ	TSJ
+Ulan Bator, Mongolia	UB	ULB
+#Australia 
+Adelaide (Australia)	AD	ADL
+Alice Spring (Australia)	AS	ASA
+Aspendale (Australia) 	AP	APD
+Darwin (Australia)	DA	DAR
+Hobart (Australia)	HO	HOA
+Hobart (Australia) NOAA	HT	HBT
+Honolulu (USA)	HW	HWH
+Perth (Australia)	PT	PTH
+Sydney (Australia)	SD	SYD
+Townsville (Australia)	TV	TSV
+Wellington (New Zealand)	WL	WLT
+#North America 
+Poker Plats, Alaska	AG 	AGP
+Atlanta Test Site (USA)	AT 	ATL
+Bedford Institute of Oceanography Nova Scotia (Canada)	BI	BDF
+Chetumal (Mexico)	CM	MEX
+Downsview (Canada)	DV	DWV
+Edmonton (Canada)	EM	EDM
+NOAA Gilmore Creek Alaska Station	NG	NGC
+Fairbanks Alaska SAR Facility	AF	ASF
+University of Alaska, (USA)	UA	FAU
+Goddard (USA)	GD	GOD
+Gatineau (Canada)	GT	GAT
+Gatineau (Canada) - high rate	GH	GAT
+Gatineau (Canada) - low rate	GS	GAT
+Baton Rouge, Louisiana State University, Louisiana (USA)	LS	LSU
+University of Miami, Florida (USA)	MI	MIM
+NOAA/NESDIS - (USA)	NE	NOA
+Norman, Oklahoma (USA)	NO	NOM
+NOAA Wallops Island Virginia Station	NW	NOW
+Prince Albert (Canada)	PA	PAS
+Prince Albert (Canada)ERS high rate	PH	PAS
+Prince Albert (Canada)ERS low rate	PS	PAS
+Poker Flat Research Range (Canada)	AG	AGS
+Redwood City (USA)	RW	RWC
+UCSD, SCR Scripps Institute of Oceanography, San Diego, California	SR	SCR
+EROS Data Center Sioux Falls, South Dakota (USA)	SF	SFL
+Stennis Space Centre (USA)	SS	SSC
+Spot USA Mobile Station	SU	SUM
+Greenbelt MD (USA)	TG	TGM
+Toronto (Canada)	TT	TRT
+University of Texas, Austin, Texas (USA)	UT	UTA
+University of Rhode Island (USA)	UR	URI
+#South America 
+Buenos Aires (Argentina) 	BA	BAA 
+Cordoba (Argentina)	CA	COA
+Cotopaxi (Equador)	CO	CPE
+Cuiaba (Brazil)	CU	CUB
+FUNCEME, Fortaleza (Brazil)	FT	FTB
+INPE, Cachoeira Paulista (Brazil)	CP	CPA
+Kourou (French Guyana)	KO	KOU
+Mar Chiquita (Argentina)	MC	MCH
+Santiago (Chile)	ST	STG
+#Others 
+Kerguelen (France, Indian Ocean)	KE	KEG
+Unknown TBD	GE	GEP
+Unknown code	XX	XXX
+Station Not Relevant	YY	YYY
+Special value for Empty	ZZ	ZZZ

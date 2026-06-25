@@ -1,0 +1,12 @@
+#
+# the name of the handler this properties are for
+#
+serverPort=7000
+handlerClass=server.httpHandler.PolygonShapeFileWfsRequestHandler
+
+WantLog=true
+APP_PATH=/shapeToWfs
+SHAPEFILE=serviceServer/data/gis/spot4-take5_5points.shp
+WANTEDFIELD_INDEX=0,1
+WANTEDFIELD_NAME=FIELD_ID,FIELD_DESCRIPTION
+KEEP_AREA_CRITERIA=0

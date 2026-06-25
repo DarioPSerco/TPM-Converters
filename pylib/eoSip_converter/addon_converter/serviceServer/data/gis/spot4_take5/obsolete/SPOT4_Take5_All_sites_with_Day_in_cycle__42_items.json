@@ -1,0 +1,2028 @@
+{
+  "type": "FeatureCollection",
+  "name": "SPOT4_Take5_All_sites_with_Day_in_cycle",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CAlpes",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=18<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.458831221657984,
+              45.6890450042956,
+              0.0
+            ],
+            [
+              7.087030472591334,
+              45.486825548891787,
+              0.0
+            ],
+            [
+              6.765733590006082,
+              44.523007099920399,
+              0.0
+            ],
+            [
+              5.163728141385366,
+              44.720811306285079,
+              0.0
+            ],
+            [
+              5.458831221657984,
+              45.6890450042956,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CAlsace",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=63<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.23189580600127,
+              49.084447922182733,
+              0.0
+            ],
+            [
+              8.043013287326856,
+              48.948181363787441,
+              0.0
+            ],
+            [
+              7.610883644987846,
+              48.001250720698827,
+              0.0
+            ],
+            [
+              6.811911881734171,
+              48.134996412984073,
+              0.0
+            ],
+            [
+              7.23189580600127,
+              49.084447922182733,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CAquitaine",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=90<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.214527754782383,
+              45.105884269436203,
+              0.0
+            ],
+            [
+              -0.285824795482893,
+              44.923621003360751,
+              0.0
+            ],
+            [
+              -0.730489377712832,
+              43.986027268345431,
+              0.0
+            ],
+            [
+              -1.641901632350659,
+              44.16378868679174,
+              0.0
+            ],
+            [
+              -1.214527754782383,
+              45.105884269436203,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CArdeche",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=49<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.177593637777391,
+              45.768997880677027,
+              0.0
+            ],
+            [
+              4.926362236329436,
+              45.658242592344777,
+              0.0
+            ],
+            [
+              4.724574673514713,
+              45.141677305209562,
+              0.0
+            ],
+            [
+              3.983312825689253,
+              45.25092667772094,
+              0.0
+            ],
+            [
+              4.177593637777391,
+              45.768997880677027,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CBretagneLoireE",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=26<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.874652318992163,
+              47.982297391940683,
+              0.0
+            ],
+            [
+              -1.263469989012387,
+              47.769570601588647,
+              0.0
+            ],
+            [
+              -1.623316613193276,
+              46.810055858115852,
+              0.0
+            ],
+            [
+              -3.202392627763057,
+              47.017361399995302,
+              0.0
+            ],
+            [
+              -2.874652318992163,
+              47.982297391940683,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CBretagneLoireO",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=56<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.914242371666938,
+              48.75550976814349,
+              0.0
+            ],
+            [
+              -2.353787776931661,
+              48.497304653254503,
+              0.0
+            ],
+            [
+              -2.79229991334185,
+              47.552144300291033,
+              0.0
+            ],
+            [
+              -4.322076129015373,
+              47.803976092983817,
+              0.0
+            ],
+            [
+              -3.914242371666938,
+              48.75550976814349,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CChine",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=49<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.825980430686798,
+              29.872920715994891,
+              0.0
+            ],
+            [
+              117.006032093078005,
+              29.692965429925412,
+              0.0
+            ],
+            [
+              116.745182879743496,
+              28.72687625105759,
+              0.0
+            ],
+            [
+              115.565165008414397,
+              28.906955777023821,
+              0.0
+            ],
+            [
+              115.825980430686798,
+              29.872920715994891,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CCongo",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=29<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.6621298758193,
+              3.406692143814469,
+              0.0
+            ],
+            [
+              17.723613734729931,
+              3.248393150177598,
+              0.0
+            ],
+            [
+              17.61646558728037,
+              2.72158003205826,
+              0.0
+            ],
+            [
+              16.537932390231589,
+              2.883286974167373,
+              0.0
+            ],
+            [
+              16.6621298758193,
+              3.406692143814469,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CMadagascar",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=81<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.437778013247843,
+              -19.038725531673389,
+              0.0
+            ],
+            [
+              47.756714126847747,
+              -19.21387343069085,
+              0.0
+            ],
+            [
+              47.542820176285481,
+              -20.1861141197645,
+              0.0
+            ],
+            [
+              46.221666157655392,
+              -20.01122249373871,
+              0.0
+            ],
+            [
+              46.437778013247843,
+              -19.038725531673389,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CMaroc",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=70<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.331577474929398,
+              32.059738102353492,
+              0.0
+            ],
+            [
+              -7.022292127625534,
+              31.838502534627018,
+              0.0
+            ],
+            [
+              -7.326050400847778,
+              30.881224389749178,
+              0.0
+            ],
+            [
+              -8.626875744354969,
+              31.10003902119017,
+              0.0
+            ],
+            [
+              -8.331577474929398,
+              32.059738102353492,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CProvLanguedocE",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=10<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.968973121345506,
+              44.355523293087892,
+              0.0
+            ],
+            [
+              5.678515928094048,
+              44.158186645713343,
+              0.0
+            ],
+            [
+              5.383967475040781,
+              43.191769714792443,
+              0.0
+            ],
+            [
+              3.703285128474325,
+              43.384458915013482,
+              0.0
+            ],
+            [
+              3.968973121345506,
+              44.355523293087892,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CProvLanguedocO",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=46<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.464823080463999,
+              44.584805803570838,
+              0.0
+            ],
+            [
+              4.201247139977228,
+              44.481515799973543,
+              0.0
+            ],
+            [
+              3.691431594520517,
+              43.085273280260793,
+              0.0
+            ],
+            [
+              2.974432158793777,
+              43.1846693400135,
+              0.0
+            ],
+            [
+              3.464823080463999,
+              44.584805803570838,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CSudmipyE",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=29<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.545202057465301,
+              44.911549593682857,
+              0.0
+            ],
+            [
+              2.323526570442164,
+              44.80410816118782,
+              0.0
+            ],
+            [
+              1.571486036523881,
+              42.515470991679969,
+              0.0
+            ],
+            [
+              0.81934409829979,
+              42.618084271751883,
+              0.0
+            ],
+            [
+              1.545202057465301,
+              44.911549593682857,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CSudmipyO",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=62<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.145557333334759,
+              44.563993235851306,
+              0.0
+            ],
+            [
+              1.630130354632018,
+              44.309483650657157,
+              0.0
+            ],
+            [
+              0.892551662729396,
+              42.489091487924497,
+              0.0
+            ],
+            [
+              -0.550679760497616,
+              42.73403434765266,
+              0.0
+            ],
+            [
+              0.145557333334759,
+              44.563993235851306,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CTunisie",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=75<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.086975669616571,
+              36.098037266252511,
+              0.0
+            ],
+            [
+              10.56600354554495,
+              35.825717613163953,
+              0.0
+            ],
+            [
+              10.226078662747391,
+              34.873960952777672,
+              0.0
+            ],
+            [
+              8.764936568236594,
+              35.141711859481518,
+              0.0
+            ],
+            [
+              9.086975669616571,
+              36.098037266252511,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "CVersailles",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=60<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.735572363747678,
+              49.056463060452067,
+              0.0
+            ],
+            [
+              2.54741835247951,
+              48.931071395971848,
+              0.0
+            ],
+            [
+              2.313726354927375,
+              48.418758779992309,
+              0.0
+            ],
+            [
+              1.505558871247871,
+              48.543368194327662,
+              0.0
+            ],
+            [
+              1.735572363747678,
+              49.056463060452067,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EArgentina",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=67<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.909334046910303,
+              -33.903468520999631,
+              0.0
+            ],
+            [
+              -59.238525478435918,
+              -33.992598099162542,
+              0.0
+            ],
+            [
+              -59.371935085450907,
+              -34.517338360327869,
+              0.0
+            ],
+            [
+              -60.051162735731879,
+              -34.426457629485768,
+              0.0
+            ],
+            [
+              -59.909334046910303,
+              -33.903468520999631,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EBelgium",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=75<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.670623007480626,
+              50.943319870419273,
+              0.0
+            ],
+            [
+              5.558618694863776,
+              50.778591376021907,
+              0.0
+            ],
+            [
+              5.292849319085779,
+              50.271226569713548,
+              0.0
+            ],
+            [
+              4.400857209333759,
+              50.43650047984508,
+              0.0
+            ],
+            [
+              4.670623007480626,
+              50.943319870419273,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EChesapeake",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=79<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.410792874970753,
+              38.108614520337888,
+              0.0
+            ],
+            [
+              -75.662027734423702,
+              37.967791248075613,
+              0.0
+            ],
+            [
+              -75.84734412343731,
+              37.452131629776751,
+              0.0
+            ],
+            [
+              -76.588613858285896,
+              37.591320481897753,
+              0.0
+            ],
+            [
+              -76.410792874970753,
+              38.108614520337888,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EChina",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle><mirror>Mirror_step=82<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.241291452857794,
+              37.136996246656111,
+              0.0
+            ],
+            [
+              116.922471022464194,
+              37.041792704069657,
+              0.0
+            ],
+            [
+              116.778017350788602,
+              36.518153011206721,
+              0.0
+            ],
+            [
+              116.099177577488902,
+              36.61295585703342,
+              0.0
+            ],
+            [
+              116.241291452857794,
+              37.136996246656111,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ECongo",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=84<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.64550905273784,
+              1.217159036267766,
+              0.0
+            ],
+            [
+              16.27550424938433,
+              1.127110262278999,
+              0.0
+            ],
+            [
+              16.154527953761569,
+              0.602876597277221,
+              0.0
+            ],
+            [
+              15.524511625061169,
+              0.692833803128297,
+              0.0
+            ],
+            [
+              15.64550905273784,
+              1.217159036267766,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EEgypt",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=54<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.602366016816081,
+              31.76994320483011,
+              0.0
+            ],
+            [
+              31.22239023749577,
+              31.670004745146429,
+              0.0
+            ],
+            [
+              31.068000304473671,
+              31.149955332602261,
+              0.0
+            ],
+            [
+              30.448014378051479,
+              31.250022699442869,
+              0.0
+            ],
+            [
+              30.602366016816081,
+              31.76994320483011,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EEthiopia",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=82<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.595536632541901,
+              9.427197026456795,
+              0.0
+            ],
+            [
+              38.21670025980184,
+              9.328097526964079,
+              0.0
+            ],
+            [
+              38.103365458022409,
+              8.801897448979052,
+              0.0
+            ],
+            [
+              37.474523305964802,
+              8.902803082593046,
+              0.0
+            ],
+            [
+              37.595536632541901,
+              9.427197026456795,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EGabon",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=85<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.543845382450771,
+              0.662460346531696,
+              0.0
+            ],
+            [
+              11.18383042134422,
+              0.572364315943768,
+              0.0
+            ],
+            [
+              11.066214506623989,
+              0.047615114293762,
+              0.0
+            ],
+            [
+              10.426187742700311,
+              0.137524999808941,
+              0.0
+            ],
+            [
+              10.543845382450771,
+              0.662460346531696,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EJordan",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle><mirror>Mirror_step=62<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.530233536124904,
+              32.135439103442877,
+              0.0
+            ],
+            [
+              37.161480080743338,
+              32.030244962842552,
+              0.0
+            ],
+            [
+              37.008910534405359,
+              31.509716089116591,
+              0.0
+            ],
+            [
+              36.380140124725067,
+              31.614528878141051,
+              0.0
+            ],
+            [
+              36.530233536124904,
+              32.135439103442877,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EKorea",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=82<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              125.830608338171302,
+              35.462480057389243,
+              0.0
+            ],
+            [
+              126.579198141484696,
+              35.327902035058237,
+              0.0
+            ],
+            [
+              126.401315663196002,
+              34.812046333012468,
+              0.0
+            ],
+            [
+              125.649903240772502,
+              34.947474175553239,
+              0.0
+            ],
+            [
+              125.830608338171302,
+              35.462480057389243,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EMorocco",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=69<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.06918716189131,
+              33.27957299404185,
+              0.0
+            ],
+            [
+              -7.409200517218203,
+              33.169510215396237,
+              0.0
+            ],
+            [
+              -7.570300456633396,
+              32.650413825020443,
+              0.0
+            ],
+            [
+              -8.230324312513641,
+              32.760356639993361,
+              0.0
+            ],
+            [
+              -8.06918716189131,
+              33.27957299404185,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EParaguay",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=91<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -55.274457231006878,
+              -24.982143618527829,
+              0.0
+            ],
+            [
+              -54.51250093492925,
+              -25.076681756446352,
+              0.0
+            ],
+            [
+              -54.62769973479999,
+              -25.603305574917261,
+              0.0
+            ],
+            [
+              -55.395770613814477,
+              -25.507835805968181,
+              0.0
+            ],
+            [
+              -55.274457231006878,
+              -24.982143618527829,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "ESouthAfrica",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=48<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26.323232335031001,
+              -27.06344530842896,
+              0.0
+            ],
+            [
+              26.923244012085799,
+              -27.153423194038879,
+              0.0
+            ],
+            [
+              26.786430909951591,
+              -27.676532183866929,
+              0.0
+            ],
+            [
+              26.186432089648019,
+              -27.586505058782581,
+              0.0
+            ],
+            [
+              26.323232335031001,
+              -27.06344530842896,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "EUkraine",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=75<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              29.724953024198321,
+              50.389066173726398,
+              0.0
+            ],
+            [
+              30.613984174662249,
+              50.228203209438583,
+              0.0
+            ],
+            [
+              30.347372928162908,
+              49.721654945373771,
+              0.0
+            ],
+            [
+              29.466359050852741,
+              49.880808514052802,
+              0.0
+            ],
+            [
+              29.724953024198321,
+              50.389066173726398,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JAngola",
+        "description": "<day_in_cycle>day_in_cycle=4<\/day_in_cycle><mirror>Mirror_step=62<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.326380251147821,
+              -14.957739633919241,
+              0.0
+            ],
+            [
+              20.886633009307559,
+              -15.041712023287671,
+              0.0
+            ],
+            [
+              20.773221852003331,
+              -15.568265965482491,
+              0.0
+            ],
+            [
+              20.203453090795811,
+              -15.48223073501487,
+              0.0
+            ],
+            [
+              20.326380251147821,
+              -14.957739633919241,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JBorneo",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=57<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.792835296907597,
+              1.27757465667267,
+              0.0
+            ],
+            [
+              115.332859360369198,
+              1.197658786187526,
+              0.0
+            ],
+            [
+              115.217115002453596,
+              0.672355958888689,
+              0.0
+            ],
+            [
+              114.677129101652,
+              0.752445012796596,
+              0.0
+            ],
+            [
+              114.792835296907597,
+              1.27757465667267,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JBotswana",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle><mirror>Mirror_step=61<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.573155741438491,
+              -22.397953838217521,
+              0.0
+            ],
+            [
+              24.162115276681611,
+              -22.482854043799559,
+              0.0
+            ],
+            [
+              24.03770828609883,
+              -23.007140705630711,
+              0.0
+            ],
+            [
+              23.446653294621061,
+              -22.922035130666959,
+              0.0
+            ],
+            [
+              23.573155741438491,
+              -22.397953838217521,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JCameroon",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=53<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.717521810085236,
+              4.872875320353757,
+              0.0
+            ],
+            [
+              9.247527243186893,
+              4.792875336804149,
+              0.0
+            ],
+            [
+              9.132518067971393,
+              4.267116431896326,
+              0.0
+            ],
+            [
+              8.602513689220777,
+              4.347121219683604,
+              0.0
+            ],
+            [
+              8.717521810085236,
+              4.872875320353757,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JHonduras",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=53<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -85.203467941380993,
+              15.27212563540362,
+              0.0
+            ],
+            [
+              -84.654383472980996,
+              15.18723509514926,
+              0.0
+            ],
+            [
+              -84.775424353192122,
+              14.66272258249427,
+              0.0
+            ],
+            [
+              -85.32634789145051,
+              14.74783602975422,
+              0.0
+            ],
+            [
+              -85.203467941380993,
+              15.27212563540362,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JSumatra",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle><mirror>Mirror_step=32<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.526577138440203,
+              0.797798111134621,
+              0.0
+            ],
+            [
+              103.076603772743098,
+              0.717895586569842,
+              0.0
+            ],
+            [
+              102.963360857279596,
+              0.192121867533291,
+              0.0
+            ],
+            [
+              102.413377273664295,
+              0.272224252037889,
+              0.0
+            ],
+            [
+              102.526577138440203,
+              0.797798111134621,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JTanzanie",
+        "description": "<day_in_cycle>day_in_cycle=2<\/day_in_cycle><mirror>Mirror_step=45<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              35.88556370161033,
+              -6.907066207798063,
+              0.0
+            ],
+            [
+              36.506553056265368,
+              -6.9921436232584,
+              0.0
+            ],
+            [
+              36.393330249139858,
+              -7.517823665474012,
+              0.0
+            ],
+            [
+              35.844344355920583,
+              -7.442919757180543,
+              0.0
+            ],
+            [
+              35.88556370161033,
+              -6.907066207798063,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JThailand",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=47<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              97.775468852924746,
+              19.27150856729634,
+              0.0
+            ],
+            [
+              98.326589937519543,
+              19.192395211862479,
+              0.0
+            ],
+            [
+              98.203587573110127,
+              18.667583560116359,
+              0.0
+            ],
+            [
+              97.644710425205247,
+              18.74847319439257,
+              0.0
+            ],
+            [
+              97.775468852924746,
+              19.27150856729634,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "JZambia",
+        "description": "<day_in_cycle>day_in_cycle=5<\/day_in_cycle><mirror>Mirror_step=61<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              25.51284433971944,
+              -14.05208266910328,
+              0.0
+            ],
+            [
+              26.073814700291589,
+              -14.13722988209512,
+              0.0
+            ],
+            [
+              25.956027835957158,
+              -14.662740927621311,
+              0.0
+            ],
+            [
+              25.396989929576812,
+              -14.577884061736709,
+              0.0
+            ],
+            [
+              25.51284433971944,
+              -14.05208266910328,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Ccrs",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=81<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -112.070809553292506,
+              57.382890838809139,
+              0.0
+            ],
+            [
+              -110.989786032560104,
+              57.166324871073009,
+              0.0
+            ],
+            [
+              -111.367725813629804,
+              56.673381275931092,
+              0.0
+            ],
+            [
+              -112.436762628432604,
+              56.886842853743723,
+              0.0
+            ],
+            [
+              -112.070809553292506,
+              57.382890838809139,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NMaricopa",
+        "description": "<day_in_cycle>day_in_cycle=1<\/day_in_cycle><mirror>Mirror_step=36\/86<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -112.8484692846786,
+              33.413173186860959,
+              0.0
+            ],
+            [
+              -111.3486797274076,
+              33.109452228183997,
+              0.0
+            ],
+            [
+              -111.510856422490093,
+              32.590488387782493,
+              0.0
+            ],
+            [
+              -112.833616057416293,
+              32.876813831912962,
+              0.0
+            ],
+            [
+              -112.8484692846786,
+              33.413173186860959,
+              0.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "NSgp",
+        "description": "<day_in_cycle>day_in_cycle=3<\/day_in_cycle><mirror>Mirror_step=66<\/mirror>",
+        "timestamp": null,
+        "begin": null,
+        "end": null,
+        "altitudeMode": null,
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": null,
+        "icon": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.402256143537954,
+              37.179343610720728,
+              0.0
+            ],
+            [
+              -97.040659285480842,
+              36.966533004874229,
+              0.0
+            ],
+            [
+              -97.377164068221816,
+              36.013136521321023,
+              0.0
+            ],
+            [
+              -98.715768059964631,
+              36.220398405001617,
+              0.0
+            ],
+            [
+              -98.402256143537954,
+              37.179343610720728,
+              0.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

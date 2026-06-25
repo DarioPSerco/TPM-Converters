@@ -1,0 +1,10 @@
+
+
+[GLOBAL]
+
+#
+DEBUG=False
+#
+URL=http://virtualbox-ubuntu1604:8002/graphite/events
+
+

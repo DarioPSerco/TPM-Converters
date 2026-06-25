@@ -1,0 +1,157 @@
+{
+  "alos_ice_polar": {
+    "ingester": "ingester_alos_ice_polar.py",
+    "config": "ingest_alos_ice_polar.cfg",
+    "product": "product_alos_ice_polar.py"
+  },
+  "cartosat_dsm": {
+    "ingester": "ingester_cartosat_dsm.py",
+    "config": "ingest_cartosat1_dsm.cfg",
+    "product": "product_cartosat_dsm.py"
+  },
+  "cartosat_image": {
+    "ingester": "ingester_cartosat_image.py",
+    "config": "ingest_cartosat1_image.cfg",
+    "product": "product_cartosat_image.py"
+  },
+  "cosmos_skymed": {
+    "ingester": "ingester_cosmos_skymed.py",
+    "config": "ingest_cosmos_skymed.cfg",
+    "product": "product_cosmos_skymed.py"
+  },
+  "deimos": {
+    "ingester": "ingester_deimos.py",
+    "config": "ingest_deimos.cfg",
+    "product": "product_deimos.py"
+  },
+  "dmciiImage2007": {
+    "ingester": "ingester_dmciiImage2007.py",
+    "config": "ingest_dmciiImage2007.cfg",
+    "product": "product_dmciiImage2007.py"
+  },
+  "geoeye1": {
+    "ingester": "ingester_geoeye1.py",
+    "config": "ingest_geoeye1.cfg",
+    "product": "product_geoeye1.py"
+  },
+  "geosat": {
+    "ingester": "ingester_geosat.py",
+    "config": "ingest_geosat.cfg",
+    "product": "product_geosat.py"
+  },
+  "goce": {
+    "ingester": "ingester_goce.py",
+    "config": "ingest_goce_L0.cfg",
+    "product": "product_goce.py"
+  },
+  "iceye": {
+    "ingester": "ingester_iceye.py",
+    "config": "ingest_iceye.cfg",
+    "product": "product_iceye.py"
+  },
+  "Irs1c_1d": {
+    "ingester": "ingester_Irs1c_1d.py",
+    "config": "ingest_Irs1c-1d.cfg",
+    "product": "product_Irs1c_1d.py"
+  },
+  "kompsat1": {
+    "ingester": "ingester_kompsat1.py",
+    "config": "ingest_kompsat1.cfg",
+    "product": "product_kompsat1.py"
+  },
+  "kompsat2": {
+    "ingester": "ingester_kompsat2.py",
+    "config": "ingest_kompsat2.cfg",
+    "product": "product_kompsat2.py"
+  },
+  "landsat1-7": {
+    "ingester": "ingester_landsat1-7_zip.py",
+    "config": null,
+    "product": "product_landsat1_7_zip.py"
+  },
+  "landsat8": {
+    "ingester": "ingester_landsat8.py",
+    "config": "ingest_landsat8.cfg",
+    "product": "product_landsat8.py"
+  },
+  "landsat_rbv": {
+    "ingester": "ingester_landsat_rbv.py",
+    "config": "ingest_landsat_rbv.cfg",
+    "product": "product_landsat_rbv.py"
+  },
+  "pleiades": {
+    "ingester": "ingester_pleiades.py",
+    "config": "ingest_pleiades.cfg",
+    "product": "product_pleiades.py"
+  },
+  "planetscope": {
+    "ingester": "ingester_planetscope.py",
+    "config": "ingest_planetscope.cfg",
+    "product": "product_planetscope.py"
+  },
+  "pneo": {
+    "ingester": "ingester_pneo.py",
+    "config": "ingest_pneo.cfg",
+    "product": "product_pneo.py"
+  },
+  "proba": {
+    "ingester": "ingester_proba.py",
+    "config": "ingest_proba.cfg",
+    "product": "product_proba.py"
+  },
+  "quickbird": {
+    "ingester": "ingester_quickbird.py",
+    "config": "ingest_quickbird.cfg",
+    "product": "product_quickbird.py"
+  },
+  "radarsat": {
+    "ingester": "ingester_radarsat.py",
+    "config": "ingest_radarsat.cfg",
+    "product": "product_radarsat.py"
+  },
+  "rapid_eye": {
+    "ingester": "ingester_rapid_eye.py",
+    "config": "ingest_rapideye.cfg",
+    "product": "product_rapid_eye.py"
+  },
+  "skysat": {
+    "ingester": "ingester_skysat.py",
+    "config": "ingest_skysat.cfg",
+    "product": "product_skysat.py"
+  },
+  "spot5_take5": {
+    "ingester": "ingester_spot5_take5.py",
+    "config": "ingest_spot5-take5.cfg",
+    "product": "product_spot5_take5.py"
+  },
+  "spot6_7": {
+    "ingester": "ingester_spot6_7.py",
+    "config": "ingest_spot67.cfg",
+    "product": "product_spot6_7.py"
+  },
+  "spot_scene": {
+    "ingester": "ingester_spot_scene.py",
+    "config": "ingest_dimap_spot_scene.cfg",
+    "product": "product_spot_spotScene.py"
+  },
+  "spot_spotview": {
+    "ingester": "ingester_spot_spotview.py",
+    "config": "ingest_dimap_spot_view.cfg",
+    "product": "product_spot_spotview.py"
+  },
+  "terrasar_x": {
+    "ingester": "ingester_terrasar_x.py",
+    "config": "ingest_terrasar_x.cfg",
+    "product": "product_terrasar_x.py"
+  },
+  "worldview": {
+    "ingester": "ingester_worldview.py",
+    "config": "ingest_worldview2.cfg",
+    "product": "product_worldview.py"
+  },
+  "worldview123": {
+    "ingester": "ingester_worldview123.py",
+    "config": "ingest_worldview123.cfg",
+    "product": "product_worldview123.py"
+  }
+}

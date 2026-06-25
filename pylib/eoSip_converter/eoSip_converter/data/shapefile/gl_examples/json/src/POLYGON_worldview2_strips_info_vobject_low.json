@@ -1,0 +1,1373 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431010_01",
+        "country": "Norway",
+        "city": "Alesund",
+        "luzId": "105C"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.94165872,
+              63.02838231
+            ],
+            [
+              6.3254340,
+              63.02838231
+            ],
+            [
+              6.3254340,
+              61.98175800
+            ],
+            [
+              5.94165872,
+              61.98175800
+            ],
+            [
+              5.94165872,
+              63.02838231
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431020_01",
+        "country": "Norway",
+        "city": "Tromso",
+        "luzId": "006"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.92032200,
+              70.33303800
+            ],
+            [
+              19.4527663,
+              70.33303800
+            ],
+            [
+              19.4527663,
+              68.97951000
+            ],
+            [
+              18.92032200,
+              68.97951000
+            ],
+            [
+              18.92032200,
+              70.33303800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431030_01",
+        "country": "Norway",
+        "city": "Stavanger",
+        "luzId": "004"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.71786200,
+              59.02767000
+            ],
+            [
+              6.0344820,
+              59.02767000
+            ],
+            [
+              6.0344820,
+              58.32217800
+            ],
+            [
+              5.71786200,
+              58.32217800
+            ],
+            [
+              5.71786200,
+              59.02767000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431040_01",
+        "country": "Norway",
+        "city": "Stavanger",
+        "luzId": "004"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.46777000,
+              59.38317000
+            ],
+            [
+              5.7661740,
+              59.38317000
+            ],
+            [
+              5.7661740,
+              58.33873800
+            ],
+            [
+              5.46777000,
+              58.33873800
+            ],
+            [
+              5.46777000,
+              59.38317000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431050_01",
+        "country": "Norway",
+        "city": "Bergen",
+        "luzId": "002"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.22869400,
+              61.01397000
+            ],
+            [
+              5.5667700,
+              61.01397000
+            ],
+            [
+              5.5667700,
+              59.98275000
+            ],
+            [
+              5.22869400,
+              59.98275000
+            ],
+            [
+              5.22869400,
+              61.01397000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431060_01",
+        "country": "Norway",
+        "city": "Drammen",
+        "luzId": "107C"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.13495220,
+              59.81153400
+            ],
+            [
+              10.4428260,
+              59.81153400
+            ],
+            [
+              10.4428260,
+              59.25875400
+            ],
+            [
+              10.13495220,
+              59.25875400
+            ],
+            [
+              10.13495220,
+              59.81153400
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431070_01",
+        "country": "Norway",
+        "city": "Tromso",
+        "luzId": "006"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.69802200,
+              70.02448200
+            ],
+            [
+              19.1437380,
+              70.02448200
+            ],
+            [
+              19.1437380,
+              68.95945800
+            ],
+            [
+              18.69802200,
+              68.95945800
+            ],
+            [
+              18.69802200,
+              70.02448200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431080_01",
+        "country": "Norway",
+        "city": "Trondheim",
+        "luzId": "003"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.33309800,
+              63.71836200
+            ],
+            [
+              10.6901100,
+              63.71836200
+            ],
+            [
+              10.6901100,
+              63.32239800
+            ],
+            [
+              10.33309800,
+              63.32239800
+            ],
+            [
+              10.33309800,
+              63.71836200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431090_01",
+        "country": "Norway",
+        "city": "Drammen",
+        "luzId": "107C"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.98289000,
+              60.01348690
+            ],
+            [
+              10.3031100,
+              60.01348690
+            ],
+            [
+              10.3031100,
+              58.83391800
+            ],
+            [
+              9.98289000,
+              58.83391800
+            ],
+            [
+              9.98289000,
+              60.01348690
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431100_01",
+        "country": "Norway",
+        "city": "Oslo",
+        "luzId": "001"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.63895400,
+              60.08041800
+            ],
+            [
+              10.9423980,
+              60.08041800
+            ],
+            [
+              10.9423980,
+              59.67664200
+            ],
+            [
+              10.63895400,
+              59.67664200
+            ],
+            [
+              10.63895400,
+              60.08041800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431110_01",
+        "country": "Norway",
+        "city": "Oslo",
+        "luzId": "001L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.88325000,
+              60.07858200
+            ],
+            [
+              11.1947220,
+              60.07858200
+            ],
+            [
+              11.1947220,
+              59.82607800
+            ],
+            [
+              10.88325000,
+              59.82607800
+            ],
+            [
+              10.88325000,
+              60.07858200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431120_01",
+        "country": "Norway",
+        "city": "Oslo",
+        "luzId": "001"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.30092478,
+              60.00345000
+            ],
+            [
+              10.6479420,
+              60.00345000
+            ],
+            [
+              10.6479420,
+              59.73687000
+            ],
+            [
+              10.30092478,
+              59.73687000
+            ],
+            [
+              10.30092478,
+              60.00345000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431130_01",
+        "country": "Norway",
+        "city": "Trondheim",
+        "luzId": "003"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.01169000,
+              63.73081800
+            ],
+            [
+              10.3643100,
+              63.73081800
+            ],
+            [
+              10.3643100,
+              63.28290600
+            ],
+            [
+              10.01169000,
+              63.28290600
+            ],
+            [
+              10.01169000,
+              63.73081800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431140_01",
+        "country": "Norway",
+        "city": "Trondheim",
+        "luzId": "003"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.38139152,
+              64.02954600
+            ],
+            [
+              10.7582848,
+              64.02954600
+            ],
+            [
+              10.7582848,
+              62.94995922
+            ],
+            [
+              10.38139152,
+              62.94995922
+            ],
+            [
+              10.38139152,
+              64.02954600
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431150_01",
+        "country": "Norway",
+        "city": "Trondheim",
+        "luzId": "003"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.14211800,
+              64.02213000
+            ],
+            [
+              10.5004757,
+              64.02213000
+            ],
+            [
+              10.5004757,
+              62.95591800
+            ],
+            [
+              10.14211800,
+              62.95591800
+            ],
+            [
+              10.14211800,
+              64.02213000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431160_01",
+        "country": "Norway",
+        "city": "Stavanger",
+        "luzId": "004"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.67991800,
+              59.02630200
+            ],
+            [
+              6.0087129,
+              59.02630200
+            ],
+            [
+              6.0087129,
+              58.32235800
+            ],
+            [
+              5.67991800,
+              58.32235800
+            ],
+            [
+              5.67991800,
+              59.02630200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Norway_scenes_LAEA/055646431170_01",
+        "country": "Norway",
+        "city": "Stavanger",
+        "luzId": "004"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.71998600,
+              59.37949800
+            ],
+            [
+              6.0099660,
+              59.37949800
+            ],
+            [
+              6.0099660,
+              58.33848600
+            ],
+            [
+              5.71998600,
+              58.33848600
+            ],
+            [
+              5.71998600,
+              59.37949800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430010_01",
+        "country": "Germany",
+        "city": "Freiburg im Breisgau",
+        "luzId": "027"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.41965400,
+              48.25535400
+            ],
+            [
+              7.6459140,
+              48.25535400
+            ],
+            [
+              7.6459140,
+              47.40960600
+            ],
+            [
+              7.41965400,
+              47.40960600
+            ],
+            [
+              7.41965400,
+              48.25535400
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430020_01",
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "luzId": "005"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.53101091,
+              47.03113800
+            ],
+            [
+              6.7495439,
+              47.03113800
+            ],
+            [
+              6.7495439,
+              45.98803800
+            ],
+            [
+              6.53101091,
+              45.98803800
+            ],
+            [
+              6.53101091,
+              47.03113800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430030_01",
+        "country": "Switzerland",
+        "city": "Zurich",
+        "luzId": "001"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.59159800,
+              47.57333400
+            ],
+            [
+              8.8112700,
+              47.57333400
+            ],
+            [
+              8.8112700,
+              47.11473000
+            ],
+            [
+              8.59159800,
+              47.11473000
+            ],
+            [
+              8.59159800,
+              47.57333400
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430040_01",
+        "country": "Switzerland",
+        "city": "Bern",
+        "luzId": "004"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.17687000,
+              47.07901800
+            ],
+            [
+              7.4026980,
+              47.07901800
+            ],
+            [
+              7.4026980,
+              46.81938600
+            ],
+            [
+              7.17687000,
+              46.81938600
+            ],
+            [
+              7.17687000,
+              47.07901800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430050_01",
+        "country": "Switzerland",
+        "city": "Lucerne",
+        "luzId": "008K"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.27422265,
+              47.14723013
+            ],
+            [
+              8.5201516,
+              47.14723013
+            ],
+            [
+              8.5201516,
+              46.92269736
+            ],
+            [
+              8.27422265,
+              46.92269736
+            ],
+            [
+              8.27422265,
+              47.14723013
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430060_01",
+        "country": "Switzerland",
+        "city": "Geneve",
+        "luzId": "102L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.02364600,
+              46.26747000
+            ],
+            [
+              6.2505180,
+              46.26747000
+            ],
+            [
+              6.2505180,
+              46.12570200
+            ],
+            [
+              6.02364600,
+              46.12570200
+            ],
+            [
+              6.02364600,
+              46.26747000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430070_01",
+        "country": "Switzerland",
+        "city": "Zurich",
+        "luzId": "001"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.38017000,
+              47.64198600
+            ],
+            [
+              8.6250780,
+              47.64198600
+            ],
+            [
+              8.6250780,
+              47.17132200
+            ],
+            [
+              8.38017000,
+              47.17132200
+            ],
+            [
+              8.38017000,
+              47.64198600
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430080_01",
+        "country": "Switzerland",
+        "city": "Bern",
+        "luzId": "004"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.32803400,
+              47.06731800
+            ],
+            [
+              7.5455460,
+              47.06731800
+            ],
+            [
+              7.5455460,
+              46.81135800
+            ],
+            [
+              7.32803400,
+              46.81135800
+            ],
+            [
+              7.32803400,
+              47.06731800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430090_01",
+        "country": "Switzerland",
+        "city": "St Gallen",
+        "luzId": "106C"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.17687195,
+              48.02729400
+            ],
+            [
+              9.4089809,
+              48.02729400
+            ],
+            [
+              9.4089809,
+              46.94893627
+            ],
+            [
+              9.17687195,
+              46.94893627
+            ],
+            [
+              9.17687195,
+              48.02729400
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430100_01",
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "luzId": "005"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.38041921,
+              46.67664600
+            ],
+            [
+              6.6201566,
+              46.67664600
+            ],
+            [
+              6.6201566,
+              46.39541400
+            ],
+            [
+              6.38041921,
+              46.39541400
+            ],
+            [
+              6.38041921,
+              46.67664600
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430110_01",
+        "country": "Switzerland",
+        "city": "Zurich",
+        "luzId": "101L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.37923400,
+              47.57653800
+            ],
+            [
+              8.6065740,
+              47.57653800
+            ],
+            [
+              8.6065740,
+              47.14774200
+            ],
+            [
+              8.37923400,
+              47.14774200
+            ],
+            [
+              8.37923400,
+              47.57653800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430120_01",
+        "country": "Switzerland",
+        "city": "Lugano",
+        "luzId": "1071L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.79573314,
+              46.03116600
+            ],
+            [
+              9.0255060,
+              46.03116600
+            ],
+            [
+              9.0255060,
+              44.95073400
+            ],
+            [
+              8.79573314,
+              44.95073400
+            ],
+            [
+              8.79573314,
+              46.03116600
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430130_01",
+        "country": "Switzerland",
+        "city": "Lugano",
+        "luzId": "1071L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.99479154,
+              47.02649400
+            ],
+            [
+              9.2359825,
+              47.02649400
+            ],
+            [
+              9.2359825,
+              45.97894671
+            ],
+            [
+              8.99479154,
+              45.97894671
+            ],
+            [
+              8.99479154,
+              47.02649400
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430140_01",
+        "country": "Switzerland",
+        "city": "Geneve",
+        "luzId": "002"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.92533000,
+              46.41694200
+            ],
+            [
+              6.1385940,
+              46.41694200
+            ],
+            [
+              6.1385940,
+              46.06147800
+            ],
+            [
+              5.92533000,
+              46.06147800
+            ],
+            [
+              5.92533000,
+              46.41694200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430150_01",
+        "country": "Switzerland",
+        "city": "Lugano",
+        "luzId": "1071L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.78855708,
+              48.02275800
+            ],
+            [
+              9.0108844,
+              48.02275800
+            ],
+            [
+              9.0108844,
+              45.95779800
+            ],
+            [
+              8.78855708,
+              45.95779800
+            ],
+            [
+              8.78855708,
+              48.02275800
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430160_01",
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "luzId": "005"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.59284200,
+              46.66995000
+            ],
+            [
+              6.8256540,
+              46.66995000
+            ],
+            [
+              6.8256540,
+              46.42011000
+            ],
+            [
+              6.59284200,
+              46.42011000
+            ],
+            [
+              6.59284200,
+              46.66995000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430170_01",
+        "country": "Switzerland",
+        "city": "Geneve",
+        "luzId": "102L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.12286200,
+              46.41946200
+            ],
+            [
+              6.3411660,
+              46.41946200
+            ],
+            [
+              6.3411660,
+              46.06986600
+            ],
+            [
+              6.12286200,
+              46.06986600
+            ],
+            [
+              6.12286200,
+              46.41946200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430180_01",
+        "country": "Switzerland",
+        "city": "Basle",
+        "luzId": "103K"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.45170774,
+              47.75234433
+            ],
+            [
+              7.7021460,
+              47.75234433
+            ],
+            [
+              7.7021460,
+              47.36777400
+            ],
+            [
+              7.45170774,
+              47.36777400
+            ],
+            [
+              7.45170774,
+              47.75234433
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430190_01",
+        "country": "Switzerland",
+        "city": "Zurich",
+        "luzId": "101L"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.58861873,
+              47.62509155
+            ],
+            [
+              8.8581906,
+              47.62509155
+            ],
+            [
+              8.8581906,
+              47.05805518
+            ],
+            [
+              8.58861873,
+              47.05805518
+            ],
+            [
+              8.58861873,
+              47.62509155
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430200_01",
+        "country": "Switzerland",
+        "city": "Bern",
+        "luzId": "004"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.38588600,
+              47.10310200
+            ],
+            [
+              7.6117500,
+              47.10310200
+            ],
+            [
+              7.6117500,
+              46.82151000
+            ],
+            [
+              7.38588600,
+              46.82151000
+            ],
+            [
+              7.38588600,
+              47.10310200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "/home/gilles/shared/MISSIONS/Worldview/3eme_dataset/DigitalGlobe/TPM_Copernicus_Delivery_Q3_2016_16EUSI-0586/Swiss_scenes_LAEA/055646430210_01",
+        "country": "Switzerland",
+        "city": "Basle",
+        "luzId": "103K"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.58687400,
+              47.71737000
+            ],
+            [
+              7.8110100,
+              47.71737000
+            ],
+            [
+              7.8110100,
+              47.37594600
+            ],
+            [
+              7.58687400,
+              47.37594600
+            ],
+            [
+              7.58687400,
+              47.71737000
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

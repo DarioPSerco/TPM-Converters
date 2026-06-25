@@ -1,0 +1,1857 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4326"
+    }
+  },
+  "info": "Updated shapes for spot4-5 take5, from A.Schedid email: S200316_000002 - SPOT 45 T5  EOSIP converter issues to fix",
+  "features": [
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.32638025114782,
+              -14.95773963391924
+            ],
+            [
+              20.88663300930756,
+              -15.04171202328767
+            ],
+            [
+              20.77322185200333,
+              -15.56826596548249
+            ],
+            [
+              20.20345309079581,
+              -15.48223073501487
+            ],
+            [
+              20.32638025114782,
+              -14.95773963391924
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JAngola",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=62</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Angola",
+        "Site": "Angola"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -59.9093340469103,
+              -33.90346852099963
+            ],
+            [
+              -59.23852547843592,
+              -33.99259809916254
+            ],
+            [
+              -59.37193508545091,
+              -34.51733836032787
+            ],
+            [
+              -60.05116273573188,
+              -34.42645762948577
+            ],
+            [
+              -59.9093340469103,
+              -33.90346852099963
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EArgentina",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=67</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Argentina",
+        "Site": "Argentina"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.670623007480626,
+              50.94331987041927
+            ],
+            [
+              5.558618694863776,
+              50.77859137602191
+            ],
+            [
+              5.292849319085779,
+              50.27122656971355
+            ],
+            [
+              4.400857209333759,
+              50.43650047984508
+            ],
+            [
+              4.670623007480626,
+              50.94331987041927
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EBelgium",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=75</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Belgium",
+        "Site": "Belgium"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.57315574143849,
+              -22.39795383821752
+            ],
+            [
+              24.16211527668161,
+              -22.48285404379956
+            ],
+            [
+              24.03770828609883,
+              -23.00714070563071
+            ],
+            [
+              23.44665329462106,
+              -22.92203513066696
+            ],
+            [
+              23.57315574143849,
+              -22.39795383821752
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JBotswana",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=5</day_in_cycle><mirror>Mirror_step=61</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Botswana",
+        "Site": "Botswana"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.717521810085236,
+              4.872875320353757
+            ],
+            [
+              9.247527243186893,
+              4.792875336804149
+            ],
+            [
+              9.132518067971393,
+              4.267116431896326
+            ],
+            [
+              8.602513689220777,
+              4.347121219683604
+            ],
+            [
+              8.717521810085236,
+              4.872875320353757
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JCameroon",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=53</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Cameroon",
+        "Site": "Cameroon"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -112.0708095532925,
+              57.38289083880914
+            ],
+            [
+              -110.9897860325601,
+              57.16632487107301
+            ],
+            [
+              -111.3677258136298,
+              56.67338127593109
+            ],
+            [
+              -112.4367626284326,
+              56.88684285374372
+            ],
+            [
+              -112.0708095532925,
+              57.38289083880914
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "Ccrs",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=81</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Canada",
+        "Site": "Fort Mc Murray oil sands"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.8259804306868,
+              29.87292071599489
+            ],
+            [
+              117.006032093078,
+              29.69296542992541
+            ],
+            [
+              116.7451828797435,
+              28.72687625105759
+            ],
+            [
+              115.5651650084144,
+              28.90695577702382
+            ],
+            [
+              115.8259804306868,
+              29.87292071599489
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CChine",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=49</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "China",
+        "Site": "China (2)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.2412914528578,
+              37.13699624665611
+            ],
+            [
+              116.9224710224642,
+              37.04179270406966
+            ],
+            [
+              116.7780173507886,
+              36.51815301120672
+            ],
+            [
+              116.0991775774889,
+              36.61295585703342
+            ],
+            [
+              116.2412914528578,
+              37.13699624665611
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EChina",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=5</day_in_cycle><mirror>Mirror_step=82</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "China",
+        "Site": "China (1)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.6621298758193,
+              3.406692143814469
+            ],
+            [
+              17.72361373472993,
+              3.248393150177598
+            ],
+            [
+              17.61646558728037,
+              2.72158003205826
+            ],
+            [
+              16.53793239023159,
+              2.883286974167373
+            ],
+            [
+              16.6621298758193,
+              3.406692143814469
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CCongo",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=29</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Congo",
+        "Site": "Congo (1)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.64550905273784,
+              1.217159036267766
+            ],
+            [
+              16.27550424938433,
+              1.127110262278999
+            ],
+            [
+              16.15452795376157,
+              0.602876597277221
+            ],
+            [
+              15.52451162506117,
+              0.692833803128297
+            ],
+            [
+              15.64550905273784,
+              1.217159036267766
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "ECongo",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=84</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Congo",
+        "Site": "Congo (2)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.60236601681608,
+              31.76994320483011
+            ],
+            [
+              31.22239023749577,
+              31.67000474514643
+            ],
+            [
+              31.06800030447367,
+              31.14995533260226
+            ],
+            [
+              30.44801437805148,
+              31.25002269944287
+            ],
+            [
+              30.60236601681608,
+              31.76994320483011
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EEgypt",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=54</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Egypt",
+        "Site": "Egypt"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              37.5955366325419,
+              9.427197026456795
+            ],
+            [
+              38.21670025980184,
+              9.32809752696408
+            ],
+            [
+              38.10336545802241,
+              8.801897448979052
+            ],
+            [
+              37.4745233059648,
+              8.902803082593046
+            ],
+            [
+              37.5955366325419,
+              9.427197026456795
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EEthiopia",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=82</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Ethiopia",
+        "Site": "Ethiopia"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.458831221657984,
+              45.6890450042956
+            ],
+            [
+              7.087030472591334,
+              45.48682554889179
+            ],
+            [
+              6.765733590006082,
+              44.5230070999204
+            ],
+            [
+              5.163728141385366,
+              44.72081130628508
+            ],
+            [
+              5.458831221657984,
+              45.6890450042956
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CAlpes",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=18</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Alpes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.23189580600127,
+              49.08444792218273
+            ],
+            [
+              8.043013287326856,
+              48.94818136378744
+            ],
+            [
+              7.610883644987846,
+              48.00125072069883
+            ],
+            [
+              6.811911881734171,
+              48.13499641298407
+            ],
+            [
+              7.23189580600127,
+              49.08444792218273
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CAlsace",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=63</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Alsace"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.214527754782383,
+              45.1058842694362
+            ],
+            [
+              -0.285824795482893,
+              44.92362100336075
+            ],
+            [
+              -0.730489377712832,
+              43.98602726834543
+            ],
+            [
+              -1.641901632350659,
+              44.16378868679174
+            ],
+            [
+              -1.214527754782383,
+              45.1058842694362
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CAquitaine",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=90</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Aquitaine"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.177593637777391,
+              45.76899788067703
+            ],
+            [
+              4.926362236329436,
+              45.65824259234478
+            ],
+            [
+              4.724574673514713,
+              45.14167730520956
+            ],
+            [
+              3.983312825689253,
+              45.25092667772094
+            ],
+            [
+              4.177593637777391,
+              45.76899788067703
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CArdeche",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=49</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Ardeche"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.914242371666938,
+              48.75550976814349
+            ],
+            [
+              -2.353787776931661,
+              48.4973046532545
+            ],
+            [
+              -2.79229991334185,
+              47.55214430029103
+            ],
+            [
+              -4.322076129015373,
+              47.80397609298382
+            ],
+            [
+              -3.914242371666938,
+              48.75550976814349
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CBretagneLoireO",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=56</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Bretagne"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.464823080463999,
+              44.58480580357084
+            ],
+            [
+              4.201247139977228,
+              44.48151579997354
+            ],
+            [
+              3.691431594520517,
+              43.08527328026079
+            ],
+            [
+              2.974432158793777,
+              43.1846693400135
+            ],
+            [
+              3.464823080463999,
+              44.58480580357084
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CProvLanguedocO",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=46</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Languedoc"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.874652318992163,
+              47.98229739194068
+            ],
+            [
+              -1.263469989012387,
+              47.76957060158865
+            ],
+            [
+              -1.623316613193276,
+              46.81005585811585
+            ],
+            [
+              -3.202392627763057,
+              47.0173613999953
+            ],
+            [
+              -2.874652318992163,
+              47.98229739194068
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CBretagneLoireE",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=26</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Loire"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.545202057465301,
+              44.91154959368286
+            ],
+            [
+              2.323526570442164,
+              44.80410816118782
+            ],
+            [
+              1.571486036523881,
+              42.51547099167997
+            ],
+            [
+              0.81934409829979,
+              42.61808427175188
+            ],
+            [
+              1.545202057465301,
+              44.91154959368286
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CSudmipyE",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=29</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Midi-Pyrenees (SouthEst)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.145557333334759,
+              44.56399323585131
+            ],
+            [
+              1.630130354632018,
+              44.30948365065716
+            ],
+            [
+              0.892551662729396,
+              42.4890914879245
+            ],
+            [
+              -0.550679760497616,
+              42.73403434765266
+            ],
+            [
+              0.145557333334759,
+              44.56399323585131
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CSudmipyO",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=62</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Midi-Pyrenees (SouthOvest)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.968973121345506,
+              44.35552329308789
+            ],
+            [
+              5.678515928094048,
+              44.15818664571334
+            ],
+            [
+              5.383967475040781,
+              43.19176971479244
+            ],
+            [
+              3.703285128474325,
+              43.38445891501348
+            ],
+            [
+              3.968973121345506,
+              44.35552329308789
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CProvLanguedocE",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=10</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Provence"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.735572363747678,
+              49.05646306045207
+            ],
+            [
+              2.54741835247951,
+              48.93107139597185
+            ],
+            [
+              2.313726354927375,
+              48.41875877999231
+            ],
+            [
+              1.505558871247871,
+              48.54336819432766
+            ],
+            [
+              1.735572363747678,
+              49.05646306045207
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CVersailles",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=60</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "France",
+        "Site": "Versailles"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.54384538245077,
+              0.662460346531696
+            ],
+            [
+              11.18383042134422,
+              0.572364315943768
+            ],
+            [
+              11.06621450662399,
+              0.047615114293762
+            ],
+            [
+              10.42618774270031,
+              0.137524999808941
+            ],
+            [
+              10.54384538245077,
+              0.662460346531696
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EGabon",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=85</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Gabon",
+        "Site": "Gabon"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -85.20346794138099,
+              15.27212563540362
+            ],
+            [
+              -84.654383472981,
+              15.18723509514926
+            ],
+            [
+              -84.77542435319212,
+              14.66272258249427
+            ],
+            [
+              -85.32634789145051,
+              14.74783602975422
+            ],
+            [
+              -85.20346794138099,
+              15.27212563540362
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JHonduras",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=53</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Honduras",
+        "Site": "Honduras"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.7928352969076,
+              1.27757465667267
+            ],
+            [
+              115.3328593603692,
+              1.197658786187526
+            ],
+            [
+              115.2171150024536,
+              0.672355958888689
+            ],
+            [
+              114.677129101652,
+              0.752445012796596
+            ],
+            [
+              114.7928352969076,
+              1.27757465667267
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JBorneo",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=57</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Indonesia",
+        "Site": "Borneo"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.5265771384402,
+              0.797798111134621
+            ],
+            [
+              103.0766037727431,
+              0.717895586569842
+            ],
+            [
+              102.9633608572796,
+              0.192121867533291
+            ],
+            [
+              102.4133772736643,
+              0.272224252037889
+            ],
+            [
+              102.5265771384402,
+              0.797798111134621
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JSumatra",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=5</day_in_cycle><mirror>Mirror_step=32</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Indonesia",
+        "Site": "Sumatra"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.5302335361249,
+              32.13543910344288
+            ],
+            [
+              37.16148008074334,
+              32.03024496284255
+            ],
+            [
+              37.00891053440536,
+              31.50971608911659
+            ],
+            [
+              36.38014012472507,
+              31.61452887814105
+            ],
+            [
+              36.5302335361249,
+              32.13543910344288
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EJordan",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=5</day_in_cycle><mirror>Mirror_step=62</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Jordan",
+        "Site": "Jordan"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.43777801324784,
+              -19.03872553167339
+            ],
+            [
+              47.75671412684775,
+              -19.21387343069085
+            ],
+            [
+              47.54282017628548,
+              -20.1861141197645
+            ],
+            [
+              46.22166615765539,
+              -20.01122249373871
+            ],
+            [
+              46.43777801324784,
+              -19.03872553167339
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CMadagascar",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=81</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Madagascar",
+        "Site": "Madagascar"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.331577474929398,
+              32.05973810235349
+            ],
+            [
+              -7.022292127625534,
+              31.83850253462702
+            ],
+            [
+              -7.326050400847778,
+              30.88122438974918
+            ],
+            [
+              -8.626875744354969,
+              31.10003902119017
+            ],
+            [
+              -8.331577474929398,
+              32.05973810235349
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CMaroc",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=70</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Morocco",
+        "Site": "Morocco (1)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8.06918716189131,
+              33.27957299404185
+            ],
+            [
+              -7.409200517218203,
+              33.16951021539624
+            ],
+            [
+              -7.570300456633396,
+              32.65041382502044
+            ],
+            [
+              -8.230324312513641,
+              32.76035663999336
+            ],
+            [
+              -8.06918716189131,
+              33.27957299404185
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EMorocco",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=69</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Morocco",
+        "Site": "Morocco (2)"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -55.27445723100688,
+              -24.98214361852783
+            ],
+            [
+              -54.51250093492925,
+              -25.07668175644635
+            ],
+            [
+              -54.62769973479999,
+              -25.60330557491726
+            ],
+            [
+              -55.39577061381448,
+              -25.50783580596818
+            ],
+            [
+              -55.27445723100688,
+              -24.98214361852783
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EParaguay",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=91</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Paraguay",
+        "Site": "Paraguay"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26.323232335031,
+              -27.06344530842896
+            ],
+            [
+              26.9232440120858,
+              -27.15342319403888
+            ],
+            [
+              26.78643090995159,
+              -27.67653218386693
+            ],
+            [
+              26.18643208964802,
+              -27.58650505878258
+            ],
+            [
+              26.323232335031,
+              -27.06344530842896
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "ESouthAfrica",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=48</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "South Africa",
+        "Site": "SouthAfrica"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              35.88556370161033,
+              -6.907066207798063
+            ],
+            [
+              36.50655305626537,
+              -6.9921436232584
+            ],
+            [
+              36.39333024913986,
+              -7.517823665474012
+            ],
+            [
+              35.84434435592058,
+              -7.442919757180543
+            ],
+            [
+              35.88556370161033,
+              -6.907066207798063
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JTanzanie",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=45</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Tanzania",
+        "Site": "Tanzania"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              97.77546885292475,
+              19.27150856729634
+            ],
+            [
+              98.32658993751954,
+              19.19239521186248
+            ],
+            [
+              98.20358757311013,
+              18.66758356011636
+            ],
+            [
+              97.64471042520525,
+              18.74847319439257
+            ],
+            [
+              97.77546885292475,
+              19.27150856729634
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JThailand",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=47</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Thailand",
+        "Site": "Thailand"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.08697566961657,
+              36.09803726625251
+            ],
+            [
+              10.56600354554495,
+              35.82571761316395
+            ],
+            [
+              10.22607866274739,
+              34.87396095277767
+            ],
+            [
+              8.764936568236594,
+              35.14171185948152
+            ],
+            [
+              9.08697566961657,
+              36.09803726625251
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "CTunisie",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=4</day_in_cycle><mirror>Mirror_step=75</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Tunisia",
+        "Site": "Tunisie"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              29.72495302419832,
+              50.3890661737264
+            ],
+            [
+              30.61398417466225,
+              50.22820320943858
+            ],
+            [
+              30.34737292816291,
+              49.72165494537377
+            ],
+            [
+              29.46635905085274,
+              49.8808085140528
+            ],
+            [
+              29.72495302419832,
+              50.3890661737264
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EUkraine",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=75</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Ukraine",
+        "Site": "Ukraine"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.41079287497075,
+              38.10861452033789
+            ],
+            [
+              -75.6620277344237,
+              37.96779124807561
+            ],
+            [
+              -75.84734412343731,
+              37.45213162977675
+            ],
+            [
+              -76.5886138582859,
+              37.59132048189775
+            ],
+            [
+              -76.41079287497075,
+              38.10861452033789
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "EChesapeake",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=2</day_in_cycle><mirror>Mirror_step=79</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "United States",
+        "Site": "Chesapeake Bay"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -112.8484692846786,
+              33.41317318686096
+            ],
+            [
+              -111.3486797274076,
+              33.109452228184
+            ],
+            [
+              -111.5108564224901,
+              32.59048838778249
+            ],
+            [
+              -112.8336160574163,
+              32.87681383191296
+            ],
+            [
+              -112.8484692846786,
+              33.41317318686096
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "NMaricopa",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=1</day_in_cycle><mirror>Mirror_step=36/86</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "United States",
+        "Site": "Maricopa"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.40225614353795,
+              37.17934361072073
+            ],
+            [
+              -97.04065928548084,
+              36.96653300487423
+            ],
+            [
+              -97.37716406822182,
+              36.01313652132102
+            ],
+            [
+              -98.71576805996463,
+              36.22039840500162
+            ],
+            [
+              -98.40225614353795,
+              37.17934361072073
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "NSgp",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=3</day_in_cycle><mirror>Mirror_step=66</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "United States",
+        "Site": "South Great Plains Lake"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              25.51284433971944,
+              -14.05208266910328
+            ],
+            [
+              26.07381470029159,
+              -14.13722988209512
+            ],
+            [
+              25.95602783595716,
+              -14.66274092762131
+            ],
+            [
+              25.39698992957681,
+              -14.57788406173671
+            ],
+            [
+              25.51284433971944,
+              -14.05208266910328
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "begin": "",
+        "altitudeMo": "",
+        "Name": "JZambia",
+        "timestamp": "",
+        "descriptio": "<day_in_cycle>day_in_cycle=5</day_in_cycle><mirror>Mirror_step=61</mirror>",
+        "tessellate": -1,
+        "extrude": 1,
+        "visibility": -1,
+        "drawOrder": "",
+        "end": "",
+        "icon": "",
+        "Country": "Zambia",
+        "Site": "Zambia"
+      }
+    }
+  ]
+}

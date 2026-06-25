@@ -1,0 +1,14 @@
+#
+# the name of the handler this properties are for
+#
+serverPort=27000
+timeout=60000
+handlerClass=server.httpHandler.XmlValidatorRequestHandler
+
+LocalSchemaCachePath=/opt/converter/files/xml_validator_cache
+UseCache=true
+SaveSchema=true
+WantLog=false
+Proxy.port=3128
+Proxy.host=proxy-dmz.esa.atcms.net
+DEBUG=true

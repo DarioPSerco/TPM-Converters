@@ -1,0 +1,5351 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3852894625656,
+          43.669282202140174
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.00",
+        "max_height": "641",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "20 Charles Street East",
+        "lat": "43.669282202140174",
+        "lng": "-79.3852894625656",
+        "id": "1",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.384707,
+          43.667577
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "33",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "13 Isabella Street",
+        "lat": "43.667577",
+        "lng": "-79.384707",
+        "id": "3",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.383591,
+          43.664837
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "135",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Pay at Exit Lane Stations', u'Credit Card at En",
+        "address": "15 Wellesley Street East",
+        "lat": "43.664837",
+        "lng": "-79.383591",
+        "id": "5",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.39285,
+          43.687092
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.90",
+        "max_height": "557",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "21 Pleasant Blvd.",
+        "lat": "43.687092",
+        "lng": "-79.392850",
+        "id": "11",
+        "carpark_ty": "Garage",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.39269983525526,
+          43.68919056469554
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.67",
+        "max_height": "188",
+        "rate": "$3.50 / Half Hour",
+        "payment_op": "[u'Pay at Exit Lane Stations', u'Credit Card at En",
+        "address": "30 Alvin Avenue",
+        "lat": "43.68919056469554",
+        "lng": "-79.39269983525526",
+        "id": "12",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.395586,
+          43.689
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "238",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "20 Delisle Avenue",
+        "lat": "43.689000",
+        "lng": "-79.395586",
+        "id": "13",
+        "carpark_ty": "Garage",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.345375,
+          43.679713
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "70",
+        "rate": "$1.75 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "716 Pape Avenue",
+        "lat": "43.679713",
+        "lng": "-79.345375",
+        "id": "17",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.75"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.463993,
+          43.664581
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "77",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "351 Keele Street",
+        "lat": "43.664581",
+        "lng": "-79.463993",
+        "id": "18",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.468124,
+          43.664736
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "71",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "385 Pacific Avenue",
+        "lat": "43.664736",
+        "lng": "-79.468124",
+        "id": "19",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.310957,
+          43.686541
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "37",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "101 Cedarvale Avenue",
+        "lat": "43.686541",
+        "lng": "-79.310957",
+        "id": "20",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.311708,
+          43.685377
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "54",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "72 Amroth Avenue",
+        "lat": "43.685377",
+        "lng": "-79.311708",
+        "id": "21",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.377218,
+          43.652705
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.00",
+        "max_height": "620",
+        "rate": "$3.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "37 Queen Street East",
+        "lat": "43.652705",
+        "lng": "-79.377218",
+        "id": "26",
+        "carpark_ty": "Garage",
+        "rate_half_": "3.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.344774,
+          43.678146
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "76",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "670 Pape Avenue",
+        "lat": "43.678146",
+        "lng": "-79.344774",
+        "id": "28",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.396348,
+          43.706469
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.93",
+        "max_height": "460",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "75 Holly Street",
+        "lat": "43.706469",
+        "lng": "-79.396348",
+        "id": "29",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.379933,
+          43.656004
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "253",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "20 Dundas Square",
+        "lat": "43.656004",
+        "lng": "-79.379933",
+        "id": "34",
+        "carpark_ty": "Garage",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.383699,
+          43.651696
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.93",
+        "max_height": "2027",
+        "rate": "$3.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Pay at Exit Lane",
+        "address": "110 Queen Street West (Nathan Phillips Square Gara",
+        "lat": "43.651696",
+        "lng": "-79.383699",
+        "id": "36",
+        "carpark_ty": "Garage",
+        "rate_half_": "3.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.400082,
+          43.711828
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "163",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Pay at Exit Lane Stations', u'Cashier']",
+        "address": "20 Castlefield Avenue",
+        "lat": "43.711828",
+        "lng": "-79.400082",
+        "id": "39",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.443882,
+          43.678365
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "64",
+        "rate": "$1.75 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "7 Norton Avenue",
+        "lat": "43.678365",
+        "lng": "-79.443882",
+        "id": "41",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.75"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.445239,
+          43.676817
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.90",
+        "max_height": "169",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "91 Via Italia",
+        "lat": "43.676817",
+        "lng": "-79.445239",
+        "id": "42",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.373066,
+          43.64644
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.98",
+        "max_height": "2008",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "2 Church Street (St. Lawrence Garage)",
+        "lat": "43.646440",
+        "lng": "-79.373066",
+        "id": "43",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.439542,
+          43.640788
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.13",
+        "max_height": "53",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "14 Fuller Avenue",
+        "lat": "43.640788",
+        "lng": "-79.439542",
+        "id": "44",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.349774,
+          43.659179
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.60",
+        "max_height": "92",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "111 Broadview Avenue",
+        "lat": "43.659179",
+        "lng": "-79.349774",
+        "id": "45",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.412076,
+          43.704445
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.67",
+        "max_height": "154",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "125 Burnaby Blvd",
+        "lat": "43.704445",
+        "lng": "-79.412076",
+        "id": "47",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.2979613,
+          43.6704624
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.67",
+        "max_height": "68",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "85 Lee Avenue",
+        "lat": "43.6704624",
+        "lng": "-79.2979613",
+        "id": "48",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.397786,
+          43.708276
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.20",
+        "max_height": "153",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "30 Roehampton Avenue",
+        "lat": "43.708276",
+        "lng": "-79.397786",
+        "id": "49",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.409662,
+          43.665054
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.67",
+        "max_height": "144",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "365 Lippincott Street",
+        "lat": "43.665054",
+        "lng": "-79.409662",
+        "id": "51",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.38272369999999,
+          43.6455358
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.90",
+        "max_height": "312",
+        "rate": "$4.00 / Half Hour",
+        "payment_op": "[u'Pay at Exit Lane Stations', u'Credit Card at En",
+        "address": "40 York Street",
+        "lat": "43.6455358",
+        "lng": "-79.38272369999999",
+        "id": "52",
+        "carpark_ty": "Garage",
+        "rate_half_": "4.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.410778,
+          43.644546
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "49",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "803 Richmond Street West",
+        "lat": "43.644546",
+        "lng": "-79.410778",
+        "id": "53",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.40433,
+          43.72677
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "42",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "23 Bedford Park Avenue",
+        "lat": "43.726770",
+        "lng": "-79.404330",
+        "id": "55",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.39712002202072,
+          43.66895845653576
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.95",
+        "max_height": "399",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Pay at Exit Lane Stations', u'Credit Card at En",
+        "address": "9 Bedford Road",
+        "lat": "43.66895845653576",
+        "lng": "-79.39712002202072",
+        "id": "58",
+        "carpark_ty": "Garage",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.479014,
+          43.650881
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "155",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "265 Durie Street",
+        "lat": "43.650881",
+        "lng": "-79.479014",
+        "id": "64",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.400079,
+          43.654303
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.90",
+        "max_height": "450",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "20 St. Andrew Street (Kensington Garage)",
+        "lat": "43.654303",
+        "lng": "-79.400079",
+        "id": "68",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.403176,
+          43.654184
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.67",
+        "max_height": "91",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "35 Bellevue Avenue",
+        "lat": "43.654184",
+        "lng": "-79.403176",
+        "id": "71",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.357467,
+          43.677316
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "93",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "35 Erindale Avenue",
+        "lat": "43.677316",
+        "lng": "-79.357467",
+        "id": "78",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.373502,
+          43.66452
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "110",
+        "rate": "$1.75 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "405 Sherbourne Street",
+        "lat": "43.664520",
+        "lng": "-79.373502",
+        "id": "79",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.75"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.465045,
+          43.66611
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "35",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "400 Keele Street",
+        "lat": "43.666110",
+        "lng": "-79.465045",
+        "id": "80",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.442739,
+          43.658969
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "40",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "695 Lansdowne Avenue",
+        "lat": "43.658969",
+        "lng": "-79.442739",
+        "id": "81",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.440143,
+          43.659412
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "56",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "9 Emerson Ave.",
+        "lat": "43.659412",
+        "lng": "-79.440143",
+        "id": "82",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.431667,
+          43.661011
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "35",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "9 Salem Avenue",
+        "lat": "43.661011",
+        "lng": "-79.431667",
+        "id": "84",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.413579,
+          43.665039
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "55",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "557 Palmerston Avenue",
+        "lat": "43.665039",
+        "lng": "-79.413579",
+        "id": "85",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.351223,
+          43.678456
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "83",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "14 Arundel Avenue",
+        "lat": "43.678456",
+        "lng": "-79.351223",
+        "id": "87",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.348379,
+          43.679007
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "47",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "25 Ferrier Avenue",
+        "lat": "43.679007",
+        "lng": "-79.348379",
+        "id": "88",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.343948,
+          43.679954
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "70",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "20 Eaton Avenue",
+        "lat": "43.679954",
+        "lng": "-79.343948",
+        "id": "89",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.343197,
+          43.680078
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "30",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "17 Eaton Avenue",
+        "lat": "43.680078",
+        "lng": "-79.343197",
+        "id": "90",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.483039,
+          43.650283
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "148",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "265 Armadale Avenue",
+        "lat": "43.650283",
+        "lng": "-79.483039",
+        "id": "91",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.416014,
+          43.664651
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "49",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "675 Manning Avenue",
+        "lat": "43.664651",
+        "lng": "-79.416014",
+        "id": "93",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.399159,
+          43.641635
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "37",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "10 Portland Street",
+        "lat": "43.641635",
+        "lng": "-79.399159",
+        "id": "96",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.425648,
+          43.662431
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "45",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "745 Ossington Avenue, 16 Carling Avenue",
+        "lat": "43.662431",
+        "lng": "-79.425648",
+        "id": "104",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.400307,
+          43.648412
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "120",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "15 Denison Avenue",
+        "lat": "43.648412",
+        "lng": "-79.400307",
+        "id": "106",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.40035,
+          43.677378
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "40",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "251 MacPherson Avenue",
+        "lat": "43.677378",
+        "lng": "-79.400350",
+        "id": "107",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.36905,
+          43.664703
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "35",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "51 Aberdeen Avenue",
+        "lat": "43.664703",
+        "lng": "-79.369050",
+        "id": "109",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.322995,
+          43.683577
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "25",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1612 Danforth Avenue",
+        "lat": "43.683577",
+        "lng": "-79.322995",
+        "id": "110",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41448,
+          43.656159
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.93",
+        "max_height": "79",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "74 Clinton Street",
+        "lat": "43.656159",
+        "lng": "-79.414480",
+        "id": "111",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.475119,
+          43.65168
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "56",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "255 Kennedy Avenue",
+        "lat": "43.651680",
+        "lng": "-79.475119",
+        "id": "116",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.368582,
+          43.653381
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.93",
+        "max_height": "258",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "323 Richmond Street East",
+        "lat": "43.653381",
+        "lng": "-79.368582",
+        "id": "125",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.433013,
+          43.660899
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "37",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "7 Bartlett Avenue",
+        "lat": "43.660899",
+        "lng": "-79.433013",
+        "id": "130",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.428073,
+          43.700543
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "26",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "912 Eglinton Avenue West",
+        "lat": "43.700543",
+        "lng": "-79.428073",
+        "id": "131",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.457513,
+          43.675143
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "7",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "20 Prescott Avenue",
+        "lat": "43.675143",
+        "lng": "-79.457513",
+        "id": "133",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.346287,
+          43.679481
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "17",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "77 Gough Avenue",
+        "lat": "43.679481",
+        "lng": "-79.346287",
+        "id": "137",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.399213,
+          43.713751
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.00",
+        "max_height": "46",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "6 Sherwood Avenue",
+        "lat": "43.713751",
+        "lng": "-79.399213",
+        "id": "139",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.447739,
+          43.676198
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "53",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "141 Greenlaw Avenue",
+        "lat": "43.676198",
+        "lng": "-79.447739",
+        "id": "141",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.340751,
+          43.680613
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "27",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "31 Langford Avenue",
+        "lat": "43.680613",
+        "lng": "-79.340751",
+        "id": "142",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.481771,
+          43.650431
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "88",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "265 Willard Avenue",
+        "lat": "43.650431",
+        "lng": "-79.481771",
+        "id": "143",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41758,
+          43.664441
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "33",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "376 Clinton Street",
+        "lat": "43.664441",
+        "lng": "-79.417580",
+        "id": "144",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.353164,
+          43.665202
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "37",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "573 Gerrard Street East",
+        "lat": "43.665202",
+        "lng": "-79.353164",
+        "id": "146",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.342339,
+          43.68035
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "35",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "12 Woodycrest Avenue",
+        "lat": "43.680350",
+        "lng": "-79.342339",
+        "id": "149",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.397024,
+          43.652954
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.00",
+        "max_height": "357",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "40 Larch Street",
+        "lat": "43.652954",
+        "lng": "-79.397024",
+        "id": "150",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.402734,
+          43.730266
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "26",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "25 Glenforest Road",
+        "lat": "43.730266",
+        "lng": "-79.402734",
+        "id": "152",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.431131,
+          43.699612
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "33",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "995 Eglinton Avenue West",
+        "lat": "43.699612",
+        "lng": "-79.431131",
+        "id": "155",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.348798,
+          43.678945
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "23",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "18 Ferrier Avenue",
+        "lat": "43.678945",
+        "lng": "-79.348798",
+        "id": "156",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.374053,
+          43.704181
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.98",
+        "max_height": "20",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "709 Millwood Road",
+        "lat": "43.704181",
+        "lng": "-79.374053",
+        "id": "157",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.433856,
+          43.64095
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "32",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1325 Queen Street West",
+        "lat": "43.640950",
+        "lng": "-79.433856",
+        "id": "158",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.395468,
+          43.688007
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "173",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Credit Card at Entry & Exit', u'Cashier']",
+        "address": "30 St. Clair Avenue West",
+        "lat": "43.688007",
+        "lng": "-79.395468",
+        "id": "161",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.412946,
+          43.689543
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "55",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "453 Spadina Road",
+        "lat": "43.689543",
+        "lng": "-79.412946",
+        "id": "164",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.419286,
+          43.644655
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "20",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "18 Ossington Avenue",
+        "lat": "43.644655",
+        "lng": "-79.419286",
+        "id": "167",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.424404,
+          43.650423
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "79",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "146 Harrison Street",
+        "lat": "43.650423",
+        "lng": "-79.424404",
+        "id": "168",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.294358,
+          43.671707
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "30",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "117 Hammersmith Avenue",
+        "lat": "43.671707",
+        "lng": "-79.294358",
+        "id": "170",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.38975,
+          43.706702
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "53",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "730 Mt. Pleasant Road",
+        "lat": "43.706702",
+        "lng": "-79.389750",
+        "id": "171",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.324476,
+          43.682926
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "24",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "737 Rhodes Avenue",
+        "lat": "43.682926",
+        "lng": "-79.324476",
+        "id": "173",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.322941,
+          43.672598
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "50",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "151 Hiawatha Road",
+        "lat": "43.672598",
+        "lng": "-79.322941",
+        "id": "174",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.388956,
+          43.704763
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "68",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "650 Mt. Pleasant Road",
+        "lat": "43.704763",
+        "lng": "-79.388956",
+        "id": "178",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.350195,
+          43.665784
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.15",
+        "max_height": "30",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "653 Gerrard Street East",
+        "lat": "43.665784",
+        "lng": "-79.350195",
+        "id": "179",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.320366,
+          43.672047
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.15",
+        "max_height": "38",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "268 Rhodes Ave",
+        "lat": "43.672047",
+        "lng": "-79.320366",
+        "id": "180",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.424011,
+          43.637863
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "269",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1155 King Street West",
+        "lat": "43.637863",
+        "lng": "-79.424011",
+        "id": "181",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.306226,
+          43.668252
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "21",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "166 Woodbine Ave",
+        "lat": "43.668252",
+        "lng": "-79.306226",
+        "id": "183",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.307384,
+          43.668004
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "24",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "192 Boardwalk Dr",
+        "lat": "43.668004",
+        "lng": "-79.307384",
+        "id": "184",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.308522,
+          43.667724
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "24",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "116 Joseph Duggan Rd",
+        "lat": "43.667724",
+        "lng": "-79.308522",
+        "id": "185",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.309487,
+          43.667445
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "24",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "118 Sarah Ashbridge Ave",
+        "lat": "43.667445",
+        "lng": "-79.309487",
+        "id": "186",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.31074,
+          43.667107
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "10",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "116 Winners Circle",
+        "lat": "43.667107",
+        "lng": "-79.310740",
+        "id": "187",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.416411,
+          43.654669
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.00",
+        "max_height": "18",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "157 Beatrice Street",
+        "lat": "43.654669",
+        "lng": "-79.416411",
+        "id": "188",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.311188,
+          43.662417
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "292",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1675 Lakeshore Blvd. E. (Parks)",
+        "lat": "43.662417",
+        "lng": "-79.311188",
+        "id": "193",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.311365,
+          43.660056
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "270",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "20 Ashbridges Bay Park Road (Parks)",
+        "lat": "43.660056",
+        "lng": "-79.311365",
+        "id": "194",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.390007,
+          43.679814
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.20",
+        "max_height": "71",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "15 Price St",
+        "lat": "43.679814",
+        "lng": "-79.390007",
+        "id": "195",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.313049,
+          43.665986
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "66",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1167 Eastern Avenue",
+        "lat": "43.665986",
+        "lng": "-79.313049",
+        "id": "200",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.314079,
+          43.66566
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "18",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1141 Eastern Avenue",
+        "lat": "43.665660",
+        "lng": "-79.314079",
+        "id": "202",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.420135,
+          43.649267
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "37",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1117 Dundas Street West",
+        "lat": "43.649267",
+        "lng": "-79.420135",
+        "id": "204",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.401648,
+          43.667778
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "15",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "465 Huron Street",
+        "lat": "43.667778",
+        "lng": "-79.401648",
+        "id": "205",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.469036,
+          43.634103
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "185",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2001 Lake Shore Blvd. West (Parks)",
+        "lat": "43.634103",
+        "lng": "-79.469036",
+        "id": "206",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.462266,
+          43.637123
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "187",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2001 Lake Shore Blvd. West (Parks)",
+        "lat": "43.637123",
+        "lng": "-79.462266",
+        "id": "207",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.451301,
+          43.637473
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "193",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1575 Lake Shore Blvd. W. (Parks)",
+        "lat": "43.637473",
+        "lng": "-79.451301",
+        "id": "208",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.40874309999998,
+          43.6330895
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "65",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "300 Remembrance Drive",
+        "lat": "43.6330895",
+        "lng": "-79.40874309999998",
+        "id": "209",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.43827420370485,
+          43.63385594958171
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "120",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1275 Lakeshore Blvd. W. (Parks)",
+        "lat": "43.63385594958171",
+        "lng": "-79.43827420370485",
+        "id": "210",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.39491,
+          43.646712
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "23",
+        "rate": "$3.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "363 Adelaide Street West",
+        "lat": "43.646712",
+        "lng": "-79.394910",
+        "id": "212",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.392222,
+          43.670936
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.20",
+        "max_height": "172",
+        "rate": "$3.50 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "74 Yorkville Avenue",
+        "lat": "43.670936",
+        "lng": "-79.392222",
+        "id": "215",
+        "carpark_ty": "Garage",
+        "rate_half_": "3.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.392475,
+          43.657231
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.13",
+        "max_height": "38",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "205 McCaul Street",
+        "lat": "43.657231",
+        "lng": "-79.392475",
+        "id": "216",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41787,
+          43.682499
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.2",
+        "max_height": "25",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "1445 Bathurst Street",
+        "lat": "43.682499",
+        "lng": "-79.417870",
+        "id": "217",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4819,
+          43.665668
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "13",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "3354 Dundas Street West",
+        "lat": "43.665668",
+        "lng": "-79.481900",
+        "id": "218",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.374326,
+          43.652464
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.15",
+        "max_height": "20",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "87 Richmond Street East",
+        "lat": "43.652464",
+        "lng": "-79.374326",
+        "id": "219",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.429629,
+          43.680738
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "18",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "789 St. Clair Avenue West",
+        "lat": "43.680738",
+        "lng": "-79.429629",
+        "id": "220",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.39426911349182,
+          43.6892603924517
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "37",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1501 Yonge Street",
+        "lat": "43.6892603924517",
+        "lng": "-79.39426911349182",
+        "id": "223",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.419812,
+          43.638242
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "184",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "34 Hanna Avenue",
+        "lat": "43.638242",
+        "lng": "-79.419812",
+        "id": "224",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.414555,
+          43.656346
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "25",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "80 Clinton Street",
+        "lat": "43.656346",
+        "lng": "-79.414555",
+        "id": "225",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4242,
+          43.682103
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "18",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "646 St. Clair Avenue West",
+        "lat": "43.682103",
+        "lng": "-79.424200",
+        "id": "226",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.395233,
+          43.64668
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "14",
+        "rate": "$3.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "105 Spadina Avenue",
+        "lat": "43.646680",
+        "lng": "-79.395233",
+        "id": "227",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.422065,
+          43.68298
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "25",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "11 Kenwood Avenue",
+        "lat": "43.682980",
+        "lng": "-79.422065",
+        "id": "228",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.422762,
+          43.64384
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "8",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "110 Dovercourt Road",
+        "lat": "43.643840",
+        "lng": "-79.422762",
+        "id": "229",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.361694,
+          43.649553
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "230",
+        "rate": "$2.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "31A Parliament Street",
+        "lat": "43.649553",
+        "lng": "-79.361694",
+        "id": "230",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.404218,
+          43.667974
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "65",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "19 Spadina Road",
+        "lat": "43.667974",
+        "lng": "-79.404218",
+        "id": "231",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.362445,
+          43.650361
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "120",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "44 Parliament Street",
+        "lat": "43.650361",
+        "lng": "-79.362445",
+        "id": "233",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.451323,
+          43.653388
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "10",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2201 Dundas Street West",
+        "lat": "43.653388",
+        "lng": "-79.451323",
+        "id": "235",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4028,
+          43.667558
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "38",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "9 Madison Ave.",
+        "lat": "43.667558",
+        "lng": "-79.402800",
+        "id": "238",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.42654,
+          43.681863
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "18",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "700 St. Clair Ave West",
+        "lat": "43.681863",
+        "lng": "-79.426540",
+        "id": "240",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4338219,
+          43.6527778
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "34",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "9 Bonar Place",
+        "lat": "43.6527778",
+        "lng": "-79.4338219",
+        "id": "241",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.341888,
+          43.641425
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "123",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "115 Unwin Avenue",
+        "lat": "43.641425",
+        "lng": "-79.341888",
+        "id": "243",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.326321,
+          43.682646
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "20",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1439 Danforth Avenue",
+        "lat": "43.682646",
+        "lng": "-79.326321",
+        "id": "244",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.45828340000003,
+          43.6754575
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "37",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "31 Blackthorn Ave",
+        "lat": "43.6754575",
+        "lng": "-79.45828340000003",
+        "id": "246",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.350373,
+          43.659822
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "22",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "136 Broadview Avenue",
+        "lat": "43.659822",
+        "lng": "-79.350373",
+        "id": "248",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.376543,
+          43.7074
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "33",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1670 Bayview Ave",
+        "lat": "43.707400",
+        "lng": "-79.376543",
+        "id": "249",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41125,
+          43.651657
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.15",
+        "max_height": "43",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "201 Claremont Street",
+        "lat": "43.651657",
+        "lng": "-79.411250",
+        "id": "251",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.442248,
+          43.678907
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "14",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "154 Westmount Avenue",
+        "lat": "43.678907",
+        "lng": "-79.442248",
+        "id": "252",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.442441,
+          43.639526
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "-11",
+        "max_height": "33",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1624 Queen Street West",
+        "lat": "43.639526",
+        "lng": "-79.442441",
+        "id": "256",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.404116,
+          43.666878
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "51",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "4 Spadina Road",
+        "lat": "43.666878",
+        "lng": "-79.404116",
+        "id": "259",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4406608171272,
+          43.6778094174964
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "13",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "94 Northcliffe Blvd.",
+        "lat": "43.6778094174964",
+        "lng": "-79.4406608171272",
+        "id": "260",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.42387041964344,
+          43.641902110590024
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.15",
+        "max_height": "124",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "45 Abell Street",
+        "lat": "43.641902110590024",
+        "lng": "-79.42387041964344",
+        "id": "261",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3857854604721,
+          43.65563165773406
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "27",
+        "rate": "$4.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "130 Elizabeth Street - Toronto Coach Terminal",
+        "lat": "43.65563165773406",
+        "lng": "-79.3857854604721",
+        "id": "263",
+        "carpark_ty": "Surface",
+        "rate_half_": "4.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.40646102757796,
+          43.63720825892904
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "49",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "250 Fort York Blvd.",
+        "lat": "43.63720825892904",
+        "lng": "-79.40646102757796",
+        "id": "266",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.357531,
+          43.65012
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.10",
+        "max_height": "103",
+        "rate": "$2.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "70 Distillery Lane",
+        "lat": "43.650120",
+        "lng": "-79.357531",
+        "id": "267",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.362971,
+          43.651254
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "83",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "271 Front Street East",
+        "lat": "43.651254",
+        "lng": "-79.362971",
+        "id": "268",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.389439,
+          43.675942
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "48",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1010 Yonge St.",
+        "lat": "43.675942",
+        "lng": "-79.389439",
+        "id": "269",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.409705,
+          43.636821
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "94",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Customer Assistance Booth',",
+        "address": "800 Fleet Street",
+        "lat": "43.636821",
+        "lng": "-79.409705",
+        "id": "271",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41623655205922,
+          43.641907498775765
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "152",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1030 King Street West - garage entrance via Shank",
+        "lat": "43.641907498775765",
+        "lng": "-79.41623655205922",
+        "id": "275",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35487253100479,
+          43.67705161510706
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "19",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "242 Danforth Avenue",
+        "lat": "43.67705161510706",
+        "lng": "-79.35487253100479",
+        "id": "277",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.42770310000003,
+          43.68183500000001
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "16",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "287 Rushton Road",
+        "lat": "43.68183500000001",
+        "lng": "-79.42770310000003",
+        "id": "279",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35887257060432,
+          43.678499963983
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "11",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "838 Broadview Ave.",
+        "lat": "43.678499963983",
+        "lng": "-79.35887257060432",
+        "id": "282",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35721380919267,
+          43.65357281481563
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "86",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "100 Cooperage Street",
+        "lat": "43.65357281481563",
+        "lng": "-79.35721380919267",
+        "id": "283",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35492331255227,
+          43.65391974804565
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "27",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "83 Tannery Road",
+        "lat": "43.65391974804565",
+        "lng": "-79.35492331255227",
+        "id": "284",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35574312757797,
+          43.65266351228955
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "25",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "40 Rolling Mills Rd.",
+        "lat": "43.65266351228955",
+        "lng": "-79.35574312757797",
+        "id": "285",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.36586784176825,
+          43.643821342471114
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.05",
+        "max_height": "307",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Pay and Display',",
+        "address": "51 Dockside Dr.",
+        "lat": "43.643821342471114",
+        "lng": "-79.36586784176825",
+        "id": "286",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.318234,
+          43.664603
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "45",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1091 Eastern Avenue",
+        "lat": "43.664603",
+        "lng": "-79.318234",
+        "id": "287",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.40763612516594,
+          43.66536897009298
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "19",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "292 Brunswick Avenue",
+        "lat": "43.66536897009298",
+        "lng": "-79.40763612516594",
+        "id": "288",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35942073320462,
+          43.65219023257861
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "450",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "373 Front Street East",
+        "lat": "43.65219023257861",
+        "lng": "-79.35942073320462",
+        "id": "289",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41433789999996,
+          43.6858599
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.1",
+        "max_height": "26",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "320 Tweedsmuir Avenue",
+        "lat": "43.6858599",
+        "lng": "-79.41433789999996",
+        "id": "291",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3662570749035,
+          43.64434398571754
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "83",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "185 Queens Quay East",
+        "lat": "43.64434398571754",
+        "lng": "-79.3662570749035",
+        "id": "300",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3986913,
+          43.6364562
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "110",
+        "rate": "$3.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "545 Lake Shore Boulevard West",
+        "lat": "43.6364562",
+        "lng": "-79.3986913",
+        "id": "302",
+        "carpark_ty": "Surface",
+        "rate_half_": "3.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.29595781534425,
+          43.67125395344704
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "28",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "136 Wineva Ave.",
+        "lat": "43.67125395344704",
+        "lng": "-79.29595781534425",
+        "id": "303",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41257,
+          43.770373
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "52",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "10 Kingsdale Avenue",
+        "lat": "43.770373",
+        "lng": "-79.412570",
+        "id": "400",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.420295,
+          43.733158
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "97",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "246 Brooke Avenue",
+        "lat": "43.733158",
+        "lng": "-79.420295",
+        "id": "401",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.412484,
+          43.769459
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "68",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "10 Empress Avenue",
+        "lat": "43.769459",
+        "lng": "-79.412484",
+        "id": "402",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.412441,
+          43.762168
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "112",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "10 Harlandale Avenue",
+        "lat": "43.762168",
+        "lng": "-79.412441",
+        "id": "403",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.414051,
+          43.763594
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "1.93",
+        "max_height": "387",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay at Exit Lane Stations', u'Credit Card at En",
+        "address": "95 Beecroft Road",
+        "lat": "43.763594",
+        "lng": "-79.414051",
+        "id": "404",
+        "carpark_ty": "Garage",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.416143,
+          43.767569
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "173",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Auto Express Pay Stations', u'Credit Card at En",
+        "address": "180 Beecroft Road",
+        "lat": "43.767569",
+        "lng": "-79.416143",
+        "id": "410",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.419576,
+          43.732182
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "32",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1880 Avenue Road",
+        "lat": "43.732182",
+        "lng": "-79.419576",
+        "id": "411",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.416572,
+          43.779321
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "62",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "11 Finch Avenue West",
+        "lat": "43.779321",
+        "lng": "-79.416572",
+        "id": "412",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.410403,
+          43.756023
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "17",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "4576 Yonge Street",
+        "lat": "43.756023",
+        "lng": "-79.410403",
+        "id": "413",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.40595,
+          43.741786
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "129",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "3885 Yonge Street",
+        "lat": "43.741786",
+        "lng": "-79.405950",
+        "id": "414",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.414662,
+          43.76082
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.15",
+        "max_height": "34",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "68 Sheppard Avenue West",
+        "lat": "43.760820",
+        "lng": "-79.414662",
+        "id": "418",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.415703,
+          43.781482
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.15",
+        "max_height": "23",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "5667 Yonge Street",
+        "lat": "43.781482",
+        "lng": "-79.415703",
+        "id": "419",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.379571,
+          43.723875
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "69",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2170 Bayview avenue",
+        "lat": "43.723875",
+        "lng": "-79.379571",
+        "id": "424",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.50903840000001,
+          43.6483334
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "40",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "7 Jackson Avenue",
+        "lat": "43.6483334",
+        "lng": "-79.50903840000001",
+        "id": "500",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.507853,
+          43.648738
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "83",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "11 Grenview Blvd. N.",
+        "lat": "43.648738",
+        "lng": "-79.507853",
+        "id": "501",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.50553109999998,
+          43.6488534
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "43",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "342 Prince Edward Drive N.",
+        "lat": "43.6488534",
+        "lng": "-79.50553109999998",
+        "id": "502",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.510632,
+          43.648389
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "65",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "12 Willingdon Blvd. - partial construction, reduce",
+        "lat": "43.648389",
+        "lng": "-79.510632",
+        "id": "503",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.51020010000002,
+          43.64818679999999
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "116",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "9 Willingdon Blvd.",
+        "lat": "43.64818679999999",
+        "lng": "-79.51020010000002",
+        "id": "504",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.511318,
+          43.646766
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "11",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "934 Royal York Road",
+        "lat": "43.646766",
+        "lng": "-79.511318",
+        "id": "505",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.503422,
+          43.60169
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "53",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "140 Fifth Street",
+        "lat": "43.601690",
+        "lng": "-79.503422",
+        "id": "506",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.500697,
+          43.601216
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "24",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "66 Third Street",
+        "lat": "43.601216",
+        "lng": "-79.500697",
+        "id": "507",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.506769,
+          43.600906
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "45",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "128 Eighth Street",
+        "lat": "43.600906",
+        "lng": "-79.506769",
+        "id": "508",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.501415,
+          43.600781
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "22",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "105 Fourth Street",
+        "lat": "43.600781",
+        "lng": "-79.501415",
+        "id": "509",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.52170886375427,
+          43.596987584112135
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "22",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "3239 Lake Shore Boulevard West",
+        "lat": "43.596987584112135",
+        "lng": "-79.52170886375427",
+        "id": "510",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.50399,
+          43.600152
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "54",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "120 Sixth Street",
+        "lat": "43.600152",
+        "lng": "-79.503990",
+        "id": "511",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.518067,
+          43.645959
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "69",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "3220 Bloor Street West",
+        "lat": "43.645959",
+        "lng": "-79.518067",
+        "id": "512",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.502724,
+          43.626997
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "28",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "575 Royal York Road",
+        "lat": "43.626997",
+        "lng": "-79.502724",
+        "id": "513",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.50531,
+          43.601317
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "11",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "",
+        "address": "139 ISLINGTON AVE.",
+        "lat": "43.601317",
+        "lng": "-79.505310",
+        "id": "514",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.519,
+          43.623355
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "11",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "WOOLGAR LANEWAY REAR OF 1124 THE QUEENSWAY",
+        "lat": "43.623355",
+        "lng": "-79.519000",
+        "id": "516",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.489882,
+          43.614299
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "23",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "15 Primrose Avenue",
+        "lat": "43.614299",
+        "lng": "-79.489882",
+        "id": "517",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.503551,
+          43.625584
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "15",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "5 Dayton Avenue",
+        "lat": "43.625584",
+        "lng": "-79.503551",
+        "id": "519",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.532733,
+          43.645253
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "62",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "20 Royalavon Crescent",
+        "lat": "43.645253",
+        "lng": "-79.532733",
+        "id": "520",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.521886,
+          43.644336
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "25",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "7 Monkton Avenue",
+        "lat": "43.644336",
+        "lng": "-79.521886",
+        "id": "521",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.47673382209018,
+          43.62277398955143
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "228",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2195 Lake shore Blvd West (Parks)",
+        "lat": "43.62277398955143",
+        "lng": "-79.47673382209018",
+        "id": "522",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.48066664138639,
+          43.6200300180063
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "80",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2225 Lake shore Blvd West (Parks)",
+        "lat": "43.6200300180063",
+        "lng": "-79.48066664138639",
+        "id": "523",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.47947037616575,
+          43.61964106324865
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "144",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2225 Lake shore Blvd West (Parks)",
+        "lat": "43.61964106324865",
+        "lng": "-79.47947037616575",
+        "id": "524",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.477247,
+          43.616982
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "28",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2225 Lake shore Blvd West (Parks)",
+        "lat": "43.616982",
+        "lng": "-79.477247",
+        "id": "525",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.478059,
+          43.61478
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "22",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2225 Lake shore Blvd West (Parks)",
+        "lat": "43.614780",
+        "lng": "-79.478059",
+        "id": "526",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.479926,
+          43.613359
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "10",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2225 Lake shore Blvd West (Parks)",
+        "lat": "43.613359",
+        "lng": "-79.479926",
+        "id": "527",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.52111938092321,
+          43.59788642956978
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "52",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "5 Colonel Samuel Smith Park Drive",
+        "lat": "43.59788642956978",
+        "lng": "-79.52111938092321",
+        "id": "528",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.516468,
+          43.593757
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "210",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "65 Colonel Samuel Smith Park Drive",
+        "lat": "43.593757",
+        "lng": "-79.516468",
+        "id": "529",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.56528279999998,
+          43.738381
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "23",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "14 Barkwin Dr.",
+        "lat": "43.738381",
+        "lng": "-79.56528279999998",
+        "id": "532",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.48673859999997,
+          43.6184744
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "23",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2300 Lake shore Boulevard West",
+        "lat": "43.6184744",
+        "lng": "-79.48673859999997",
+        "id": "533",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4767453,
+          43.6267898
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "14",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "15 Marine Parade Drive",
+        "lat": "43.6267898",
+        "lng": "-79.4767453",
+        "id": "534",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.32750320000002,
+          43.6905916
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "20",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "550 Mortimer Avenue",
+        "lat": "43.6905916",
+        "lng": "-79.32750320000002",
+        "id": "600",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.374332,
+          43.703909
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "25",
+        "rate": "$1.25 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1503 Bayview Avenue",
+        "lat": "43.703909",
+        "lng": "-79.374332",
+        "id": "602",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.25"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4903,
+          43.687441
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "47",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1169 Weston Road",
+        "lat": "43.687441",
+        "lng": "-79.490300",
+        "id": "651",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.472383,
+          43.690343
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "14",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "301 Scott Road",
+        "lat": "43.690343",
+        "lng": "-79.472383",
+        "id": "652",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.486397,
+          43.649119
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "113",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "17 Riverview Gardens",
+        "lat": "43.649119",
+        "lng": "-79.486397",
+        "id": "653",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.486663,
+          43.648894
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "54",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "16 Riverview Gardens",
+        "lat": "43.648894",
+        "lng": "-79.486663",
+        "id": "654",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.428223,
+          43.700241
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.20",
+        "max_height": "68",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "168 Chiltern Hill Road",
+        "lat": "43.700241",
+        "lng": "-79.428223",
+        "id": "655",
+        "carpark_ty": "Garage",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.486953,
+          43.668423
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "7",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "1A Mould Avenue",
+        "lat": "43.668423",
+        "lng": "-79.486953",
+        "id": "656",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.506555,
+          43.67789
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "11",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "271A Scarlett Road",
+        "lat": "43.677890",
+        "lng": "-79.506555",
+        "id": "657",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.446806,
+          43.686611
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "94",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2054 Dufferin Street",
+        "lat": "43.686611",
+        "lng": "-79.446806",
+        "id": "658",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.43819,
+          43.686479
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "22",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "341 Oakwood Avenue",
+        "lat": "43.686479",
+        "lng": "-79.438190",
+        "id": "659",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.439317,
+          43.688069
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "19",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "406 Oakwood Avenue",
+        "lat": "43.688069",
+        "lng": "-79.439317",
+        "id": "660",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.463983,
+          43.682507
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "28",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "433 Rogers Road",
+        "lat": "43.682507",
+        "lng": "-79.463983",
+        "id": "661",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.451795,
+          43.695951
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "130",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1 Shortt Street",
+        "lat": "43.695951",
+        "lng": "-79.451795",
+        "id": "663",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.440712,
+          43.697588
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "23",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1531 Eglinton Avenue West",
+        "lat": "43.697588",
+        "lng": "-79.440712",
+        "id": "667",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.477919,
+          43.690203
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "109",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2700 Eglinton Avenue West",
+        "lat": "43.690203",
+        "lng": "-79.477919",
+        "id": "668",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.478585,
+          43.690792
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "38",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2700 Eglinton Avenue West",
+        "lat": "43.690792",
+        "lng": "-79.478585",
+        "id": "669",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.446383,
+          43.6866
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.00",
+        "max_height": "23",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2053 Dufferin Street",
+        "lat": "43.686600",
+        "lng": "-79.446383",
+        "id": "670",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.475222,
+          43.689981
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "13",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "2623 Eglinton Avenue West",
+        "lat": "43.689981",
+        "lng": "-79.475222",
+        "id": "674",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.51381889999999,
+          43.7013911
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "34",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "4 Rosemount Avenue",
+        "lat": "43.7013911",
+        "lng": "-79.51381889999999",
+        "id": "675",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.250093,
+          43.775378
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "261",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "101 Grangeway Avenue",
+        "lat": "43.775378",
+        "lng": "-79.250093",
+        "id": "700",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.281496,
+          43.68177
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "83",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "197 Blantyre Avenue",
+        "lat": "43.681770",
+        "lng": "-79.281496",
+        "id": "701",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.235437,
+          43.70664
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "232",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1 Brimley Road (Bluffer's Park)",
+        "lat": "43.706640",
+        "lng": "-79.235437",
+        "id": "702",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.234632,
+          43.707446
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "128",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1 Brimley Road (Bluffer's Park)",
+        "lat": "43.707446",
+        "lng": "-79.234632",
+        "id": "703",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.230051,
+          43.712603
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "168",
+        "rate": "$1.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1 Brimley Road (Bluffer's Park)",
+        "lat": "43.712603",
+        "lng": "-79.230051",
+        "id": "705",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.238387,
+          43.789429
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "103",
+        "rate": "$2.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "284 Milner Avenue",
+        "lat": "43.789429",
+        "lng": "-79.238387",
+        "id": "706",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.237915,
+          43.789507
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "24",
+        "rate": "$2.50 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1530 Markham Road - minor capital repairs onsite",
+        "lat": "43.789507",
+        "lng": "-79.237915",
+        "id": "707",
+        "carpark_ty": "Surface",
+        "rate_half_": "2.50"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.299188,
+          43.744476
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "2.06",
+        "max_height": "25",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "1940 Lawrence Avenue East",
+        "lat": "43.744476",
+        "lng": "-79.299188",
+        "id": "709",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.251359,
+          43.77458
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "214",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "100 Grangeway Avenue",
+        "lat": "43.774580",
+        "lng": "-79.251359",
+        "id": "710",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.256377,
+          43.772181
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "16",
+        "rate": "$1.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "158 Borough Drive",
+        "lat": "43.772181",
+        "lng": "-79.256377",
+        "id": "711",
+        "carpark_ty": "Surface",
+        "rate_half_": "1.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.534117,
+          43.636572
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "1200",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "Kipling South Lot - 400 Munster Avenue",
+        "lat": "43.636572",
+        "lng": "-79.534117",
+        "id": "801",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.526188,
+          43.644181
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "534",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay at Entrance Lane Stations']",
+        "address": "Islington Main Lot - 3330 Bloor Street West",
+        "lat": "43.644181",
+        "lng": "-79.526188",
+        "id": "802",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.522862,
+          43.646774
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "283",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "Islington Lomond Lot - 20 Lomond Drive",
+        "lat": "43.646774",
+        "lng": "-79.522862",
+        "id": "804",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.457159,
+          43.655818
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "187",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "Keele Lot - 400 Indian Road",
+        "lat": "43.655818",
+        "lng": "-79.457159",
+        "id": "805",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.447117,
+          43.733662
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "645",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "Wilson South Lot - 30 Tippett Road",
+        "lat": "43.733662",
+        "lng": "-79.447117",
+        "id": "810",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.449177,
+          43.736244
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "885",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay at Entrance Lane Stations']",
+        "address": "Wilson Main Lot - 50 Wilson Heights Blvd",
+        "lat": "43.736244",
+        "lng": "-79.449177",
+        "id": "811",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.416368,
+          43.782032
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "1552",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "Finch West Lot - 18 Hendon Ave",
+        "lat": "43.782032",
+        "lng": "-79.416368",
+        "id": "813",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.415907,
+          43.782319
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "900",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "Finch East - 814 Willowdale Ave - partial closure,",
+        "lat": "43.782319",
+        "lng": "-79.415907",
+        "id": "814",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.367484,
+          43.770058
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "102",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "Leslie Lot - 2760 Old Leslie Street",
+        "lat": "43.770058",
+        "lng": "-79.367484",
+        "id": "815",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.346707,
+          43.775815
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "366",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay at Entrance Lane Stations']",
+        "address": "Don Mills Lot - 1800 Sheppard Ave East",
+        "lat": "43.775815",
+        "lng": "-79.346707",
+        "id": "816",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.276394,
+          43.766793
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "68",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display']",
+        "address": "Ellesmere Lot - Near 1050 Ellesmere Road - closed",
+        "lat": "43.766793",
+        "lng": "-79.276394",
+        "id": "817",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.270269,
+          43.750477
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "90",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay and Display', u'Mobile Pay Available']",
+        "address": "Lawrence East Lot - Near 2450 Lawrence Ave East",
+        "lat": "43.750477",
+        "lng": "-79.270269",
+        "id": "818",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.263471,
+          43.731844
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "",
+        "max_height": "673",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay at Entrance Lane Stations']",
+        "address": "Kennedy South Lot -155 Transway Cres",
+        "lat": "43.731844",
+        "lng": "-79.263471",
+        "id": "821",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.28131,
+          43.715522
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "capacity": "0.00",
+        "max_height": "920",
+        "rate": "$0.00 / Half Hour",
+        "payment_op": "[u'Pay at Entrance Lane Stations']",
+        "address": "Warden North Lot - 705 Warden Ave",
+        "lat": "43.715522",
+        "lng": "-79.281310",
+        "id": "822",
+        "carpark_ty": "Surface",
+        "rate_half_": "0.00"
+      }
+    }
+  ]
+}
