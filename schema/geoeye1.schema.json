@@ -143,7 +143,7 @@
           "properties": {
             "productType": {
               "type": "string",
-              "enum": ["GIS_PAN_2A", "GIS_PAN_OR", "GIS_PAN_MP", "GIS_4B__2A", "GIS_4B__OR", "GIS_4B__MP"],
+              "enum": ["L2AVRS_PAN", "L2AVRR_PAN", "L2ASTR_PAN", "L3_MRO_PAN", "L2AVRS_MS_", "L2AVRR_MS_", "L2ASTR_MS_", "L3_MRP_MS_"],
               "description": "GeoEye-1 type code. $comment: source REF_TYPECODES (product_geoeye1.py:22-25) has a missing-comma bug yielding 'GIS_4B__MPGIS_PAN_OR'; the intended 6 codes are listed here. Observed, not fixed in the kept extraction."
             },
             "size": {

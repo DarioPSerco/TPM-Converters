@@ -19,8 +19,9 @@ from xml_nodes import sipBuilder, rep_footprint
 
 
 REF_TYPECODES=[
-    'GIS_4B__2A', 'GIS_4B__OR', 'GIS_4B__MP'
-    'GIS_PAN_OR', 'GIS_PAN_MP', 'GIS_PAN_2A'
+    'L2AVRS_PAN', 'L2AVRR_PAN', 'L2ASTR_PAN'
+    'L3_MRO_PAN', 'L2AVRS_MS_', 'L2AVRR_MS_',
+    'L2ASTR_MS_','L3_MRP_MS_'
 ]
 RESOLUTION_LIMIT = 0.1
 REF_PROCESSING_LEVEL = {

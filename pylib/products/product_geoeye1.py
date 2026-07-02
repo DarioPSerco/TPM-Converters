@@ -30,12 +30,14 @@ from xml_nodes import rep_footprint
 
 #
 #
-REF_TYPECODES = ['GIS_4B__2A',
-                 'GIS_PAN_OR',
-                 'GIS_PAN_MP',
-                 'GIS_PAN_2A',
-                 'GIS_4B__OR',
-                 'GIS_4B__MP']
+REF_TYPECODES = ['L2AVRS_PAN', 
+                 'L2AVRR_PAN', 
+                 'L2ASTR_PAN',
+                 'L3_MRO_PAN',
+                 'L2AVRS_MS_',
+                 'L2AVRR_MS_',
+                 'L2ASTR_MS_',
+                 'L3_MRP_MS_']
 
 RESOLUTION_LIMIT = 0.1
 # REF_RESOLUTION = [ '0.30', '0.40', '0.50', '0.60' ]
