@@ -261,9 +261,6 @@ class Product_Quickbird(Product_Directory):
 
                 if name.endswith(BROWSE_SUFFIX):
                     preview_path = eoFile
-                    fd = open(preview_path, 'r')
-                    self.preview_data = fd.read()
-                    fd.close()
                     shutil.copyfile(preview_path, "%s/%s" % (folder, name))
                     print((" ## FOUND self.preview_path=%s" % preview_path))
                     self.preview_path.append(preview_path)
