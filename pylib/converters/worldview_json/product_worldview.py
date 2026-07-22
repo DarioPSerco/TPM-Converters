@@ -277,9 +277,6 @@ class Product_Worldview(Product_Directory):
 
                 if name.endswith(BROWSE_SUFFIX):
                     preview_path = eoFile
-                    with open(preview_path, 'rb') as fd:
-                        self.preview_data = fd.read()
-
                     shutil.copyfile(preview_path, "%s/%s" % (folder, name))
                     print((" ## FOUND self.preview_path=%s" % preview_path))
                     self.preview_path.append(preview_path)

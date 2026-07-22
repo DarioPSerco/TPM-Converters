@@ -43,7 +43,6 @@ class ingester_worldview(ingester.Ingester):
                 processInfo.srcProduct,
                 eoName,
                 outDir,
-                converter_version=__version__,
                 native_product_name=processInfo.srcProduct.origName,
             )
             processInfo.addLog("  JSON metadata manifest written: %s" % jsonPath)
