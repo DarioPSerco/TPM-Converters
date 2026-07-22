@@ -19,9 +19,8 @@ from xml_nodes import sipBuilder, rep_footprint
 
 
 REF_TYPECODES=[
-    'L2AVRS_PAN', 'L2AVRR_PAN', 'L2ASTR_PAN'
-    'L3_MRO_PAN', 'L2AVRS_MS_', 'L2AVRR_MS_',
-    'L2ASTR_MS_','L3_MRP_MS_'
+    'GIS_4B__2A', 'GIS_4B__OR', 'GIS_4B__MP',
+    'GIS_PAN_OR', 'GIS_PAN_MP', 'GIS_PAN_2A'
 ]
 RESOLUTION_LIMIT = 0.1
 REF_PROCESSING_LEVEL = {
@@ -271,9 +270,6 @@ class Product_Geoeye1(Product_Directory):
 
                 if name.endswith(BROWSE_SUFFIX):
                     preview_path = eoFile
-                    with open(preview_path, 'r') as fd:
-                        self.preview_data = fd.read()
-
                     shutil.copyfile(preview_path, "%s/%s" % (folder, name))
                     print((" ## FOUND self.preview_path=%s" % preview_path))
                     self.preview_path.append(preview_path)
