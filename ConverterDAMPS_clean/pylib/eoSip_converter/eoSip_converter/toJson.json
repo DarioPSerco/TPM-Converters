@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "order": "Order",
+        "country": "Country",
+        "city": "City",
+        "luzId": "LuzId"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.815299447796,
+              43.741110288
+            ],
+            [
+              0.842761456689,
+              43.0126988418
+            ],
+            [
+              1.95795305701,
+              43.0292778726
+            ],
+            [
+              1.94468246529,
+              43.7579095651
+            ],
+            [
+              0.815299447796,
+              43.741110288
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

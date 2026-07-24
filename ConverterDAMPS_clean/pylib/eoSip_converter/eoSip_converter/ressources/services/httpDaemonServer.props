@@ -1,0 +1,16 @@
+
+
+[GLOBAL]
+#
+# the listening port
+#
+LISTENING_PORT=6002
+
+#
+# the listening port
+#
+LISTENING_HOST=localhost
+
+
+#
+DEBUG=True

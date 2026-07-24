@@ -1,0 +1,104 @@
+{
+  "type": "Feature",
+  "id": "QB2_OPER_L2ASTR_PAN_20160501T144606_S24-190_W066-403_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-66.44291264, -24.15261009],
+        [-66.44136086, -24.23036597],
+        [-66.36391186, -24.22904374],
+        [-66.36551048, -24.15129263],
+        [-66.44291264, -24.15261009]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ARCHIVED",
+    "title": "QB2_OPER_L2ASTR_PAN_20160501T144606_S24-190_W066-403_0001",
+    "date": "2016-05-01T14:46:06.806Z/2016-05-01T14:46:06.806Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": {
+      "platform": {
+        "platformShortName": "QuickBird-2",
+        "orbitType": "LEO"
+      },
+      "instrument": {
+        "instrumentShortName": "BGI",
+        "sensorType": "OPTICAL"
+      },
+      "acquisitionParameters": {
+        "beginningDateTime": "2016-05-01T14:46:06.806Z",
+        "endingDateTime": "2016-05-01T14:46:06.806Z",
+        "operationalMode": "STEREO",
+        "resolution": 0.5,
+        "acquisitionType": "NOMINAL",
+        "wavelengths": {
+          "spectralRange": "VIS"
+        },
+        "acquisitionAngles": {
+          "illuminationAzimuthAngle": 33.3,
+          "illuminationElevationAngle": 44.1
+        }
+      }
+    },
+    "productInformation": {
+      "size": 627642676,
+      "cloudCover": 0,
+      "productType": "L2ASTR_PAN",
+      "processingLevel": "2A",
+      "resourceLineage": {
+        "processStep": {
+          "description": "EOPF-EOS Converter for QuickBird-2",
+          "stepDateTime": {
+            "created": "2021-02-01T15:30:23.000Z"
+          },
+          "processor": {
+            "role": "processor",
+            "party": {
+              "name": "EOF-EOS External Data Handling",
+              "type": "CI_Organisation"
+            }
+          },
+          "reference": {
+            "title": "EOPF-EOS Specialization for QuickBird-2 products",
+            "edition": "1.0"
+          },
+          "source": {
+            "citation": "<Native product name>",
+            "processedLevel": "Stereo2A"
+          },
+          "processingInformation": {
+            "softwareReference": {
+              "title": "<EOPF-EOS Converter name>",
+              "edition": "<EOPF-EOS Converter version>"
+            }
+          },
+          "output": {
+            "sourceCitation": {
+              "title": "QB2_OPER_L2ASTR_PAN_20100527T231608_N13-756_W100-000_0001.ZIP"
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/<native_product>",
+          "type": "application/x-hdf5",
+          "title": "Native File",
+          "category": "product (TBD as part of vocabulary to consolidate)"
+        }
+      ],
+      "preview": [
+        {
+          "href": "/preview/overviews/QB2_OPER_L2ASTR_PAN_20100527T231608_N13-756_W100-000_0001.PNG",
+          "type": "image/png",
+          "title": "Product browse",
+          "category": "overview (TBD as above)"
+        }
+      ]
+    }
+  }
+}

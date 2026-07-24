@@ -1,0 +1,135 @@
+<opt:EarthObservation xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:opt="http://www.opengis.net/opt/2.1"
+                      xmlns:eop="http://www.opengis.net/eop/2.1" xmlns:om="http://www.opengis.net/om/2.0"
+                      xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_1">
+    <om:phenomenonTime>
+        <gml:TimePeriod gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_2">
+            <gml:beginPosition>2009-05-17T02:57:58Z</gml:beginPosition>
+            <gml:endPosition>2009-05-17T02:57:58Z</gml:endPosition>
+        </gml:TimePeriod>
+    </om:phenomenonTime>
+    <om:resultTime>
+        <gml:TimeInstant gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_3">
+            <gml:timePosition>2011-09-28T00:00:00Z</gml:timePosition>
+        </gml:TimeInstant>
+    </om:resultTime>
+    <om:procedure>
+        <opt:EarthObservationEquipment gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_4">
+            <eop:platform>
+                <eop:Platform>
+                    <eop:shortName>ALOS</eop:shortName>
+                    <eop:serialIdentifier>1</eop:serialIdentifier>
+                </eop:Platform>
+            </eop:platform>
+            <eop:instrument>
+                <eop:Instrument>
+                    <eop:shortName>AVNIR</eop:shortName>
+                </eop:Instrument>
+            </eop:instrument>
+            <eop:sensor>
+                <eop:Sensor>
+                    <eop:sensorType>OPTICAL</eop:sensorType>
+                    <eop:operationalMode>IM</eop:operationalMode>
+                </eop:Sensor>
+            </eop:sensor>
+            <eop:acquisitionParameters>
+                <eop:Acquisition>
+                    <eop:orbitNumber>000000</eop:orbitNumber>
+                    <eop:orbitDirection>DESCENDING</eop:orbitDirection>
+                    <eop:wrsLongitudeGrid codeSpace="">E113</eop:wrsLongitudeGrid>
+                    <eop:wrsLatitudeGrid codeSpace="">N000</eop:wrsLatitudeGrid>
+                    <eop:illuminationAzimuthAngle uom="degrees">46.11</eop:illuminationAzimuthAngle>
+                    <eop:illuminationElevationAngle uom="degrees">61.47</eop:illuminationElevationAngle>
+                    <eop:incidenceAngle uom="degrees">0.1</eop:incidenceAngle>
+                </eop:Acquisition>
+            </eop:acquisitionParameters>
+        </opt:EarthObservationEquipment>
+    </om:procedure>
+    <om:observedProperty/>
+    <om:featureOfInterest>
+        <eop:Footprint gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_5">
+            <eop:multiExtentOf>
+                <gml:MultiSurface gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_6">
+                    <gml:surfaceMember>
+                        <gml:Polygon gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_7">
+                            <gml:exterior>
+                                <gml:LinearRing>
+                                    <gml:posList>0.43 112.969 -0.421 112.969 -0.421 113.443 0.43 113.443 0.43 112.969
+                                    </gml:posList>
+                                </gml:LinearRing>
+                            </gml:exterior>
+                        </gml:Polygon>
+                    </gml:surfaceMember>
+                </gml:MultiSurface>
+            </eop:multiExtentOf>
+            <eop:centerOf>
+                <gml:Point gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_8">
+                    <gml:pos>0.0045000384979 113.206000138</gml:pos>
+                </gml:Point>
+            </eop:centerOf>
+        </eop:Footprint>
+    </om:featureOfInterest>
+    <om:result>
+        <opt:EarthObservationResult gml:id="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000_9">
+            <eop:browse>
+                <eop:BrowseInformation>
+                    <eop:type>QUICKLOOK</eop:type>
+                    <eop:referenceSystemIdentifier codeSpace="epsg">EPSG:4326</eop:referenceSystemIdentifier>
+                    <eop:fileName>
+                        <ows:ServiceReference
+                                xlink:href="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000.BI.JPG">
+                            <ows:RequestMessage/>
+                        </ows:ServiceReference>
+                    </eop:fileName>
+                </eop:BrowseInformation>
+            </eop:browse>
+            <eop:product>
+                <eop:ProductInformation>
+                    <eop:fileName>
+                        <ows:ServiceReference
+                                xlink:href="AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000.ZIP">
+                            <ows:RequestMessage/>
+                        </ows:ServiceReference>
+                    </eop:fileName>
+                    <eop:version>N/A</eop:version>
+                    <eop:size uom="Bytes">10067698</eop:size>
+                </eop:ProductInformation>
+            </eop:product>
+            <opt:cloudCoverPercentage uom="%">3</opt:cloudCoverPercentage>
+        </opt:EarthObservationResult>
+    </om:result>
+    <eop:metaDataProperty>
+        <eop:EarthObservationMetaData>
+            <eop:identifier>AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000</eop:identifier>
+            <eop:acquisitionType>NOMINAL</eop:acquisitionType>
+            <eop:productType>AV2_OBS_11</eop:productType>
+            <eop:status>ARCHIVED</eop:status>
+            <eop:processing>
+                <eop:ProcessingInformation>
+                    <eop:processingCenter>Astrium Services</eop:processingCenter>
+                    <eop:processingDate>2011-09-28T00:00:00Z</eop:processingDate>
+                </eop:ProcessingInformation>
+            </eop:processing>
+            <eop:vendorSpecific>
+                <eop:SpecificInformation>
+                    <eop:localAttribute>country</eop:localAttribute>
+                    <eop:localValue>Indonesia</eop:localValue>
+                </eop:SpecificInformation>
+            </eop:vendorSpecific>
+            <eop:vendorSpecific>
+                <eop:SpecificInformation>
+                    <eop:localAttribute>boundingBox</eop:localAttribute>
+                    <eop:localValue>0.43 112.969 -0.421 112.969 -0.421 113.443 0.43 113.443 0.43 112.969
+                    </eop:localValue>
+                </eop:SpecificInformation>
+            </eop:vendorSpecific>
+            <eop:vendorSpecific>
+                <eop:SpecificInformation>
+                    <eop:localAttribute>original_name</eop:localAttribute>
+                    <eop:localValue>N00-E113_AVN_20090517_PRO_0.zip</eop:localValue>
+                </eop:SpecificInformation>
+            </eop:vendorSpecific>
+        </eop:EarthObservationMetaData>
+    </eop:metaDataProperty>
+</opt:EarthObservation>
