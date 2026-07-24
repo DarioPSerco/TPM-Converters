@@ -1,0 +1,12 @@
+﻿# Cache e artefatti Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# File temporanei
+.goutputstream-*
+
+# Log e output generati a runtime
+log/
+_validation/regen_*/
+_validation/*.json

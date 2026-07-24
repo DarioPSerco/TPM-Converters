@@ -1,0 +1,106 @@
+{
+  "type": "Feature",
+  "id": "ICE_OPER_XN_SM__SLC_20130527T231708_20130527T231732_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-66.44291264, -24.15261009],
+        [-66.44136086, -24.23036597],
+        [-66.36391186, -24.22904374],
+        [-66.36551048, -24.15129263],
+        [-66.44291264, -24.15261009]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "ICE_OPER_XN_SM__SLC_20130527T231708_20130527T231732_0001",
+    "date": "2016-05-01T14:46:06.806Z/2016-05-01T14:46:06.806Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": {
+      "platform": {
+        "platformShortName": "ICEYE",
+        "platformSerialIdentifier": "1",
+        "orbitType": "LEO"
+      },
+      "instrument": {
+        "instrumentShortName": "SAR",
+        "sensorType": "RADAR"
+      },
+      "acquisitionParameters": {
+        "beginningDateTime": "2016-05-01T14:46:06.806Z",
+        "endingDateTime": "2016-05-01T14:46:06.806Z",
+        "operationalMode": "Strip",
+        "orbitNumber": "53",
+        "orbitDirection": "ASCENDING",
+        "wrsLongitudeGrid": "301",
+        "wrsLatitudeGrid": "25",
+        "polarisationMode": "S",
+        "polarisationChannel": "VV",
+        "antennaLookDirection": "LEFT",
+        "resolution": 0.5,
+        "acquisitionType": "NOMINAL",
+        "acquisitionAngles": {
+          "incidenceAngle": 33.3
+        }
+      }
+    },
+    "productInformation": {
+      "size": 627642676,
+      "productType": "XN_SM__SLC",
+      "resourceLineage": {
+        "processStep": {
+          "description": "EOPF-EOS Converter for ICEYE",
+          "stepDateTime": {
+            "created": "2021-02-01T15:30:23.000Z"
+          },
+          "processor": {
+            "role": "processor",
+            "party": {
+              "name": "EOF-EOS External Data Handling",
+              "type": "CI_Organisation"
+            }
+          },
+          "reference": {
+            "title": "EOPF-EOS Specialization for ICEYE products",
+            "edition": "1.0"
+          },
+          "source": {
+            "citation": "<Native product name>",
+            "processedLevel": "<processed level>"
+          },
+          "processingInformation": {
+            "softwareReference": {
+              "title": "<EOPF-EOS Converter name>",
+              "edition": "<EOPF-EOS Converter version>"
+            }
+          },
+          "output": {
+            "sourceCitation": {
+              "title": "ICE_OPER_XN_SM__SLC_20130527T231708_20130527T231732_0001.ZIP"
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/<native_product>",
+          "type": "application/x-hdf5",
+          "title": "Native File",
+          "category": "product (TBD as part of vocabulary to consolidate)"
+        }
+      ],
+      "preview": [
+        {
+          "href": "/preview/overviews/ICE_OPER_XN_SM__SLC_20130527T231708_20130527T231732_0001.PNG",
+          "type": "image/png",
+          "title": "Product browse",
+          "category": "overview (TBD as above)"
+        }
+      ]
+    }
+  }
+}

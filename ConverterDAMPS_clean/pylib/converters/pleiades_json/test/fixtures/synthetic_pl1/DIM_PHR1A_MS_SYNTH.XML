@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC Pleiades DIMAP fixture: invented values, structure inferred
+     from product_pleiades.py xmlMapping / refineMetadata paths only. -->
+<Dimap_Document>
+  <Dataset_Identification>
+    <DATASET_TYPE>RASTER_SENSOR</DATASET_TYPE>
+    <DATASET_NAME version="1.0">SYNTH_PL1_DATASET</DATASET_NAME>
+  </Dataset_Identification>
+  <Dataset_Content>
+    <Dataset_Extent>
+      <Vertex>
+        <LON>-66.44291264</LON>
+        <LAT>-24.15261009</LAT>
+        <ROW>1</ROW>
+        <COL>1</COL>
+      </Vertex>
+      <Vertex>
+        <LON>-66.36391186</LON>
+        <LAT>-24.15129263</LAT>
+        <ROW>1</ROW>
+        <COL>1000</COL>
+      </Vertex>
+      <Vertex>
+        <LON>-66.36551048</LON>
+        <LAT>-24.22904374</LAT>
+        <ROW>1000</ROW>
+        <COL>1000</COL>
+      </Vertex>
+      <Vertex>
+        <LON>-66.44136086</LON>
+        <LAT>-24.23036597</LAT>
+        <ROW>1000</ROW>
+        <COL>1</COL>
+      </Vertex>
+      <Center>
+        <LON>-66.403</LON>
+        <LAT>-24.190</LAT>
+      </Center>
+    </Dataset_Extent>
+    <Dataset_Components>
+      <Component>
+        <COMPONENT_PATH href="LINEAGE/STRIP_DS_PHR1A_201605011446068_FR1_PX_W066S24_0224_08756_DIM.XML"/>
+      </Component>
+    </Dataset_Components>
+  </Dataset_Content>
+  <Dataset_Sources>
+    <Source_Identification>
+      <Strip_Source>
+        <IMAGING_DATE>2016-05-01</IMAGING_DATE>
+        <IMAGING_TIME>14:46:06.8Z</IMAGING_TIME>
+        <MISSION_INDEX>1A</MISSION_INDEX>
+        <INSTRUMENT_INDEX>1A</INSTRUMENT_INDEX>
+      </Strip_Source>
+    </Source_Identification>
+  </Dataset_Sources>
+  <Geometric_Data>
+    <Use_Area>
+      <Located_Geometric_Values>
+        <Acquisition_Angles>
+          <INCIDENCE_ANGLE_ALONG_TRACK>5.32</INCIDENCE_ANGLE_ALONG_TRACK>
+          <INCIDENCE_ANGLE_ACROSS_TRACK>7.18</INCIDENCE_ANGLE_ACROSS_TRACK>
+        </Acquisition_Angles>
+        <Solar_Incidences>
+          <SUN_AZIMUTH>145.23</SUN_AZIMUTH>
+          <SUN_ELEVATION>61.74</SUN_ELEVATION>
+        </Solar_Incidences>
+      </Located_Geometric_Values>
+    </Use_Area>
+  </Geometric_Data>
+  <Product_Information>
+    <Delivery_Identification>
+      <PRODUCTION_DATE>2021-02-01T15:30:23.000</PRODUCTION_DATE>
+    </Delivery_Identification>
+  </Product_Information>
+  <Processing_Information>
+    <Product_Settings>
+      <SPECTRAL_PROCESSING>MS</SPECTRAL_PROCESSING>
+    </Product_Settings>
+    <Production_Facility>
+      <SOFTWARE version="V_03_09">IPU</SOFTWARE>
+    </Production_Facility>
+  </Processing_Information>
+  <Raster_Data>
+    <Raster_Dimensions>
+      <NCOLS>1000</NCOLS>
+      <NROWS>1000</NROWS>
+      <NBANDS>4</NBANDS>
+    </Raster_Dimensions>
+  </Raster_Data>
+</Dimap_Document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC Pleiades-NEO DIMAP fixture: invented values, structure
+     inferred from product_pneo.py xmlMapping / refineMetadata paths only.
+     The Solar_Incidences block is [INFERRED from Pleiades DIMAP layout] -
+     the original pneo extraction never read it; real-TDS confirmation
+     PENDING (see SYNTHETIC_FIXTURE_NOTE.md). -->
+<Dimap_Document>
+  <Dataset_Identification>
+    <DATASET_TYPE>RASTER_PROJECTED</DATASET_TYPE>
+    <DATASET_NAME version="1.2">SYNTH_PLN_DATASET</DATASET_NAME>
+  </Dataset_Identification>
+  <Dataset_Content>
+    <CLOUD_COVERAGE>1.2</CLOUD_COVERAGE>
+    <Dataset_Extent>
+      <Vertex>
+        <LON>2.10312345</LON>
+        <LAT>41.41261009</LAT>
+        <ROW>1</ROW>
+        <COL>1</COL>
+      </Vertex>
+      <Vertex>
+        <LON>2.20391186</LON>
+        <LAT>41.41129263</LAT>
+        <ROW>1</ROW>
+        <COL>1000</COL>
+      </Vertex>
+      <Vertex>
+        <LON>2.20551048</LON>
+        <LAT>41.33904374</LAT>
+        <ROW>1000</ROW>
+        <COL>1000</COL>
+      </Vertex>
+      <Vertex>
+        <LON>2.10136086</LON>
+        <LAT>41.34036597</LAT>
+        <ROW>1000</ROW>
+        <COL>1</COL>
+      </Vertex>
+      <Center>
+        <LON>2.153</LON>
+        <LAT>41.376</LAT>
+      </Center>
+    </Dataset_Extent>
+    <Dataset_Components>
+      <Component>
+        <COMPONENT_PATH href="LINEAGE/PROCESSING_PNEO1_202105031049000_SYNTH_DIM.XML"/>
+      </Component>
+    </Dataset_Components>
+  </Dataset_Content>
+  <Dataset_Sources>
+    <Source_Identification>
+      <Strip_Source>
+        <IMAGING_DATE>2021-05-03</IMAGING_DATE>
+        <IMAGING_TIME>10:49:12.4Z</IMAGING_TIME>
+        <MISSION_INDEX>3</MISSION_INDEX>
+        <INSTRUMENT_INDEX>1</INSTRUMENT_INDEX>
+      </Strip_Source>
+    </Source_Identification>
+  </Dataset_Sources>
+  <Geometric_Data>
+    <Use_Area>
+      <Located_Geometric_Values>
+        <Acquisition_Angles>
+          <INCIDENCE_ANGLE>11.87</INCIDENCE_ANGLE>
+          <INCIDENCE_ANGLE_ALONG_TRACK>4.21</INCIDENCE_ANGLE_ALONG_TRACK>
+          <INCIDENCE_ANGLE_ACROSS_TRACK>9.63</INCIDENCE_ANGLE_ACROSS_TRACK>
+        </Acquisition_Angles>
+        <Solar_Incidences>
+          <SUN_AZIMUTH>152.81</SUN_AZIMUTH>
+          <SUN_ELEVATION>57.42</SUN_ELEVATION>
+        </Solar_Incidences>
+      </Located_Geometric_Values>
+    </Use_Area>
+  </Geometric_Data>
+  <Product_Information>
+    <Delivery_Identification>
+      <PRODUCTION_DATE>2022-03-11T09:12:45.000</PRODUCTION_DATE>
+    </Delivery_Identification>
+  </Product_Information>
+  <Processing_Information>
+    <Product_Settings>
+      <SPECTRAL_PROCESSING>MS</SPECTRAL_PROCESSING>
+      <Sampling_Settings>
+        <RESAMPLING_SPACING>0.3</RESAMPLING_SPACING>
+      </Sampling_Settings>
+    </Product_Settings>
+    <Production_Facility>
+      <SOFTWARE version="V2.6">IMF</SOFTWARE>
+    </Production_Facility>
+  </Processing_Information>
+  <Coordinate_Reference_System>
+    <Projected_CRS>
+      <PROJECTED_CRS_CODE>urn:ogc:def:crs:EPSG::32631</PROJECTED_CRS_CODE>
+    </Projected_CRS>
+  </Coordinate_Reference_System>
+  <Raster_Data>
+    <Raster_Dimensions>
+      <NCOLS>1000</NCOLS>
+      <NROWS>1000</NROWS>
+      <NBANDS>4</NBANDS>
+    </Raster_Dimensions>
+    <Data_Access>
+      <DATA_FILE_FORMAT>image/jp2</DATA_FILE_FORMAT>
+    </Data_Access>
+  </Raster_Data>
+</Dimap_Document>

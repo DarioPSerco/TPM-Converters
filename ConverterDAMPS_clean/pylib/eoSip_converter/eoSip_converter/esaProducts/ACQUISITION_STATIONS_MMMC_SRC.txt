@@ -1,0 +1,160 @@
+AS	ALICE SPRING
+AT	ATLANTA TEST SITE
+TO	AUSSAGUEL
+HO	AUSTRALIA HOBART
+AD	Adelaide (Australia)
+NM	Agrhymet, Niamey (Nigeria)
+AP	Aspendale (Australia)
+TH	BANGKOK
+BJ	BEIJING
+BE	BEIJING - ERS
+BK	BISHKEK
+BI	Bedford
+BL	Berlin
+BN	Berne (Switzerland)
+BZ	Bolzano (Italy)
+BR	Brest (France)
+BU	Budapest
+BA	Buenos Aires, Argentina
+CA	CORDOBA, ARGENTINA
+CO	COTOPAXI, ECUADOR
+CU	CUIABA, BRAZIL
+CR	Cairo (Egypt)
+CS	Casey, Antartica
+LN	Centre Meteo Lannion (France)
+CM	Chetumal (Mexico)
+CH	Copenhagen
+OB	DLR, Oberpfaffenhofen (Germany)
+DX	Da-Xing
+DA	Darwin, Australia
+DB	De Bilt (Holland)
+DK	Dhaka (Bangladesh)
+DS	Dharan, Saudi Arabia
+DV	Downsview (Canada)
+__	Dummy Station
+SF	EROs Data Centre Sioux Falls (USA)
+EM	Edmonton (Canada)
+AF	FAIRBANKS, ALASKA
+FS	FUCINO STATION
+UA	Fairbanks Alaska Univ.
+FB	Farnborough (United Kingdom)
+FT	Funceme, Fortaleza (Brazil)
+GH	GATINEAU HIGH RATE STATION
+GS	GATINEAU LOW RATE STATION
+GT	Gatineau
+NG	Gilmore Creek, Akaska
+GD	Goddard (USA)
+TG	Greenbelt MD (USA)
+GR	Grimstadt (Norway)
+HA	HATOYAMA, JAPAN
+HW	HONOLULU
+SE	HYDERABAD
+HM	Hamburg
+HN	Hanoi
+HB	Hartebeestoek, South Africa
+HS	Helsinki
+HI	Hiroshima (Japan)
+HT	Hobart, Australia
+HG	Hong Kong (China)
+CP	INPE, Cashoiera Paulista (Brazil)
+IS	ISLAMABAD,PAKISTAN
+IR	ISRAEL
+TU	ISTAMBUL
+JO	JOHANNESBURG STATION
+JS	Jeddah, Saudi Arabia
+KA	KARI (Norway)
+KM	KHANTY MANSYISK
+KS	KIRUNA STATION
+KB	KITAB
+KL	KUALA LUMPUR (Malaysia)
+KU	KUMAMOTO JAPAN
+KG	Keelung (Taiwan)
+NB	Kenyan Met Office, Nairobi (Kenya)
+KE	Kergu (Estonia)
+KY	Kiyose (Japan)
+KO	Kourou (French Guiana)
+KK	Krakow (Poland)
+LI	LIBREVILLE
+RE	La Reunion
+LR	La Reunion (France)
+LZ	La Spezia (Italy)
+JK	Lapan, Jakarta (Indonesia)
+LH	Lasham (United Kingdom)
+LS	Lousiana University. Louisiana USA
+ML	MALINDI,KENIA
+MS	MASPALOMAS STATION
+MA	MATERA
+MM	MCMURDO
+MI	MIAMI
+MW	MOSCOW
+MD	Madrid
+MG	Magadan
+SL	Malaysian Met Department, Selangor (Malaysia)
+MN	Manila (Phillipines)
+MC	Mar Chiquita (Argentina)
+MZ	Marzuq, Libia
+MT	Matera Telespazio
+NZ	NEUSTRELITZ
+NW	NOAA Wallops Island ¿ Virgina Station
+NE	NOAA/NESDIS - (USA)
+NO	NORMAN STATION
+ND	New Dheli
+NK	Norrkoping (Sweden)
+NV	Novosibirsk (Russia)
+TF	O'HIGGINS
+OF	Offenbach (Germany)
+OS	Oslo
+IN	PARI-PARI
+FR	PDHS-E
+PH	PRINCE ALBERT HIGH RATE STATION
+PS	PRINCE ALBERT LOW RATE STATION
+PL	Palmer Station, Antarctica
+CT	Paris
+PT	Perth, Australia
+AG	Poker Plats, Alaska
+PR	Prague
+PO	Pretoria
+PA	Price Albert, Canada
+RA	RAL, Rutherford Appleton Lab. (United Kingdom)
+SA	RHYAD, SAUDI ARABIA
+NI	RRSC Nairobi (Kenya)
+RD	Redu (Belgium)
+RW	Redwood City (USA)
+RM	Rome
+SG	SINGAPORE
+SV	SVALBARD
+SY	SYOWA, JAPAN
+SR	San Diego, SCR
+SM	Santa Maria Island
+ST	Santiago
+SZ	Scanzano
+SN	Sendai (Japan)
+S1	Seoul
+S2	Seoul Univ.
+SP	Spitzbergen (Norway)
+SU	Spot USA Mobile Station
+SS	Stennis Space Centre (USA)
+SD	Sydney
+TW	TAIWAN
+TS	TROMSOE
+TP	Taipei (Taiwan)
+TB	Terranova Bay, Antartica
+TI	Tiksi (Russia, Siberia)
+TY	Tokay University (Japan)
+TK	Tokyo University (Japan)
+TT	Toronto
+TE	Toulouse Test Site (France)
+TV	Townsville, Australia
+TC	Traben-Trarbach (Germany)
+TL	Tripoli
+TA	Troll
+TJ	Tsukaba
+TN	Tunis
+UB	ULAN BATOR
+XX	UNKNOWN
+DD	University of Dundee (UK)
+UR	University of Rhode Island (USA)
+UT	University of Texas, Austin, Texas (USA) 
+VF	Villafranca (Spain)
+WF	WEST FREUGH, UK
+WL	Wellington (New Zealand) 
