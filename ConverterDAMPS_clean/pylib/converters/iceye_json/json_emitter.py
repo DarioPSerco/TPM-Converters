@@ -31,19 +31,19 @@ TEMPLATE_PATH = Path(__file__).resolve().parent / "feature_template_sar.json"
 # shaped as a partial tree mirroring the template.
 MISSION_VALUES = {
     "properties": {
-        "acquisitionInformation": {
+        "acquisitionInformation": [{
             "platform": {"platformShortName": "ICEYE", "orbitType": "LEO"},
             "instrument": {"instrumentShortName": "SAR", "sensorType": "RADAR"},
-        },
+        }],
         "productInformation": {
-            "resourceLineage": {"processStep": {
+            "resourceLineage": [{"processStep": [{
                 "description": "EOPF-EOS Converter for ICEYE",
                 "reference": {"title": "EOPF-EOS Specialization for ICEYE products",
                               "edition": "1.0"},
                 "processingInformation": {"softwareReference": {
                     "title": "EOPF-EOS Converter for ICEYE",
                     "edition": __version__}},
-            }},
+            }]}],
         },
     },
 }
@@ -54,6 +54,20 @@ def _gv(met, key):
     if not met.valueExists(v):
         return None
     return v
+
+
+def _int_or_none(value):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _grid_or_none(value):
+    if value is None:
+        return None
+    match = re.search(r"-?\d+", str(value))
+    return int(match.group()) if match else None
 
 
 def _norm_dt(s):
@@ -106,16 +120,16 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             "title": eo_product_name,
             "date": "%s/%s" % (begin, end) if begin and end else None,
             "created": created,
-            "acquisitionInformation": {
+            "acquisitionInformation": [{
                 "platform": {"platformSerialIdentifier": str(serial) if serial is not None else None},
-                "acquisitionParameters": {
+                "acquisitionParameters": [{
                     "beginningDateTime": begin,
                     "endingDateTime": end,
                     "operationalMode": _gv(met, M.METADATA_SENSOR_OPERATIONAL_MODE),
-                    "orbitNumber": str(orbit) if orbit is not None else None,
-                    "orbitDirection": _gv(met, M.METADATA_ORBIT_DIRECTION),
-                    "wrsLongitudeGrid": _gv(met, M.METADATA_WRS_LONGITUDE_GRID_NORMALISED),
-                    "wrsLatitudeGrid": _gv(met, M.METADATA_WRS_LATITUDE_GRID_NORMALISED),
+                    "orbitNumber": _int_or_none(orbit),
+                    "orbitDIrection": _gv(met, M.METADATA_ORBIT_DIRECTION),
+                    "wrsLongitudeGrid": _grid_or_none(_gv(met, M.METADATA_WRS_LONGITUDE_GRID_NORMALISED)),
+                    "wrsLatitudeGrid": _grid_or_none(_gv(met, M.METADATA_WRS_LATITUDE_GRID_NORMALISED)),
                     "polarisationMode": _gv(met, M.METADATA_POLARISATION_MODE),
                     "polarisationChannel": _gv(met, M.METADATA_POLARISATION_CHANNELS),
                     "antennaLookDirection": _gv(met, M.METADATA_ANTENNA_LOOK_DIRECTION),
@@ -123,16 +137,16 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
                     "acquisitionAngles": {
                         "incidenceAngle": float(incidence) if incidence is not None else None,
                     },
-                },
-            },
+                }],
+            }],
             "productInformation": {
                 "size": int(size),
                 "productType": typecode,
-                "resourceLineage": {"processStep": {
+                "resourceLineage": [{"processStep": [{
                     "stepDateTime": {"created": created},
-                    "source": {"citation": native_name, "processedLevel": processed},
+                    "source": {"citation": native_name},
                     "output": {"sourceCitation": {"title": "%s.ZIP" % eo_product_name}},
-                }},
+                }]}],
             },
             "links": {
                 "measurements": [{"href": "/measurements/%s" % native_name}],

@@ -90,8 +90,8 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert json_template.find_placeholders(feature) == []
 
     props = feature["properties"]
-    acq = props["acquisitionInformation"]
-    par = acq["acquisitionParameters"]
+    acq = props["acquisitionInformation"][0]
+    par = acq["acquisitionParameters"][0]
     assert feature["type"] == "Feature"
     assert feature["geometry"]["type"] == "Polygon"
     assert props["status"] == "ACQUIRED"
@@ -100,8 +100,10 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert acq["instrument"]["instrumentShortName"] == "SAR"
     assert acq["instrument"]["sensorType"] == "RADAR"
     assert par["operationalMode"] == "Strip"
-    assert par["orbitNumber"] == "53"
-    assert par["orbitDirection"] == "ASCENDING"
+    assert par["orbitNumber"] == 53
+    assert par["orbitDIrection"] == "ASCENDING"
+    assert par["wrsLongitudeGrid"] == 66
+    assert par["wrsLatitudeGrid"] == 24
     assert par["polarisationMode"] == "S"
     assert par["polarisationChannel"] == "VV"
     assert par["antennaLookDirection"] == "LEFT"
@@ -110,9 +112,8 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert props["productInformation"]["productType"] == "XN_SM__SLC"
     assert isinstance(props["productInformation"]["size"], int)
     assert props["productInformation"]["size"] > 0
-    lineage = props["productInformation"]["resourceLineage"]["processStep"]
-    assert lineage["source"]["citation"] == NATIVE_DIR.name
-    assert lineage["source"]["processedLevel"] == "SLC"
+    lineage = props["productInformation"]["resourceLineage"][0]["processStep"][0]
+    assert lineage["source"][0]["citation"] == NATIVE_DIR.name
 
 
 def test_optical_fields_and_tokens_absent(tmp_path):

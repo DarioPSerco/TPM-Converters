@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import spaces
+from common import json_template, spaces
 
 ROOT = Path(__file__).resolve().parents[2]
 CONVERTERS = ROOT / "pylib" / "converters"
@@ -26,7 +26,7 @@ MISSIONS = {
 
 def citation_of(manifest):
     d = json.loads(manifest.read_text(encoding="utf-8"))
-    return d["properties"]["productInformation"]["resourceLineage"]["processStep"]["source"]["citation"]
+    return json_template.lineage_citation(d)
 
 
 def outspace_citations(sp):

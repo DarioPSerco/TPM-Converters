@@ -22,20 +22,20 @@ from quickbird_json import __version__
 # shaped as a partial tree mirroring the template.
 MISSION_VALUES = {
     "properties": {
-        "acquisitionInformation": {
+        "acquisitionInformation": [{
             "platform": {"platformShortName": "QuickBird-2", "orbitType": "LEO"},
             "instrument": {"instrumentShortName": "BGI", "sensorType": "OPTICAL"},
-            "acquisitionParameters": {"wavelengths": {"spectralRange": "VIS"}},
-        },
+            "acquisitionParameters": [{"wavelenghts": {"spectralRange": "VIS"}}],
+        }],
         "productInformation": {
-            "resourceLineage": {"processStep": {
+            "resourceLineage": [{"processStep": [{
                 "description": "EOPF-EOS Converter for QuickBird-2",
                 "reference": {"title": "EOPF-EOS Specialization for QuickBird-2 products",
                               "edition": "1.0"},
                 "processingInformation": {"softwareReference": {
                     "title": "EOPF-EOS Converter for QuickBird-2",
                     "edition": __version__}},
-            }},
+            }]}],
         },
     },
 }
@@ -96,7 +96,7 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             "title": eo_product_name,
             "date": "%s/%s" % (begin, end) if begin and end else None,
             "created": created,
-            "acquisitionInformation": {"acquisitionParameters": {
+            "acquisitionInformation": [{"acquisitionParameters": [{
                 "beginningDateTime": begin,
                 "endingDateTime": end,
                 "operationalMode": _gv(met, M.METADATA_SENSOR_OPERATIONAL_MODE),
@@ -105,17 +105,17 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
                     "illuminationAzimuthAngle": float(sun_az) if sun_az is not None else None,
                     "illuminationElevationAngle": float(sun_el) if sun_el is not None else None,
                 },
-            }},
+            }]}],
             "productInformation": {
                 "size": int(size),
                 "cloudCover": float(cloud) if cloud is not None else None,
                 "productType": typecode,
                 "processingLevel": level_token,
-                "resourceLineage": {"processStep": {
+                "resourceLineage": [{"processStep": [{
                     "stepDateTime": {"created": created},
-                    "source": {"citation": native_name, "processedLevel": processed},
+                    "source": {"citation": native_name, "processedLevel": {"code": processed}},
                     "output": {"sourceCitation": {"title": "%s.ZIP" % eo_product_name}},
-                }},
+                }]}],
             },
             "links": {
                 "measurements": [{"href": "/measurements/%s" % native_name}],

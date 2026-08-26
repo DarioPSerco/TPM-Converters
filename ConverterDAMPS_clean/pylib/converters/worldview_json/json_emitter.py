@@ -23,20 +23,20 @@ from worldview_json import __version__
 # shaped as a partial tree mirroring the template.
 MISSION_VALUES = {
     "properties": {
-        "acquisitionInformation": {
+        "acquisitionInformation": [{
             "platform": {"orbitType": "LEO"},
             "instrument": {"sensorType": "OPTICAL"},
-            "acquisitionParameters": {"wavelengths": {"spectralRange": "VIS"}},
-        },
+            "acquisitionParameters": [{"wavelenghts": {"spectralRange": "VIS"}}],
+        }],
         "productInformation": {
-            "resourceLineage": {"processStep": {
+            "resourceLineage": [{"processStep": [{
                 "description": "EOPF-EOS Converter for WorldView",
                 "reference": {"title": "EOPF-EOS Specialization for WorldView products",
                               "edition": "1.0"},
                 "processingInformation": {"softwareReference": {
                     "title": "EOPF-EOS Converter for WorldView",
                     "edition": __version__}},
-            }},
+            }]}],
         },
     },
 }
@@ -157,11 +157,11 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             "title": eo_product_name,
             "date": "%s/%s" % (begin, end) if begin and end else None,
             "created": created,
-            "acquisitionInformation": {
+            "acquisitionInformation": [{
                 "platform": {"platformShortName": _platform_short_name(met, is_legion)},
                 "instrument": {"instrumentShortName":
                                INSTRUMENT_SHORTNAME.get(instrument_native, instrument_native)},
-                "acquisitionParameters": {
+                "acquisitionParameters": [{
                     "beginningDateTime": begin,
                     "endingDateTime": end,
                     "operationalMode": _operational_mode(met, product),
@@ -170,18 +170,18 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
                         "illuminationAzimuthAngle": float(sun_az) if sun_az is not None else None,
                         "illuminationElevationAngle": float(sun_el) if sun_el is not None else None,
                     },
-                },
-            },
+                }],
+            }],
             "productInformation": {
                 "size": int(size),
                 "cloudCover": float(cloud) if cloud is not None else None,
                 "productType": typecode,
                 "processingLevel": _processing_level(met),
-                "resourceLineage": {"processStep": {
+                "resourceLineage": [{"processStep": [{
                     "stepDateTime": {"created": created},
-                    "source": {"citation": native_name, "processedLevel": _processed_level(met)},
+                    "source": {"citation": native_name, "processedLevel": {"code": _processed_level(met)}},
                     "output": {"sourceCitation": {"title": "%s.ZIP" % eo_product_name}},
-                }},
+                }]}],
             },
             "links": {
                 "measurements": [{"href": "/measurements/%s" % native_name}],

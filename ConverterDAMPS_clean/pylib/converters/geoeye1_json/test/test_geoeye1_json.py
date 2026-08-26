@@ -58,11 +58,12 @@ def test_emitted_json_matches_template(tmp_path):
 
     props = feature["properties"]
     assert feature["type"] == "Feature"
-    assert props["status"] == "ARCHIVED"
-    assert props["acquisitionInformation"]["platform"]["platformShortName"] == "GeoEye-1"
-    assert props["acquisitionInformation"]["platform"]["orbitType"] == "LEO"
-    assert props["acquisitionInformation"]["instrument"]["instrumentShortName"] == "GIS"
-    assert props["acquisitionInformation"]["acquisitionParameters"]["operationalMode"] == "PAN"
+    assert props["status"] == "ACQUIRED"
+    acq = props["acquisitionInformation"][0]
+    assert acq["platform"]["platformShortName"] == "GeoEye-1"
+    assert acq["platform"]["orbitType"] == "LEO"
+    assert acq["instrument"]["instrumentShortName"] == "GIS"
+    assert acq["acquisitionParameters"][0]["operationalMode"] == "PAN"
     assert props["productInformation"]["productType"] == "GIS_PAN_2A"
     assert feature["geometry"]["type"] == "Polygon"
     assert "bbox" not in feature

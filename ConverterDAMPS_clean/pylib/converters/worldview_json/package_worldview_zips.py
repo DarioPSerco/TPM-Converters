@@ -8,7 +8,7 @@ from PIL import Image
 
 BASE = Path(__file__).resolve()
 sys.path.insert(0, str(BASE.parents[1]))
-from common import spaces
+from common import json_template, spaces
 
 SPACES = spaces.read_spaces(BASE.parent / "ingest_worldview.cfg")
 OUTSPACE = SPACES["OUTSPACE"]
@@ -52,7 +52,7 @@ def package_one(mf):
     product = d["id"]
     pinfo = d["properties"]["productInformation"]
     ptype = pinfo["productType"]
-    scene_xml = pinfo["resourceLineage"]["processStep"]["source"]["citation"]
+    scene_xml = json_template.lineage_citation(d)
     scene = spaces.find_native(scene_xml, SPACES)
     bs = browses(scene)
     canon = pick_canonical(bs)

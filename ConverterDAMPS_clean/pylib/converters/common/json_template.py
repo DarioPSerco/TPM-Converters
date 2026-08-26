@@ -45,6 +45,8 @@ def overlay(base, over):
         longer = base if len(base) > len(over) else over
         merged.extend(longer[len(merged):])
         return merged
+    if isinstance(base, list) and isinstance(over, dict) and base:
+        return [overlay(base[0], over)] + base[1:]
     return over
 
 
@@ -71,6 +73,14 @@ def find_placeholders(node, path="$"):
     elif isinstance(node, str) and _PLACEHOLDER.search(node):
         found.append((path, node))
     return found
+
+
+def lineage_citation(feature):
+    """Return the native citation from either supported lineage shape."""
+    lineage = feature["properties"]["productInformation"]["resourceLineage"]
+    process_step = lineage[0]["processStep"][0] if isinstance(lineage, list) else lineage["processStep"]
+    source = process_step["source"]
+    return source[0]["citation"] if isinstance(source, list) else source["citation"]
 
 
 def build(*layers, template_path=TEMPLATE_PATH):

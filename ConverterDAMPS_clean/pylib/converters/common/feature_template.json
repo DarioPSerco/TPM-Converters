@@ -6,11 +6,12 @@
     "coordinates": "<footprint closed ring [[lon,lat],...]>"
   },
   "properties": {
-    "status": "ARCHIVED",
+    "status": "ACQUIRED",
     "title": "<product id>",
     "date": "<beginningDateTime>/<endingDateTime>",
     "created": "<production datetime>",
-    "acquisitionInformation": {
+    "acquisitionInformation": [
+      {
       "platform": {
         "platformShortName": "<platformShortName>",
         "orbitType": "<orbitType>"
@@ -19,68 +20,69 @@
         "instrumentShortName": "<instrumentShortName>",
         "sensorType": "<sensorType>"
       },
-      "acquisitionParameters": {
+      "acquisitionParameters": [{
         "beginningDateTime": "<beginningDateTime>",
         "endingDateTime": "<endingDateTime>",
         "operationalMode": "<operationalMode>",
         "resolution": "<resolution (number)>",
         "acquisitionType": "NOMINAL",
-        "wavelengths": {
+        "wavelenghts": {
           "spectralRange": "<spectralRange>"
         },
         "acquisitionAngles": {
           "illuminationAzimuthAngle": "<sun azimuth (number)>",
           "illuminationElevationAngle": "<sun elevation (number)>"
         }
+      }]
       }
-    },
+    ],
     "productInformation": {
       "size": "<package size bytes (number)>",
       "cloudCover": "<cloud cover (number)>",
       "productType": "<typecode>",
       "processingLevel": "<processing level>",
-      "resourceLineage": {
-        "processStep": {
+      "resourceLineage": [{
+        "processStep": [{
           "description": "<mission converter description>",
           "stepDateTime": {
             "created": "<production datetime>"
           },
-          "processor": {
+          "processor": [{
             "role": "processor",
-            "party": {
+            "party": [{
               "name": "EOF-EOS External Data Handling",
               "type": "CI_Organisation"
-            }
-          },
-          "reference": {
+            }]
+          }],
+          "reference": [{
             "title": "<mission spec reference title>",
             "edition": "<mission spec edition>"
-          },
-          "source": {
+          }],
+          "source": [{
             "citation": "<native product name>",
-            "processedLevel": "<native processed level>"
-          },
+            "processedLevel": {"code": "<native processed level>"}
+          }],
           "processingInformation": {
             "softwareReference": {
               "title": "<converter software name>",
               "edition": "<converter software version>"
             }
           },
-          "output": {
+          "output": [{
             "sourceCitation": {
               "title": "<product id>.ZIP"
             }
-          }
-        }
-      }
+          }]
+        }]
+      }]
     },
     "links": {
       "measurements": [
         {
           "href": "/measurements/<native product name>",
-          "type": "application/x-hdf5",
+          "type": "application/vnd.hdfgroup.hdf5",
           "title": "Native File",
-          "category": "product (TBD as part of vocabulary to consolidate)"
+          "category": "DATA"
         }
       ],
       "preview": [
@@ -88,7 +90,7 @@
           "href": "/preview/overviews/<product id>.PNG",
           "type": "image/png",
           "title": "Product browse",
-          "category": "overview (TBD as above)"
+          "category": "OVERVIEW"
         }
       ]
     }

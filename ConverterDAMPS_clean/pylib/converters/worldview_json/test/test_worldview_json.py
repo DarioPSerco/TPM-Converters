@@ -58,12 +58,13 @@ def test_emitted_json_matches_template(tmp_path):
     assert feature["type"] == "Feature"
     assert feature["id"] == EO_PRODUCT_NAME
     props = feature["properties"]
-    assert props["status"] == "ARCHIVED"
-    assert props["acquisitionInformation"]["platform"]["orbitType"] == "LEO"
-    assert props["acquisitionInformation"]["acquisitionParameters"]["wavelengths"]["spectralRange"] == "VIS"
-    assert props["acquisitionInformation"]["platform"]["platformShortName"] == "WorldView-1"
-    assert props["acquisitionInformation"]["instrument"]["instrumentShortName"] == "WorldView-60 Camera"
-    assert props["acquisitionInformation"]["acquisitionParameters"]["operationalMode"] == "PANCHROMATIC"
+    assert props["status"] == "ACQUIRED"
+    acq = props["acquisitionInformation"][0]
+    assert acq["platform"]["orbitType"] == "LEO"
+    assert acq["acquisitionParameters"][0]["wavelenghts"]["spectralRange"] == "VIS"
+    assert acq["platform"]["platformShortName"] == "WorldView-1"
+    assert acq["instrument"]["instrumentShortName"] == "WorldView-60 Camera"
+    assert acq["acquisitionParameters"][0]["operationalMode"] == "PANCHROMATIC"
     assert props["productInformation"]["productType"] == "WV6_PAN_2A"
     # non-MP type -> Polygon geometry, no bbox
     assert feature["geometry"]["type"] == "Polygon"

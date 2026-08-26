@@ -5,7 +5,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve()
 sys.path.insert(0, str(BASE.parents[1]))
-from common import spaces
+from common import json_template, spaces
 
 SPACES = spaces.read_spaces(BASE.parent / "ingest_iceye.cfg")
 OUTSPACE = SPACES["OUTSPACE"]
@@ -32,7 +32,7 @@ def package_one(mf):
     product = d["id"]
     pinfo = d["properties"]["productInformation"]
     ptype = pinfo["productType"]
-    citation = pinfo["resourceLineage"]["processStep"]["source"]["citation"]
+    citation = json_template.lineage_citation(d)
     native = spaces.find_native(citation, SPACES)
     native_id = native.name
     bs = browses(native)
