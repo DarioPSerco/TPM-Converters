@@ -11,5 +11,5 @@ under `to_be_converted/`). Hand-authored to match the native structure
   `satId` (must be `QB02`); `BEGIN_GROUP = BAND_*` counted for bands.
 - `...-BROWSE.JPG` — ASCII placeholder; `extractToPath` reads it in text mode.
 
-Resolves to type code **BGI_PAN_2A** (QuickBird-2, panchromatic, Standard 2A),
+Resolves to type code **L2AVRR_PAN** (QuickBird-2, panchromatic, ORStandard2A),
 0.6 m GSD, scene centred near N13 / W100. Values invented but plausible.

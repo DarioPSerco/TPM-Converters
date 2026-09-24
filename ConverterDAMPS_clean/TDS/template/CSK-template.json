@@ -1,0 +1,136 @@
+{
+  "type": "Feature",
+  "id": "CS__OPER_L1ASMU_SCS_20170424T134911_20170424T135006_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-66.44291264, -24.15261009],
+        [-66.44136086, -24.23036597],
+        [-66.36391186, -24.22904374],
+        [-66.36551048, -24.15129263],
+        [-66.44291264, -24.15261009]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "CS__OPER_L1ASMU_SCS_20170424T134911_20170424T135006_0001",
+    "date": "2017-04-24T13:49:11.806Z/2017-04-24T13:50:06.806Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "COSMO-SkyMed Second Generation-1",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "CSG-SAR",
+          "sensorType": "RADAR"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2017-04-24T13:49:11.806Z",
+            "endingDateTime": "2017-04-24T13:50:06.806Z",
+            "acquisitionType": "NOMINAL",
+            "operationalMode": "HIM",
+            "rangeResolution": 23.0,
+            "azimuthResolution": 49.0,
+            "resolution": 49.0,
+            "wavelengths": [
+              {
+                "spectralRange": "X-Band",
+                "discreteWavelength": 0.0312284,
+                "startWavelength": 0.028,
+                "stopWavelength": 0.052
+              }
+            ],
+            "polarisationMode": "S",
+            "polarisationChannel": "HH",
+            "orbitNumber": 355,
+            "orbitDirection": "ASCENDING",
+            "acquisitionAngles": {
+              "incidenceAngle": 67.0
+            }
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 627642676,
+      "productType": "L1ASMU_SCS",
+      "processingDate": "2017-04-24T13:49:11.806Z",
+      "processingLevel": "1A",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for COSMO-SkyMed",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for COSMO-SkyMed products",
+                  "edition": "1.0"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "CSKS1_SCSU_HI_01_HH_RA_SF_20170424134911_20170424135006.h5"
+                  },
+                  "processedLevel": {
+                    "code": "L1A"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for COSMO-SkyMed",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "CS__OPER_L1ASMU_SCS_20170424T134911_20170424T135006_0001.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/CSKS1_SCSU_HI_01_HH_RA_SF_20170424134911_20170424135006.h5",
+          "type": "application/vnd.hdfgroup.hdf5",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "preview": [
+        {
+          "href": "/preview/overviews/CS__OPER_L1ASMU_SCS_20170424T134911_20170424T135006_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

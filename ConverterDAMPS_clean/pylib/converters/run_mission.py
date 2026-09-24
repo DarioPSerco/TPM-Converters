@@ -21,6 +21,7 @@ MISSIONS = {
     "iceye": ("iceye_json", "ingest_iceye.cfg", "ingester_iceye.py", "v101", "package_iceye_zips.py"),
     "pleiades": ("pleiades_json", "ingest_pleiades.cfg", "ingester_pleiades.py", "v100", "package_pleiades_zips.py"),
     "pneo": ("pneo_json", "ingest_pneo.cfg", "ingester_pneo.py", "v100", "package_pneo_zips.py"),
+    "cosmoskymed": ("cosmoskymed_json", "ingest_cosmoskymed.cfg", "ingester_cosmoskymed.py", "v101", "package_cosmoskymed_zips.py"),
 }
 
 

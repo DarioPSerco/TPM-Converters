@@ -76,11 +76,18 @@ def find_placeholders(node, path="$"):
 
 
 def lineage_citation(feature):
-    """Return the native citation from either supported lineage shape."""
+    """Return the native citation from any supported lineage shape.
+
+    Three shapes are in use: ``source.citation``, ``source[0].citation`` and
+    (COSMO-SkyMed, spec Table 16) ``source[0].sourceCitation.title``."""
     lineage = feature["properties"]["productInformation"]["resourceLineage"]
     process_step = lineage[0]["processStep"][0] if isinstance(lineage, list) else lineage["processStep"]
     source = process_step["source"]
-    return source[0]["citation"] if isinstance(source, list) else source["citation"]
+    if isinstance(source, list):
+        source = source[0]
+    if "citation" in source:
+        return source["citation"]
+    return source["sourceCitation"]["title"]
 
 
 def build(*layers, template_path=TEMPLATE_PATH):

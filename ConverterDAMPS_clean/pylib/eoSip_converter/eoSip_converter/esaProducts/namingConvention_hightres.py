@@ -22,13 +22,16 @@ class NamingConvention_HightRes(NamingConvention):
     HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXvV =   '<yyyymmddThhmmss>_<LLL>-<LLL>_<OOOO>-<OOO>_<vvvc>_v<VVVV>'
     HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXv2V4 = '<yyyymmddThhmmss>_<LLL>-<LLL>_<OOOO>-<OOO>_<vc>_v<VVVV>'
     HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXv2V5 = '<yyyymmddThhmmss>_<LLL>-<LLL>_<OOOO>-<OOO>_<vv>_v<VVVV>'
+    # start_stop_version: <vvvc> = 3-digit processor version + 1-digit counter
+    HIGHTRES_PATTERN_INSTANCE_GENERIC_DDVC = '<yyyymmddThhmmss>_<YYYYMMDDTHHMMSS>_<vvvc>'
 
     #
     HIGHRES_POSSIBLE_PATTERN = [HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXVC,
                                 HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXV2C,
                                 HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXvV,
                                 HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXv2V4,
-                                HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXv2V5
+                                HIGHTRES_PATTERN_INSTANCE_GENERIC_DTYXv2V5,
+                                HIGHTRES_PATTERN_INSTANCE_GENERIC_DDVC
                                 ]
 
     #
@@ -121,6 +124,12 @@ class NamingConvention_HightRes(NamingConvention):
                 res = "%sT%s" % (tmp, tmp1)
                 if self.debug != 0:
                     print("res4 is now:%s" % res)
+            elif tok == '<YYYYMMDDTHHMMSS>':
+                tmp = formatUtils.normaliseDate(met.getMetadataValue(metadata.METADATA_STOP_DATE), 8, '#')
+                tmp1 = formatUtils.normaliseTime(met.getMetadataValue(metadata.METADATA_STOP_TIME), 6, '#')
+                res = "%s_%sT%s" % (res, tmp, tmp1)
+                if self.debug != 0:
+                    print("res5 is now:%s" % res)
             elif tok == '<vvvv>':  # NOT USED???
                 tmp = formatUtils.normaliseNumber(met.getMetadataValue(metadata.METADATA_SIP_VERSION), len(tok) - 2)
                 res = "%s_%s" % (res, tmp)

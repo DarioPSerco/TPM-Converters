@@ -12,5 +12,5 @@
 - `...-BROWSE.JPG` — ASCII placeholder; `extractToPath` raises if no preview is
   found, and reads it in text mode, so a real JPEG is not needed for the test.
 
-Resolves to type code **GIS_PAN_2A** (GeoEye-1, panchromatic, Standard 2A),
+Resolves to type code **L2AVRR_PAN** (GeoEye-1, panchromatic, ORStandard2A),
 scene centred near N13 / W100. Values invented but plausible.

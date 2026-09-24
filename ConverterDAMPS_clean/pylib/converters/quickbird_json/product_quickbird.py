@@ -16,10 +16,14 @@ from eoSip_converter.esaProducts.browseImage import BrowseImage
 from xml_nodes import sipBuilder, rep_footprint
 
 
-REF_TYPECODES = [
-    'BGI_PAN_2A', 'BGI_PAN_MP', 'BGI_PAN__OR',
-    'BGI_4B__2A', 'BGI_4B__MP', 'BGI_4B__OR'
-]
+# (imageDescriptor, band mode) -> product type, per QuickBird-2 naming convention table
+TYPECODES = {
+    ('Standard2A', 'PAN'): 'L2AVRS_PAN', ('Standard2A', 'MS'): 'L2AVRS_MS_',
+    ('ORStandard2A', 'PAN'): 'L2AVRR_PAN', ('ORStandard2A', 'MS'): 'L2AVRR_MS_',
+    ('StereoOR2A', 'PAN'): 'L2ASTR_PAN', ('StereoOR2A', 'MS'): 'L2ASTR_MS_',
+    ('OrthoRectified3', 'PAN'): 'L3_MRO_PAN', ('OrthoRectified3', 'MS'): 'L3_MRP_MS_',
+}
+REF_TYPECODES = set(TYPECODES.values())
 RESOLUTION_LIMIT = 0.1
 REF_PROCESSING_LEVEL = {
     'other: LV1B',
@@ -28,7 +32,7 @@ REF_PROCESSING_LEVEL = {
     'other: LV4',
     'other: Stereo1B', 'other: Stereo2A', 'other: StereoOR2A'
 }
-WITH_BOUNDINGBOX = ['BGI_PAN_MP', 'BGI_4B__MP']
+WITH_BOUNDINGBOX = ['L3_MRO_PAN', 'L3_MRP_MS_']
 METADATA_SUFFIX = "_README.XML"  # Not used?
 BROWSE_SUFFIX = "-BROWSE.JPG"
 TIFF_SUFFIX = ".TIF"
@@ -632,22 +636,11 @@ class Product_Quickbird(Product_Directory):
     def buildTypeCode(self, processInfo):
 
         tmp = self.metadata.getMetadataValue("imageDescriptor").replace('"', '')
-        level = None
-        if tmp == "ORStandard2A":
-            level = '2A'
-        elif tmp == "Standard2A":
-            level = '2A'
-        elif tmp == "StereoOR2A":
-            level = 'OR'
-        elif tmp == "OrthoRectified3":
-            level = 'MP'
-        else:
-            raise Exception("unknown imageDescriptor:'%s'" % tmp)
 
         nb = self.metadata.getMetadataValue("numberOfBands")
         sensorMode = None
         if nb==4:
-            sensorMode = '4B_'
+            sensorMode = 'MS'
         else:
             sensorMode = 'PAN'
         if sensorMode=="PAN":
@@ -655,11 +648,9 @@ class Product_Quickbird(Product_Directory):
         else:
             self.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, 'PM')
 
-        typecode="BGI_%s_%s" % (sensorMode, level)
-
-
-        if not typecode in REF_TYPECODES:
-            raise Exception("buildTypeCode; unknown typecode:'%s'" % typecode)
+        typecode = TYPECODES.get((tmp, sensorMode))
+        if typecode is None:
+            raise Exception("unknown imageDescriptor:'%s'. num band=%s" % (tmp, nb))
         self.metadata.setMetadataPair(metadata.METADATA_TYPECODE, typecode)
 
         #if typecode=="BGI_PAN_MP" or typecode=="BGI_4B__MP":

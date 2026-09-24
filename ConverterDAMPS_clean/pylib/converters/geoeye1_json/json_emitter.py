@@ -85,7 +85,8 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
     if cloud is not None and str(cloud) == "-999":
         cloud = None
     processed = (_gv(met, M.METADATA_PROCESSING_LEVEL) or "").replace("other: ", "").strip() or None
-    level_token = typecode.split("_")[-1] if typecode else None
+    # L2A* -> "2A", L3_* -> "3"
+    level_token = typecode[1:3].rstrip("_") if typecode else None
     size = getattr(product, "tmpSize", 0) or 0
 
     dynamic = {

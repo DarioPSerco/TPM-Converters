@@ -18,10 +18,14 @@ from eoSip_converter.esaProducts.product_directory import Product_Directory
 from xml_nodes import sipBuilder, rep_footprint
 
 
-REF_TYPECODES=[
-    'GIS_4B__2A', 'GIS_4B__OR', 'GIS_4B__MP',
-    'GIS_PAN_OR', 'GIS_PAN_MP', 'GIS_PAN_2A'
-]
+# (imageDescriptor, band mode) -> product type, per GeoEye-1 naming convention table
+TYPECODES = {
+    ('Standard2A', 'PAN'): 'L2AVRS_PAN', ('Standard2A', 'MS'): 'L2AVRS_MS_',
+    ('ORStandard2A', 'PAN'): 'L2AVRR_PAN', ('ORStandard2A', 'MS'): 'L2AVRR_MS_',
+    ('StereoOR2A', 'PAN'): 'L2ASTR_PAN', ('StereoOR2A', 'MS'): 'L2ASTR_MS_',
+    ('OrthoRectified3', 'PAN'): 'L3_MRO_PAN', ('OrthoRectified3', 'MS'): 'L3_MRP_MS_',
+}
+REF_TYPECODES = set(TYPECODES.values())
 RESOLUTION_LIMIT = 0.1
 REF_PROCESSING_LEVEL = {
     'other: LV1B',
@@ -30,7 +34,7 @@ REF_PROCESSING_LEVEL = {
     'other: LV4',
     'other: Stereo1B', 'other: Stereo2A', 'other: StereoOR2A'
 }
-WITH_BOUNDINGBOX = ['GIS_PAN_MP', 'GIS_4B__MP']
+WITH_BOUNDINGBOX = ['L3_MRO_PAN', 'L3_MRP_MS_']
 METADATA_SUFFIX="_README.XML"  # Not used?
 BROWSE_SUFFIX="-BROWSE.JPG"
 TIFF_SUFFIX=".TIF"
@@ -617,19 +621,9 @@ class Product_Geoeye1(Product_Directory):
         tmp = self.metadata.getMetadataValue("imageDescriptor").replace('"', '')
         nb = self.metadata.getMetadataValue("numberOfBands")
 
-        level = None
-        if tmp == "ORStandard2A" or tmp == "Standard2A":
-            level = '2A'
-        elif tmp == "StereoOR2A":
-            level = 'OR'
-        elif tmp == "OrthoRectified3":
-            level = 'MP'
-        else:
-            raise Exception("unknown imageDescriptor:'%s'. num band=%s" % (tmp, nb))
-
         sensorMode = None
         if nb==4:
-            sensorMode = '4B_'
+            sensorMode = 'MS'
         else:
             sensorMode = 'PAN'
         if sensorMode=="PAN":
@@ -637,11 +631,9 @@ class Product_Geoeye1(Product_Directory):
         else:
             self.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, 'PM')
 
-        typecode="GIS_%s_%s" % (sensorMode, level)
-
-
-        if not typecode in REF_TYPECODES:
-            raise Exception("buildTypeCode; unknown typecode:'%s'" % typecode)
+        typecode = TYPECODES.get((tmp, sensorMode))
+        if typecode is None:
+            raise Exception("unknown imageDescriptor:'%s'. num band=%s" % (tmp, nb))
         self.metadata.setMetadataPair(metadata.METADATA_TYPECODE, typecode)
 
         #if typecode=="GIS_PAN_MP" or typecode=="GIS_4B__MP":

@@ -15,7 +15,7 @@ from quickbird_json import product_quickbird, json_emitter
 FIXTURE_DIR = Path(__file__).resolve().parent / "fixtures" / "synthetic_qb2"
 README_XML = FIXTURE_DIR / "010787518010_01_README.XML"
 
-EO_PRODUCT_NAME = "QB2_OPER_BGI_PAN_2A_20100527T231608_N13-756_W100-000_0001"
+EO_PRODUCT_NAME = "QB2_OPER_L2AVRR_PAN_20100527T231608_20100527T231908_0001"
 
 WORLDVIEW_TOKENS = [
     "WorldView", "WV6", "WV1_", "WV2", "WV3", "WV4", "WVL", "Legion",
@@ -64,7 +64,8 @@ def test_emitted_json_matches_template(tmp_path):
     assert acq["platform"]["orbitType"] == "LEO"
     assert acq["instrument"]["instrumentShortName"] == "BGI"
     assert acq["acquisitionParameters"][0]["operationalMode"] == "PAN"
-    assert props["productInformation"]["productType"] == "BGI_PAN_2A"
+    assert props["productInformation"]["productType"] == "L2AVRR_PAN"
+    assert props["productInformation"]["processingLevel"] == "2A"
     assert feature["geometry"]["type"] == "Polygon"
     assert "bbox" not in feature
 
