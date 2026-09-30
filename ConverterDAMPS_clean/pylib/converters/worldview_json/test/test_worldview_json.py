@@ -15,8 +15,8 @@ from worldview_json import product_worldview, json_emitter
 FIXTURE_DIR = Path(__file__).resolve().parent / "fixtures" / "synthetic_wv"
 README_XML = FIXTURE_DIR / "010787518010_01_README.XML"
 
-# spec-faithful synthetic EO product name (WV6_PAN_2A type code)
-EO_PRODUCT_NAME = "WV1_OPER_WV6_PAN_2A_20100527T231608_N13-756_W100-000_0001"
+# spec-faithful synthetic EO product name (L2AVRR_PAN product type)
+EO_PRODUCT_NAME = "WV1_OPER_L2AVRR_PAN_20100527T231608_20100527T231609_0001"
 
 
 class _ProcessInfoStub:
@@ -45,7 +45,7 @@ def test_emitted_json_matches_template(tmp_path):
 
     prod, met = _extract(work)
     mission, dynamic = json_emitter.build_layers(met, prod, EO_PRODUCT_NAME)
-    feature = json_template.build(mission, dynamic)
+    feature = json_template.build(mission, dynamic, template_path=json_emitter.TEMPLATE_PATH)
 
     # no unfilled "<...>" template placeholder survives (raises on failure)
     json_template.validate(feature)
@@ -61,11 +61,25 @@ def test_emitted_json_matches_template(tmp_path):
     assert props["status"] == "ACQUIRED"
     acq = props["acquisitionInformation"][0]
     assert acq["platform"]["orbitType"] == "LEO"
-    assert acq["acquisitionParameters"][0]["wavelenghts"]["spectralRange"] == "VIS"
+    assert acq["acquisitionParameters"][0]["wavelengths"] == [{
+        "spectralRange": "VNIR", "startWavelength": 450e-9, "stopWavelength": 900e-9,
+        "discreteWavelengths": [675e-9]}]
     assert acq["platform"]["platformShortName"] == "WorldView-1"
     assert acq["instrument"]["instrumentShortName"] == "WorldView-60 Camera"
-    assert acq["acquisitionParameters"][0]["operationalMode"] == "PANCHROMATIC"
-    assert props["productInformation"]["productType"] == "WV6_PAN_2A"
+    assert acq["acquisitionParameters"][0]["operationalMode"] == "PAN"
+    assert props["productInformation"]["productType"] == "L2AVRR_PAN"  # fixture imageDescriptor ORStandard2A
+    pinfo = props["productInformation"]
+    assert pinfo["processingLevel"] == "2A"  # native LV2A
+    assert pinfo["processingDate"] == props["created"]
+    # L2AVRR_*: CRS optional, and the fixture carries no map projection
+    assert "referenceSystemIdentifier" not in pinfo
+    source = pinfo["resourceLineage"][0]["processStep"][0]["source"][0]
+    assert source["sourceCitation"]["title"] == prod.origName
+    assert source["processedLevel"]["code"] == "LV2A"
+    links = props["links"]
+    assert links["measurements"][0]["type"] == "image/tiff; application=geotiff"
+    assert links["measurements"][0]["title"] == "Native EO Product"
+    assert links["preview"][0]["title"] == "Preview Image"
     # non-MP type -> Polygon geometry, no bbox
     assert feature["geometry"]["type"] == "Polygon"
     assert "bbox" not in feature

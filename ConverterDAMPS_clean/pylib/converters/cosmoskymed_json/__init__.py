@@ -1,4 +1,4 @@
-__version__ = '1.0.0'
+__version__ = '1.1.0'
 
 EOSIP_CONVERTER_LIBRARY_VERSION_REQ = ">=1.1.0"
 VERSION_CHANGES = {}

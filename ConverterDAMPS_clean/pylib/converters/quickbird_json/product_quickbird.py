@@ -99,7 +99,12 @@ class Product_Quickbird(Product_Directory):
         'productLevel': 'productLevel',
         'imageDescriptor': 'imageDescriptor',
         'numberOfLooks': 'numberOfLooks',
-        'satId': 'satId'
+        'satId': 'satId',
+        # map projection, for referenceSystemIdentifier
+        'datumName': 'datumName',
+        'mapProjName': 'mapProjName',
+        'mapZone': 'mapZone',
+        'mapHemi': 'mapHemi',
     }
 
     # for 3) then parse subfolder file like: 010787518010_01_P001_MUL/18NOV21054629-P3DS-011211306040_01_P001.XML
@@ -639,7 +644,7 @@ class Product_Quickbird(Product_Directory):
 
         nb = self.metadata.getMetadataValue("numberOfBands")
         sensorMode = None
-        if nb==4:
+        if nb in (3, 4):
             sensorMode = 'MS'
         else:
             sensorMode = 'PAN'

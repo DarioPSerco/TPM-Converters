@@ -10,3 +10,8 @@ __pycache__/
 log/
 _validation/regen_*/
 _validation/*.json
+
+# Dati TDS (prodotti nativi, output, ZIP): mai committare.
+# Eccezione: TDS/template/ contiene i template di riferimento letti dai test.
+TDS/*
+!TDS/template/

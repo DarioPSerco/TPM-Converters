@@ -88,7 +88,7 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-27 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 4, PNEO 4, CSK 7). The
+31 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 4, PNEO 4, CSK 11). The
 iceye/pleiades/pneo/cosmoskymed suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
@@ -97,7 +97,8 @@ iceye/pleiades/pneo/cosmoskymed suites read `TDS/template/*.json` via a relative
 ```
 <PRODUCT_ID>.ZIP            (all entries STORED)
 ├── <PRODUCT_ID>.JSON       manifest, byte-identical to the OUTSPACE JSON
-├── measurements/           full native product tree
+├── measurements/           full native product tree (a COSMO-SkyMed .tgz
+│                           delivery is expanded here, uncompressed)
 └── preview/overviews/<PRODUCT_ID>.PNG
 ```
 
@@ -109,24 +110,32 @@ resolve inside the ZIP — packagers copy the manifest verbatim, no rewrite.
 - ICEYE validated on real TDS (SM/SC/SLH); pleiades/pneo converters+packagers
   validated on synthetic fixtures only — field values pending real TDS
   (PNEO sun angles inferred; PL1 "HiRI" suspected template bug).
-- COSMO-SkyMed validated end to end on one real TDS product (CSK HIMAGE
-  DGM_B, Level 1B, single pol). Open points: no SCANSAR (WIDEREGION /
-  HUGEREGION) and no Second Generation (CSG) product seen yet — those
-  mappings are covered by table assertions only; TIFF / GEOTIFF-only
-  deliveries are not handled (the entry file is the `.h5`, and the orbit,
-  incidence-angle and polarisation values live in its attributes); the
-  overview PNG is written from the HDF5 `S0n/QLK` dataset in native
-  acquisition orientation, with no re-orientation.
+- COSMO-SkyMed validated end to end on two real TDS products: CSK HIMAGE
+  DGM_B (Level 1B, HDF5 delivery) and CSK WIDEREGION GEC_B (Level 1C,
+  GeoTIFF-in-`.tgz` delivery). Open points: no PINGPONG and no Second
+  Generation (CSG) product seen yet — those mappings are covered by fixtures
+  and table assertions only; the overview PNG keeps the native quicklook
+  orientation, with no re-orientation.
 
 ## COSMO-SkyMed specifics (`cosmoskymed_json`)
 
 Per "EOPF-EOS SPECIALIZATION FOR COSMO-SKYMED PRODUCTS". Differences worth
 knowing, all in `pylib/converters/cosmoskymed_json/`:
 
-- **Entry file**: the native `.h5` (cfg `[Search] FILES_EXTPATTERN=^\.h5$`).
-  Every manifest value comes from its attribute tree (root + `S0n` beam group +
-  image dataset); the DFDN / DFAS XML sidecars are only carried over as
-  delivered content. Needs `h5py`.
+- **Entry file**: the native `.h5`, or the `.tgz` of a GeoTIFF delivery (cfg
+  `[Search] FILES_EXTPATTERN=^\.(h5|tgz)$`). Both carry the SAME attribute
+  names: the HDF5 attribute tree (root + `S0n` beam group + image dataset), or
+  its XML dump `<name>.attribs.xml` inside the `.tgz`. Needs `h5py` for the
+  HDF5 form. The DFDN / DFAS XML sidecars are only carried over as delivered
+  content.
+- **GeoTIFF deliveries**: the packager expands the `.tgz` INTO
+  `measurements/` (the spec wants the native product uncompressed), so the ZIP
+  holds `<name>.MBI.tif`, its `.tfw` / `.aux.xml`, the QLK GeoTIFF and
+  `<name>.attribs.xml`. The lineage cites the delivered `.tgz`; the
+  measurements link points at the `.MBI.tif` (`image/tiff`).
+- **Polarisation**: one channel per DISTINCT `S0n` `Polarisation` — a ScanSAR
+  product has one `S0n` group per subswath, all with the same polarisation, so
+  it stays single-pol (`S`).
 - **Product type code**: the ten codes the spec allows, keyed by mode family
   (STRIPMAP HIMAGE/PINGPONG -> SM, SCANSAR WIDEREGION/HUGEREGION -> SC) in
   `product_cosmoskymed.TYPECODE_MAP`: `L1ASMU_SCS`, `L1ASMB_SCS`,

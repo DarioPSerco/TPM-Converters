@@ -111,10 +111,14 @@ def _polygon_coordinates(footprint):
 def build_layers(met, product, eo_product_name, native_product_name=None):
     """COSMO-SkyMed per-product dynamic values, from this mission's
     extraction."""
+    # lineage citation: the native product file as delivered (the .h5, or the
+    # .tgz of a GeoTIFF delivery). measurements link: the image file as it
+    # lands in measurements/ - the same .h5, or the GeoTIFF out of the .tgz.
     native_name = (native_product_name
                    or _la(met, "nativeDataFile")
                    or getattr(product, "origName", None)
                    or eo_product_name)
+    measurement_file = _la(met, "nativeDataFile") or native_name
     typecode = _gv(met, M.METADATA_TYPECODE)
     created = _gv(met, M.METADATA_DATASET_PRODUCTION_DATE)
     processed = _gv(met, M.METADATA_PROCESSING_TIME) or created
@@ -175,7 +179,7 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             },
             "links": {
                 "measurements": [{
-                    "href": "/measurements/%s" % native_name,
+                    "href": "/measurements/%s" % measurement_file,
                     "type": _la(met, "measurementsMediaType"),
                 }],
                 "preview": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],

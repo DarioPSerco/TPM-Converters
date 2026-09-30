@@ -19,7 +19,7 @@ EO_PRODUCT_NAME = "QB2_OPER_L2AVRR_PAN_20100527T231608_20100527T231908_0001"
 
 WORLDVIEW_TOKENS = [
     "WorldView", "WV6", "WV1_", "WV2", "WV3", "WV4", "WVL", "Legion",
-    "WorldView-60", "WorldView-110", "SpaceView", "MS4B", "MS8B", "PANCHROMATIC",
+    "WorldView-60", "WorldView-110", "SpaceView", "MS8B", "PANCHROMATIC",
     "GeoEye", "GE01", "GIS_",
 ]
 
@@ -50,7 +50,7 @@ def test_emitted_json_matches_template(tmp_path):
 
     prod, met = _extract(work)
     mission, dynamic = json_emitter.build_layers(met, prod, EO_PRODUCT_NAME)
-    feature = json_template.build(mission, dynamic)
+    feature = json_template.build(mission, dynamic, template_path=json_emitter.TEMPLATE_PATH)
     json_template.validate(feature)
 
     out_path = json_template.write_json(feature, str(out), EO_PRODUCT_NAME)
@@ -65,7 +65,21 @@ def test_emitted_json_matches_template(tmp_path):
     assert acq["instrument"]["instrumentShortName"] == "BGI"
     assert acq["acquisitionParameters"][0]["operationalMode"] == "PAN"
     assert props["productInformation"]["productType"] == "L2AVRR_PAN"
-    assert props["productInformation"]["processingLevel"] == "2A"
+    assert props["productInformation"]["processingLevel"] == "2A"  # native LV2A
+    assert acq["acquisitionParameters"][0]["wavelengths"] == [{
+        "spectralRange": "VNIR", "startWavelength": 450e-9, "stopWavelength": 900e-9,
+        "discreteWavelengths": [675e-9]}]
+    pinfo = props["productInformation"]
+    assert pinfo["processingDate"] == props["created"]
+    # L2AVRR_*: CRS optional, and the fixture carries no map projection
+    assert "referenceSystemIdentifier" not in pinfo
+    source = pinfo["resourceLineage"][0]["processStep"][0]["source"][0]
+    assert source["sourceCitation"]["title"] == prod.origName
+    assert source["processedLevel"]["code"] == "LV2A"
+    links = props["links"]
+    assert links["measurements"][0]["type"] == "image/tiff"
+    assert links["measurements"][0]["title"] == "Native EO Product"
+    assert links["preview"][0]["title"] == "Preview Image"
     assert feature["geometry"]["type"] == "Polygon"
     assert "bbox" not in feature
 
@@ -75,7 +89,7 @@ def test_no_worldview_or_geoeye_value_leaked(tmp_path):
     work.mkdir()
     prod, met = _extract(work)
     mission, dynamic = json_emitter.build_layers(met, prod, EO_PRODUCT_NAME)
-    feature = json_template.build(mission, dynamic)
+    feature = json_template.build(mission, dynamic, template_path=json_emitter.TEMPLATE_PATH)
     blob = json.dumps(feature)
     for tok in WORLDVIEW_TOKENS:
         assert tok not in blob, "Foreign-mission token leaked into QuickBird-2 output: %s" % tok

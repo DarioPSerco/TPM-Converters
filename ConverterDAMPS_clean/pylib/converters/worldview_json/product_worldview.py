@@ -18,16 +18,14 @@ GDAL_STEP_2='gdal_translate -b 1 -scale 0 4096 -ot byte -outsize 25% 25% @SRC @D
 GDAL_STEP_3='gdal_merge.py -co "PHOTOMETRIC=rgb" -separate @DEST1 @DEST2 @DEST3 -o @DEST4'
 GDAL_STEP_4='gdal_translate @DEST4 -scale 0 2048 -ot Byte @DEST5'
 
-REF_TYPECODES = [
-    'WV6_PAN_2A', 'WV6_PAN_OR', 'WV6_PAN_MP',
-    'WV1_4B__2A', 'WV1_4B__OR', 'WV1_4B__MP',
-    'WV1_8B__2A', 'WV1_8B__OR', 'WV1_8B__MP',
-    'WV1_PAN_2A', 'WV1_PAN_OR', 'WV1_PAN_MP',
-    'WV1_S8B_2A', 'WV1_S8B_MP',
-    # 'WV4_PAN_2A', 'WV4_PAN_OR', 'WV4_PAN_MP',
-    # 'WV4_4B__2A', 'WV4_4B__OR', 'WV4_4B__MP',
-    # 'WV4_8B__2A', 'WV4_8B__OR', 'WV4_8B__MP',
-]
+# (imageDescriptor, band mode) -> product type, per WorldView naming convention table
+TYPECODES = {
+    ('Standard2A', 'PAN'): 'L2AVRS_PAN', ('Standard2A', 'MS'): 'L2AVRS_MS_',
+    ('ORStandard2A', 'PAN'): 'L2AVRR_PAN', ('ORStandard2A', 'MS'): 'L2AVRR_MS_',
+    ('StereoOR2A', 'PAN'): 'L2ASTR_PAN', ('StereoOR2A', 'MS'): 'L2ASTR_MS_',
+    ('OrthoRectified3', 'PAN'): 'L3_MRO_PAN', ('OrthoRectified3', 'MS'): 'L3_MRP_MS_',
+}
+REF_TYPECODES = set(TYPECODES.values())
 
 RESOLUTION_LIMIT = 0.1
 REF_PROCESSING_LEVEL = {
@@ -38,7 +36,7 @@ REF_PROCESSING_LEVEL = {
     'other: Stereo1B', 'other: Stereo2A', 'other: StereoOR2A'
 }
 
-WITH_BOUNDINGBOX = ['WV6_PAN_MP', 'WV1_PAN_MP', 'WV1_4B__MP', 'WV1_8B__MP', 'WV1_S8B_MP']
+WITH_BOUNDINGBOX = ['L3_MRO_PAN', 'L3_MRP_MS_']
 METADATA_SUFFIX = "_README.XML"  # Not used?
 BROWSE_SUFFIX = "-BROWSE.JPG"
 TIFF_SUFFIX = ".TIF"
@@ -98,7 +96,12 @@ class Product_Worldview(Product_Directory):
         metadata.METADATA_PROCESSING_LEVEL: 'productLevel',
         metadata.METADATA_SCALE: 'productScale',
         'satId': 'satId',
-        'bandId': 'bandId'
+        'bandId': 'bandId',
+        # map projection, for referenceSystemIdentifier
+        'datumName': 'datumName',
+        'mapProjName': 'mapProjName',
+        'mapZone': 'mapZone',
+        'mapHemi': 'mapHemi',
         }
 
     # for 3) then parse subfolder file like: 010787518010_01_P001_MUL/18NOV21054629-P3DS-011211306040_01_P001.XML
@@ -670,19 +673,8 @@ class Product_Worldview(Product_Directory):
         #    print self.path
         #    os._exit(1)
 
-        # get raw level, format it
+        # get raw level
         tmp = self.metadata.getMetadataValue("imageDescriptor").replace('"', '')
-
-        level = None
-        if tmp == "ORStandard2A" or tmp == "Standard2A":
-            level = '2A'
-        elif tmp == "StereoOR2A":
-            level = 'OR'
-        elif tmp == "OrthoRectified3":
-            level = 'MP'
-        else:
-            raise Exception("unknown imageDescriptor:'%s'. num band=%s" % (tmp, nb))
-
 
         # get instrument # WV6, WV1
         instrument = self.metadata.getMetadataValue(metadata.METADATA_INSTRUMENT)
@@ -694,7 +686,6 @@ class Product_Worldview(Product_Directory):
         # switch
         sensorMode = None
         sensorOpMode = None
-        usedWv = 'WV1'
         if self.is_wv_legion:
             if nb == 1:
                 sensorMode = 'PAN'
@@ -710,7 +701,6 @@ class Product_Worldview(Product_Directory):
         elif platformId[-1]=='1':
             sensorMode = 'PAN'
             sensorOpMode = 'PAN'
-            usedWv = 'WV6'
 
         elif platformId[-1] == '2':
             if nb == 1:
@@ -763,10 +753,10 @@ class Product_Worldview(Product_Directory):
         if sensorMode is None:
             raise Exception("buildTypeCode: sensorMode not set")
         self.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, sensorOpMode)
-        typecode="%s_%s_%s" % (usedWv, sensorMode, level)
-
-        if not typecode in REF_TYPECODES:
-            raise Exception("buildTypeCode; unknown typecode:'%s'" % typecode)
+        bandMode = 'PAN' if sensorMode == 'PAN' else 'MS'
+        typecode = TYPECODES.get((tmp, bandMode))
+        if typecode is None:
+            raise Exception("unknown imageDescriptor:'%s'. num band=%s" % (tmp, nb))
         self.metadata.setMetadataPair(metadata.METADATA_TYPECODE, typecode)
 
         if typecode in WITH_BOUNDINGBOX:

@@ -331,9 +331,11 @@ Il runner resta preferibile perché imposta automaticamente il `PYTHONPATH`, ese
 
 ## 13. COSMO-SkyMed
 
-Il prodotto nativo COSMO-SkyMed e' la cartella di consegna che contiene il file
-`.h5` piu' la nota di consegna DFDN, la scheda DFAS e il checksum. Va copiata
-dentro `TDS\COSMO SKYMED\INBOX`, per esempio:
+Il prodotto nativo COSMO-SkyMed e' la cartella di consegna, con il file prodotto
+piu' la nota di consegna DFDN, la scheda DFAS e il checksum. Va copiata dentro
+`TDS\COSMO SKYMED\INBOX`. Sono gestiti due formati di consegna.
+
+Consegna HDF5, file di ingresso `.h5`:
 
 ```text
 TDS\COSMO SKYMED\INBOX\CSKS1_DGM_B_HI_01_HH_RD_SF_20170515172254_20170515172301\
@@ -344,8 +346,25 @@ TDS\COSMO SKYMED\INBOX\CSKS1_DGM_B_HI_01_HH_RD_SF_20170515172254_20170515172301\
         SHA256_736299_1-1.sha256.sec
 ```
 
-Il file di ingresso e' il `.h5`: tutti i metadati del manifest vengono letti
-dai suoi attributi HDF5. Serve `h5py`, incluso in `requirements.txt`.
+Consegna GeoTIFF, file di ingresso `.tgz`:
+
+```text
+TDS\COSMO SKYMED\INBOX\CSKS1_GEC_B_WR_01_HH_RD_SF_20171007160717_20171007160732\
+    1008699-756540\
+        CSKS1_GEC_B_WR_01_HH_RD_SF_20171007160717_20171007160732.tgz
+        DFDN_CSKS1_GEC_B_WR_01_HH_RD_SF_20171007160717_20171007160732.h5.xml
+        DFAS_1008699_CSK_AccompanyingSheet.xml
+        SHA256_1008699_1-1.sha256.sec
+```
+
+Il `.tgz` non va scompattato a mano: lo legge il convertitore e lo espande il
+packager. Dentro ci sono `<nome>.MBI.tif` con il suo `.tfw`, `<nome>.QLK.tif` e
+`<nome>.attribs.xml`.
+
+I metadati del manifest vengono sempre dagli attributi del prodotto: l'albero di
+attributi HDF5 nel caso `.h5`, il suo dump XML `<nome>.attribs.xml` nel caso
+`.tgz`. I nomi degli attributi sono identici nei due casi. Per il formato HDF5
+serve `h5py`, incluso in `requirements.txt`.
 
 Conversione completa:
 
@@ -356,12 +375,15 @@ Conversione completa:
 Risultato:
 
 - `TDS\COSMO SKYMED\OUTSPACE\<ID>.JSON`, il manifest;
-- `TDS\COSMO SKYMED\OUTSPACE\<ID>.PNG`, l'overview estratta dal dataset HDF5
-  `S0n/QLK`, perche' COSMO-SkyMed non consegna un file quicklook separato;
-- `TDS\COSMO SKYMED\PRODUCTS\<ID>.ZIP`, il delivery.
+- `TDS\COSMO SKYMED\OUTSPACE\<ID>.PNG`, l'overview, presa dal dataset HDF5
+  `S0n/QLK` oppure dal `<nome>.QLK.tif` dentro il `.tgz`;
+- `TDS\COSMO SKYMED\PRODUCTS\<ID>.ZIP`, il delivery. In `measurements/` finisce
+  il nativo decompresso: il contenuto del `.tgz` viene espanso, come chiede la
+  specifica.
 
 `<ID>` segue la convenzione della specializzazione EOPF-EOS, per esempio
-`CS__OPER_L1BSM__DGM_20170515T172253_20170515T172301_0001`.
+`CS__OPER_L1BSM__DGM_20170515T172253_20170515T172301_0001` oppure
+`CS__OPER_L1CSC__GEC_20171007T160717_20171007T160732_0001`.
 
 ### Codice di tipo prodotto
 
@@ -381,8 +403,9 @@ conversione, senza inventare un codice.
 
 ### Limiti attuali
 
-- Le consegne solo TIFF / GEOTIFF non sono gestite: il file di ingresso deve
-  essere il `.h5`.
-- Nessun prodotto SCANSAR, WIDEREGION o HUGEREGION, ne' Second Generation
-  (CSG) e' stato ancora provato su dati reali: le mappature esistono e sono
-  verificate dai test, ma non da una conversione.
+- Provati su dati reali: HIMAGE DGM_B (1B, consegna HDF5) e WIDEREGION GEC_B
+  (1C, consegna GeoTIFF in `.tgz`).
+- Nessun prodotto PINGPONG ne' Second Generation (CSG) e' stato ancora provato
+  su dati reali: le mappature esistono e sono verificate dai test, ma non da una
+  conversione.
+- L'overview mantiene l'orientamento nativo del quicklook, senza riorientamento.

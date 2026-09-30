@@ -1,10 +1,20 @@
 """This class represents a COSMO-SkyMed / COSMO-SkyMed Second Generation
-native HDF5 product.
+native product.
 
-The entry file handed to the converter is the product .h5 file; the native
-product unit is the delivery folder holding it (.h5 + DFDN delivery note +
-DFAS accompanying sheet + checksum), which is what the packager stores under
-measurements/.
+Two delivery formats are handled, both driven by the same attribute names:
+
+- **HDF5**: the entry file is the product `.h5`; metadata comes from its
+  attribute tree (root + `S0n` beam group + image dataset) and the overview
+  from the `S0n/QLK` dataset.
+- **GeoTIFF in a `.tgz`**: the entry file is the delivery `.tgz`; it holds
+  `<name>.MBI.tif` / `<name>.SBI.tif` (+ `.tfw`), `<name>.QLK.tif` and
+  `<name>.attribs.xml`, the XML dump of the very same HDF5 attribute tree.
+  Metadata comes from that XML and the overview from the QLK GeoTIFF.
+
+In both cases the native product unit is the delivery folder holding the entry
+file (entry + DFDN delivery note + DFAS accompanying sheet + checksum), which
+is what the packager stores under measurements/ - uncompressed, as the
+specialization requires.
 
 Supported instrument modes (EOPF-EOS specialization for COSMO-SKYMED):
 HIMAGE and PINGPONG (STRIPMAP), WIDEREGION and HUGEREGION (SCANSAR).
@@ -16,35 +26,43 @@ DGM_B: Level 1B Detected Ground Multi-look
 GEC_B: Level 1C Geocoded Ellipsoid Corrected
 GTC_B: Level 1D Geocoded Terrain Corrected
 
-All metadata comes from the HDF5 attribute tree (root attributes, the S0n beam
-group and its image dataset). The DFDN / DFAS XML sidecars carry no value the
-HDF5 attributes do not already hold, so they are only carried over as delivered
-content. TIFF / GEOTIFF-only deliveries are NOT handled: see the known limits
-in README.md.
+The DFDN / DFAS XML sidecars carry no value the product attributes do not
+already hold, so they are only carried over as delivered content.
 """
 import os
 import re
+import tarfile
 from typing import Optional
 
-import h5py
 import numpy as np
+from lxml import etree
 
 from eoSip_converter.base import processInfo as pinfo
 from eoSip_converter.esaProducts import formatUtils, metadata, product_EOSIP
 from eoSip_converter.esaProducts.browseImage import BrowseImage
 from eoSip_converter.esaProducts.product_directory import Product_Directory
 
-__version__ = '1.0.0'
+__version__ = '1.1.0'
 
 H5_SUFFIX = ".h5"
+TGZ_SUFFIXES = (".tgz", ".tar.gz")
 QUICKLOOK_DATASET = "QLK"
+IMAGE_DATASETS = ("MBI", "SBI")
 BEAM_GROUP_RE = re.compile(r"^S\d{2}$")
+
+FORMAT_HDF5 = "HDF5"
+FORMAT_GEOTIFF = "GEOTIFF"
+
+MEDIA_TYPES = {".h5": "application/vnd.hdfgroup.hdf5",
+               ".tif": "image/tiff",
+               ".tiff": "image/tiff"}
 
 # custom metadata keys (mission-local, like ICEYE's 'level')
 SATELLITE_ID = 'satellite_id'
 MISSION_ID = 'mission_id'
 ACQUISITION_MODE = 'acquisition_mode'
 NATIVE_PRODUCT_TYPE = 'native_product_type'
+NATIVE_FORMAT = 'native_format'
 PROCESSED_LEVEL_CODE = 'processed_level_code'
 
 # instrument mode: native Acquisition Mode -> operationalMode (spec Table 10)
@@ -118,6 +136,14 @@ def decode(value):
     return value
 
 
+def as_floats(value):
+    """Attribute value -> list of floats, from either backend (numpy array
+    from HDF5, blank-separated text from the attribute XML dump)."""
+    if isinstance(value, (list, tuple, np.ndarray)):
+        return [float(v) for v in np.asarray(value).reshape(-1)]
+    return [float(tok) for tok in str(value).split()]
+
+
 def normalise_utc(value):
     """COSMO-SkyMed UTC (YYYY-MM-DD hh:mm:ss with up to nanoseconds) -> RFC
     3339 with milliseconds (YYYY-MM-DDThh:mm:ss.sssZ)."""
@@ -132,36 +158,69 @@ def normalise_utc(value):
     return "%s.%sZ" % (base, millis)
 
 
+def is_tgz(path):
+    lowered = str(path).lower()
+    return any(lowered.endswith(suffix) for suffix in TGZ_SUFFIXES)
+
+
+def media_type_of(filename):
+    ext = os.path.splitext(str(filename).lower())[1]
+    if ext not in MEDIA_TYPES:
+        raise Exception("no media type known for: %s" % filename)
+    return MEDIA_TYPES[ext]
+
+
+def tar_members(tgz_path):
+    """[(archive member name, size)] of the regular files in the delivery."""
+    with tarfile.open(tgz_path, "r:gz") as tf:
+        return [(m.name, m.size) for m in tf.getmembers() if m.isfile()]
+
+
 class Product_CosmoSkymed(Product_Directory):
 
     def __init__(self, path=None):
         super().__init__(path)
-        if not str(path).lower().endswith(H5_SUFFIX):
-            raise Exception("not a COSMO-SkyMed HDF5 product: %s" % path)
+        lowered = str(self.path).lower()
+        if lowered.endswith(H5_SUFFIX):
+            self.native_format = FORMAT_HDF5
+        elif is_tgz(lowered):
+            self.native_format = FORMAT_GEOTIFF
+        else:
+            raise Exception("not a COSMO-SkyMed native product (.h5 / .tgz): %s" % path)
 
         self.EO_FOLDER = os.path.dirname(self.path)
         self.productFolderName = os.path.basename(self.EO_FOLDER)
         self.preview_path = None
         self.tmpSize = 0
 
-        # HDF5 attribute layers, read once (the .h5 stays closed afterwards)
-        self.h5_attrs = {}
+        # attribute layers, read once, same names in both backends
+        self.root_attrs = {}
         self.beam_attrs = {}
         self.image_attrs = {}
         self.beam_names = []
         self.polarisations = []
         self.image_dataset = None
         self.quicklook_dataset = None
-        self._scan_h5()
+        # GeoTIFF delivery only: member names inside the .tgz
+        self.members = []
+        self.image_file = None
+        self.quicklook_file = None
+
+        if self.native_format == FORMAT_HDF5:
+            self._scan_hdf5()
+        else:
+            self._scan_tgz()
 
         if self.debug != 0:
-            print(" init class Product_CosmoSkymed")
+            print(" init class Product_CosmoSkymed (%s)" % self.native_format)
 
-    # -- HDF5 access ------------------------------------------------------
+    # -- HDF5 backend -----------------------------------------------------
 
-    def _scan_h5(self):
+    def _scan_hdf5(self):
+        import h5py
+
         with h5py.File(self.path, 'r') as fd:
-            self.h5_attrs = {k: decode(v) for k, v in fd.attrs.items()}
+            self.root_attrs = {k: decode(v) for k, v in fd.attrs.items()}
             self.beam_names = sorted(k for k in fd.keys() if BEAM_GROUP_RE.match(k))
             if not self.beam_names:
                 raise Exception("no S0n beam group in %s" % self.path)
@@ -169,26 +228,106 @@ class Product_CosmoSkymed(Product_Directory):
             for name in self.beam_names:
                 polarisation = decode(fd[name].attrs.get('Polarisation'))
                 if polarisation is not None:
-                    self.polarisations.append(str(polarisation))
+                    self._add_polarisation(str(polarisation))
 
             beam = fd[self.beam_names[0]]
             self.beam_attrs = {k: decode(v) for k, v in beam.attrs.items()}
 
-            for name, obj in beam.items():
-                if not isinstance(obj, h5py.Dataset):
-                    continue
-                if name == QUICKLOOK_DATASET:
-                    self.quicklook_dataset = "%s/%s" % (self.beam_names[0], name)
-                elif CORNER_ATTRS[0] in obj.attrs and self.image_dataset is None:
-                    self.image_dataset = "%s/%s" % (self.beam_names[0], name)
-                    self.image_attrs = {k: decode(v) for k, v in obj.attrs.items()}
+            # the image and quicklook datasets sit under the beam group
+            # (slant / ground range products) or at the root (geocoded ones)
+            for holder in (beam, fd):
+                for name, obj in holder.items():
+                    if not isinstance(obj, h5py.Dataset):
+                        continue
+                    if name == QUICKLOOK_DATASET and self.quicklook_dataset is None:
+                        self.quicklook_dataset = obj.name
+                    elif CORNER_ATTRS[0] in obj.attrs and self.image_dataset is None:
+                        self.image_dataset = obj.name
+                        self.image_attrs = {k: decode(v) for k, v in obj.attrs.items()}
 
             if self.image_dataset is None:
                 raise Exception("no image dataset with geodetic corners in %s" % self.path)
 
+        self.image_file = self.origName
+
+    # -- GeoTIFF (.tgz) backend -------------------------------------------
+
+    def _scan_tgz(self):
+        attribs_xml = None
+        with tarfile.open(self.path, "r:gz") as tf:
+            for member in tf.getmembers():
+                if not member.isfile():
+                    continue
+                name = member.name
+                self.members.append((name, member.size))
+                base = os.path.basename(name).lower()
+                if base.endswith(".attribs.xml"):
+                    attribs_xml = tf.extractfile(member).read()
+                elif base.endswith(".qlk.tif") or base.endswith(".qlk.tiff"):
+                    self.quicklook_file = name
+                elif any(base.endswith("%s.tif" % d.lower()) or base.endswith("%s.tiff" % d.lower())
+                         for d in IMAGE_DATASETS):
+                    if self.image_file is None:
+                        self.image_file = name
+
+        if attribs_xml is None:
+            raise Exception("no <name>.attribs.xml in %s" % self.path)
+        if self.image_file is None:
+            raise Exception("no MBI / SBI image file in %s" % self.path)
+
+        self._read_attribs_xml(attribs_xml)
+        self.image_file = os.path.basename(self.image_file)
+
+    def _read_attribs_xml(self, data):
+        """Parse <name>.attribs.xml: the HDF5 attribute tree as XML, with
+        <_ROOT_>, the S0n beam groups and the image / quicklook datasets."""
+        root = etree.fromstring(data)
+
+        def attrs_of(node):
+            return {a.get("Name"): (a.text or "").strip()
+                    for a in node if a.tag == "Attribute"}
+
+        root_node = root.find("_ROOT_")
+        if root_node is None:
+            raise Exception("no <_ROOT_> group in the attribute XML of %s" % self.path)
+        self.root_attrs = attrs_of(root_node)
+
+        beams = [node for node in root if BEAM_GROUP_RE.match(str(node.tag))]
+        if not beams:
+            raise Exception("no S0n beam group in the attribute XML of %s" % self.path)
+        self.beam_names = [str(node.tag) for node in beams]
+        for node in beams:
+            polarisation = attrs_of(node).get('Polarisation')
+            if polarisation:
+                self._add_polarisation(polarisation)
+        self.beam_attrs = attrs_of(beams[0])
+
+        for node in root.iter():
+            tag = str(node.tag)
+            if tag == QUICKLOOK_DATASET and self.quicklook_dataset is None:
+                self.quicklook_dataset = tag
+            elif tag in IMAGE_DATASETS and self.image_dataset is None:
+                candidate = attrs_of(node)
+                if CORNER_ATTRS[0] in candidate:
+                    self.image_dataset = tag
+                    self.image_attrs = candidate
+
+        if self.image_dataset is None:
+            raise Exception("no image dataset with geodetic corners in the "
+                            "attribute XML of %s" % self.path)
+
+    # -- attribute access -------------------------------------------------
+
+    def _add_polarisation(self, polarisation):
+        """One channel per DISTINCT polarisation: a ScanSAR product has one
+        S0n group per subswath, all with the same polarisation."""
+        polarisation = str(polarisation).strip()
+        if polarisation and polarisation not in self.polarisations:
+            self.polarisations.append(polarisation)
+
     def attr(self, name, default=None):
         """Attribute lookup: image dataset first, then beam group, then root."""
-        for layer in (self.image_attrs, self.beam_attrs, self.h5_attrs):
+        for layer in (self.image_attrs, self.beam_attrs, self.root_attrs):
             if name in layer:
                 return layer[name]
         return default
@@ -196,7 +335,7 @@ class Product_CosmoSkymed(Product_Directory):
     def need_attr(self, name):
         value = self.attr(name)
         if value is None:
-            raise Exception("missing HDF5 attribute: '%s' in %s" % (name, self.path))
+            raise Exception("missing attribute: '%s' in %s" % (name, self.path))
         return value
 
     def first_attr(self, *names):
@@ -204,7 +343,7 @@ class Product_CosmoSkymed(Product_Directory):
             value = self.attr(name)
             if value is not None:
                 return value
-        raise Exception("missing HDF5 attributes %s in %s" % (list(names), self.path))
+        raise Exception("missing attributes %s in %s" % (list(names), self.path))
 
     # -- product lifecycle ------------------------------------------------
 
@@ -220,8 +359,10 @@ class Product_CosmoSkymed(Product_Directory):
         pass
 
     def extractToPath(self, folder=None, dont_extract=False):
-        """No extraction needed: the native delivery folder is already
-        uncompressed. Walk it to get the delivered size the manifest reports."""
+        """No extraction to disk is needed: the manifest values are already
+        read. Walk the delivery to get the size the manifest reports - for a
+        .tgz delivery, the size its content takes once uncompressed, which is
+        what lands in measurements/."""
         if not os.path.exists(folder):
             raise Exception("destination folder does not exist: %s" % folder)
 
@@ -234,38 +375,63 @@ class Product_CosmoSkymed(Product_Directory):
                 n += 1
                 eoFile = os.path.join(root, name)
                 self.contentList.append(eoFile)
-                self.tmpSize += os.stat(eoFile).st_size
+                if is_tgz(name):
+                    for member, size in (self.members or tar_members(eoFile)):
+                        self.tmpSize += size
+                else:
+                    self.tmpSize += os.stat(eoFile).st_size
                 if self.debug != 0:
                     print(" ## product content[%d]:'%s'" % (n, name))
-        print((" #### native delivery: %d file(s), %d bytes" % (n, self.tmpSize)))
+        print((" #### native delivery: %d file(s), %d bytes uncompressed"
+               % (n, self.tmpSize)))
 
     def writeQuicklook(self, destPath):
-        """Write the HDF5 quicklook (S0n/QLK) as a PNG at destPath.
+        """Write the native quicklook as a PNG at destPath: the `S0n/QLK`
+        HDF5 dataset, or the `<name>.QLK.tif` member of the .tgz delivery.
 
-        The QLK raster is stored in native acquisition orientation (see the
-        Quick Look Lines/Columns Order attributes); it is written as-is, with
-        no re-orientation."""
+        The quicklook keeps its native orientation (see the 'Quick Look
+        Lines/Columns Order' attributes); it is written as-is, with no
+        re-orientation."""
         from PIL import Image
 
-        if self.quicklook_dataset is None:
-            raise FileNotFoundError(
-                "corrupt COSMO-SkyMed native product (no %s quicklook dataset in %s)"
-                % (QUICKLOOK_DATASET, self.path))
+        if self.native_format == FORMAT_HDF5:
+            import h5py
 
-        with h5py.File(self.path, 'r') as fd:
-            data = fd[self.quicklook_dataset][:]
+            if self.quicklook_dataset is None:
+                raise FileNotFoundError(
+                    "corrupt COSMO-SkyMed native product (no %s quicklook dataset in %s)"
+                    % (QUICKLOOK_DATASET, self.path))
+            with h5py.File(self.path, 'r') as fd:
+                data = fd[self.quicklook_dataset][:]
+            image = Image.fromarray(self._to_uint8(data))
+        else:
+            if self.quicklook_file is None:
+                raise FileNotFoundError(
+                    "corrupt COSMO-SkyMed native product (no QLK GeoTIFF in %s)"
+                    % self.path)
+            with tarfile.open(self.path, "r:gz") as tf:
+                with tf.extractfile(self.quicklook_file) as fd:
+                    image = Image.open(fd)
+                    image.load()
+            if image.mode not in ("L", "RGB"):
+                image = Image.fromarray(self._to_uint8(np.asarray(image)))
 
-        if data.dtype != np.uint8:
-            # scale to 8 bit; NaN/inf (float quicklooks) count as no signal
-            data = np.nan_to_num(data.astype('float64'), nan=0.0, posinf=0.0, neginf=0.0)
-            top = float(data.max())
-            data = (np.zeros(data.shape, dtype=np.uint8) if top <= 0
-                    else (np.clip(data / top, 0, 1) * 255).astype(np.uint8))
-
-        Image.fromarray(data).save(destPath, "PNG")
+        image.save(destPath, "PNG")
         self.preview_path = destPath
         print((" #### quicklook written: %s" % destPath))
         return destPath
+
+    @staticmethod
+    def _to_uint8(data):
+        data = np.asarray(data)
+        if data.dtype == np.uint8:
+            return data
+        # scale to 8 bit; NaN/inf (float quicklooks) count as no signal
+        data = np.nan_to_num(data.astype('float64'), nan=0.0, posinf=0.0, neginf=0.0)
+        top = float(data.max())
+        if top <= 0:
+            return np.zeros(data.shape, dtype=np.uint8)
+        return (np.clip(data / top, 0, 1) * 255).astype(np.uint8)
 
     # -- metadata ---------------------------------------------------------
 
@@ -297,6 +463,7 @@ class Product_CosmoSkymed(Product_Directory):
             raise Exception("metadata is None")
 
         self.metadata = met
+        met.setMetadataPair(NATIVE_FORMAT, self.native_format)
 
         # sensing times
         start = normalise_utc(self.need_attr('Scene Sensing Start UTC'))
@@ -326,13 +493,13 @@ class Product_CosmoSkymed(Product_Directory):
         met.setMetadataPair(metadata.METADATA_SATELLITE, satellite)
 
         # orbit
-        met.setMetadataPair(metadata.METADATA_ORBIT, int(self.need_attr('Orbit Number')))
+        met.setMetadataPair(metadata.METADATA_ORBIT, int(str(self.need_attr('Orbit Number')).strip()))
         orbit_direction = str(self.need_attr('Orbit Direction')).upper()
         if orbit_direction not in ('ASCENDING', 'DESCENDING'):
             raise Exception("invalid orbit direction: %s" % orbit_direction)
         met.setMetadataPair(metadata.METADATA_ORBIT_DIRECTION, orbit_direction)
 
-        # polarisation: one S0n beam group per channel
+        # polarisation: one channel per distinct S0n Polarisation
         if not self.polarisations:
             raise Exception("no Polarisation attribute in %s" % self.path)
         met.setMetadataPair(metadata.METADATA_POLARISATION_MODE,
@@ -357,13 +524,13 @@ class Product_CosmoSkymed(Product_Directory):
         met.setMetadataPair(metadata.METADATA_PRODUCT_SIZE, product_EOSIP.PRODUCT_SIZE_NOT_SET)
 
         # resolutions: ground/slant range and azimuth geometric resolution
-        range_resolution = float(self.first_attr(
+        range_resolution = as_floats(self.first_attr(
             'Ground Range Geometric Resolution',
             'Slant Range Geometric Resolution',
-            'Ground Range Instrument Geometric Resolution'))
-        azimuth_resolution = float(self.first_attr(
+            'Ground Range Instrument Geometric Resolution'))[0]
+        azimuth_resolution = as_floats(self.first_attr(
             'Azimuth Geometric Resolution',
-            'Azimuth Instrument Geometric Resolution'))
+            'Azimuth Instrument Geometric Resolution'))[0]
         if range_resolution <= 0 or azimuth_resolution <= 0:
             raise Exception("invalid resolution: range=%s azimuth=%s"
                             % (range_resolution, azimuth_resolution))
@@ -375,8 +542,8 @@ class Product_CosmoSkymed(Product_Directory):
         met.setMetadataPair(metadata.METADATA_RESOLUTION, resolution)
 
         # scene incidence angle: mean of the near/far image incidence angles
-        near = float(self.need_attr('Near Incidence Angle'))
-        far = float(self.need_attr('Far Incidence Angle'))
+        near = as_floats(self.need_attr('Near Incidence Angle'))[0]
+        far = as_floats(self.need_attr('Far Incidence Angle'))[0]
         incidence = round((near + far) / 2.0, 6)
         met.setMetadataPair(metadata.METADATA_INSTRUMENT_INCIDENCE_ANGLE, incidence)
         met.setMetadataPair(metadata.METADATA_MINIMUM_INCIDENCE_ANGLE, round(near, 6))
@@ -384,11 +551,12 @@ class Product_CosmoSkymed(Product_Directory):
 
         # radar wavelength, rounded to the spec's discreteWavelength precision
         met.addLocalAttribute("radarWavelength",
-                              round(float(self.need_attr('Radar Wavelength')), 7))
+                              round(as_floats(self.need_attr('Radar Wavelength'))[0], 7))
 
-        # native data file and its media type, for the measurements link
-        met.addLocalAttribute("nativeDataFile", self.origName)
-        met.addLocalAttribute("measurementsMediaType", "application/vnd.hdfgroup.hdf5")
+        # the measurements link points at the image file, as it lands in
+        # measurements/ (the .h5 itself, or the GeoTIFF out of the .tgz)
+        met.addLocalAttribute("nativeDataFile", self.image_file)
+        met.addLocalAttribute("measurementsMediaType", media_type_of(self.image_file))
 
         print(("## resolution range=%s azimuth=%s; incidence=%s"
                % (range_resolution, azimuth_resolution, incidence)))
@@ -401,9 +569,9 @@ class Product_CosmoSkymed(Product_Directory):
         geodetic corners."""
         coords = []
         for name in CORNER_ATTRS:
-            corner = self.need_attr(name)
-            coords.append(float(corner[0]))  # latitude
-            coords.append(float(corner[1]))  # longitude
+            corner = as_floats(self.need_attr(name))
+            coords.append(corner[0])  # latitude
+            coords.append(corner[1])  # longitude
         # close the ring
         coords.extend(coords[0:2])
 

@@ -10,6 +10,7 @@ to end, so the asserted values are real-product values; the PINGPONG fixture is
 invented and proves the dual-pol / Level 1A branches only.
 """
 import json
+import os
 from pathlib import Path
 
 import pytest
@@ -23,12 +24,15 @@ HIM_NAME = "CSKS1_DGM_B_HI_01_HH_RD_SF_20170515172254_20170515172301"
 HIM_H5 = FIXTURE_DIR / HIM_NAME / "736299-502923" / ("%s.h5" % HIM_NAME)
 SPP_NAME = "CSKS4_SCSU_PP_01_HH_RA_FF_20200704101010_20200704101020"
 SPP_H5 = FIXTURE_DIR / SPP_NAME / "800001" / ("%s.h5" % SPP_NAME)
+GEC_NAME = "CSKS1_GEC_B_WR_01_HH_RD_SF_20171007160717_20171007160732"
+GEC_TGZ = FIXTURE_DIR / GEC_NAME / "1008699" / ("%s.tgz" % GEC_NAME)
 CSK_TEMPLATE = Path(__file__).resolve().parents[4] / "TDS" / "template" / "CSK-template.json"
 
 # EO product names as the naming convention builds them
 # (<MMM>_<CCCC>_<TTTTTTTTTT>_<start>_<stop>_<vvvv>)
 HIM_EO_NAME = "CS__OPER_L1BSM__DGM_20170515T172253_20170515T172301_0001"
 SPP_EO_NAME = "CS__OPER_L1ASMU_SCS_20200704T101010_20200704T101020_0001"
+GEC_EO_NAME = "CS__OPER_L1CSC__GEC_20171007T160717_20171007T160732_0001"
 
 # the ten product types the specialization allows
 ALLOWED_PRODUCT_TYPES = {
@@ -61,9 +65,12 @@ def _extract(h5_path, work_folder):
     return prod, met
 
 
-def _feature(h5_path, eo_name, work_folder):
+def _feature(h5_path, eo_name, work_folder, native_product_name=None):
     prod, met = _extract(h5_path, work_folder)
-    mission, dynamic = json_emitter.build_layers(met, prod, eo_name)
+    # the ingester passes the entry file's basename, as here
+    mission, dynamic = json_emitter.build_layers(
+        met, prod, eo_name,
+        native_product_name=native_product_name or os.path.basename(str(h5_path)))
     feature = json_template.build(mission, dynamic,
                                   template_path=json_emitter.TEMPLATE_PATH)
     return prod, met, feature
@@ -175,6 +182,76 @@ def test_dual_polarisation_and_level_1a(tmp_path):
     assert props["productInformation"]["processingLevel"] == "1A"
     step = props["productInformation"]["resourceLineage"][0]["processStep"][0]
     assert step["source"][0]["processedLevel"]["code"] == "L1A"
+
+
+def test_geotiff_tgz_delivery_scansar_level_1c(tmp_path):
+    """SCANSAR WIDEREGION GeoTIFF delivery: metadata from the attribute XML
+    inside the .tgz, four subswaths but ONE polarisation channel."""
+    work = tmp_path / "work"
+    work.mkdir()
+    prod, _, feature = _feature(GEC_TGZ, GEC_EO_NAME, work)
+    assert json_template.find_placeholders(feature) == []
+    assert prod.native_format == product_cosmoskymed.FORMAT_GEOTIFF
+    assert prod.beam_names == ["S01", "S02", "S03", "S04"]
+
+    props = feature["properties"]
+    par = props["acquisitionInformation"][0]["acquisitionParameters"][0]
+    assert par["operationalMode"] == "SCW"
+    # four subswaths, all HH: one DISTINCT channel, so single polarisation
+    assert par["polarisationMode"] == "S"
+    assert par["polarisationChannel"] == "HH"
+    assert par["rangeResolution"] == 30.0
+    assert par["azimuthResolution"] == 30.0
+    assert par["orbitNumber"] == 55911
+    assert par["orbitDirection"] == "DESCENDING"
+    assert par["acquisitionAngles"]["incidenceAngle"] == pytest.approx(30.409467)
+    assert par["wavelengths"][0]["discreteWavelength"] == 0.031228
+
+    pinfo = props["productInformation"]
+    assert pinfo["productType"] == "L1CSC__GEC"
+    assert pinfo["productType"] in ALLOWED_PRODUCT_TYPES
+    assert pinfo["processingLevel"] == "1C"
+    # size is the UNCOMPRESSED content, which is what lands in measurements/
+    assert pinfo["size"] > GEC_TGZ.stat().st_size
+
+    step = pinfo["resourceLineage"][0]["processStep"][0]
+    # lineage cites the delivered file, the link points at the image file
+    assert step["source"][0]["sourceCitation"]["title"] == "%s.tgz" % GEC_NAME
+    assert step["source"][0]["processedLevel"]["code"] == "L1C"
+    link = props["links"]["measurements"][0]
+    assert link["href"] == "/measurements/%s.MBI.tif" % GEC_NAME
+    assert link["type"] == "image/tiff"
+
+
+def test_geotiff_tgz_structure_matches_template(tmp_path):
+    work = tmp_path / "work"
+    work.mkdir()
+    _, _, feature = _feature(GEC_TGZ, GEC_EO_NAME, work)
+    with open(CSK_TEMPLATE, encoding="utf-8") as fd:
+        reference = json.load(fd)
+    got = _key_paths(feature)
+    want = _key_paths(reference)
+    assert got == want, "missing: %s / extra: %s" % (sorted(want - got), sorted(got - want))
+
+
+def test_quicklook_from_tgz_geotiff(tmp_path):
+    work = tmp_path / "work"
+    work.mkdir()
+    prod, _ = _extract(GEC_TGZ, work)
+    png = tmp_path / ("%s.PNG" % GEC_EO_NAME)
+    prod.writeQuicklook(str(png))
+
+    from PIL import Image
+    with Image.open(png) as im:
+        assert im.format == "PNG"
+        assert im.size == (8, 6)
+
+
+def test_unknown_native_format_is_rejected(tmp_path):
+    bogus = tmp_path / "CSKS1_DGM_B_HI_01_HH_RD_SF_20170515172254_20170515172301.zip"
+    bogus.write_bytes(b"not a native product")
+    with pytest.raises(Exception, match="not a COSMO-SkyMed native product"):
+        product_cosmoskymed.Product_CosmoSkymed(str(bogus))
 
 
 def test_typecode_map_is_exactly_the_allowed_product_types():

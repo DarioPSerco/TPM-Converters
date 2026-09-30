@@ -4,18 +4,35 @@ Mission adapter for the common template-driven generator
 (``common/json_template.py``). Keeps GeoEye-1's own extraction (the metadata
 dict populated by ``product_geoeye1.Product_Geoeye1.extractMetadata``),
 declares the GeoEye-1 mission-fixed value map, and hands both layers to the
-mission-agnostic generator. Output matches ``TDS/template/GE1-template.json``
-— structure and values. A future mission plugs in the same way: its own
-MISSION_VALUES + its own dynamic layer, no change to the common core.
+mission-agnostic generator. Output follows "EOPF-EOS SPECIALIZATION FOR
+GEOEYE-1 PRODUCTS" 1.0 through its own placeholder template
+(``feature_template_ge1.json``).
+
+Spec readings encoded here:
+- wavelengths: Table 10 and the example spell the block ``wavelenght`` /
+  ``wavelenghts``, Table 13 (which defines its content) spells
+  ``wavelengths``; the plural is used, as for WorldView and COSMO-SkyMed. One
+  entry per spectralRange of Table 14: start/stop are the outer bounds of the
+  range, discreteWavelengths the band centres.
+- operationalMode: Table 2 gives PAN / MS4B per product type; Table 10 also
+  allows STEREO, used (as in the example) for stereo native levels.
+- lineage source: Table 17 is normative (``source[0].sourceCitation.title``),
+  not the example (``source[0].citation``).
+- cloudCover and referenceSystemIdentifier are written only when the native
+  product carries them (Table 18; Table 15 makes the CRS mandatory only for
+  L2AVRS_* and L3_* - a missing CRS there fails the conversion).
 
 This replaces the XML / eoSIP .SIP.ZIP output stage. No XML / no eoSIP.
 """
 import re
+from pathlib import Path
 
 from eoSip_converter.esaProducts import metadata as M
 
 from common import json_template
 from geoeye1_json import __version__
+
+TEMPLATE_PATH = Path(__file__).resolve().parent / "feature_template_ge1.json"
 
 # GeoEye-1 mission-fixed values — template slots constant for this mission,
 # shaped as a partial tree mirroring the template.
@@ -24,7 +41,6 @@ MISSION_VALUES = {
         "acquisitionInformation": [{
             "platform": {"platformShortName": "GeoEye-1", "orbitType": "LEO"},
             "instrument": {"instrumentShortName": "GIS", "sensorType": "OPTICAL"},
-            "acquisitionParameters": [{"wavelenghts": {"spectralRange": "VIS"}}],
         }],
         "productInformation": {
             "resourceLineage": [{"processStep": [{
@@ -38,6 +54,21 @@ MISSION_VALUES = {
         },
     },
 }
+
+
+# spec Table 14, in nm: band set -> [(spectralRange, [(start, stop), ...])]
+WAVELENGTHS_NM = {
+    "PAN": [("VNIR", [(450, 900)])],
+    "MS4B": [("VIS", [(450, 510), (520, 580), (655, 690)]),
+             ("NIR", [(780, 900)])],
+}
+
+# spec Table 16: native level -> processingLevel ("3" for every other level)
+PROCESSING_LEVEL = {"LV1B": "1B", "Stereo1B": "1B",
+                    "LV2A": "2A", "Stereo2A": "2A", "StereoOR2A": "2A"}
+
+# spec Table 15: product types that must carry referenceSystemIdentifier
+CRS_MANDATORY = ("L2AVRS_PAN", "L2AVRS_MS_", "L3_MRO_PAN", "L3_MRP_MS_")
 
 
 def _gv(met, key):
@@ -67,6 +98,45 @@ def _polygon_coordinates(footprint):
     return [ring]
 
 
+def _band_set(typecode):
+    """PAN / MS4B from the product type band token (Table 2)."""
+    if not typecode:
+        return None
+    return "PAN" if typecode.endswith("PAN") else "MS4B"
+
+
+def _wavelengths(band_set):
+    ranges = WAVELENGTHS_NM.get(band_set)
+    if ranges is None:
+        return None
+    return [{
+        "spectralRange": spectral_range,
+        "startWavelength": min(b[0] for b in bands) / 1e9,
+        "stopWavelength": max(b[1] for b in bands) / 1e9,
+        "discreteWavelengths": [(b[0] + b[1]) / 2 / 1e9 for b in bands],
+    } for spectral_range, bands in ranges]
+
+
+def _reference_system(met):
+    """EPSG URI from the native map projection: WGS84 UTM -> 326zz/327zz,
+    WGS84 geographic -> 4326. None when not derivable."""
+    datum = (_gv(met, "datumName") or "").replace('"', "")
+    proj = (_gv(met, "mapProjName") or "").replace('"', "")
+    if datum != "WE":
+        return None
+    if proj == "UTM":
+        zone = _gv(met, "mapZone")
+        hemi = (_gv(met, "mapHemi") or "").replace('"', "")
+        if zone is None or hemi not in ("N", "S"):
+            return None
+        code = (32600 if hemi == "N" else 32700) + int(zone)
+    elif proj.startswith("Geographic"):
+        code = 4326
+    else:
+        return None
+    return "http://www.opengis.net/def/crs/EPSG/0/%d" % code
+
+
 def build_layers(met, product, eo_product_name, native_product_name=None):
     """GeoEye-1 per-product dynamic values, from this mission's extraction."""
     native_name = native_product_name or getattr(product, "origName", None) or eo_product_name
@@ -85,9 +155,14 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
     if cloud is not None and str(cloud) == "-999":
         cloud = None
     processed = (_gv(met, M.METADATA_PROCESSING_LEVEL) or "").replace("other: ", "").strip() or None
-    # L2A* -> "2A", L3_* -> "3"
-    level_token = typecode[1:3].rstrip("_") if typecode else None
+    processing_level = PROCESSING_LEVEL.get(processed, "3") if processed else None
+    band_set = _band_set(typecode)
+    operational_mode = "STEREO" if "Stereo" in (processed or "") else band_set
     size = getattr(product, "tmpSize", 0) or 0
+    crs = _reference_system(met)
+    if crs is None and typecode in CRS_MANDATORY:
+        raise ValueError("referenceSystemIdentifier is mandatory for %s but the native "
+                         "map projection gives none" % typecode)
 
     dynamic = {
         "id": eo_product_name,
@@ -99,8 +174,9 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             "acquisitionInformation": [{"acquisitionParameters": [{
                 "beginningDateTime": begin,
                 "endingDateTime": end,
-                "operationalMode": _gv(met, M.METADATA_SENSOR_OPERATIONAL_MODE),
+                "operationalMode": operational_mode,
                 "resolution": float(resolution) if resolution is not None else None,
+                "wavelengths": _wavelengths(band_set),
                 "acquisitionAngles": {
                     "illuminationAzimuthAngle": float(sun_az) if sun_az is not None else None,
                     "illuminationElevationAngle": float(sun_el) if sun_el is not None else None,
@@ -110,11 +186,14 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
                 "size": int(size),
                 "cloudCover": float(cloud) if cloud is not None else None,
                 "productType": typecode,
-                "processingLevel": level_token,
+                "referenceSystemIdentifier": crs,
+                "processingDate": created,
+                "processingLevel": processing_level,
                 "resourceLineage": [{"processStep": [{
                     "stepDateTime": {"created": created},
-                    "source": {"citation": native_name, "processedLevel": {"code": processed}},
-                    "output": {"sourceCitation": {"title": "%s.ZIP" % eo_product_name}},
+                    "source": [{"sourceCitation": {"title": native_name},
+                                "processedLevel": {"code": processed}}],
+                    "output": [{"sourceCitation": {"title": "%s.ZIP" % eo_product_name}}],
                 }]}],
             },
             "links": {
@@ -129,4 +208,4 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
 def emit(met, product, eo_product_name, out_dir, do_validate=True, **kwargs):
     mission, dynamic = build_layers(met, product, eo_product_name, **kwargs)
     return json_template.emit(out_dir, eo_product_name, mission, dynamic,
-                              do_validate=do_validate)
+                              template_path=TEMPLATE_PATH, do_validate=do_validate)
