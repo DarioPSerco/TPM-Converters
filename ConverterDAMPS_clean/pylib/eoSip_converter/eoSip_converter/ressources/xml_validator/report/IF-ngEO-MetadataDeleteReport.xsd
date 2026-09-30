@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:rep="http://ngeo.eo.esa.int/schema/metadataDeleteReport" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ngeo.eo.esa.int/schema/metadataDeleteReport" elementFormDefault="qualified"
+           attributeFormDefault="unqualified" version="1.3">
+    <!--======================================-->
+    <!--==== ngEO Root Elements ===============-->
+    <!--======================================-->
+    <xs:element name="metadataDeleteReport" type="rep:metadataDeleteReportType">
+        <xs:annotation>
+            <xs:documentation>ngEO Delete Metadata Report Type</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <!--=======================================-->
+    <!--==== ngEO Complex Types Section ========-->
+    <!--=======================================-->
+    <xs:complexType name="metadataDeleteReportType">
+        <xs:annotation>
+            <xs:documentation>ngEO Delete Metadata Report Data Structure</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="responsibleOrgName" type="xs:string" nillable="false" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Entity issuing the Delete Metadata Report file</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Delete Metadata Report date time</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="productDeletionGroup" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:sequence>
+                            <xs:annotation>
+                                <xs:documentation>This group of information is mandatory for ingesting purposes.
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:element name="platformShortName" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Platform (i.e. mission) identifier
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="instrumentShortName" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Instrument (i.e. sensor) identifier
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="operationalMode" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Also known as imaging mode, sensor mode or acquisition mode
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="productType" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Product type.</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:element name="productDeletionItem" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Element used to remove the whole metadata for a product
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="productIdentifier" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Identifier for metadata item, includes ground segment
+                                                namespace to guarantee uniqueness within EOP.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="source" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Source of meta data</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bulkDeletion" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Bulk Delete</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="beginDate" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Begin Date of the Metadata to delete</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="endDate" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>End Date of the Metadata to delete</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="dateType">
+                            <xs:annotation>
+                                <xs:documentation>Acquisition Time or Ingestion Time to be used as the date criteria
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="INGESTION_TIME"/>
+                                    <xs:enumeration value="ACQUISITION_TIME"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="targetProductType">
+                            <xs:annotation>
+                                <xs:documentation>This element provides the mission/sensor/sensorMode/productType
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="platformShortName" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Platform (i.e. mission) identifier
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="instrumentShortName" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Instrument (i.e. sensor) identifier
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="operationalMode" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Also known as imaging mode, sensor mode or acquisition
+                                                mode
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="productType" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Product type.</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="version" type="xs:string" use="required" fixed="1.2"/>
+    </xs:complexType>
+    <!--=======================================-->
+    <xs:complexType name="productDeletionItemType">
+        <xs:annotation>
+            <xs:documentation>ngEO Delete Metadata Report Data Structure</xs:documentation>
+        </xs:annotation>
+        <xs:sequence/>
+    </xs:complexType>
+    <!--=======================================-->
+</xs:schema>

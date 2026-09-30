@@ -1,0 +1,98 @@
+{
+  "type": "Feature",
+  "id": "<product id>",
+  "bbox": "<bbox [west,south,east,north]>",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": "<footprint closed ring [[lon,lat],...]>"
+  },
+  "properties": {
+    "status": "ARCHIVED",
+    "title": "<product id>",
+    "date": "<beginningDateTime>/<endingDateTime>",
+    "created": "<production datetime>",
+    "acquisitionInformation": {
+      "platform": {
+        "platformShortName": "<platformShortName>",
+        "platformSerialIdentifier": "<platformSerialIdentifier>",
+        "orbitType": "<orbitType>"
+      },
+      "instrument": {
+        "instrumentShortName": "<instrumentShortName>",
+        "sensorType": "<sensorType>"
+      },
+      "acquisitionParameters": {
+        "beginningDateTime": "<beginningDateTime>",
+        "endingDateTime": "<endingDateTime>",
+        "operationalMode": "<operationalMode>",
+        "orbitNumber": "<orbitNumber (number)>",
+        "orbitDirection": "<orbitDirection>",
+        "wrsLongitudeGrid": "<wrsLongitudeGrid>",
+        "wrsLatitudeGrid": "<wrsLatitudeGrid>",
+        "acquisitionType": "NOMINAL",
+        "acquisitionAngles": {
+          "illuminationAzimuthAngle": "<sun azimuth (number)>",
+          "illuminationElevationAngle": "<sun elevation (number)>",
+          "acrossTrackIncidenceAngle": "<across-track incidence angle (number)>",
+          "alongTrackIncidenceAngle": "<along-track incidence angle (number)>"
+        }
+      }
+    },
+    "productInformation": {
+      "size": "<package size bytes (number)>",
+      "productType": "<typecode>",
+      "resourceLineage": {
+        "processStep": {
+          "description": "<mission converter description>",
+          "stepDateTime": {
+            "created": "<production datetime>"
+          },
+          "processor": {
+            "role": "processor",
+            "party": {
+              "name": "EOF-EOS External Data Handling",
+              "type": "CI_Organisation"
+            }
+          },
+          "reference": {
+            "title": "<mission spec reference title>",
+            "edition": "<mission spec edition>"
+          },
+          "source": {
+            "citation": "<native product name>",
+            "processedLevel": "<native processed level>"
+          },
+          "processingInformation": {
+            "softwareReference": {
+              "title": "<converter software name>",
+              "edition": "<converter software version>"
+            }
+          },
+          "output": {
+            "sourceCitation": {
+              "title": "<product id>.ZIP"
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/<native product name>",
+          "type": "application/x-hdf5",
+          "title": "Native File",
+          "category": "product (TBD as part of vocabulary to consolidate)"
+        }
+      ],
+      "preview": [
+        {
+          "href": "/preview/overviews/<product id>.PNG",
+          "type": "image/png",
+          "title": "Product browse",
+          "category": "overview (TBD as above)"
+        }
+      ]
+    }
+  }
+}

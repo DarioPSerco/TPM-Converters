@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eoSip_converter"
+authors = [
+    {name = "Gilles Lavaux", email = "gilles.lavaux@serco.com"},
+    {name = "Simon Purser", email = "simon.purser@serco.com"},
+]
+requires-python = ">=3.6"
+version = "1.1.0"
+dependencies = [
+    "numpy",
+    "lxml",
+    "matplotlib",
+    "pillow",
+    "packaging"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["ingesters", "scripts"]
+namespaces = false
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*"]

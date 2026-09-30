@@ -1,0 +1,14 @@
+
+
+[GLOBAL]
+#
+# the pattern using to build the http call to the remote m2bs server
+#
+URL_PATTERN=http://localhost:7001/polygonToCountry
+
+
+
+#
+DEBUG=False
+TIMEOUT=10
+#PROXY=localhost:8084

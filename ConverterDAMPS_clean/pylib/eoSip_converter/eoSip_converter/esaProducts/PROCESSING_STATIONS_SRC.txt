@@ -1,0 +1,28 @@
+#EUROPE
+ACRI	AC	ACR
+Data Service Initiative	DS	DSI
+ECMWF	EC	ECM
+ESRIN Frascati	ES	ESR
+ESRIN PAF Frascati	ES	PDF
+Finnish PAC	FI	FIN
+FOS-ES	FO	FOS
+French PAC	FP	FPA
+French PAC (PDAS-F)	PF	PDA
+German PAC	DP	DPA
+German PAF	DP	DPF
+IECF	IE	IEC
+Italian PAC	IP	IPA
+Italian PAF	IP	IPF
+Matera for NRT production	PA	PAM
+KARI (Norway)	KA	KAR
+LRAC Kiruna	LR	LRA
+Orbite Mission	OM	O_M
+PDCC	PD	PDC
+PDHS Kiruna	KS	PDK
+PDHS Kiruna	KS	KIR
+PHDS ESRIN	ES	PDE
+Spanish PAC	EP	EPA
+Swedish PAC (S-PAC)	SP	SPA
+Tromsoe	TP	TRS
+UK PAC	UP	UPA
+UK PAF	UP	UPF

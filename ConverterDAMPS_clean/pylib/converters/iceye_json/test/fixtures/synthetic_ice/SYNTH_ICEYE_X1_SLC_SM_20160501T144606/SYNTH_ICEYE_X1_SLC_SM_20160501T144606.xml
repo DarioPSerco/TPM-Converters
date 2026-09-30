@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC ICEYE metadata - element names inferred from
+     product_iceye.Product_Iceye.xmlMapping. NOT a real product. -->
+<Metadata>
+  <acquisition_start_utc>2016-05-01T14:46:06.806123</acquisition_start_utc>
+  <acquisition_end_utc>2016-05-01T14:46:30.912456</acquisition_end_utc>
+  <orbit_relative_number>53</orbit_relative_number>
+  <orbit_direction>ASCENDING</orbit_direction>
+  <product_level>SLC</product_level>
+  <acquisition_mode>stripmap</acquisition_mode>
+  <satellite_look_angle>25.0</satellite_look_angle>
+  <incidence_center>33.3</incidence_center>
+  <look_side>left</look_side>
+  <coord_first_near>1 1 -24.15261009 -66.44291264</coord_first_near>
+  <coord_first_far>1 1 -24.15129263 -66.36551048</coord_first_far>
+  <coord_last_near>1 1 -24.23036597 -66.44136086</coord_last_near>
+  <coord_last_far>1 1 -24.22904374 -66.36391186</coord_last_far>
+  <coord_center>1 1 -24.19082811 -66.40342396</coord_center>
+  <satellite_name>ICEYE-X1</satellite_name>
+  <Orbit_State_Vectors>
+    <orbit_vector>
+      <velX>-1050.123</velX>
+      <velY>-6900.456</velY>
+      <velZ>-2900.789</velZ>
+    </orbit_vector>
+  </Orbit_State_Vectors>
+  <azimuth_look_bandwidth>0.0</azimuth_look_bandwidth>
+  <range_look_bandwidth>0.0</range_look_bandwidth>
+  <total_processed_bandwidth_azimuth>15000.0</total_processed_bandwidth_azimuth>
+  <azimuth_looks>1</azimuth_looks>
+  <azimuth_spacing>2.5</azimuth_spacing>
+  <azimuth_ground_spacing>0.5</azimuth_ground_spacing>
+  <range_spacing>2.5</range_spacing>
+  <slant_range_spacing>0.5</slant_range_spacing>
+  <processor_version>1.19</processor_version>
+  <processing_time>2021-02-01T15:30:23.123456</processing_time>
+</Metadata>

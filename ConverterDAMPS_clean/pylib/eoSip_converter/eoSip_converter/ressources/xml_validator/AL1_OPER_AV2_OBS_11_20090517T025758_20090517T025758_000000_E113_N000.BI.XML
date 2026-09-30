@@ -1,0 +1,22 @@
+<rep:browseReport xmlns:rep="http://ngeo.eo.esa.int/schema/browseReport" xmlns:opt="http://www.opengis.net/opt/2.0"
+                  xmlns:eop="http://www.opengis.net/eop/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+                  xmlns:om="http://www.opengis.net/om/2.0" xmlns:ows="http://www.opengis.net/ows/2.0"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  version="1.1"
+                  xsi:schemaLocation="http://ngeo.eo.esa.int/schema/browseReport IF-ngEO-BrowseReport-1.1.xsd">
+    <rep:responsibleOrgName>ESA</rep:responsibleOrgName>
+    <rep:dateTime>2014-07-18T11:39:54Z</rep:dateTime>
+    <rep:browseType>AV2_OBS_11</rep:browseType>
+    <rep:browse>
+        <rep:browseIdentifier>AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000.BI.JPG
+        </rep:browseIdentifier>
+        <rep:fileName>AL1_OPER_AV2_OBS_11_20090517T025758_20090517T025758_000000_E113_N000.BI</rep:fileName>
+        <rep:imageType>Jpeg</rep:imageType>
+        <rep:referenceSystemIdentifier>EPSG:4326</rep:referenceSystemIdentifier>
+        <rep:rectifiedBrowse>
+            <rep:coordList>-0.421 112.969 0.43 113.443</rep:coordList>
+        </rep:rectifiedBrowse>
+        <rep:startTime>2009-05-17T02:57:58Z</rep:startTime>
+        <rep:endTime>2009-05-17T02:57:58Z</rep:endTime>
+    </rep:browse>
+</rep:browseReport>

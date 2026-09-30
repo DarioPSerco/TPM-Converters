@@ -1,0 +1,6 @@
+graft eoSip_converter
+
+# It's wise to explicitly exclude common junk
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude .DS_Store
