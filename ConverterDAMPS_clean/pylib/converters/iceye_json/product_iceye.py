@@ -1,11 +1,11 @@
 """This class represent a worldview directory product
 
 Supported types
-XN_SM__SLC: Level 1 Strip SLC product
-XN_SM__GRD: Level 1 Strip GRD product
-XN_SL__SLC: Level 1 Spot SLC product
-XN_SL__GRD: Level 1 Spot GRD product
-XN_SR__GRD: Level 1 Scan GRD product
+L1_SM__SLC: Level 1 Strip SLC product
+L1_SM__GRD: Level 1 Strip GRD product
+L1_SL__SLC: Level 1 Spot SLC product
+L1_SL__GRD: Level 1 Spot GRD product
+L1_SC__GRD: Level 1 Scan GRD product
 """
 import math
 import os
@@ -23,7 +23,7 @@ from xml_nodes import rep_footprint
 __version__ = '1.0.0'
 
 # for verification
-REF_TYPECODE = {'XN_SM__SLC', 'XN_SM__GRD', 'XN_SL__SLC', 'XN_SL__GRD', 'XN_SR__GRD'}
+REF_TYPECODE = {'L1_SM__SLC', 'L1_SM__GRD', 'L1_SL__SLC', 'L1_SL__GRD', 'L1_SC__GRD'}
 BROWSE_SUFFIX = ".png"
 TIFF_SUFFIX = ".tif"
 METADATA_SUFFIX = ".xml"
@@ -81,7 +81,11 @@ class Product_Iceye(Product_Directory):
         range_spacing: 'range_spacing',
         slant_range_spacing: 'slant_range_spacing',
         metadata.METADATA_SOFTWARE_VERSION: 'processor_version',
-        metadata.METADATA_PROCESSING_TIME: 'processing_time'
+        metadata.METADATA_PROCESSING_TIME: 'processing_time',
+        # spec azimuth/range resolution and CRS (missing nodes give None)
+        'azimuth_resolution': 'azimuth_resolution',
+        'range_resolution_center': 'range_resolution_center',
+        'geo_ref_system': 'geo_ref_system',
     }
 
     def __init__(self, path=None):
@@ -263,32 +267,32 @@ class Product_Iceye(Product_Directory):
 
         # if mode is strip, its level can be SLC or GRD
         if sensor_mode == 'stripmap':
-            sensor_mode = 'Strip'
+            sensor_mode = 'SM'
             self.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, sensor_mode)
             if level == 'SLC':
-                typecode = 'XN_SM__SLC'
+                typecode = 'L1_SM__SLC'
             elif level == 'GRD':
-                typecode = 'XN_SM__GRD'
+                typecode = 'L1_SM__GRD'
             else:
                 raise Exception("unknown level: %s" % level)
 
         # if mode is spot, its level can be SLC or GRD
         elif sensor_mode == 'spotlight':
-            sensor_mode = 'Spot'
+            sensor_mode = 'SL'
             self.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, sensor_mode)
             if level == 'SLC':
-                typecode = 'XN_SL__SLC'
+                typecode = 'L1_SL__SLC'
             elif level == 'GRD':
-                typecode = 'XN_SL__GRD'
+                typecode = 'L1_SL__GRD'
             else:
                 raise Exception("unknown level: %s" % level)
 
         # if mode is scan, its level can only be GRD
         elif sensor_mode == 'scan':
-            sensor_mode = sensor_mode.capitalize()
+            sensor_mode = 'SC'
             self.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, sensor_mode)
             if level == 'GRD':
-                typecode = 'XN_SR__GRD'
+                typecode = 'L1_SC__GRD'
             else:
                 raise Exception("unknown level: %s" % level)
         else:
@@ -437,9 +441,9 @@ class Product_Iceye(Product_Directory):
         tmp = self.metadata.getMetadataValue(metadata.METADATA_TYPECODE)
         subClass = None
         print(("type code = %s" % tmp))
-        if tmp == 'XN_SM__SLC' or tmp == 'XN_SL__SLC':
+        if tmp == 'L1_SM__SLC' or tmp == 'L1_SL__SLC':
             subClass = 'SLC'
-        elif tmp == 'XN_SM__GRD' or tmp == 'XN_SL__GRD' or tmp == 'XN_SR__GRD':
+        elif tmp == 'L1_SM__GRD' or tmp == 'L1_SL__GRD' or tmp == 'L1_SC__GRD':
             subClass = 'GRD'
         else:
             raise Exception("invalid subClass: %s" % tmp)

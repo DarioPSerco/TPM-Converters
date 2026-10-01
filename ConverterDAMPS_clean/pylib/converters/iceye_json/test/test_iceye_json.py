@@ -1,7 +1,7 @@
 """Structural proof: drive iceye_json extraction on a SYNTHETIC native ICEYE
 product, emit the JSON manifest via the common template generator, and assert
-the output matches TDS/template/ICE-template.json key-path for key-path — SAR
-fields present, optical fields absent, no placeholder left.
+the output carries every key path of the ICEYE spec template — SAR fields
+present, optical fields absent, no placeholder left.
 
 Fixture is SYNTHETIC (see fixtures/SYNTHETIC_FIXTURE_NOTE.md): this proves
 pipeline + structure only, NOT value-correctness on real data (PENDING TDS).
@@ -16,12 +16,10 @@ from iceye_json import product_iceye, json_emitter
 FIXTURE_DIR = Path(__file__).resolve().parent / "fixtures" / "synthetic_ice"
 NATIVE_DIR = FIXTURE_DIR / "SYNTH_ICEYE_X1_SLC_SM_20160501T144606"
 METADATA_XML = NATIVE_DIR / "SYNTH_ICEYE_X1_SLC_SM_20160501T144606.xml"
-ICE_TEMPLATE = Path(__file__).resolve().parents[4] / "TDS" / "template" / "ICE-template.json"
+EO_PRODUCT_NAME = "ICE_OPER_L1_SM__SLC_20160501T144606_20160501T144616_0001"
 
-EO_PRODUCT_NAME = "ICE_OPER_XN_SM__SLC_20160501T144606_S24-190_W066-403_01"
-
-OPTICAL_KEYS = ["wavelengths", "spectralRange", "cloudCover", "processingLevel",
-                "illuminationAzimuthAngle", "illuminationElevationAngle"]
+OPTICAL_KEYS = ["cloudCover", "illuminationAzimuthAngle", "illuminationElevationAngle",
+                "startWavelength", "stopWavelength"]
 OPTICAL_TOKENS = ["GeoEye", "GE01", "GIS", "WorldView", "QuickBird", "BGI", "OPTICAL", "VIS"]
 
 
@@ -60,7 +58,7 @@ def _key_paths(node, prefix="$"):
     return paths
 
 
-def test_emitted_json_matches_ice_template_structure(tmp_path):
+def test_emitted_json_matches_spec_template_structure(tmp_path):
     work = tmp_path / "work"
     out = tmp_path / "out"
     work.mkdir()
@@ -72,11 +70,13 @@ def test_emitted_json_matches_ice_template_structure(tmp_path):
                                   template_path=json_emitter.TEMPLATE_PATH)
     json_template.validate(feature)
 
-    with open(ICE_TEMPLATE, encoding="utf-8") as fd:
+    with open(json_emitter.TEMPLATE_PATH, encoding="utf-8") as fd:
         reference = json.load(fd)
 
-    got = _key_paths(feature)
-    want = _key_paths(reference)
+    # coordinates: a placeholder string in the template, an array in the output
+    got = {k for k in _key_paths(feature) if not k.startswith("$.geometry.coordinates")}
+    want = {k for k in _key_paths(reference) if not k.startswith("$.geometry.coordinates")}
+    # SLC: referenceSystemIdentifier optional (Table 14), the fixture has none
     assert got == want, "missing: %s / extra: %s" % (sorted(want - got), sorted(got - want))
 
 
@@ -99,21 +99,32 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert acq["platform"]["orbitType"] == "LEO"
     assert acq["instrument"]["instrumentShortName"] == "SAR"
     assert acq["instrument"]["sensorType"] == "RADAR"
-    assert par["operationalMode"] == "Strip"
+    assert acq["platform"]["platformSerialIdentifier"] == 1
+    assert par["operationalMode"] == "SM"
     assert par["orbitNumber"] == 53
-    assert par["orbitDIrection"] == "ASCENDING"
-    assert par["wrsLongitudeGrid"] == 66
-    assert par["wrsLatitudeGrid"] == 24
+    assert par["orbitDirection"] == "ASCENDING"
     assert par["polarisationMode"] == "S"
-    assert par["polarisationChannel"] == "VV"
+    assert par["polarisationChannels"] == "VV"
     assert par["antennaLookDirection"] == "LEFT"
-    assert isinstance(par["resolution"], float)
+    assert par["resolution"] == 3.0  # Table 10, L1_SM__SLC
+    assert isinstance(par["azimuthResolution"], float)
+    assert isinstance(par["rangeResolution"], float)
+    assert par["wavelengths"] == [{"spectralRange": "X", "discreteWavelength": 31.0666e-3}]
     assert isinstance(par["acquisitionAngles"]["incidenceAngle"], float)
-    assert props["productInformation"]["productType"] == "XN_SM__SLC"
+    pinfo = props["productInformation"]
+    assert pinfo["productType"] == "L1_SM__SLC"
+    assert pinfo["processingLevel"] == "1A"
+    assert "referenceSystemIdentifier" not in pinfo
     assert isinstance(props["productInformation"]["size"], int)
     assert props["productInformation"]["size"] > 0
     lineage = props["productInformation"]["resourceLineage"][0]["processStep"][0]
-    assert lineage["source"][0]["citation"] == NATIVE_DIR.name
+    assert lineage["source"][0]["sourceCitation"]["title"] == NATIVE_DIR.name
+    assert lineage["source"][0]["processedLevel"]["code"] == "L1A"
+    meas = props["links"]["measurements"][0]
+    assert meas["href"] == "/measurements/SYNTH_ICEYE_X1_SLC_SM_20160501T144606.h5"
+    assert meas["type"] == "application/x-hdf5"
+    assert meas["title"] == "Native EO Product"
+    assert props["links"]["preview"][0]["title"] == "Preview Image"
 
 
 def test_optical_fields_and_tokens_absent(tmp_path):
