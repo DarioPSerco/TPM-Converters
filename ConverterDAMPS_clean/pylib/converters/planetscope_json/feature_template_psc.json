@@ -1,0 +1,125 @@
+{
+  "type": "Feature",
+  "id": "<product id>",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": "<footprint closed ring [[lon,lat],...]>"
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "<product id>",
+    "date": "<beginningDateTime>/<endingDateTime>",
+    "created": "<package creation datetime>",
+    "acquisitionInformation": [{
+      "platform": {
+        "platformShortName": "<platformShortName>",
+        "orbitType": "<orbitType>"
+      },
+      "instrument": {
+        "instrumentShortName": "<instrumentShortName>",
+        "sensorType": "<sensorType>"
+      },
+      "acquisitionParameters": [{
+        "beginningDateTime": "<beginningDateTime>",
+        "endingDateTime": "<endingDateTime>",
+        "acquisitionType": "NOMINAL",
+        "operationalMode": "<operationalMode>",
+        "resolution": "<resolution (number)>",
+        "orbitDirection": "<orbitDirection>",
+        "wavelengths": "<wavelengths array (spec Table 14)>",
+        "acquisitionAngles": {
+          "illuminationAzimuthAngle": "<sun azimuth (number)>",
+          "illuminationElevationAngle": "<sun elevation (number)>",
+          "incidenceAngle": "<incidence angle (number)>"
+        }
+      }]
+    }],
+    "productInformation": {
+      "size": "<native product size bytes (number)>",
+      "productType": "<typecode>",
+      "processingDate": "<processing datetime>",
+      "processingLevel": "<processingLevel>",
+      "resourceLineage": [{
+        "processStep": [{
+          "description": "PlanetScope processor",
+          "processor": [{
+            "role": "processor",
+            "party": [{
+              "name": "Planet",
+              "type": "CI_Organisation"
+            }]
+          }],
+          "source": [{
+            "processedLevel": {
+              "code": "<processed level code>"
+            }
+          }],
+          "processingInformation": {
+            "softwareReference": {
+              "title": "<native processor name>",
+              "edition": "<native processor version>"
+            }
+          },
+          "output": [{
+            "sourceCitation": {
+              "title": "<native product name>"
+            }
+          }]
+        }, {
+          "description": "<mission converter description>",
+          "stepDateTime": {
+            "created": "<package creation datetime>"
+          },
+          "processor": [{
+            "role": "processor",
+            "party": [{
+              "name": "EOF-EOS External Data Handling",
+              "type": "CI_Organisation"
+            }]
+          }],
+          "reference": [{
+            "title": "<mission spec reference title>",
+            "edition": "<mission spec edition>"
+          }],
+          "source": [{
+            "sourceCitation": {
+              "title": "<native product name>"
+            },
+            "processedLevel": {
+              "code": "<processed level code>"
+            }
+          }],
+          "processingInformation": {
+            "softwareReference": {
+              "title": "<converter software name>",
+              "edition": "<converter software version>"
+            }
+          },
+          "output": [{
+            "sourceCitation": {
+              "title": "<product id>.ZIP"
+            }
+          }]
+        }]
+      }]
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/<native image file>",
+          "type": "<measurements media type>",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "preview": [
+        {
+          "href": "/preview/overviews/<product id>.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

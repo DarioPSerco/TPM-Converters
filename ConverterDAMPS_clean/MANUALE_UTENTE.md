@@ -17,6 +17,7 @@ Le missioni supportate sono:
 - Pleiades: `pleiades`
 - Pleiades NEO: `pneo`
 - COSMO-SkyMed: `cosmoskymed`
+- PlanetScope: `planetscope`
 
 ## 2. Prerequisiti
 
@@ -103,6 +104,8 @@ Esempi di file di ingresso:
 | ICEYE | `*.xml` |
 | Pleiades | secondo il pattern configurato nella missione |
 | Pleiades NEO | secondo il pattern configurato nella missione |
+| COSMO-SkyMed | `*.h5` oppure `*.tgz` |
+| PlanetScope | `<item id>_metadata.json` |
 
 Esempio GeoEye:
 
@@ -135,6 +138,7 @@ Sostituire `geoeye1` con la missione desiderata:
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py pleiades
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py pneo
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py cosmoskymed
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py planetscope
 ```
 
 È possibile usare anche `py` se l'ambiente globale contiene tutte le dipendenze:
@@ -288,7 +292,7 @@ Dalla root del progetto:
 Il test verifica emitter, template, struttura JSON e packaging logico. Un risultato positivo atteso è:
 
 ```text
-20 passed
+50 passed
 ```
 
 ## 11. Conversione manuale di un singolo prodotto
@@ -409,3 +413,97 @@ conversione, senza inventare un codice.
   su dati reali: le mappature esistono e sono verificate dai test, ma non da una
   conversione.
 - L'overview mantiene l'orientamento nativo del quicklook, senza riorientamento.
+
+## 14. PlanetScope
+
+Il prodotto nativo PlanetScope e' un *item* Planet: il file metadata
+`<item id>_metadata.json` piu' gli asset con lo stesso prefisso (GeoTIFF
+immagine, XML `<item id>_<asset>_metadata.xml`, maschere `udm`/`udm2`, RPC).
+Va copiato dentro `TDS\PLANETSCOPE\INBOX`. Sono gestiti due layout di consegna.
+
+Consegna Orders API, piu' item nella stessa cartella:
+
+```text
+TDS\PLANETSCOPE\INBOX\order_7d1c\
+    manifest.json
+    PSScene\
+        20170424_134911_0e19_metadata.json
+        20170424_134911_0e19_3B_Visual.tif
+        20170424_134911_0e19_3B_Visual_metadata.xml
+        20170424_134911_0e19_3B_udm2.tif
+        20210314_070803_29_2262_metadata.json
+        20210314_070803_29_2262_3B_AnalyticMS_SR_8b.tif
+        20210314_070803_29_2262_3B_AnalyticMS_8b_metadata.xml
+        20210314_070803_29_2262_3B_udm2.tif
+```
+
+Consegna Data API (legacy), una sottocartella per asset:
+
+```text
+TDS\PLANETSCOPE\INBOX\20190801_093015_1018\
+    20190801_093015_1018_metadata.json
+    basic_analytic_4b\20190801_093015_1018_1B_AnalyticMS.tif
+    basic_analytic_4b_xml\20190801_093015_1018_1B_AnalyticMS_metadata.xml
+    basic_analytic_4b_rpc\20190801_093015_1018_1B_AnalyticMS_RPC.TXT
+```
+
+Ogni `<item id>_metadata.json` produce un prodotto EOPF-EOS. In
+`measurements/` finiscono SOLO i file il cui nome inizia con l'id dell'item,
+con la loro struttura di sottocartelle: gli altri item della stessa cartella e
+i file d'ordine (`manifest.json`) restano fuori.
+
+I metadati vengono dal JSON dell'item (footprint, istante di acquisizione,
+strumento, angoli solari, view angle, cloud cover, risoluzione, data di
+pubblicazione) e dall'XML dell'asset (periodo di validita', orbit direction,
+angolo di incidenza, nome e versione del processore, livello nativo, numero di
+bande, codice EPSG). L'XML e' obbligatorio: senza, la conversione fallisce.
+
+Conversione completa:
+
+```powershell
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py planetscope
+```
+
+Risultato:
+
+- `TDS\PLANETSCOPE\OUTSPACE\<ID>.JSON`, il manifest;
+- `TDS\PLANETSCOPE\OUTSPACE\<ID>.PNG`, l'overview: Planet non consegna un
+  browse, quindi viene generata dal GeoTIFF dell'item (l'asset Visual se
+  presente, altrimenti bande rosso/verde/blu dell'immagine principale con
+  stretch 2-98 percentile; i pixel no-data diventano trasparenti). Serve
+  `tifffile` (con `imagecodecs` per i GeoTIFF compressi), in `requirements.txt`;
+- `TDS\PLANETSCOPE\PRODUCTS\<ID>.ZIP`, il delivery.
+
+`<ID>` segue la convenzione della specializzazione EOPF-EOS, per esempio
+`PSC_OPER_L3_VO__MS__20170424T134911_20170424T135111_0001`.
+
+### Codice di tipo prodotto
+
+Deciso dall'asset immagine principale dell'item. Se un item ha piu' asset
+immagine vale il primo di questa lista (gli altri finiscono comunque in
+`measurements/`):
+
+| asset immagine | tipo prodotto | modo |
+|---|---|---|
+| `_3B_AnalyticMS_8b.tif` | `L3_AO__MS_` | MS8B |
+| `_3B_AnalyticMS_SR_8b.tif` | `L3_SRO_MS_` | MS8B |
+| `_1B_AnalyticMS_8b.tif` | `L1BAB__MS_` | MS8B |
+| `_1A_AnalyticMS_8b.tif` | `L1AAB__MS_` | MS8B |
+| `_3B_AnalyticMS.tif` | `L3_AO__MS_` | MS4B |
+| `_3B_AnalyticMS_SR.tif` | `L3_SRO_MS_` | MS4B |
+| `_1B_AnalyticMS.tif` | `L1BAB__MS_` | MS4B |
+| `_1A_AnalyticMS.tif` | `L1AAB__MS_` | MS4B |
+| `_3B_Analytic.tif` | `L3_AO__MS_` | MS3B |
+| `_3B_Visual.tif` | `L3_VO__MS_` | MS3B |
+| `_BGRN_Analytic.tif` / `_BGRN_SR.tif` (item `PSOrthoTile`) | `L3_OT__MS_` | MS4B |
+
+Un item senza nessuno di questi asset, o con livello/bande dell'XML in
+contrasto con l'asset, fa fallire la conversione.
+
+### Limiti attuali
+
+- Nessun prodotto PlanetScope reale e' stato ancora convertito: converter e
+  packager sono provati solo su item sintetici (vedi
+  `planetscope_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`).
+- Il nome dell'asset L1A (`_1A_AnalyticMS`) non e' confermato da un prodotto
+  reale.

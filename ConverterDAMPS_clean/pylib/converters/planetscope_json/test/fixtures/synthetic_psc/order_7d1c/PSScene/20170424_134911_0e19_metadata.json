@@ -1,0 +1,47 @@
+{
+  "type": "Feature",
+  "id": "20170424_134911_0e19",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2017-04-24T13:49:11.806371Z",
+    "item_type": "PSScene",
+    "instrument": "PS2",
+    "satellite_id": "0e19",
+    "provider": "planetscope",
+    "pixel_resolution": 3.0,
+    "gsd": 3.7,
+    "sun_azimuth": 33.3,
+    "sun_elevation": 44.1,
+    "view_angle": 0.6,
+    "cloud_cover": 0.0,
+    "quality_category": "standard",
+    "published": "2017-04-25T02:10:33.000Z",
+    "updated": "2017-05-02T10:11:12.000Z"
+  }
+}

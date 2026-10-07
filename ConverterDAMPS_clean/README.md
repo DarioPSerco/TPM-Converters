@@ -1,4 +1,4 @@
-# ConverterDAMPS_clean — minimal runtime tree for the seven `_json` converters
+# ConverterDAMPS_clean — minimal runtime tree for the eight `_json` converters
 
 Extracted from `ConverterDAMPS` per `CLEAN_PACKAGE_ANALYSIS.md` (12 audit-hook
 traces, 3 real conversions). Contains ONLY what these converters need.
@@ -20,7 +20,7 @@ writes to a flat `log/` or the repo root.
 
 | dir | role |
 |---|---|
-| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,cosmoskymed}_json/` | the seven converters (code + `ingest_*.cfg` + packager + tests) |
+| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,cosmoskymed,planetscope}_json/` | the eight converters (code + `ingest_*.cfg` + packager + tests) |
 | `pylib/converters/common/` | mission-agnostic JSON template engine + `feature_template.json` + `spaces.py` |
 | `pylib/converters/run_mission.py` | one-command runner: convert + package + archive per mission |
 | `pylib/eoSip_converter/` | base ingester package — **pruned**: `data/shapefile/` (186 MB) and `proj/` (5 MB) removed, never touched in any trace |
@@ -49,7 +49,7 @@ native products into `TDS/<MISSION>/INBOX/` first (a raw `.zip` in INBOX is
 silently skipped), then:
 
 ```bash
-.venv/Scripts/python pylib/converters/run_mission.py <geoeye|worldview|quickbird|iceye|pleiades|pneo|cosmoskymed>
+.venv/Scripts/python pylib/converters/run_mission.py <geoeye|worldview|quickbird|iceye|pleiades|pneo|cosmoskymed|planetscope>
 ```
 
 The runner converts every INBOX product, packages the delivery ZIPs into
@@ -69,7 +69,7 @@ PYTHONPATH="pylib/xml_nodes/v101;pylib/converters" \
 
 | converter                                                | xml_nodes version on PYTHONPATH |
 |----------------------------------------------------------|---------------------------------|
-| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json | `pylib/xml_nodes/v101`          |
+| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json | `pylib/xml_nodes/v101` |
 | pleiades_json, pneo_json                                 | `pylib/xml_nodes/v100`          |
 
 `v200` is used only by the geoeye1/worldview/quickbird test conftests.
@@ -88,8 +88,8 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-31 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 4, PNEO 4, CSK 11). The
-iceye/pleiades/pneo/cosmoskymed suites read `TDS/template/*.json` via a relative
+50 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 4, PNEO 4, CSK 11, PSC 19). The
+iceye/pleiades/pneo/cosmoskymed/planetscope suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
 ## Delivery-ZIP layout (all packagers)
@@ -153,3 +153,48 @@ knowing, all in `pylib/converters/cosmoskymed_json/`:
   spec's own example. `resolution` is the worst of range and azimuth
   resolution; `acquisitionAngles.incidenceAngle` is the mean of the image near
   and far incidence angles.
+
+## PlanetScope specifics (`planetscope_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR PLANETSCOPE PRODUCTS" 1.0. Differences worth
+knowing, all in `pylib/converters/planetscope_json/`:
+
+- **Entry file**: the Planet item metadata `<item id>_metadata.json` (cfg
+  `[Search] FILES_NAMEPATTERN=^.*_metadata$`, `FILES_EXTPATTERN=^\.json$`).
+  One item = one EOPF-EOS product. The item files are every file under the
+  entry folder whose name starts with the item id, so both the Orders API
+  layout (several items flat in one folder) and the legacy Data API layout
+  (one sub-folder per asset) work; the packager copies exactly that set into
+  `measurements/`, sub-folders kept, and nothing else (no order
+  `manifest.json`, no other item).
+- **Metadata**: item JSON (footprint, `acquired`, `instrument`, sun angles,
+  `view_angle`, `cloud_percent` / `cloud_cover`, `pixel_resolution` / `gsd`,
+  `published`) plus the asset XML `<item id>_<asset>_metadata.xml`
+  (`ps:EarthObservation`: validity period, orbit direction, incidence angle,
+  processor name/version, native level, `numBands`, EPSG code). The XML is
+  required. When both name the same second, the start time takes the item
+  JSON milliseconds (the XML gives whole seconds).
+- **Product type**: fixed by the main image asset, first match in
+  `product_planetscope.IMAGE_ASSETS` (8 bands before 4, analytic before SR,
+  basic, then 3-band analytic, visual) or `ORTHO_TILE_ASSETS` for a
+  `PSOrthoTile` item. Mode MS3B/MS4B/MS8B from the band count, checked against
+  spec Table 2; the XML `productType` must agree (it may only move a basic
+  product between L1A and L1B).
+- **Overview**: Planet delivers no browse, so the converter renders
+  `<EO name>.PNG` (RGBA, max 1000 px) next to the manifest in OUTSPACE: the
+  visual asset when the item has one, else the red/green/blue bands of the
+  main image with a 2-98 percentile stretch; no-data is transparent. Reads the
+  GeoTIFF with `tifffile` (+ `imagecodecs` for LZW/deflate), taking the
+  smallest internal overview that is still >= 1000 px.
+- **Manifest shapes chosen where the spec contradicts itself**: two lineage
+  process steps (Planet processor, then the converter); `wavelengths`
+  (plural) with `stopWavelength`, one entry per spectralRange of Table 14;
+  `orbitDirection` (camelCase); processedLevel code `L1A`/`L1B`/`L3B` (`L3A`
+  for an ortho tile) in both steps. `cloudCover` and
+  `referenceSystemIdentifier` only when the native item carries them; a
+  MultiPolygon footprint becomes the bounding box Polygon. The lineage cites
+  the entry file `<item id>_metadata.json`, so `run_mission.py` and the
+  packager can find the native item back (`common.json_template.lineage_citation`
+  now skips process steps whose source has no citation).
+- **Not yet validated on a real product**: synthetic fixtures only, see
+  `planetscope_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`.

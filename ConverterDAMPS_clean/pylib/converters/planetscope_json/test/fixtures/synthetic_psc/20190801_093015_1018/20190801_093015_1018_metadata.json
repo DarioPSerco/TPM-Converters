@@ -1,0 +1,43 @@
+{
+  "type": "Feature",
+  "id": "20190801_093015_1018",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          12.4,
+          41.9
+        ],
+        [
+          12.4,
+          42.0
+        ],
+        [
+          12.55,
+          42.0
+        ],
+        [
+          12.55,
+          41.9
+        ],
+        [
+          12.4,
+          41.9
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2019-08-01T09:30:15.500000Z",
+    "item_type": "PSScene",
+    "instrument": "PS2.SD",
+    "satellite_id": "1018",
+    "provider": "planetscope",
+    "gsd": 3.7,
+    "sun_azimuth": 135.0,
+    "sun_elevation": 55.5,
+    "view_angle": 2.8,
+    "published": "2019-08-01T15:00:00Z"
+  }
+}

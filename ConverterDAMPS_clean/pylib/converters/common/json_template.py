@@ -79,15 +79,26 @@ def lineage_citation(feature):
     """Return the native citation from any supported lineage shape.
 
     Three shapes are in use: ``source.citation``, ``source[0].citation`` and
-    (COSMO-SkyMed, spec Table 16) ``source[0].sourceCitation.title``."""
+    (COSMO-SkyMed, spec Table 16) ``source[0].sourceCitation.title``.
+
+    The lineage may hold several process steps (PlanetScope: the supplier
+    step, whose source carries no citation, then the converter step); the
+    first step whose source cites a native product wins."""
     lineage = feature["properties"]["productInformation"]["resourceLineage"]
-    process_step = lineage[0]["processStep"][0] if isinstance(lineage, list) else lineage["processStep"]
-    source = process_step["source"]
-    if isinstance(source, list):
-        source = source[0]
-    if "citation" in source:
-        return source["citation"]
-    return source["sourceCitation"]["title"]
+    steps = lineage[0]["processStep"] if isinstance(lineage, list) else lineage["processStep"]
+    if isinstance(steps, dict):
+        steps = [steps]
+    for process_step in steps:
+        source = process_step.get("source")
+        if isinstance(source, list):
+            source = source[0] if source else None
+        if not source:
+            continue
+        if "citation" in source:
+            return source["citation"]
+        if "sourceCitation" in source:
+            return source["sourceCitation"]["title"]
+    raise KeyError("no native product citation in the manifest lineage")
 
 
 def build(*layers, template_path=TEMPLATE_PATH):

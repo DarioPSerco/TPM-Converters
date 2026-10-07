@@ -1,0 +1,188 @@
+{
+  "type": "Feature",
+  "id": "PSC_OPER_L3_VO__MS__20170424T134911_20170424T135111_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "PSC_OPER_L3_VO__MS__20170424T134911_20170424T135111_0001",
+    "date": "2017-04-24T13:49:11.806Z/2017-04-24T13:51:11.000Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "Dove",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "PS2",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2017-04-24T13:49:11.806Z",
+            "endingDateTime": "2017-04-24T13:51:11.000Z",
+            "acquisitionType": "NOMINAL",
+            "operationalMode": "MS3B",
+            "resolution": 3.0,
+            "orbitDirection": "DESCENDING",
+            "wavelengths": [
+              {
+                "spectralRange": "VIS",
+                "startWavelength": 4.65e-07,
+                "stopWavelength": 6.8e-07,
+                "discreteWavelengths": [
+                  4.9e-07,
+                  5.65e-07,
+                  6.65e-07
+                ]
+              }
+            ],
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "incidenceAngle": 0.7
+            }
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 627642676,
+      "productType": "L3_VO__MS_",
+      "processingDate": "2017-04-25T02:10:33.000Z",
+      "processingLevel": "3",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "PlanetScope processor",
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "Planet",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "source": [
+                {
+                  "processedLevel": {
+                    "code": "L3B"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "<processor name>",
+                  "edition": "<processor version>"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "20170424_134911_0e19_metadata.json"
+                  }
+                }
+              ]
+            },
+            {
+              "description": "EOPF-EOS Converter for PlanetScope",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for PlanetScope products",
+                  "edition": "1.0"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "20170424_134911_0e19_metadata.json"
+                  },
+                  "processedLevel": {
+                    "code": "L3B"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for PlanetScope",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "PSC_OPER_L3_VO__MS__20170424T134911_20170424T135111_0001.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cloudCover": 0.0,
+      "referenceSystemIdentifier": "http://www.opengis.net/def/crs/EPSG/0/32719"
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/20170424_134911_0e19_3B_Visual.tif",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "preview": [
+        {
+          "href": "/preview/overviews/PSC_OPER_L3_VO__MS__20170424T134911_20170424T135111_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

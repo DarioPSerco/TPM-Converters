@@ -1,0 +1,63 @@
+{
+  "type": "Feature",
+  "id": "1234567_3357220_2017-04-24_0e19",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            15.0,
+            40.0
+          ],
+          [
+            15.1,
+            40.0
+          ],
+          [
+            15.1,
+            40.1
+          ],
+          [
+            15.0,
+            40.0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            15.12,
+            40.02
+          ],
+          [
+            15.3,
+            40.02
+          ],
+          [
+            15.3,
+            40.2
+          ],
+          [
+            15.12,
+            40.02
+          ]
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2017-04-24T10:05:00.123456Z",
+    "item_type": "PSOrthoTile",
+    "instrument": "PS2",
+    "satellite_id": "0e19",
+    "provider": "planetscope",
+    "pixel_resolution": 3.125,
+    "gsd": 3.7,
+    "sun_azimuth": 150.5,
+    "sun_elevation": 50.0,
+    "view_angle": 1.1,
+    "cloud_cover": 0.05,
+    "published": "2017-04-24T18:00:00.000Z"
+  }
+}
