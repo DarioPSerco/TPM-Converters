@@ -62,7 +62,7 @@ def test_emitted_json_matches_template(tmp_path):
     acq = props["acquisitionInformation"][0]
     assert acq["platform"]["orbitType"] == "LEO"
     assert acq["acquisitionParameters"][0]["wavelengths"] == [{
-        "spectralRange": "VNIR", "startWavelength": 450e-9, "stopWavelength": 900e-9,
+        "spectralRange": "VNIR", "startWavelength": 450e-9, "endWavelength": 900e-9,
         "discreteWavelengths": [675e-9]}]
     assert acq["platform"]["platformShortName"] == "WorldView-1"
     assert acq["instrument"]["instrumentShortName"] == "WorldView-60 Camera"
@@ -77,9 +77,9 @@ def test_emitted_json_matches_template(tmp_path):
     assert source["sourceCitation"]["title"] == prod.origName
     assert source["processedLevel"]["code"] == "LV2A"
     links = props["links"]
-    assert links["measurements"][0]["type"] == "image/tiff; application=geotiff"
+    assert links["measurements"][0]["type"] == "image/tiff; application=geotiff; profile=cloud-optimized"
     assert links["measurements"][0]["title"] == "Native EO Product"
-    assert links["preview"][0]["title"] == "Preview Image"
+    assert links["previews"][0]["title"] == "Preview Image"
     # non-MP type -> Polygon geometry, no bbox
     assert feature["geometry"]["type"] == "Polygon"
     assert "bbox" not in feature

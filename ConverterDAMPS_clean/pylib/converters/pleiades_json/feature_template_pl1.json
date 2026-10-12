@@ -85,7 +85,7 @@
           "category": "product (TBD as part of vocabulary to consolidate)"
         }
       ],
-      "preview": [
+      "previews": [
         {
           "href": "/preview/overviews/<product id>.PNG",
           "type": "image/png",

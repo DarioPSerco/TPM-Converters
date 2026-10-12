@@ -67,7 +67,7 @@ def test_emitted_json_matches_template(tmp_path):
     assert props["productInformation"]["productType"] == "L2AVRR_PAN"
     assert props["productInformation"]["processingLevel"] == "2A"  # native LV2A
     assert acq["acquisitionParameters"][0]["wavelengths"] == [{
-        "spectralRange": "VNIR", "startWavelength": 450e-9, "stopWavelength": 900e-9,
+        "spectralRange": "VNIR", "startWavelength": 450e-9, "endWavelength": 900e-9,
         "discreteWavelengths": [675e-9]}]
     pinfo = props["productInformation"]
     assert pinfo["processingDate"] == props["created"]
@@ -77,9 +77,9 @@ def test_emitted_json_matches_template(tmp_path):
     assert source["sourceCitation"]["title"] == prod.origName
     assert source["processedLevel"]["code"] == "LV2A"
     links = props["links"]
-    assert links["measurements"][0]["type"] == "image/tiff; application=geotiff"
+    assert links["measurements"][0]["type"] == "image/tiff; application=geotiff; profile=cloud-optimized"
     assert links["measurements"][0]["title"] == "Native EO Product"
-    assert links["preview"][0]["title"] == "Preview Image"
+    assert links["previews"][0]["title"] == "Preview Image"
     assert feature["geometry"]["type"] == "Polygon"
     assert "bbox" not in feature
 

@@ -14,8 +14,9 @@ layer fills a slot is the mission's choice — the generator merges uniformly.
 Spec readings encoded here:
 - wavelengths: Table 11 and the example spell the block ``wavelenghts``,
   Table 14 (which defines its content) spells ``wavelengths``; the plural is
-  used, as for COSMO-SkyMed. One entry per spectralRange of Table 15:
-  start/stop are the outer bounds of the range, discreteWavelengths the band
+  used, as for COSMO-SkyMed. The upper bound is ``endWavelength``. One
+  entry per spectralRange of Table 15:
+  start/end are the outer bounds of the range, discreteWavelengths the band
   centres. WorldView Legion MS4B is missing from Table 15: its B/G/R/N bands
   are taken from the Legion MS8B row (same values as WorldView-2/3 MS4B).
 - lineage source: Table 18 is normative (``source[0].sourceCitation.title``),
@@ -173,7 +174,7 @@ def _wavelengths(met, is_legion):
     return [{
         "spectralRange": spectral_range,
         "startWavelength": min(b[0] for b in bands) / 1e9,
-        "stopWavelength": max(b[1] for b in bands) / 1e9,
+        "endWavelength": max(b[1] for b in bands) / 1e9,
         "discreteWavelengths": [(b[0] + b[1]) / 2 / 1e9 for b in bands],
     } for spectral_range, bands in ranges]
 
@@ -274,7 +275,7 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             },
             "links": {
                 "measurements": [{"href": "/measurements/%s" % native_name}],
-                "preview": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
+                "previews": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
             },
         },
     }

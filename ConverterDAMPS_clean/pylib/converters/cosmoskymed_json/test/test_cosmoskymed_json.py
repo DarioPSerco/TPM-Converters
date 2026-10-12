@@ -155,10 +155,10 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert links["measurements"][0]["type"] == "application/vnd.hdfgroup.hdf5"
     assert links["measurements"][0]["title"] == "Native EO Product"
     assert links["measurements"][0]["category"] == "DATA"
-    assert links["preview"][0]["href"] == "/preview/overviews/%s.PNG" % HIM_EO_NAME
-    assert links["preview"][0]["type"] == "image/png"
-    assert links["preview"][0]["title"] == "Preview Image"
-    assert links["preview"][0]["category"] == "OVERVIEW"
+    assert links["previews"][0]["href"] == "/preview/overviews/%s.PNG" % HIM_EO_NAME
+    assert links["previews"][0]["type"] == "image/png"
+    assert links["previews"][0]["title"] == "Preview Image"
+    assert links["previews"][0]["category"] == "OVERVIEW"
 
 
 def test_dual_polarisation_and_level_1a(tmp_path):

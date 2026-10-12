@@ -23,6 +23,8 @@ MISSIONS = {
     "pneo": ("pneo_json", "ingest_pneo.cfg", "ingester_pneo.py", "v100", "package_pneo_zips.py"),
     "cosmoskymed": ("cosmoskymed_json", "ingest_cosmoskymed.cfg", "ingester_cosmoskymed.py", "v101", "package_cosmoskymed_zips.py"),
     "planetscope": ("planetscope_json", "ingest_planetscope.cfg", "ingester_planetscope.py", "v101", "package_planetscope_zips.py"),
+    "radarsat1": ("radarsat1_json", "ingest_radarsat1.cfg", "ingester_radarsat1.py", "v101", "package_radarsat1_zips.py"),
+    "terrasarx": ("terrasarx_json", "ingest_terrasarx.cfg", "ingester_terrasarx.py", "v101", "package_terrasarx_zips.py"),
 }
 
 
@@ -48,9 +50,14 @@ def unit_of(path, sp):
         if label == "DONESPACE":
             continue
         try:
-            return spaces.containing_unit(path, root)
+            unit = spaces.containing_unit(path, root)
         except ValueError:
             continue
+        # a native folder sitting directly in the root is itself the unit
+        # (RADARSAT-1: INBOX/<scene>/<CEOS files>)
+        if unit is None and path.is_dir():
+            return path
+        return unit
     return None
 
 

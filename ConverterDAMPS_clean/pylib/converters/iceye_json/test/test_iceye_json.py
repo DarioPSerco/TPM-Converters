@@ -124,7 +124,7 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert meas["href"] == "/measurements/SYNTH_ICEYE_X1_SLC_SM_20160501T144606.h5"
     assert meas["type"] == "application/x-hdf5"
     assert meas["title"] == "Native EO Product"
-    assert props["links"]["preview"][0]["title"] == "Preview Image"
+    assert props["links"]["previews"][0]["title"] == "Preview Image"
 
 
 def test_optical_fields_and_tokens_absent(tmp_path):

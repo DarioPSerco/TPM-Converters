@@ -162,7 +162,7 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             },
             "links": {
                 "measurements": [{"href": "/measurements/%s" % native_name}],
-                "preview": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
+                "previews": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
             },
         },
     }

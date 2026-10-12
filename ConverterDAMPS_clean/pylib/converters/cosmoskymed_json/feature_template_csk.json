@@ -95,7 +95,7 @@
           "category": "DATA"
         }
       ],
-      "preview": [
+      "previews": [
         {
           "href": "/preview/overviews/<product id>.PNG",
           "type": "image/png",

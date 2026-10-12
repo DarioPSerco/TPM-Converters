@@ -1,0 +1,108 @@
+{
+  "type": "Feature",
+  "id": "<product id>",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": "<footprint closed ring [[lon,lat],...]>"
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "<product id>",
+    "date": "<beginningDateTime>/<endingDateTime>",
+    "created": "<package creation datetime>",
+    "acquisitionInformation": [{
+      "platform": {
+        "platformShortName": "<platformShortName>",
+        "orbitType": "<orbitType>"
+      },
+      "instrument": {
+        "instrumentShortName": "<instrumentShortName>",
+        "sensorType": "<sensorType>"
+      },
+      "acquisitionParameters": [{
+        "beginningDateTime": "<beginningDateTime>",
+        "endingDateTime": "<endingDateTime>",
+        "acquisitionType": "NOMINAL",
+        "operationalMode": "<operationalMode>",
+        "polarisationMode": "<polarisationMode>",
+        "polarisationChannels": "<polarisationChannels>",
+        "antennaLookDirection": "<antennaLookDirection>",
+        "azimuthResolution": "<azimuthResolution (number)>",
+        "rangeResolution": "<rangeResolution (number)>",
+        "resolution": "<resolution (number)>",
+        "acquisitionAngles": {
+          "incidenceAngle": "<incidence angle (number)>"
+        },
+        "orbitNumber": "<orbitNumber (number)>",
+        "orbitDirection": "<orbitDirection>",
+        "wavelengths": [{
+          "spectralRange": "<spectralRange>",
+          "discreteWavelength": "<discreteWavelength (number)>"
+        }]
+      }]
+    }],
+    "productInformation": {
+      "size": "<package size bytes (number)>",
+      "productType": "<typecode>",
+      "referenceSystemIdentifier": "<CRS URI>",
+      "processingDate": "<processing datetime>",
+      "processingLevel": "<processingLevel>",
+      "resourceLineage": [{
+        "processStep": [{
+          "description": "<mission converter description>",
+          "stepDateTime": {
+            "created": "<package creation datetime>"
+          },
+          "processor": [{
+            "role": "processor",
+            "party": [{
+              "name": "EOF-EOS External Data Handling",
+              "type": "CI_Organisation"
+            }]
+          }],
+          "reference": [{
+            "title": "<mission spec reference title>",
+            "edition": "<mission spec edition>"
+          }],
+          "source": [{
+            "sourceCitation": {
+              "title": "<native product name>"
+            },
+            "processedLevel": {
+              "code": "<processed level code>"
+            }
+          }],
+          "processingInformation": {
+            "softwareReference": {
+              "title": "<converter software name>",
+              "edition": "<converter software version>"
+            }
+          },
+          "output": [{
+            "sourceCitation": {
+              "title": "<product id>.ZIP"
+            }
+          }]
+        }]
+      }]
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/<native product name>",
+          "type": "<measurements media type>",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/<product id>.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

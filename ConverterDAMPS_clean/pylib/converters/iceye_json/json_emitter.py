@@ -129,7 +129,7 @@ def _native_image(product):
 def _measurements_type(native_file):
     name = (native_file or "").lower()
     if name.endswith(".tif") or name.endswith(".tiff"):
-        return "image/tiff; application=geotiff"
+        return "image/tiff; application=geotiff; profile=cloud-optimized"
     if name.endswith(".h5"):
         return "application/x-hdf5"
     return None
@@ -229,7 +229,7 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             "links": {
                 "measurements": [{"href": "/measurements/%s" % native_file if native_file else None,
                                   "type": _measurements_type(native_file)}],
-                "preview": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
+                "previews": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
             },
         },
     }

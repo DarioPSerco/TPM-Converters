@@ -80,12 +80,12 @@
       "measurements": [
         {
           "href": "/measurements/<native product name>",
-          "type": "image/tiff; application=geotiff",
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
           "title": "Native EO Product",
           "category": "DATA"
         }
       ],
-      "preview": [
+      "previews": [
         {
           "href": "/preview/overviews/<product id>.PNG",
           "type": "image/png",

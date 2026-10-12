@@ -198,3 +198,39 @@ knowing, all in `pylib/converters/planetscope_json/`:
   now skips process steps whose source has no citation).
 - **Not yet validated on a real product**: synthetic fixtures only, see
   `planetscope_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`.
+
+## TerraSAR-X / TanDEM-X specifics (`terrasarx_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR TERRASAR-X / TANDEM-X PRODUCTS" 1.01. Run
+with `run_mission.py terrasarx`. Differences worth knowing, all in
+`pylib/converters/terrasarx_json/`:
+
+- **Entry file**: the main annotation `<product name>.xml` (cfg `[Search]
+  FILES_NAMEPATTERN=^T[SD]X1_SAR__.*`, `FILES_EXTPATTERN=^\.xml$`). Extract
+  the DLR DIMS `.tar.gz` into `INBOX/` first; the whole
+  `dims_op_oc_dfd2_<order>/` folder is the unit moved to DONESPACE.
+- **Measurements**: only the product folder
+  (`TSX-1.SAR.L1B/<product name>/`) is the native product. The packager
+  stores it as `measurements/<product name>/`; the DIMS `readme.html`,
+  `iif/` and `tools/` are not packaged. `size` is the product folder size.
+  The link points at the first image data file (GeoTIFF, or COSAR `.cos` as
+  `application/octet-stream`).
+- **Product type**: `(productVariant, imagingMode)` in
+  `product_terrasarx.TYPECODE_MAP`. SL / HS / ST -> `SL`, SM -> `SM`,
+  SC -> `SC`, WS -> `SCW`; SSC -> `SLC`. The spotlight MGD product is
+  `L1BSL__MGC`, as the spec writes it.
+- **Platform**: annotation mission TSX-1 -> package prefix `TSX`,
+  `TerraSAR-X` / `TSX-1`; TDX-1 -> `TDX`, `TanDEM-X` / `TOR`.
+- **Overview**: the native `PREVIEW/BROWSE.tif` re-encoded as
+  `<EO name>.PNG` next to the manifest in OUTSPACE, orientation as delivered.
+- **Manifest shapes chosen where the spec contradicts itself or is silent**:
+  `wavelengths[0].discreteWavelengths` = `[0.0310666]`; lineage source per
+  Table 16 (`sourceCitation.title` = annotation file name); no
+  `wrsLatitudeGrid` (example only); `resolution` = worse of ground range
+  and azimuth resolution; `referenceSystemIdentifier` = UTM / UPS EPSG code
+  for GEC / EEC, EPSG:4326 for SSC / MGD.
+- **Path length**: native paths reach ~252 characters under `INBOX/`; a
+  deeper checkout can hit the Windows 260-character limit.
+- Validated end to end on five real products (SSC SL, SSC HS, TDX MGD SL,
+  GEC SC, EEC SC). No StripMap, Wide ScanSAR, staring spotlight or
+  multi-polarisation product seen yet.

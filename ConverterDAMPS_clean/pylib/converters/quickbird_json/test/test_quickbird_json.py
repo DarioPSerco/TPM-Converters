@@ -79,7 +79,7 @@ def test_emitted_json_matches_template(tmp_path):
     links = props["links"]
     assert links["measurements"][0]["type"] == "image/tiff"
     assert links["measurements"][0]["title"] == "Native EO Product"
-    assert links["preview"][0]["title"] == "Preview Image"
+    assert links["previews"][0]["title"] == "Preview Image"
     assert feature["geometry"]["type"] == "Polygon"
     assert "bbox" not in feature
 

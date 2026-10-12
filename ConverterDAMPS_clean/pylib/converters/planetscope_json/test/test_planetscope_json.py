@@ -167,7 +167,7 @@ def test_visual_scene_values(work):
     assert links["measurements"] == [{"href": "/measurements/%s_3B_Visual.tif" % VO_ID,
                                       "type": "image/tiff", "title": "Native EO Product",
                                       "category": "DATA"}]
-    assert links["preview"] == [{"href": "/preview/overviews/%s.PNG" % VO_EO_NAME,
+    assert links["previews"] == [{"href": "/preview/overviews/%s.PNG" % VO_EO_NAME,
                                  "type": "image/png", "title": "Preview Image",
                                  "category": "OVERVIEW"}]
 

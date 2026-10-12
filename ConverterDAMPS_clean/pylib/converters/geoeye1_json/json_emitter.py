@@ -11,9 +11,12 @@ GEOEYE-1 PRODUCTS" 1.0 through its own placeholder template
 Spec readings encoded here:
 - wavelengths: Table 10 and the example spell the block ``wavelenght`` /
   ``wavelenghts``, Table 13 (which defines its content) spells
-  ``wavelengths``; the plural is used, as for WorldView and COSMO-SkyMed. One
-  entry per spectralRange of Table 14: start/stop are the outer bounds of the
-  range, discreteWavelengths the band centres.
+  ``wavelengths``; the plural is used, as for WorldView and COSMO-SkyMed.
+  Table 13 and the example spell the upper bound
+  ``stopWavelengthendWavelength`` (an unaccepted edit of stop -> end);
+  ``endWavelength`` is used. One entry per spectralRange of Table 14:
+  start/end are the outer bounds of the range, discreteWavelengths the band
+  centres.
 - operationalMode: Table 2 gives PAN / MS4B per product type; Table 10 also
   allows STEREO, used (as in the example) for stereo native levels.
 - lineage source: Table 17 is normative (``source[0].sourceCitation.title``),
@@ -112,7 +115,7 @@ def _wavelengths(band_set):
     return [{
         "spectralRange": spectral_range,
         "startWavelength": min(b[0] for b in bands) / 1e9,
-        "stopWavelength": max(b[1] for b in bands) / 1e9,
+        "endWavelength": max(b[1] for b in bands) / 1e9,
         "discreteWavelengths": [(b[0] + b[1]) / 2 / 1e9 for b in bands],
     } for spectral_range, bands in ranges]
 
@@ -198,7 +201,7 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
             },
             "links": {
                 "measurements": [{"href": "/measurements/%s" % native_name}],
-                "preview": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
+                "previews": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
             },
         },
     }
