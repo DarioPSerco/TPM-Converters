@@ -20,7 +20,7 @@ writes to a flat `log/` or the repo root.
 
 | dir | role |
 |---|---|
-| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,cosmoskymed,planetscope}_json/` | the eight converters (code + `ingest_*.cfg` + packager + tests) |
+| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,cosmoskymed,planetscope,radarsat1,terrasarx,skysat}_json/` | the eleven converters (code + `ingest_*.cfg` + packager + tests) |
 | `pylib/converters/common/` | mission-agnostic JSON template engine + `feature_template.json` + `spaces.py` |
 | `pylib/converters/run_mission.py` | one-command runner: convert + package + archive per mission |
 | `pylib/eoSip_converter/` | base ingester package — **pruned**: `data/shapefile/` (186 MB) and `proj/` (5 MB) removed, never touched in any trace |
@@ -49,7 +49,7 @@ native products into `TDS/<MISSION>/INBOX/` first (a raw `.zip` in INBOX is
 silently skipped), then:
 
 ```bash
-.venv/Scripts/python pylib/converters/run_mission.py <geoeye|worldview|quickbird|iceye|pleiades|pneo|cosmoskymed|planetscope>
+.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|cosmoskymed|planetscope|radarsat1|terrasarx|skysat>
 ```
 
 The runner converts every INBOX product, packages the delivery ZIPs into
@@ -69,7 +69,7 @@ PYTHONPATH="pylib/xml_nodes/v101;pylib/converters" \
 
 | converter                                                | xml_nodes version on PYTHONPATH |
 |----------------------------------------------------------|---------------------------------|
-| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json | `pylib/xml_nodes/v101` |
+| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json | `pylib/xml_nodes/v101` |
 | pleiades_json, pneo_json                                 | `pylib/xml_nodes/v100`          |
 
 `v200` is used only by the geoeye1/worldview/quickbird test conftests.
@@ -88,8 +88,9 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-50 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 4, PNEO 4, CSK 11, PSC 19). The
-iceye/pleiades/pneo/cosmoskymed/planetscope suites read `TDS/template/*.json` via a relative
+108 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 4, PNEO 4, CSK 11, PSC 19, RS1 13,
+TSX 18, SSC 27). The
+iceye/pleiades/pneo/cosmoskymed/planetscope/skysat suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
 ## Delivery-ZIP layout (all packagers)
@@ -234,3 +235,42 @@ with `run_mission.py terrasarx`. Differences worth knowing, all in
 - Validated end to end on five real products (SSC SL, SSC HS, TDX MGD SL,
   GEC SC, EEC SC). No StripMap, Wide ScanSAR, staring spotlight or
   multi-polarisation product seen yet.
+
+## SkySat specifics (`skysat_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR SKYSAT PRODUCTS" 1.01. Run with
+`run_mission.py skysat`. Same Planet delivery as PlanetScope, so the same
+entry file and item-file rule; differences worth knowing, all in
+`pylib/converters/skysat_json/`:
+
+- **Entry file**: the Planet item metadata `<item id>_metadata.json` of a
+  `SkySatScene` or `SkySatCollect` item. All metadata come from the item JSON
+  (Planet ships no asset XML for SkySat); the CRS comes from the GeoKeys of
+  the main GeoTIFF.
+- **Product type**: a `SkySatScene` is typed by its main image asset, first
+  match in `product_skysat.SCENE_ASSETS`: `_pansharpened` -> `L3_ORT_PSH`,
+  `_analytic[_SR|_dn]` -> `L3_ORT_MS_`, `_visual` -> `L3_ORTVMS_`,
+  `_panchromatic[_dn]` -> `L3_ORT_PAN`, `_basic_panchromatic[_dn]` ->
+  `L1BBDN_MSP` (the `_basic_analytic[_dn]` image, if present, is a second
+  measurements link), `_basic_analytic[_dn]` -> `L1BBDN_MS_`,
+  `_basic_l1a_panchromatic_dn` -> `L1ABDN_PAN`. A `SkySatCollect` is
+  `SYNORT_BDL`, one component per image kind found (visual, pansharpened,
+  analytic, panchromatic). operationalMode and wavelengths follow Tables 2/3
+  and 15/16.
+- **Bundle**: one acquisitionParameters entry, one measurements link and one
+  overview per component; overviews are `<EO name>_PSH3B.PNG`, `_PSH4B.PNG`,
+  `_MS.PNG`, `_PAN.PNG` (section 4).
+- **Overview**: rendered like PlanetScope (`<EO name>.PNG` next to the
+  manifest); a panchromatic image gives a grey overview. The packager stores
+  every PNG named by the manifest previews hrefs under `previews/overviews/`
+  (plural, as this specialization writes it).
+- **Manifest shapes chosen where the spec contradicts itself or is silent**:
+  one lineage process step, source per Table 19 (`sourceCitation.title` = the
+  entry file); processingLevel `1A`/`1B`/`3`, processedLevel code
+  `L1A`/`L1B`/`L3B`/`SYN`; `processingDate` written (mandatory in Table 18);
+  `endWavelength`, one entry per spectral range, discreteWavelengths = band
+  centres (NIR 820 nm, the example says 870); `acrossTrackIncidenceAngle` =
+  item `view_angle`; start = end = item `acquired`; link titles from Tables
+  22/23. `cloudCover` and `referenceSystemIdentifier` only when available.
+- **Not yet validated on a real product**: synthetic fixtures only, see
+  `skysat_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`.

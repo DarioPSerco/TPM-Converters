@@ -18,6 +18,7 @@ Le missioni supportate sono:
 - Pleiades NEO: `pneo`
 - COSMO-SkyMed: `cosmoskymed`
 - PlanetScope: `planetscope`
+- SkySat: `skysat`
 
 ## 2. Prerequisiti
 
@@ -90,9 +91,13 @@ Le cartelle sono usate nel modo seguente:
 
 ## 4. Preparazione del dataset
 
-Estrarre il dataset prima di copiarlo in `INBOX`. Il runner non elabora direttamente un archivio ZIP lasciato in `INBOX`.
+Il dataset può essere copiato in `INBOX` come cartella estratta oppure come archivio `.zip`.
 
-Copiare l'intera cartella del prodotto, mantenendo i file nativi e i file metadata.
+Un `.zip` posto direttamente in `INBOX` viene estratto dal runner all'inizio dello stage `convert`, in `TMPSPACE\STAGE_<nome zip>\`. Se lo ZIP contiene una sola cartella, quella cartella è il dataset; altrimenti i file vengono raccolti in `STAGE_<nome zip>\<nome zip>\`. A fine run in `DONESPACE` finisce solo il dataset estratto: l'archivio originale viene cancellato. Se la conversione o il packaging falliscono, l'archivio originale viene invece spostato in `FAILEDSPACE` insieme al dataset estratto. Uno ZIP corrotto resta in `INBOX` e il runner stampa `unzip: ... FAILED`.
+
+PLEIADES e PNEO usano già lo ZIP come formato nativo: per queste missioni lo ZIP non viene estratto.
+
+Copiare l'intera cartella del prodotto (o il suo ZIP), mantenendo i file nativi e i file metadata.
 
 Esempi di file di ingresso:
 
@@ -106,6 +111,7 @@ Esempi di file di ingresso:
 | Pleiades NEO | secondo il pattern configurato nella missione |
 | COSMO-SkyMed | `*.h5` oppure `*.tgz` |
 | PlanetScope | `<item id>_metadata.json` |
+| SkySat | `<item id>_metadata.json` |
 
 Esempio GeoEye:
 
@@ -139,6 +145,7 @@ Sostituire `geoeye1` con la missione desiderata:
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py pneo
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py cosmoskymed
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py planetscope
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py skysat
 ```
 
 È possibile usare anche `py` se l'ambiente globale contiene tutte le dipendenze:
@@ -267,7 +274,7 @@ py pylib\converters\run_mission.py geoeye1
 
 Il runner non ha trovato un file di ingresso. Verificare:
 
-- dataset estratto e non solo ZIP;
+- ZIP valido, posto direttamente in `INBOX` (non in una sottocartella);
 - cartella missione corretta;
 - presenza del file metadata;
 - nome ed estensione conformi al file `.cfg`;
@@ -507,3 +514,81 @@ contrasto con l'asset, fa fallire la conversione.
   `planetscope_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`).
 - Il nome dell'asset L1A (`_1A_AnalyticMS`) non e' confermato da un prodotto
   reale.
+
+## 15. SkySat
+
+Il prodotto nativo SkySat e' un *item* Planet, come per PlanetScope: il file
+metadata `<item id>_metadata.json` piu' gli asset con lo stesso prefisso
+(GeoTIFF immagine, maschere `udm`/`udm2`, RPC dei prodotti basic). L'item
+puo' essere una scena (`SkySatScene`) o una collect (`SkySatCollect`). Va
+copiato dentro `TDS\SKYSAT\INBOX`. Valgono gli stessi due layout di consegna
+di PlanetScope (Orders API con piu' item nella stessa cartella, Data API con
+una sottocartella per asset), per esempio:
+
+```text
+TDS\SKYSAT\INBOX\order_5f3a\
+    manifest.json
+    SkySatScene\
+        20180428_125611_ssc3d2_0017_metadata.json
+        20180428_125611_ssc3d2_0017_pansharpened.tif
+        20180428_125611_ssc3d2_0017_visual.tif
+        20180428_125611_ssc3d2_0017_pansharpened_udm2.tif
+TDS\SKYSAT\INBOX\20200619_094518_ssc11_u0001\
+    20200619_094518_ssc11_u0001_metadata.json
+    20200619_094518_ssc11_u0001_visual.tif
+    20200619_094518_ssc11_u0001_pansharpened.tif
+    20200619_094518_ssc11_u0001_analytic.tif
+    20200619_094518_ssc11_u0001_panchromatic.tif
+```
+
+Planet non consegna XML per SkySat: tutti i metadati vengono dal JSON
+dell'item (footprint, istante di acquisizione, angoli solari, view angle usato
+come angolo di incidenza, cloud cover, risoluzione, data di pubblicazione). Il
+codice EPSG dei prodotti ortho viene letto dal GeoTIFF.
+
+Conversione completa:
+
+```powershell
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py skysat
+```
+
+Risultato:
+
+- `TDS\SKYSAT\OUTSPACE\<ID>.JSON`, il manifest;
+- `TDS\SKYSAT\OUTSPACE\<ID>.PNG`, l'overview generata dal GeoTIFF (come per
+  PlanetScope; un'immagine pancromatica da' un'overview in grigio). Per una
+  collect `SYNORT_BDL` le overview sono quattro: `<ID>_PSH3B.PNG`,
+  `<ID>_PSH4B.PNG`, `<ID>_MS.PNG`, `<ID>_PAN.PNG`;
+- `TDS\SKYSAT\PRODUCTS\<ID>.ZIP`, il delivery, con le overview in
+  `previews/overviews/`.
+
+`<ID>` segue la convenzione della specializzazione, per esempio
+`SSC_OPER_L3_ORT_PSH_20180428T125611_20180428T125611_0001`.
+
+### Codice di tipo prodotto
+
+Per una scena decide l'asset immagine principale, il primo trovato in questa
+lista (gli altri file dell'item finiscono comunque in `measurements/`):
+
+| asset immagine | tipo prodotto | modo |
+|---|---|---|
+| `_pansharpened.tif` | `L3_ORT_PSH` | MS |
+| `_analytic_SR.tif` / `_analytic.tif` / `_analytic_dn.tif` | `L3_ORT_MS_` | MS |
+| `_visual.tif` | `L3_ORTVMS_` | MS |
+| `_panchromatic.tif` / `_panchromatic_dn.tif` | `L3_ORT_PAN` | PAN |
+| `_basic_panchromatic[_dn].tif` (+ `_basic_analytic[_dn].tif`) | `L1BBDN_MSP` | MS |
+| `_basic_analytic[_dn].tif` | `L1BBDN_MS_` | MS4B |
+| `_basic_l1a_panchromatic_dn.tif` | `L1ABDN_PAN` | PAN |
+
+Una collect (`SkySatCollect`) e' sempre `SYNORT_BDL`: un componente per ogni
+immagine trovata tra visual (MS), pansharpened (MS), analytic (MS4B) e
+panchromatic (PAN), ciascuno con i propri parametri di acquisizione, link
+`measurements` e overview.
+
+### Limiti attuali
+
+- Nessun prodotto SkySat reale e' stato ancora convertito: converter e
+  packager sono provati solo su item sintetici (vedi
+  `skysat_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`).
+- La corrispondenza asset Planet -> tipo prodotto e' un'interpretazione della
+  specifica, che non nomina i file nativi; va confermata su dati reali.

@@ -67,7 +67,7 @@ def test_emitted_json_matches_template(tmp_path):
     assert props["productInformation"]["productType"] == "L2AVRR_PAN"
     assert props["productInformation"]["processingLevel"] == "2A"  # native LV2A
     assert acq["acquisitionParameters"][0]["wavelengths"] == [{
-        "spectralRange": "VNIR", "startWavelength": 450e-9, "stopWavelength": 900e-9,
+        "spectralRange": "VNIR", "startWavelength": 450e-9, "endWavelength": 900e-9,
         "discreteWavelengths": [675e-9]}]
     pinfo = props["productInformation"]
     assert pinfo["processingDate"] == props["created"]

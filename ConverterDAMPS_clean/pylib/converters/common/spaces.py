@@ -1,6 +1,7 @@
 import configparser
 import re
 import shutil
+import zipfile
 from pathlib import Path
 
 # [Main] keys, same names/semantics as the base ingester (ingester.py:593-604).
@@ -78,6 +79,59 @@ def find_entries(spaces):
     return entries
 
 
+def zip_is_native(spaces):
+    """True when the mission ingests the .zip itself (PLEIADES, PNEO):
+    its [Search] extension pattern already selects .zip files."""
+    return bool(re.compile(spaces["EXTPATTERN"]).match(".zip"))
+
+
+def _free_stage(tmpspace, stem):
+    stage = tmpspace / ("STAGE_%s" % stem)
+    n = 0
+    while stage.exists():
+        n += 1
+        stage = tmpspace / ("STAGE_%s_%d" % (stem, n))
+    return stage
+
+
+def expand_zips(spaces):
+    """Unpack every .zip sitting directly in INBOX into its own
+    TMPSPACE/STAGE_<stem>/ so the folder-based converters see a normal
+    native unit. The original archive is moved next to the unit in the
+    STAGE folder; move_unit deletes it on success (DONESPACE gets only the
+    unzipped native) and archives it with the unit in FAILEDSPACE.
+    No-op for missions whose native format is the zip itself.
+    Returns [(zip_path, unit_path)]; a corrupt zip is left in INBOX."""
+    if zip_is_native(spaces) or not spaces["INBOX"].is_dir():
+        return []
+    expanded = []
+    # top level only: a .zip inside an unpacked native is product content
+    for zp in sorted(spaces["INBOX"].glob("*")):
+        if not (zp.is_file() and zp.suffix.lower() == ".zip"):
+            continue
+        stage = _free_stage(spaces["TMPSPACE"], zp.stem)
+        try:
+            with zipfile.ZipFile(zp) as zf:
+                names = [n for n in zf.namelist() if n.strip("/")]
+                tops = {n.split("/", 1)[0] for n in names}
+                # archive already wrapping one folder: that folder is the
+                # unit; otherwise wrap the loose files in <stem>/
+                wrapped = len(tops) == 1 and any("/" in n for n in names)
+                dest = stage if wrapped else stage / zp.stem
+                dest.mkdir(parents=True)
+                zf.extractall(dest)  # extractall drops absolute / ".." parts
+        except (zipfile.BadZipFile, OSError) as e:
+            # never leave a half-extracted unit for the converter to pick up
+            shutil.rmtree(stage, ignore_errors=True)
+            print("unzip: %s FAILED (%s), left in INBOX" % (zp, e))
+            continue
+        unit = stage / tops.pop() if wrapped else dest
+        shutil.move(str(zp), str(stage / zp.name))
+        expanded.append((zp, unit))
+        print("unzip: %s -> %s" % (zp, unit))
+    return expanded
+
+
 def containing_unit(path, root):
     """Top-level folder under root that holds path: the movable native unit."""
     rel = path.resolve().relative_to(root.resolve())
@@ -86,9 +140,11 @@ def containing_unit(path, root):
     return root / rel.parts[0]
 
 
-def move_unit(unit, dest_root):
+def move_unit(unit, dest_root, keep_zip=True):
     """Move a native unit into dest_root; never clobber an earlier archive -
-    a re-run of the same product gets a _1, _2, ... suffix."""
+    a re-run of the same product gets a _1, _2, ... suffix. The original
+    archive left by expand_zips goes along when keep_zip, else it is deleted:
+    DONESPACE holds only the unzipped native."""
     dest_root.mkdir(parents=True, exist_ok=True)
     dest = dest_root / unit.name
     n = 0
@@ -97,6 +153,20 @@ def move_unit(unit, dest_root):
         dest = dest_root / ("%s_%d" % (unit.name, n))
     shutil.move(str(unit), str(dest))
     parent = unit.parent
-    if parent.name.startswith("STAGE_") and not any(parent.iterdir()):
-        parent.rmdir()
+    if parent.name.startswith("STAGE_"):
+        # original archive left by expand_zips
+        rest = list(parent.iterdir())
+        if rest and all(p.is_file() and p.suffix.lower() == ".zip" for p in rest):
+            for zp in rest:
+                if not keep_zip:
+                    zp.unlink()
+                    continue
+                zdest = dest_root / zp.name
+                n = 0
+                while zdest.exists():
+                    n += 1
+                    zdest = dest_root / ("%s_%d%s" % (zp.stem, n, zp.suffix))
+                shutil.move(str(zp), str(zdest))
+        if not any(parent.iterdir()):
+            parent.rmdir()
     return dest

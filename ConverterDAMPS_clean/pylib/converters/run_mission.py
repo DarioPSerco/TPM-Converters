@@ -25,6 +25,7 @@ MISSIONS = {
     "planetscope": ("planetscope_json", "ingest_planetscope.cfg", "ingester_planetscope.py", "v101", "package_planetscope_zips.py"),
     "radarsat1": ("radarsat1_json", "ingest_radarsat1.cfg", "ingester_radarsat1.py", "v101", "package_radarsat1_zips.py"),
     "terrasarx": ("terrasarx_json", "ingest_terrasarx.cfg", "ingester_terrasarx.py", "v101", "package_terrasarx_zips.py"),
+    "skysat": ("skysat_json", "ingest_skysat.cfg", "ingester_skysat.py", "v101", "package_skysat_zips.py"),
 }
 
 
@@ -68,6 +69,7 @@ def convert(mission_dir, cfg, ingester, ver, sp):
     )
     before = outspace_citations(sp)
     results = []  # (entry, unit, ok, detail)
+    spaces.expand_zips(sp)  # INBOX/*.zip -> TMPSPACE/STAGE_<stem>/
     entries = spaces.find_entries(sp)
     if not entries:
         print("convert: no entry files found in %s or %s\\STAGE_*"
@@ -144,7 +146,7 @@ def move(conv_results, pkg_results, sp):
         if not unit.exists():
             continue
         dest_root = sp["DONESPACE"] if ok else sp["FAILEDSPACE"]
-        dest = spaces.move_unit(unit, dest_root)
+        dest = spaces.move_unit(unit, dest_root, keep_zip=not ok)
         moved.append((unit, dest, ok))
         print("move: %s -> %s" % (unit, dest))
     if not moved:

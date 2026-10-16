@@ -1,0 +1,45 @@
+{
+  "type": "Feature",
+  "id": "20190612_101530_ssc7d3_0042",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          9.1,
+          45.4
+        ],
+        [
+          9.14,
+          45.4
+        ],
+        [
+          9.14,
+          45.43
+        ],
+        [
+          9.1,
+          45.43
+        ],
+        [
+          9.1,
+          45.4
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2019-06-12T10:15:30.123456Z",
+    "item_type": "SkySatScene",
+    "satellite_id": "SSC7",
+    "camera_id": "d3",
+    "provider": "skysat",
+    "pixel_resolution": 0.5,
+    "gsd": 0.72,
+    "sun_azimuth": 141.7,
+    "sun_elevation": 62.6,
+    "view_angle": 12.4,
+    "cloud_percent": 3,
+    "published": "2019-06-12T18:30:00.000Z"
+  }
+}

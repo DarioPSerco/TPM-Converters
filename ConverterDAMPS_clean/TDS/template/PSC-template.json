@@ -55,7 +55,7 @@
               {
                 "spectralRange": "VIS",
                 "startWavelength": 4.65e-07,
-                "stopWavelength": 6.8e-07,
+                "endWavelength": 6.8e-07,
                 "discreteWavelengths": [
                   4.9e-07,
                   5.65e-07,

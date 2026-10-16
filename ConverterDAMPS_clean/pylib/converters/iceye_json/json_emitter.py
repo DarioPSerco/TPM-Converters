@@ -23,7 +23,11 @@ Spec readings encoded here:
 - polarisationChannels, orbitNumber, orbitDirection: names from Tables 10 and
   12 (camelCase), flat under acquisitionParameters[0] as for COSMO-SkyMed; the
   example's ``polarisationChannel`` / ``orbitParameters`` are not used.
-- wavelengths: one X-band entry, discreteWavelength fixed by Table 14.
+- wavelengths: one X-band entry, ``discreteWavelengths`` (a one-value
+  array, fixed by Table 14): the EOF-EOS strict schema rejects the singular
+  ``discreteWavelength``.
+- platformSerialIdentifier: a string ("X55" -> "55"); Table 8 reads it as an
+  Integer, but the strict schema types it ``string``.
 - processingLevel / processedLevel: SLC -> 1A / L1A, GRD -> 1B / L1B.
 - referenceSystemIdentifier: written when the native geo_ref_system is
   WGS84; Table 14 makes it mandatory for GRD - a missing CRS there fails.
@@ -44,7 +48,7 @@ TEMPLATE_PATH = Path(__file__).resolve().parent / "feature_template_sar.json"
 
 # spec Table 14: X-band, fixed wavelength (m)
 SPECTRAL_RANGE = "X"
-DISCRETE_WAVELENGTH = 31.0666e-3
+DISCRETE_WAVELENGTHS = [31.0666e-3]
 
 # spec Table 10: resolution (m) per product type
 RESOLUTION = {"L1_SM__SLC": 3.0, "L1_SM__GRD": 3.0,
@@ -66,7 +70,7 @@ MISSION_VALUES = {
             "instrument": {"instrumentShortName": "SAR", "sensorType": "RADAR"},
             "acquisitionParameters": [{"wavelengths": [{
                 "spectralRange": SPECTRAL_RANGE,
-                "discreteWavelength": DISCRETE_WAVELENGTH,
+                "discreteWavelengths": DISCRETE_WAVELENGTHS,
             }]}],
         }],
         "productInformation": {
@@ -105,11 +109,12 @@ def _float_or_none(value):
 
 
 def _serial_or_none(value):
-    """spec Table 8: platformSerialIdentifier is an Integer ("X2" -> 2)."""
+    """platformSerialIdentifier, digits only as a string ("X2" -> "2"):
+    the strict schema types it string."""
     if value is None:
         return None
     match = re.search(r"\d+", str(value))
-    return int(match.group()) if match else None
+    return str(int(match.group())) if match else None
 
 
 def _native_image(product):

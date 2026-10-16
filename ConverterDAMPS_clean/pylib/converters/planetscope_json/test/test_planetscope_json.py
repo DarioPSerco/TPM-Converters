@@ -129,7 +129,7 @@ def test_visual_scene_values(work):
     assert par["resolution"] == 3.0
     assert par["orbitDirection"] == "DESCENDING"
     assert par["wavelengths"] == [{
-        "spectralRange": "VIS", "startWavelength": 465e-9, "stopWavelength": 680e-9,
+        "spectralRange": "VIS", "startWavelength": 465e-9, "endWavelength": 680e-9,
         "discreteWavelengths": [490e-9, 565e-9, 665e-9]}]
     assert par["acquisitionAngles"] == {"illuminationAzimuthAngle": 33.3,
                                         "illuminationElevationAngle": 44.1,
@@ -185,7 +185,7 @@ def test_superdove_8_band_surface_reflectance(work):
     assert len(par["wavelengths"][0]["discreteWavelengths"]) == 6
     assert par["wavelengths"][0]["startWavelength"] == 431e-9
     assert par["wavelengths"][1] == {"spectralRange": "VNIR", "startWavelength": 697e-9,
-                                     "stopWavelength": 713e-9, "discreteWavelengths": [705e-9]}
+                                     "endWavelength": 713e-9, "discreteWavelengths": [705e-9]}
     assert par["beginningDateTime"] == par["endingDateTime"] == "2021-03-14T07:08:03.311Z"
     pinfo = props["productInformation"]
     assert pinfo["productType"] == "L3_SRO_MS_"

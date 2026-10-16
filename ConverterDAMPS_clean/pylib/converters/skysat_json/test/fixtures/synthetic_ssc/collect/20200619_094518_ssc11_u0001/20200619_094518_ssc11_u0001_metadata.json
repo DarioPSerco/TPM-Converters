@@ -1,0 +1,62 @@
+{
+  "type": "Feature",
+  "id": "20200619_094518_ssc11_u0001",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            15.0,
+            40.0
+          ],
+          [
+            15.1,
+            40.0
+          ],
+          [
+            15.1,
+            40.1
+          ],
+          [
+            15.0,
+            40.0
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            15.12,
+            40.02
+          ],
+          [
+            15.3,
+            40.02
+          ],
+          [
+            15.3,
+            40.2
+          ],
+          [
+            15.12,
+            40.02
+          ]
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2020-06-19T09:45:18.250000Z",
+    "item_type": "SkySatCollect",
+    "satellite_id": "SSC11",
+    "provider": "skysat",
+    "pixel_resolution": 0.5,
+    "gsd": 0.66,
+    "sun_azimuth": 150.5,
+    "sun_elevation": 66.0,
+    "view_angle": 0.7,
+    "cloud_cover": 0.05,
+    "published": "2020-06-19T18:00:00.000Z"
+  }
+}

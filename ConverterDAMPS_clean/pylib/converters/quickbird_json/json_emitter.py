@@ -11,7 +11,8 @@ placeholder template (``feature_template_qb2.json``).
 Spec readings encoded here:
 - wavelengths: Table 10 and the example spell the block ``wavelenghts``,
   Table 13 (which defines its content) spells ``wavelengths``; the plural is used, as for WorldView and COSMO-SkyMed. One
-  entry per spectralRange of Table 14: start/stop are the outer bounds of the
+  entry per spectralRange of Table 14: startWavelength/endWavelength (not
+  stopWavelength) are the outer bounds of the
   range, discreteWavelengths the band centres.
 - operationalMode: Table 2 gives PAN / MS4B per product type; Table 10 also
   allows STEREO, used (as in the example) for stereo native levels. Table 14
@@ -112,7 +113,7 @@ def _wavelengths(band_set):
     return [{
         "spectralRange": spectral_range,
         "startWavelength": min(b[0] for b in bands) / 1e9,
-        "stopWavelength": max(b[1] for b in bands) / 1e9,
+        "endWavelength": max(b[1] for b in bands) / 1e9,
         "discreteWavelengths": [(b[0] + b[1]) / 2 / 1e9 for b in bands],
     } for spectral_range, bands in ranges]
 

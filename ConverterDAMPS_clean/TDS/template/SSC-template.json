@@ -1,0 +1,169 @@
+{
+  "type": "Feature",
+  "id": "SSC_OPER_L3_ORT_PSH_20180428T125611_20180428T125611_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "SSC_OPER_L3_ORT_PSH_20180428T125611_20180428T125611_0001",
+    "date": "2018-04-28T12:56:11.806Z/2018-04-28T12:56:11.806Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "SkySat",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "SkySat Camera",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2018-04-28T12:56:11.806Z",
+            "endingDateTime": "2018-04-28T12:56:11.806Z",
+            "operationalMode": "MS",
+            "resolution": 0.5,
+            "acquisitionType": "NOMINAL",
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "acrossTrackIncidenceAngle": 0.7
+            },
+            "wavelengths": [
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 4.5e-07,
+                "endWavelength": 9e-07,
+                "discreteWavelengths": [
+                  6.75e-07
+                ]
+              },
+              {
+                "spectralRange": "VIS",
+                "startWavelength": 4.5e-07,
+                "endWavelength": 6.95e-07,
+                "discreteWavelengths": [
+                  4.825e-07,
+                  5.55e-07,
+                  6.5e-07
+                ]
+              },
+              {
+                "spectralRange": "NIR",
+                "startWavelength": 7.4e-07,
+                "endWavelength": 9e-07,
+                "discreteWavelengths": [
+                  8.2e-07
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 4356,
+      "productType": "L3_ORT_PSH",
+      "processingDate": "2018-04-29T02:10:33.000Z",
+      "processingLevel": "3",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for SkySat",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for SkySat products",
+                  "edition": "1.01"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "20180428_125611_ssc3d2_0017_metadata.json"
+                  },
+                  "processedLevel": {
+                    "code": "L3B"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for SkySat",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "SSC_OPER_L3_ORT_PSH_20180428T125611_20180428T125611_0001.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "referenceSystemIdentifier": "http://www.opengis.net/def/crs/EPSG/0/32719",
+      "cloudCover": 56.0
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/20180428_125611_ssc3d2_0017_pansharpened.tif",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/SSC_OPER_L3_ORT_PSH_20180428T125611_20180428T125611_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

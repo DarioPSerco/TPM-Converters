@@ -1,0 +1,43 @@
+{
+  "type": "Feature",
+  "id": "20160501_144606_ssc1d1_0005",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          12.4,
+          41.9
+        ],
+        [
+          12.4,
+          41.95
+        ],
+        [
+          12.47,
+          41.95
+        ],
+        [
+          12.47,
+          41.9
+        ],
+        [
+          12.4,
+          41.9
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2016-05-01T14:46:06.806000Z",
+    "item_type": "SkySatScene",
+    "satellite_id": "SSC1",
+    "camera_id": "d1",
+    "provider": "skysat",
+    "gsd": 0.86,
+    "sun_azimuth": 135.0,
+    "sun_elevation": 55.5,
+    "view_angle": 18.2,
+    "published": "2016-05-01T20:00:00Z"
+  }
+}

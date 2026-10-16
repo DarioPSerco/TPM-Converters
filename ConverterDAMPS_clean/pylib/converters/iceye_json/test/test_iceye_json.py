@@ -99,7 +99,7 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert acq["platform"]["orbitType"] == "LEO"
     assert acq["instrument"]["instrumentShortName"] == "SAR"
     assert acq["instrument"]["sensorType"] == "RADAR"
-    assert acq["platform"]["platformSerialIdentifier"] == 1
+    assert acq["platform"]["platformSerialIdentifier"] == "1"
     assert par["operationalMode"] == "SM"
     assert par["orbitNumber"] == 53
     assert par["orbitDirection"] == "ASCENDING"
@@ -109,7 +109,7 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert par["resolution"] == 3.0  # Table 10, L1_SM__SLC
     assert isinstance(par["azimuthResolution"], float)
     assert isinstance(par["rangeResolution"], float)
-    assert par["wavelengths"] == [{"spectralRange": "X", "discreteWavelength": 31.0666e-3}]
+    assert par["wavelengths"] == [{"spectralRange": "X", "discreteWavelengths": [31.0666e-3]}]
     assert isinstance(par["acquisitionAngles"]["incidenceAngle"], float)
     pinfo = props["productInformation"]
     assert pinfo["productType"] == "L1_SM__SLC"

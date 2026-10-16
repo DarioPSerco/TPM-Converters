@@ -16,9 +16,9 @@ Spec readings encoded here:
 - wavelengths: the example spells the block ``wavelenghts``, Table 13
   ``wavelengths``; the plural is used, as for COSMO-SkyMed and WorldView.
   Table 13 names the upper bound ``stopWavelengthendWavelength`` (an edit
-  left-over of stop/end); ``stopWavelength`` is used, as for the other
-  missions. One entry per spectralRange of Table 14: start/stop are the
-  outer bounds of the range, discreteWavelengths the band centres.
+  left-over of stop/end); ``endWavelength`` is used. One entry per
+  spectralRange of Table 14: start/end are the outer bounds of the range,
+  discreteWavelengths the band centres.
 - orbitDirection: Table 12 spells ``OrbitDirection``; the example's
   ``orbitDirection`` is used, the camelCase every other key follows.
 - processedLevel code: Table 18 (``L1A`` / ``L1B`` / ``L3B``, ``L3A`` for an
@@ -90,7 +90,7 @@ def _wavelengths(mode):
     return [{
         "spectralRange": spectral_range,
         "startWavelength": min(b[0] for b in bands),
-        "stopWavelength": max(b[1] for b in bands),
+        "endWavelength": max(b[1] for b in bands),
         "discreteWavelengths": [round((b[0] + b[1]) / 2, 12) for b in bands],
     } for spectral_range, bands in ranges]
 
