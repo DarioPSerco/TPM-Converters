@@ -1,25 +1,12 @@
-#
-# This is a TEMPLATE ingester class. 
-#
-# For Esa/lite dissemination project
-#
-# Serco 02/2015 Lavaux Gilles
-#
-# 03/03/2015: V: 0.1
-#
-# TODO: add .SIP.ZIp in <ows:ServiceReference xlink:href="PH1_OPER_HIR_PMS_3__20130819T175900_N39-000_W105-000_0101">
-# - add processing date
-# - add version =   <Processing_Information> <Production_Facility> <SOFTWARE version="6">IMF</SOFTWARE>
-# - remove leading _ from operational mode
-#
+# Ingester class for the Pleiades-NEO mission
+import os
 import sys
 import traceback
 from io import StringIO
-import os
 
 from eoSip_converter.base import ingester, reportMaker
 from eoSip_converter.esaProducts import product_EOSIP
-from eoSip_converter.esaProducts import metadata
+from eoSip_converter.esaProducts import definitions_EoSip, metadata
 from eoSip_converter.esaProducts.namingConvention_hightres import NamingConvention_HightRes
 
 from pneo_json import __version__, product_pneo, json_emitter
@@ -27,7 +14,10 @@ from pneo_json import __version__, product_pneo, json_emitter
 # minimum config version that can be use
 MIN_CONFIG_VERSION = 1.0
 VERSION = f"PNEO converter V:{__version__}"
-REF_NAME = 'PLN_OPER_NEO_P_S_2__20210503T104900_N41-376_E002-153_01_v1021.SIP.ZIP'
+
+# EOPF-EOS package name reference, spec section "Package Format and Naming
+# Convention": <MMM>_<CCCC>_<TTTTTTTTTT>_<start>_<stop>_<bbvv>
+EO_REF_NAME = 'PLN_OPER_L1APRI_PAN_20210503T104900_20210503T105500_0001'
 
 
 class ingester_pneo(ingester.Ingester):
@@ -42,7 +32,9 @@ class ingester_pneo(ingester.Ingester):
     def afterStarting(self, **kargs):
         self.test_just_extract_metadata = True
 
-    # Build and write the JSON metadata manifest (replaces XML/eoSIP output).
+    # Build and write the JSON metadata manifest and the overview PNG(s)
+    # (replaces XML/eoSIP output). The overviews are written next to the
+    # manifest, named as its previews hrefs; the packager zips them.
     def _emit_json(self, processInfo):
         eoName = processInfo.destProduct.getEoProductName()
         outDir = self.outputProductResolvedPaths[0] if self.outputProductResolvedPaths else processInfo.workFolder
@@ -56,6 +48,10 @@ class ingester_pneo(ingester.Ingester):
         )
         processInfo.addLog("  JSON metadata manifest written: %s" % jsonPath)
         self.logger.info("  JSON metadata manifest written: %s" % jsonPath)
+
+        for pngPath in processInfo.srcProduct.writeQuicklooks(outDir, eoName):
+            processInfo.addLog("  overview image written: %s" % pngPath)
+            self.logger.info("  overview image written: %s" % pngPath)
         return jsonPath
 
     # config version is like: name_floatVersion
@@ -70,22 +66,7 @@ class ingester_pneo(ingester.Ingester):
     # called before doing the various reports
     # JSON-only mode: report/output stages downstream are disabled, so emit
     # the JSON manifest here (this hook still runs in extract-metadata mode).
-    # XML-report-only steps (href remap, angle unit) are dropped; the
-    # operationalMode trailing-underscore strip is kept - it feeds the JSON.
-    # NOTE the len-3 guard lets 'MS_' through with its padding underscore
-    # (suspected pipeline bug, kept unchanged - see PLEIADES_PNEO_DEV.md).
     def beforeReportsDone(self, processInfo):
-        # remove leading _ from
-        sensor_mode = processInfo.destProduct.metadata.getMetadataValue(metadata.METADATA_SENSOR_OPERATIONAL_MODE)
-        tmp = sensor_mode
-        while sensor_mode.endswith('_'):
-            if len(sensor_mode) == 3:
-                break
-            sensor_mode = sensor_mode[0:-1]
-        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@ sensor mode changed from '%s' to '%s'" % (tmp, sensor_mode))
-
-        processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, sensor_mode)
-
         self._emit_json(processInfo)
 
     # called after having done the various reports
@@ -98,46 +79,20 @@ class ingester_pneo(ingester.Ingester):
         pass
 
     def buildEoNames(self, processInfo, namingConvention=None):
-        # test default in ingester
+        # force setEoExtension to ZIP: the delivery is a .ZIP package.
+        processInfo.destProduct.setEoExtension(definitions_EoSip.getDefinition('PACKAGE_EXT'))
+        #
         self.buildEoNamesDefault(processInfo, namingConvention)
 
-        # Ensure the platform ID doesn't make its way into identifiers/filenames
-        # etc. which must start with 'PLN'
-        if processInfo.destProduct.metadata.getMetadataValue(metadata.METADATA_PLATFORM_ID) != 'N':
-            sipProductName = 'PLN' + processInfo.destProduct.sipProductName[3:]
-            sipPackageName = 'PLN' + processInfo.destProduct.sipPackageName[3:]
-            eoProductName = 'PLN' + processInfo.destProduct.eoProductName[3:]
-            eoPackageName = 'PLN' + processInfo.destProduct.eoPackageName[3:]
-            identifier = 'PLN' + processInfo.destProduct.identifier[3:]
-
-            processInfo.destProduct.identifier = identifier
-            processInfo.destProduct.eoProductName = eoProductName
-            processInfo.destProduct.eoPackageName = eoPackageName
-
-            processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_PRODUCTNAME, eoProductName)
-            processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_IDENTIFIER, identifier)
-            processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_FULL_PRODUCTNAME, eoPackageName)
-
-        file_counter = processInfo.destProduct.metadata.getMetadataValue(metadata.METADATA_FILECOUNTER)
-        product_version = processInfo.destProduct.metadata.getMetadataValue(metadata.METADATA_SIP_VERSION)
-        product_version_and_counter = f"{product_version}{file_counter}"
-        processInfo.destProduct.sipProductName = f"{processInfo.destProduct.eoProductName}_v{product_version_and_counter}"
-        processInfo.destProduct.sipPackageName = f"{processInfo.destProduct.sipProductName}.SIP.ZIP"
-
-        processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_PACKAGENAME, processInfo.destProduct.sipProductName)
-        processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_FULL_PACKAGENAME, processInfo.destProduct.sipPackageName)
-
-        processInfo.destProduct.identifier = processInfo.destProduct.metadata.getMetadataValue(metadata.METADATA_PACKAGENAME)
-        processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_IDENTIFIER, processInfo.destProduct.identifier)
-
-        # test EoSip package name
-        aName = processInfo.destProduct.getSipPackageName()
-        if len(aName) != len(REF_NAME):
-            print("ref name:%s" % REF_NAME)
-            print("EoSip name:%s" % aName)
-            raise Exception("EoSip name has incorrect length:%s VS %s" % (len(aName), len(REF_NAME)))
-        if aName.find('@') >= 0 or aName.find('#') > 0:
-            raise Exception("SipProductName incomplet:%s" % aName)
+        # JSON-only mode: only the EO product name is used (it names the
+        # package, the manifest and the overviews), so only it is checked.
+        anEoName = processInfo.destProduct.getEoProductName()
+        if len(anEoName) != len(EO_REF_NAME):
+            print("Ref EO name:%s" % EO_REF_NAME)
+            print("EO name    :%s" % anEoName)
+            raise Exception("EO name has incorrect length:%s VS %s" % (len(anEoName), len(EO_REF_NAME)))
+        if anEoName.find('@') >= 0 or anEoName.find('#') >= 0:
+            raise Exception("EoProductName incomplet:%s" % anEoName)
 
     # Override
     # this is the first function called by the base ingester
@@ -145,7 +100,7 @@ class ingester_pneo(ingester.Ingester):
     # as input we have the manifest path. Need to use his parent for the product path
     def createSourceProduct(self, processInfo):
         global debug, logger
-        processInfo.srcPath = processInfo.srcPath.replace('\\', os.sep)
+        processInfo.srcPath = processInfo.srcPath.replace('\\', '/')
         product = product_pneo.Product_Pneo(processInfo.srcPath)
         if self.test_mode:
             product.setDebug(1)
@@ -158,28 +113,24 @@ class ingester_pneo(ingester.Ingester):
         eosipP = product_EOSIP.Product_EOSIP()
         # use wrapped zip if size ~ 2gb
         aSize = processInfo.srcProduct.getSize()
-
-        # don't want an Eosip > 2gb done using python zip lib
-        if aSize > 1.9 * 1024 ** 3:
-            msg = " ## zip: will use wrapped library because size >=1.9 gb: %s" % aSize
-            print(msg)
-            processInfo.addLog(msg)
+        # d'ont want an Eosip > 2gb done using python zip lib
+        if aSize > 1900 * 1024 * 1024:
+            processInfo.addLog(" ## zip: will use wrapped library because size >=1.9 gb: %s" % (aSize))
             eosipP.setUsePythonZipLib(False)
         else:
-            msg = " ## zip: will use python library because size <1.9 gb: %s" % aSize
-            processInfo.addLog(msg)
-
+            processInfo.addLog(" ## zip: will use python library because size <1.9 gb: %s" % (aSize))
+        #
         eosipP.sourceProductPath = processInfo.srcPath
         processInfo.destProduct = eosipP
 
         # set naming convention instance
         namingConventionSip = NamingConvention_HightRes(self.OUTPUT_SIP_PATTERN)
         eosipP.setNamingConventionSipInstance(namingConventionSip)
+        eosipP.setNamingConventionEoInstance(namingConventionSip)
 
-        namingConventionEoInstance = NamingConvention_HightRes(self.OUTPUT_EO_PATTERN)
-        eosipP.setNamingConventionEoInstance(namingConventionEoInstance)
-
-        processInfo.destProduct.setNamingConventionEoInstance(namingConventionEoInstance)
+        namingConventionEo = NamingConvention_HightRes(self.OUTPUT_EO_PATTERN)
+        eosipP.setNamingConventionEoInstance(namingConventionEo)
+        processInfo.destProduct.setNamingConventionEoInstance(namingConventionEo)
 
         self.logger.info(" Eo-Sip product created")
         processInfo.addLog(" Eo-Sip product created")
@@ -195,35 +146,22 @@ class ingester_pneo(ingester.Ingester):
         self.logger.info(" prepare product")
         processInfo.srcProduct.extractToPath(processInfo.workFolder, processInfo.test_dont_extract)
 
-        self.stretcherAppExe = self.ressourcesProvider.getRessourcePath("stretchAppExe")
-        processInfo.srcProduct.stretcherAppExe = self.stretcherAppExe
-
         processInfo.addLog("  extracted inside:%s" % (processInfo.workFolder))
         self.logger.info("  extracted inside:%s" % (processInfo.workFolder))
 
     # Override
     def extractMetadata(self, met, processInfo):
         # fill metadata object
-        numAdded = processInfo.srcProduct.extractMetadata(met)
+        processInfo.srcProduct.extractMetadata(met)
 
-        # met.setMetadataPair(metadata.METADATA_GENERATION_TIME, time.strftime('%Y-%m-%dT%H:%M:%SZ'))
         # use method in base converter
         self.getGenerationTime(met)
 
-        # keep some info
-        # pleiade or not
-        if processInfo.srcProduct.isPneo:
-            # if processInfo.srcProduct.isSpot6:
-            #    processInfo.addInfo("SPOT6", processInfo.srcProduct.origName)
-            # elif processInfo.srcProduct.isSpot7:
-            #    processInfo.addInfo("SPOT7", processInfo.srcProduct.origName)
-            pass
-        else:
+        if not processInfo.srcProduct.isPneo:
             raise Exception("is not a pleiades-neo product")
 
-        # number of preview
-        numPreview = len(processInfo.srcProduct.previewContentName)
-        processInfo.addInfo(processInfo.srcProduct.origName, "number of preview:%s" % numPreview)
+        self.keepInfo('typecode', met.getMetadataValue(metadata.METADATA_TYPECODE))
+        self.keepInfo('components', len(processInfo.srcProduct.components))
 
         if self.debug != 0:
             print("metadata dump:\n%s" % met.dump())
@@ -232,7 +170,8 @@ class ingester_pneo(ingester.Ingester):
         pass
 
     # Override
-    # JSON-only mode: no browse image is produced.
+    # JSON-only mode: no eoSIP browse is produced; the overview PNGs are
+    # written by _emit_json.
     def makeBrowses(self, processInfo, ratio=50):
         pass
 
@@ -253,6 +192,7 @@ if __name__ == '__main__':
         if len(sys.argv) > 1:
             ingester = ingester_pneo()
 
+            # ingester.DEBUG=1
             exitCode = ingester.starts(sys.argv)
 
             ingester.makeConversionReport("Pneo conversion report")

@@ -70,6 +70,11 @@ def convert(mission_dir, cfg, ingester, ver, sp):
     before = outspace_citations(sp)
     results = []  # (entry, unit, ok, detail)
     spaces.expand_zips(sp)  # INBOX/*.zip -> TMPSPACE/STAGE_<stem>/
+    # a zip still sitting in INBOX failed to unpack: count it, do not hide it
+    if not spaces.zip_is_native(sp) and sp["INBOX"].is_dir():
+        for zp in sorted(sp["INBOX"].glob("*")):
+            if zp.is_file() and zp.suffix.lower() == ".zip":
+                results.append((zp, None, False, "unzip failed, left in INBOX"))
     entries = spaces.find_entries(sp)
     if not entries:
         print("convert: no entry files found in %s or %s\\STAGE_*"

@@ -1,8 +1,9 @@
-__version__ = '1.1.0'
+__version__ = '1.2.0'
 EOSIP_CONVERTER_LIBRARY_VERSION_REQ = ">=1.1.0"
 
 VERSION_CHANGES = {
-    '1.1.0': 'Compliance with EOSIP specification document v1.2'
+    '1.1.0': 'Compliance with EOSIP specification document v1.2',
+    '1.2.0': 'EOPF-EOS Specialization for PLEIADES NEO products 1.01',
 }
 
 def ensure_eosip_converter_version_is_valid(required_version):

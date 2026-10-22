@@ -1,17 +1,21 @@
 # SYNTHETIC FIXTURE — NOT REAL DATA
 
-`synthetic_pln/DIM_PNEO1_MS_SYNTH.XML` is a hand-written DIMAP metadata file,
-faithful to the native Pleiades-NEO structure only as far as
-`product_pneo.py` reveals it (xmlMapping paths, LINEAGE/PROCESSING_PNEO
-component, Dataset_Extent, Raster_Dimensions/NBANDS, DATASET_NAME/SOFTWARE
-versions, CRS codes). All values are invented.
+`synthetic_pln/DIM_PNEO3_MS_SYNTH.XML` is a hand-written DIMAP product
+document and `synthetic_pln/LINEAGE_SYNTH_DIM.XML` a hand-written lineage
+document carrying the orbit. No real Pleiades NEO delivery was available:
+their structure is the Pleiades DIMAP one (same Airbus DIMAP family, see
+`pleiades_json/test/fixtures`), reduced to the fields `product_pneo.py`
+reads, with the PNEO identifiers (`DIM_PNEO3_*`, `IMG_PNEO3_*`,
+`MISSION_INDEX` 3). Values are invented (the specialization's example values
+where it has them).
 
-IMPORTANT: the `Solar_Incidences/SUN_AZIMUTH|SUN_ELEVATION` block is itself
-[INFERRED from the Pleiades DIMAP layout] — the original pneo extraction
-never read it, and no real PNEO DIMAP was available to confirm it exists.
-The fixture uses the same inferred paths the new xmlMapping entries expect,
-so the test proves NOTHING about those paths being right — only that the
-pipeline works IF they are. Real-TDS confirmation is the top PENDING item.
+The test derives the other product types from the MS document (PAN, PMS and
+their `-FS` / `-N` variants, projected / ortho, bundle PAN + MS) by
+replacing a few values, and zips each one with a PIL-generated preview JPG,
+a dummy image file and the lineage document into a fake native delivery
+(`<job>/IMG_PNEO3_<kind>_001/...`).
 
-It proves pipeline + JSON structure ONLY — value-correctness on real
-PNEO data is PENDING TDS (none available).
+It proves pipeline + JSON structure ONLY. To check on the first real PNEO
+delivery: where the orbit number / direction sit (else the cfg fallback is
+used), `Solar_Incidences` and `INCIDENCE_ANGLE` paths, `CLOUD_COVERAGE`,
+and the `SPECTRAL_PROCESSING` values.

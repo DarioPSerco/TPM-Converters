@@ -1,10 +1,8 @@
-import io
 import json
+import shutil
 import sys
 import zipfile
 from pathlib import Path
-
-from PIL import Image
 
 BASE = Path(__file__).resolve()
 sys.path.insert(0, str(BASE.parents[1]))
@@ -30,45 +28,49 @@ def find_native_file(marker_name, sp):
     )
 
 
-def browses(native_zip):
-    # quicklook inside the Airbus DIMAP delivery (PREVIEW_*.JPG); PENDING
-    # real-TDS validation - refine the selection rule when data arrives
-    with zipfile.ZipFile(native_zip) as zf:
-        return sorted(n for n in zf.namelist()
-                      if Path(n).name.upper().endswith((".JPG", ".PNG"))
-                      and ("PREVIEW" in Path(n).name.upper()
-                           or "QUICKLOOK" in Path(n).name.upper()))
-
-
-def png_bytes(native_zip, member):
-    with zipfile.ZipFile(native_zip) as zf:
-        data = zf.read(member)
-    if member.upper().endswith(".PNG"):
-        return data
-    buf = io.BytesIO()
-    Image.open(io.BytesIO(data)).save(buf, format="PNG")
-    return buf.getvalue()
-
-
 def package_one(mf):
     d = json.loads(mf.read_text(encoding="utf-8"))
     product = d["id"]
     pinfo = d["properties"]["productInformation"]
     ptype = pinfo["productType"]
+    links = d["properties"]["links"]
     citation = json_template.lineage_citation(d)
     native = find_native_file(citation, SPACES)
-    bs = browses(native)
-    if not bs:
-        raise Exception("no PREVIEW/QUICKLOOK browse in %s" % native)
-    canon = bs[0]
+
+    # The delivery ZIP is unpacked into measurements/ (spec section 3.3),
+    # its layout kept, so the manifest's measurements hrefs resolve inside
+    # the package.
+    with zipfile.ZipFile(native) as src:
+        members = [i for i in src.infolist() if not i.is_dir()]
+    packed = {"measurements/%s" % i.filename for i in members}
+    for link in links["measurements"]:
+        href = link["href"].lstrip("/")
+        if href not in packed:
+            raise Exception("measurements href %s is not in the delivery %s" % (href, native.name))
+
+    # The converter writes the overview PNG(s) next to the manifest in
+    # OUTSPACE, named as the previews hrefs.
+    browses = []
+    for link in links["previews"]:
+        href = link["href"].lstrip("/")
+        browse = OUTSPACE / Path(href).name
+        if not browse.is_file():
+            raise Exception("no overview %s in OUTSPACE for %s" % (browse.name, product))
+        browses.append((browse, href))
 
     out = PRODUCTS / ("%s.ZIP" % product)
-    print("=> %s  (native %s, type %s, %d browse, canon %s)" % (
-        out.name, native.name, ptype, len(bs), Path(canon).name))
-    with zipfile.ZipFile(out, "w", zipfile.ZIP_STORED, allowZip64=True) as zf:
+    print("=> %s  (native %s, %d file(s), type %s, %d browse(s))" % (
+        out.name, native.name, len(members), ptype, len(browses)))
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_STORED, allowZip64=True) as zf, \
+            zipfile.ZipFile(native) as src:
         zf.write(mf, "%s.JSON" % product)
-        zf.writestr("preview/overviews/%s.PNG" % product, png_bytes(native, canon))
-        zf.write(native, "measurements/%s" % native.name)
+        for browse, href in browses:
+            zf.write(browse, href)
+        for info in members:
+            # streamed: a Pleiades-NEO image can be several GB
+            with src.open(info) as fin, zf.open("measurements/%s" % info.filename, "w",
+                                                force_zip64=True) as fout:
+                shutil.copyfileobj(fin, fout, 1024 * 1024)
     print("   done  %.1f MB" % (out.stat().st_size / 1e6))
     return native
 

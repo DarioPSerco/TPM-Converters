@@ -1,4 +1,5 @@
 import configparser
+import os
 import re
 import shutil
 import zipfile
@@ -124,6 +125,10 @@ def expand_zips(spaces):
             # never leave a half-extracted unit for the converter to pick up
             shutil.rmtree(stage, ignore_errors=True)
             print("unzip: %s FAILED (%s), left in INBOX" % (zp, e))
+            if isinstance(e, FileNotFoundError) and os.name == "nt":
+                # extracting cannot miss a file: the path is over MAX_PATH
+                print("unzip: path probably longer than 260 characters - install"
+                      " the converter in a shorter folder or enable Windows long paths")
             continue
         unit = stage / tops.pop() if wrapped else dest
         shutil.move(str(zp), str(stage / zp.name))

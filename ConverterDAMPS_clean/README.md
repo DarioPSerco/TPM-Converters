@@ -88,7 +88,7 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-108 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 4, PNEO 4, CSK 11, PSC 19, RS1 13,
+150 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, CSK 11, PSC 19, RS1 13,
 TSX 18, SSC 27). The
 iceye/pleiades/pneo/cosmoskymed/planetscope/skysat suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
@@ -108,9 +108,8 @@ resolve inside the ZIP — packagers copy the manifest verbatim, no rewrite.
 
 ## Known limits
 
-- ICEYE validated on real TDS (SM/SC/SLH); pleiades/pneo converters+packagers
-  validated on synthetic fixtures only — field values pending real TDS
-  (PNEO sun angles inferred; PL1 "HiRI" suspected template bug).
+- ICEYE validated on real TDS (SM/SC/SLH). Pleiades and Pleiades NEO: see
+  their sections below (PNEO: synthetic fixtures only, no real TDS yet).
 - COSMO-SkyMed validated end to end on two real TDS products: CSK HIMAGE
   DGM_B (Level 1B, HDF5 delivery) and CSK WIDEREGION GEC_B (Level 1C,
   GeoTIFF-in-`.tgz` delivery). Open points: no PINGPONG and no Second
@@ -189,7 +188,7 @@ knowing, all in `pylib/converters/planetscope_json/`:
   smallest internal overview that is still >= 1000 px.
 - **Manifest shapes chosen where the spec contradicts itself**: two lineage
   process steps (Planet processor, then the converter); `wavelengths`
-  (plural) with `stopWavelength`, one entry per spectralRange of Table 14;
+  (plural) with `endWavelength`, one entry per spectralRange of Table 14;
   `orbitDirection` (camelCase); processedLevel code `L1A`/`L1B`/`L3B` (`L3A`
   for an ortho tile) in both steps. `cloudCover` and
   `referenceSystemIdentifier` only when the native item carries them; a
@@ -274,3 +273,87 @@ entry file and item-file rule; differences worth knowing, all in
   22/23. `cloudCover` and `referenceSystemIdentifier` only when available.
 - **Not yet validated on a real product**: synthetic fixtures only, see
   `skysat_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`.
+
+## Pleiades specifics (`pleiades_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR PLEIADES PRODUCTS" 1.01. Run with
+`run_mission.py pleiades`. Differences worth knowing, all in
+`pylib/converters/pleiades_json/`:
+
+- **Entry file**: the Airbus DIMAP delivery `.zip` itself (not unpacked by
+  `run_mission`). It holds one `DIM_PHR1*.XML` per component: one for a
+  PAN / MS / pansharpened product, two (P + MS) for a bundle. Orbit number
+  and direction come from each component's `LINEAGE/STRIP_DS_*_DIM.XML`.
+- **Product type** (Table 2): DIMAP `DATASET_TYPE` `RASTER_SENSOR` /
+  `RASTER_PROJECTED` / `RASTER_ORTHO` -> `L1APRI` / `L2_PRO` / `L3_ORT`,
+  `SPECTRAL_PROCESSING` `P` / `MS` / `PMS` (any `-N`/`-X` variant) -> `PAN`
+  / `MS_` / `PSH`, P + MS -> `BDL`. Bundle types are `L2_PRO_BDL` /
+  `L3_ORT_BDL` (Table 2 and the example), not Table 1's `L2_BNDLPRO` /
+  `L3_BNDLORT`. A projected PAN or MS product, or any other component set,
+  is outside the specialization and fails.
+- **Package name**: `PL1_OPER_<type>_<start>_<stop>_0001`, start / stop the
+  outer bounds of the scene times (`Located_Geometric_Values/TIME`).
+- **Bundle**: one acquisitionParameters entry, one measurements link and one
+  overview per component, MS first; overviews `<EO name>_MS.PNG` /
+  `_PAN.PNG` (section 4.3).
+- **Measurements**: the delivery ZIP is unpacked into `measurements/`
+  (layout kept). Each link points at the component image; a tiled image links
+  its DIMAP document (`application/xml`) instead. Link type from the EOF-EOS
+  schema thesaurus: JPEG 2000 -> `application/octet-stream` (no `image/jp2`
+  entry), TIFF -> `image/tiff` (the only GeoTIFF entry is cloud-optimized).
+- **Overview**: the component `DATASET_QL_PATH` quicklook as PNG, written
+  next to the manifest; the packager stores it under `previews/overviews/`.
+- **Manifest shapes chosen where the spec contradicts itself or is silent**:
+  one lineage step, source per Table 19 (`sourceCitation.title` = the
+  delivery ZIP name, processedLevel `L1A`/`L2`/`L3`); processingLevel
+  `1A`/`2`/`3`; `processingDate` = DIMAP `PRODUCTION_DATE`; `created` =
+  conversion time; angles from the `Center` located values, each left out
+  when absent; resolution = `RESAMPLING_SPACING`; wavelengths per Tables
+  15/16, the PSH NIR row taken as 775-915 nm (Table 15 repeats the VNIR
+  bounds there); link titles from Tables 21/22;
+  `referenceSystemIdentifier` (EPSG URI from `PROJECTED_CRS_CODE`) for level
+  2/3 only.
+- **Validated** on one real L3 PMS delivery (`TDS/PLEIADES/INBOX`) end to
+  end (convert + package) and on synthetic fixtures for every product type,
+  see `pleiades_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`. No real
+  bundle, L1A or L2 delivery seen yet.
+
+## Pleiades NEO specifics (`pneo_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR PLEIADES NEO PRODUCTS" 1.01. Run with
+`run_mission.py pneo`. Same Airbus DIMAP family and same code layout as
+`pleiades_json`; the differences, all in `pylib/converters/pneo_json/`:
+
+- **Entry file**: the DIMAP delivery `.zip` itself (not unpacked by
+  `run_mission`), one `DIM_PNEO*.XML` per component: one for a PAN / MS /
+  pansharpened product, two (PAN + MS) for a bundle.
+- **Product type** (Tables 1/2): `DATASET_TYPE` `RASTER_SENSOR` /
+  `RASTER_PROJECTED` / `RASTER_ORTHO` -> `L1APRI` / `L2_PRO` / `L3_ORT`,
+  `SPECTRAL_PROCESSING` `PAN` (or `P`) / `MS` / `PMS` (any `-FS`/`-N`/`-X`
+  variant) -> `PAN` / `MS_` / `PSH`, PAN + MS -> `BDL`. All twelve types of
+  the spec; the ortho bundle is `L2_ORT_BDL`, as the spec writes it in every
+  table (not `L3_ORT_BDL`).
+- **Package name**: `PLN_OPER_<type>_<start>_<stop>_0001` (`PLN` whatever
+  the satellite).
+- **Platform**: `MISSION_INDEX` 3 / 4 -> `Pleiades Neo-3` / `Pleiades Neo-4`
+  (any other index fails); instrument `PNEO`.
+- **Orbit** (mandatory): first `*ORBIT_NUMBER` / `*ORBIT_DIRECTION` element
+  found in the DIMAP document or its `LINEAGE/*.XML` documents; if none, the
+  cfg fallback `METADATA_ORBIT` / `METADATA_ORBIT_DIRECTION` (0 /
+  DESCENDING) with a WARNING. To check on the first real delivery.
+- **Wavelengths**: one entry per row of Table 15 (Table 16 for a bundle),
+  discreteWavelengths = mean of the row's range (Table 14). Table 15 still
+  names the old types (`L1AOPT_*`, `L2_GEO_*`): rows matched by PAN / MS /
+  PSH. The bundle example's MS VNIR 525 nm and PAN 450-800 nm disagree with
+  Table 16: the table is used (575 nm, 480-820 nm).
+- **Manifest shapes**: processingLevel and processedLevel both
+  `L1A`/`L2`/`L3` (Table 18; the example's `1A` is not an allowed value);
+  `cloudCover` mandatory (Table 20, DIMAP `CLOUD_COVERAGE`, missing -> fail);
+  `incidenceAngle` added to the Pleiades angle set (Table 13);
+  `referenceSystemIdentifier` for L2/L3 from `PROJECTED_CRS_CODE`, else
+  `GEODETIC_CRS_CODE`; lineage reference edition `1.01`. Bundle, links,
+  overviews, measurements and packaging as Pleiades.
+- **Not yet validated on a real product**: synthetic fixtures only, see
+  `pneo_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`; also run end to end
+  (`run_mission.py pneo`, convert + package) on synthetic bundle and PSH
+  deliveries.

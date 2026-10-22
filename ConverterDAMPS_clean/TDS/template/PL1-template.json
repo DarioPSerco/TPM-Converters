@@ -1,12 +1,6 @@
 {
   "type": "Feature",
-  "id": "PL1_OPER_HIR_MS__1A_20010415T105400_S23-311_E005-476_1011",
-  "bbox": [
-    -2.69574,
-    61.965195,
-    0.135472,
-    63.261372
-  ],
+  "id": "PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -20,90 +14,120 @@
     ]
   },
   "properties": {
-    "status": "ARCHIVED",
-    "title": "PL1_OPER_HIR_MS__1A_20010415T105400_S23-311_E005-476_1011",
-    "date": "2016-05-01T14:46:06.806Z/2016-05-01T14:46:06.806Z",
+    "status": "ACQUIRED",
+    "title": "PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001",
+    "date": "2017-04-24T13:49:11.806Z/2017-04-24T13:50:06.806Z",
     "created": "2021-02-01T15:30:23.000Z",
-    "acquisitionInformation": {
-      "platform": {
-        "platformShortName": "PLEIADES",
-        "platformSerialIdentifier": "1A",
-        "orbitType": "LEO"
-      },
-      "instrument": {
-        "instrumentShortName": "HiRI",
-        "sensorType": "OPTICAL"
-      },
-      "acquisitionParameters": {
-        "beginningDateTime": "2016-05-01T14:46:06.806Z",
-        "endingDateTime": "2016-05-01T14:46:06.806Z",
-        "operationalMode": "MS",
-        "orbitNumber": 56,
-        "orbitDirection": "DESCENDING",
-        "wrsLongitudeGrid": "33.3",
-        "wrsLatitudeGrid": "44.1",
-        "acquisitionType": "NOMINAL",
-        "acquisitionAngles": {
-          "illuminationAzimuthAngle": 33.3,
-          "illuminationElevationAngle": 44.1,
-          "acrossTrackIncidenceAngle": 33.3,
-          "alongTrackIncidenceAngle": 44.1
-        }
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "Pleiades-1A",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "HiRI",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2017-04-24T13:49:11.806Z",
+            "endingDateTime": "2017-04-24T13:50:06.806Z",
+            "operationalMode": "PAN",
+            "resolution": 0.5,
+            "acquisitionType": "NOMINAL",
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "acrossTrackIncidenceAngle": 0.7,
+              "alongTrackIncidenceAngle": 20
+            },
+            "wavelengths": [
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 480E-09,
+                "endWavelength": 820E-09,
+                "discreteWavelengths": [650E-09]
+              }
+            ],
+            "orbitNumber": 33,
+            "orbitDirection": "ASCENDING"
+          }
+        ]
       }
-    },
+    ],
     "productInformation": {
       "size": 627642676,
-      "productType": "HIR_MS__1A",
-      "resourceLineage": {
-        "processStep": {
-          "description": "EOPF-EOS Converter for PLEIADES",
-          "stepDateTime": {
-            "created": "2021-02-01T15:30:23.000Z"
-          },
-          "processor": {
-            "role": "processor",
-            "party": {
-              "name": "EOF-EOS External Data Handling",
-              "type": "CI_Organisation"
+      "productType": "L1APRI_PAN",
+      "processingLevel": "1A",
+      "processingDate": "2017-04-25T10:12:41.239Z",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for PLEIADES",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for PLEIADES products",
+                  "edition": "1.01"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "<Native product name>"
+                  },
+                  "processedLevel": {
+                    "code": "L1A"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "<EOPF-EOS Converter name>",
+                  "edition": "<EOPF-EOS Converter version>"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001.ZIP"
+                  }
+                }
+              ]
             }
-          },
-          "reference": {
-            "title": "EOPF-EOS Specialization for PLEIADES products",
-            "edition": "1.0"
-          },
-          "source": {
-            "citation": "<Native product name>",
-            "processedLevel": "Stereo2A"
-          },
-          "processingInformation": {
-            "softwareReference": {
-              "title": "<EOPF-EOS Converter name>",
-              "edition": "<EOPF-EOS Converter version>"
-            }
-          },
-          "output": {
-            "sourceCitation": {
-              "title": "WV1_OPER_L2ASTB_PAN_20100527T231608_N13-756_W100-000_0001.ZIP"
-            }
-          }
+          ]
         }
-      }
+      ]
     },
     "links": {
       "measurements": [
         {
           "href": "/measurements/<native_product>",
-          "type": "application/x-hdf5",
-          "title": "Native File",
-          "category": "product (TBD as part of vocabulary to consolidate)"
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
         }
       ],
       "previews": [
         {
-          "href": "/preview/overviews/WV1_OPER_L2ASTB_PAN_20100527T231608_N13-756_W100-000_0001.PNG",
+          "href": "/previews/overviews/PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001.PNG",
           "type": "image/png",
-          "title": "Product browse",
-          "category": "overview (TBD as above)"
+          "title": "Preview Image",
+          "category": "OVERVIEW"
         }
       ]
     }

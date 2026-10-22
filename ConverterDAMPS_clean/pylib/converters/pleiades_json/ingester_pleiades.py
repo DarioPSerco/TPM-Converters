@@ -6,7 +6,7 @@ from io import StringIO
 
 from eoSip_converter.base import ingester, reportMaker
 from eoSip_converter.esaProducts import product_EOSIP
-from eoSip_converter.esaProducts import metadata
+from eoSip_converter.esaProducts import definitions_EoSip, metadata
 from eoSip_converter.esaProducts.namingConvention_hightres import NamingConvention_HightRes
 
 from pleiades_json import __version__, product_pleiades, json_emitter
@@ -14,7 +14,10 @@ from pleiades_json import __version__, product_pleiades, json_emitter
 # minimum config version that can be use
 MIN_CONFIG_VERSION = 1.0
 VERSION = f"Pleiades converter V:{__version__}"
-REF_NAME = 'PL1_OPER_HIR_MS__1A_20001122T112233_N20-882_E095-939_0001.SIP.ZIP'
+
+# EOPF-EOS package name reference, spec section "Package Format and Naming
+# Convention": <MMM>_<CCCC>_<TTTTTTTTTT>_<start>_<stop>_<bbvv>
+EO_REF_NAME = 'PL1_OPER_L1APRI_MS__20010415T105400_20010415T105500_0001'
 
 
 class ingester_pleiades(ingester.Ingester):
@@ -29,7 +32,9 @@ class ingester_pleiades(ingester.Ingester):
     def afterStarting(self, **kargs):
         self.test_just_extract_metadata = True
 
-    # Build and write the JSON metadata manifest (replaces XML/eoSIP output).
+    # Build and write the JSON metadata manifest and the overview PNG(s)
+    # (replaces XML/eoSIP output). The overviews are written next to the
+    # manifest, named as its previews hrefs; the packager zips them.
     def _emit_json(self, processInfo):
         eoName = processInfo.destProduct.getEoProductName()
         outDir = self.outputProductResolvedPaths[0] if self.outputProductResolvedPaths else processInfo.workFolder
@@ -43,6 +48,10 @@ class ingester_pleiades(ingester.Ingester):
         )
         processInfo.addLog("  JSON metadata manifest written: %s" % jsonPath)
         self.logger.info("  JSON metadata manifest written: %s" % jsonPath)
+
+        for pngPath in processInfo.srcProduct.writeQuicklooks(outDir, eoName):
+            processInfo.addLog("  overview image written: %s" % pngPath)
+            self.logger.info("  overview image written: %s" % pngPath)
         return jsonPath
 
     # config version is like: name_floatVersion
@@ -57,18 +66,7 @@ class ingester_pleiades(ingester.Ingester):
     # called before doing the various reports
     # JSON-only mode: report/output stages downstream are disabled, so emit
     # the JSON manifest here (this hook still runs in extract-metadata mode).
-    # XML-report-only steps (href remap, angle unit) are dropped; the
-    # operationalMode trailing-underscore strip is kept - it feeds the JSON.
     def beforeReportsDone(self, processInfo):
-        # remove leading _ from
-        sensor_mode = processInfo.destProduct.metadata.getMetadataValue(metadata.METADATA_SENSOR_OPERATIONAL_MODE)
-        tmp = sensor_mode
-        while sensor_mode.endswith('_'):
-            sensor_mode = sensor_mode[0:-1]
-        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@ sensor mode changed from '%s' to '%s'" % (tmp, sensor_mode))
-
-        processInfo.destProduct.metadata.setMetadataPair(metadata.METADATA_SENSOR_OPERATIONAL_MODE, sensor_mode)
-
         self._emit_json(processInfo)
 
     # called after having done the various reports
@@ -81,17 +79,20 @@ class ingester_pleiades(ingester.Ingester):
         pass
 
     def buildEoNames(self, processInfo, namingConvention=None):
-        # test default in ingester
+        # force setEoExtension to ZIP: the delivery is a .ZIP package.
+        processInfo.destProduct.setEoExtension(definitions_EoSip.getDefinition('PACKAGE_EXT'))
+        #
         self.buildEoNamesDefault(processInfo, namingConvention)
 
-        # test EoSip package name
-        aName = processInfo.destProduct.getSipPackageName()
-        if len(aName) != len(REF_NAME):
-            print("ref name:%s" % REF_NAME)
-            print("EoSip name:%s" % aName)
-            raise Exception("EoSip name has incorrect length:%s VS %s" % (len(aName), len(REF_NAME)))
-        if aName.find('@') >= 0 or aName.find('#') > 0:
-            raise Exception("SipProductName incomplet:%s" % aName)
+        # JSON-only mode: only the EO product name is used (it names the
+        # package, the manifest and the overviews), so only it is checked.
+        anEoName = processInfo.destProduct.getEoProductName()
+        if len(anEoName) != len(EO_REF_NAME):
+            print("Ref EO name:%s" % EO_REF_NAME)
+            print("EO name    :%s" % anEoName)
+            raise Exception("EO name has incorrect length:%s VS %s" % (len(anEoName), len(EO_REF_NAME)))
+        if anEoName.find('@') >= 0 or anEoName.find('#') >= 0:
+            raise Exception("EoProductName incomplet:%s" % anEoName)
 
     # Override
     # this is the first function called by the base ingester
@@ -127,7 +128,9 @@ class ingester_pleiades(ingester.Ingester):
         eosipP.setNamingConventionSipInstance(namingConventionSip)
         eosipP.setNamingConventionEoInstance(namingConventionSip)
 
-        processInfo.destProduct.setNamingConventionEoInstance(namingConventionSip)
+        namingConventionEo = NamingConvention_HightRes(self.OUTPUT_EO_PATTERN)
+        eosipP.setNamingConventionEoInstance(namingConventionEo)
+        processInfo.destProduct.setNamingConventionEoInstance(namingConventionEo)
 
         self.logger.info(" Eo-Sip product created")
         processInfo.addLog(" Eo-Sip product created")
@@ -149,26 +152,16 @@ class ingester_pleiades(ingester.Ingester):
     # Override
     def extractMetadata(self, met, processInfo):
         # fill metadata object
-        numAdded = processInfo.srcProduct.extractMetadata(met)
+        processInfo.srcProduct.extractMetadata(met)
 
-        # met.setMetadataPair(metadata.METADATA_GENERATION_TIME, time.strftime('%Y-%m-%dT%H:%M:%SZ'))
         # use method in base converter
         self.getGenerationTime(met)
 
-        # keep some info
-        # pleiade or not
-        if processInfo.srcProduct.isPleiades:
-            # if processInfo.srcProduct.isSpot6:
-            #    processInfo.addInfo("SPOT6", processInfo.srcProduct.origName)
-            # elif processInfo.srcProduct.isSpot7:
-            #    processInfo.addInfo("SPOT7", processInfo.srcProduct.origName)
-            pass
-        else:
+        if not processInfo.srcProduct.isPleiades:
             raise Exception("is not a pleiades product")
 
-        # number of preview
-        numPreview = len(processInfo.srcProduct.previewContentName)
-        processInfo.addInfo(processInfo.srcProduct.origName, "number of preview:%s" % numPreview)
+        self.keepInfo('typecode', met.getMetadataValue(metadata.METADATA_TYPECODE))
+        self.keepInfo('components', len(processInfo.srcProduct.components))
 
         if self.debug != 0:
             print("metadata dump:\n%s" % met.dump())
@@ -177,7 +170,8 @@ class ingester_pleiades(ingester.Ingester):
         pass
 
     # Override
-    # JSON-only mode: no browse image is produced.
+    # JSON-only mode: no eoSIP browse is produced; the overview PNGs are
+    # written by _emit_json.
     def makeBrowses(self, processInfo, ratio=50):
         pass
 

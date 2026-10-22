@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC Pleiades LINEAGE/STRIP_DS_* fixture: invented values, only the
+     orbit block the converter reads, at the path of a real DIMAP 2.15 strip document. -->
+<Dimap_Document>
+  <Acquisition_Configuration>
+    <Platform_Configuration>
+      <Ephemeris_Configuration>
+        <ACQUISITION_ORBIT_NUMBER>33</ACQUISITION_ORBIT_NUMBER>
+        <ACQUISITION_ORBIT_DIRECTION>ASCENDING</ACQUISITION_ORBIT_DIRECTION>
+      </Ephemeris_Configuration>
+    </Platform_Configuration>
+  </Acquisition_Configuration>
+</Dimap_Document>

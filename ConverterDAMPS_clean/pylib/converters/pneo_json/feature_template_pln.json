@@ -1,98 +1,74 @@
 {
   "type": "Feature",
   "id": "<product id>",
-  "bbox": "<bbox [west,south,east,north]>",
   "geometry": {
     "type": "Polygon",
     "coordinates": "<footprint closed ring [[lon,lat],...]>"
   },
   "properties": {
-    "status": "ARCHIVED",
+    "status": "ACQUIRED",
     "title": "<product id>",
     "date": "<beginningDateTime>/<endingDateTime>",
-    "created": "<production datetime>",
-    "acquisitionInformation": {
+    "created": "<package creation datetime>",
+    "acquisitionInformation": [{
       "platform": {
         "platformShortName": "<platformShortName>",
-        "platformSerialIdentifier": "<platformSerialIdentifier>",
         "orbitType": "<orbitType>"
       },
       "instrument": {
         "instrumentShortName": "<instrumentShortName>",
         "sensorType": "<sensorType>"
       },
-      "acquisitionParameters": {
-        "beginningDateTime": "<beginningDateTime>",
-        "endingDateTime": "<endingDateTime>",
-        "operationalMode": "<operationalMode>",
-        "orbitNumber": "<orbitNumber (number)>",
-        "orbitDirection": "<orbitDirection>",
-        "wrsLongitudeGrid": "<wrsLongitudeGrid>",
-        "wrsLatitudeGrid": "<wrsLatitudeGrid>",
-        "acquisitionType": "NOMINAL",
-        "acquisitionAngles": {
-          "illuminationAzimuthAngle": "<sun azimuth (number)>",
-          "illuminationElevationAngle": "<sun elevation (number)>",
-          "acrossTrackIncidenceAngle": "<across-track incidence angle (number)>",
-          "alongTrackIncidenceAngle": "<along-track incidence angle (number)>"
-        }
-      }
-    },
+      "acquisitionParameters": "<acquisition parameters array, one entry per component (spec Tables 10-16)>"
+    }],
     "productInformation": {
-      "size": "<package size bytes (number)>",
+      "size": "<native product size bytes (number)>",
+      "cloudCover": "<cloud cover percentage (number)>",
       "productType": "<typecode>",
-      "resourceLineage": {
-        "processStep": {
+      "processingLevel": "<processingLevel>",
+      "processingDate": "<processing datetime>",
+      "resourceLineage": [{
+        "processStep": [{
           "description": "<mission converter description>",
           "stepDateTime": {
-            "created": "<production datetime>"
+            "created": "<package creation datetime>"
           },
-          "processor": {
+          "processor": [{
             "role": "processor",
-            "party": {
+            "party": [{
               "name": "EOF-EOS External Data Handling",
               "type": "CI_Organisation"
-            }
-          },
-          "reference": {
+            }]
+          }],
+          "reference": [{
             "title": "<mission spec reference title>",
             "edition": "<mission spec edition>"
-          },
-          "source": {
-            "citation": "<native product name>",
-            "processedLevel": "<native processed level>"
-          },
+          }],
+          "source": [{
+            "sourceCitation": {
+              "title": "<native product name>"
+            },
+            "processedLevel": {
+              "code": "<processed level code>"
+            }
+          }],
           "processingInformation": {
             "softwareReference": {
               "title": "<converter software name>",
               "edition": "<converter software version>"
             }
           },
-          "output": {
+          "output": [{
             "sourceCitation": {
               "title": "<product id>.ZIP"
             }
-          }
-        }
-      }
+          }]
+        }]
+      }]
     },
     "links": {
-      "measurements": [
-        {
-          "href": "/measurements/<native product name>",
-          "type": "application/x-hdf5",
-          "title": "Native File",
-          "category": "product (TBD as part of vocabulary to consolidate)"
-        }
-      ],
-      "previews": [
-        {
-          "href": "/preview/overviews/<product id>.PNG",
-          "type": "image/png",
-          "title": "Product browse",
-          "category": "overview (TBD as above)"
-        }
-      ]
+      "measurements": "<measurements links array (spec Table 21)>",
+      "previews": "<previews links array (spec Table 22)>"
     }
   }
 }
