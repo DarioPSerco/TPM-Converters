@@ -1,0 +1,1 @@
+<xsl>synthetic placeholder</xsl>

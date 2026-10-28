@@ -19,6 +19,7 @@ Le missioni supportate sono:
 - COSMO-SkyMed: `cosmoskymed`
 - PlanetScope: `planetscope`
 - SkySat: `skysat`
+- Beijing-1, NigeriaSat-1, UK-DMC-1: `dmc`
 
 ## 2. Prerequisiti
 
@@ -93,7 +94,7 @@ Le cartelle sono usate nel modo seguente:
 
 Il dataset può essere copiato in `INBOX` come cartella estratta oppure come archivio `.zip`.
 
-Un `.zip` posto direttamente in `INBOX` viene estratto dal runner all'inizio dello stage `convert`, in `TMPSPACE\STAGE_<nome zip>\`. Se lo ZIP contiene una sola cartella, quella cartella è il dataset; altrimenti i file vengono raccolti in `STAGE_<nome zip>\<nome zip>\`. A fine run in `DONESPACE` finisce solo il dataset estratto: l'archivio originale viene cancellato. Se la conversione o il packaging falliscono, l'archivio originale viene invece spostato in `FAILEDSPACE` insieme al dataset estratto. Uno ZIP corrotto resta in `INBOX` e il runner stampa `unzip: ... FAILED`.
+Un `.zip` posto direttamente in `INBOX` viene estratto dal runner all'inizio dello stage `convert`, in `TMPSPACE\STAGE_<nome zip>\`. Se lo ZIP contiene una sola cartella, quella cartella è il dataset; altrimenti i file vengono raccolti in `STAGE_<nome zip>\<nome zip>\`. A fine run in `DONESPACE` finisce solo il dataset estratto: l'archivio originale viene cancellato. Se la conversione o il packaging falliscono, l'archivio originale viene invece spostato in `FAILEDSPACE` insieme al dataset estratto. Uno ZIP corrotto resta in `INBOX` e il runner stampa `unzip: ... FAILED`. Se lo ZIP estratto non contiene nessun file di ingresso (per esempio uno ZIP che contiene altri ZIP), il dataset non viene convertito né segnalato come failure: resta in `TMPSPACE\STAGE_<nome zip>\` e va controllato a mano.
 
 PLEIADES e PNEO usano già lo ZIP come formato nativo: per queste missioni lo ZIP non viene estratto.
 
@@ -112,6 +113,7 @@ Esempi di file di ingresso:
 | COSMO-SkyMed | `*.h5` oppure `*.tgz` |
 | PlanetScope | `<item id>_metadata.json` |
 | SkySat | `<item id>_metadata.json` |
+| Beijing-1 / NigeriaSat-1 / UK-DMC-1 | `<dataset>.dim` |
 
 Esempio GeoEye:
 
@@ -146,6 +148,7 @@ Sostituire `geoeye1` con la missione desiderata:
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py cosmoskymed
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py planetscope
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py skysat
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py dmc
 ```
 
 È possibile usare anche `py` se l'ambiente globale contiene tutte le dipendenze:
@@ -278,6 +281,7 @@ Il runner non ha trovato un file di ingresso. Verificare:
 - cartella missione corretta;
 - presenza del file metadata;
 - nome ed estensione conformi al file `.cfg`;
+- ZIP che contiene altri ZIP invece dei file del prodotto: resta in `TMPSPACE\STAGE_*`;
 - esecuzione dalla root `ConverterDAMPS_clean`.
 
 ### JSON presente ma `0 packaged`
@@ -592,3 +596,61 @@ panchromatic (PAN), ciascuno con i propri parametri di acquisizione, link
   `skysat_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`).
 - La corrispondenza asset Planet -> tipo prodotto e' un'interpretazione della
   specifica, che non nomina i file nativi; va confermata su dati reali.
+
+## 16. Beijing-1, NigeriaSat-1 e UK-DMC-1
+
+Un solo converter per i tre satelliti (sensore SLIM-6), secondo "EOPF-EOS
+Specialization for Beijing-1, Nigeriasat-1 and UK-DMC-1 products" 1.0. Ogni
+prodotto arriva come uno ZIP senza sottocartelle, da copiare cosi' com'e' in
+`TDS\DMC\INBOX`, per esempio:
+
+```text
+TDS\DMC\INBOX\20071105000000000,DC00068e_000000_010499_p_L1R_FI.zip
+    DC00068e_000000_010499_p_L1R_FI.dim        metadata DIMAP (file di ingresso)
+    DC00068e_000000_010499_p_L1R_FI.tif        immagine
+    DC00068e_000000_010499_p_L1R_FI_ql.jpg     quicklook
+    DC00068e_000000_010499_p_L1R_FI_meta.sip   ZIP con repository.xml
+    DC00068e_000000_010499_p_L1R_FI.htm / .xsl visualizzazione del .dim
+```
+
+I metadati vengono dal `.dim` (satellite, livello, istante centrale della
+scena, footprint, angoli solari, sistema di riferimento, data di produzione);
+risoluzione e cloud cover vengono da `repository.xml` dentro il `_meta.sip`.
+
+Conversione completa:
+
+```powershell
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py dmc
+```
+
+Risultato:
+
+- `TDS\DMC\OUTSPACE\<ID>.JSON`, il manifest;
+- `TDS\DMC\PRODUCTS\<ID>.ZIP`, il delivery: manifest, tutti i file dello ZIP
+  originale in `measurements/` e il quicklook convertito in PNG in
+  `previews/overviews/<ID>.PNG`;
+- `TDS\DMC\DONESPACE\<nome zip>\`, il prodotto estratto (lo ZIP originale
+  viene cancellato).
+
+`<ID>` segue la convenzione della specializzazione, per esempio
+`BJ1_OPER_L1_OPT_MS__20070808T082321_20070808T082321_0001`.
+
+### Codice di tipo prodotto e contatore
+
+| `.dim` | valore | risultato |
+|---|---|---|
+| `MISSION` / `MISSION_INDEX` | `BEIJING` / `1` | `BJ1`, Beijing-1 |
+| `GEOMETRIC_PROCESSING` | `1R_...` | `L1R`, tipo `L1_OPT_MS_` |
+| `GEOMETRIC_PROCESSING` | `1T_...` | `L1T`, tipo `L1_ORT_MS_` |
+
+Le varianti della stessa acquisizione (vista `p` / `s`, regione `_FI` /
+`_SE` / `_NO`, sistema di riferimento, copia QL) hanno lo stesso satellite,
+livello e istante: le ultime quattro cifre del nome, `<bbvv>`, le
+distinguono. `bb` e' la baseline (`00`), `vv` il contatore (`01`, `02`, ...).
+Il primo prodotto che riceve un certo nome prende il contatore `01` (nome che
+termina con `0001`), il successivo con lo stesso nome `02` (`0002`),
+nell'ordine di elaborazione (ordine alfabetico dei nomi ZIP in una run). I
+nomi assegnati sono registrati in
+`TDS\DMC\dmc_names.json`: un prodotto convertito di nuovo riprende il suo
+nome. Il file va conservato insieme ai risultati: se viene cancellato, un
+nome gia' consegnato puo' essere riassegnato.

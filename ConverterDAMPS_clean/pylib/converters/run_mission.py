@@ -26,6 +26,7 @@ MISSIONS = {
     "radarsat1": ("radarsat1_json", "ingest_radarsat1.cfg", "ingester_radarsat1.py", "v101", "package_radarsat1_zips.py"),
     "terrasarx": ("terrasarx_json", "ingest_terrasarx.cfg", "ingester_terrasarx.py", "v101", "package_terrasarx_zips.py"),
     "skysat": ("skysat_json", "ingest_skysat.cfg", "ingester_skysat.py", "v101", "package_skysat_zips.py"),
+    "dmc": ("dmc_json", "ingest_dmc.cfg", "ingester_dmc.py", "v101", "package_dmc_zips.py"),
 }
 
 

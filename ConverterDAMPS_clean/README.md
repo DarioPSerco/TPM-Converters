@@ -20,7 +20,7 @@ writes to a flat `log/` or the repo root.
 
 | dir | role |
 |---|---|
-| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,cosmoskymed,planetscope,radarsat1,terrasarx,skysat}_json/` | the eleven converters (code + `ingest_*.cfg` + packager + tests) |
+| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc}_json/` | the twelve converters (code + `ingest_*.cfg` + packager + tests) |
 | `pylib/converters/common/` | mission-agnostic JSON template engine + `feature_template.json` + `spaces.py` |
 | `pylib/converters/run_mission.py` | one-command runner: convert + package + archive per mission |
 | `pylib/eoSip_converter/` | base ingester package — **pruned**: `data/shapefile/` (186 MB) and `proj/` (5 MB) removed, never touched in any trace |
@@ -49,7 +49,7 @@ native products into `TDS/<MISSION>/INBOX/` first (a raw `.zip` in INBOX is
 silently skipped), then:
 
 ```bash
-.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|cosmoskymed|planetscope|radarsat1|terrasarx|skysat>
+.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc>
 ```
 
 The runner converts every INBOX product, packages the delivery ZIPs into
@@ -69,7 +69,7 @@ PYTHONPATH="pylib/xml_nodes/v101;pylib/converters" \
 
 | converter                                                | xml_nodes version on PYTHONPATH |
 |----------------------------------------------------------|---------------------------------|
-| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json | `pylib/xml_nodes/v101` |
+| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json | `pylib/xml_nodes/v101` |
 | pleiades_json, pneo_json                                 | `pylib/xml_nodes/v100`          |
 
 `v200` is used only by the geoeye1/worldview/quickbird test conftests.
@@ -88,9 +88,9 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-150 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, CSK 11, PSC 19, RS1 13,
-TSX 18, SSC 27). The
-iceye/pleiades/pneo/cosmoskymed/planetscope/skysat suites read `TDS/template/*.json` via a relative
+204 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, CSK 11, PSC 19, RS1 13,
+TSX 18, SSC 27, DMC 54). The
+iceye/pleiades/pneo/cosmoskymed/planetscope/skysat/dmc suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
 ## Delivery-ZIP layout (all packagers)
@@ -273,6 +273,59 @@ entry file and item-file rule; differences worth knowing, all in
   22/23. `cloudCover` and `referenceSystemIdentifier` only when available.
 - **Not yet validated on a real product**: synthetic fixtures only, see
   `skysat_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`.
+
+## Beijing-1 / NigeriaSat-1 / UK-DMC-1 specifics (`dmc_json`)
+
+Per "EOPF-EOS Specialization for Beijing-1, Nigeriasat-1 and UK-DMC-1
+products" 1.0, one converter for the three satellites. Run with
+`run_mission.py dmc`; workspace `TDS/DMC/`. Differences worth knowing, all in
+`pylib/converters/dmc_json/`:
+
+- **Delivery**: one flat `.zip` per product in INBOX, holding `<dataset>.dim`
+  (DIMAP 1.1), `.tif`, `<dataset>_ql.jpg`, `<dataset>_meta.sip` (a zip with
+  `repository.xml`), `.htm` and `.xsl`. The runner unzips it into
+  `TMPSPACE/STAGE_<zip>/<zip>/`; the whole folder goes to `measurements/`.
+- **Entry file**: the `.dim`. Platform, level, scene time, footprint, sun
+  angles, CRS and production date come from it; resolution and cloud cover
+  from `repository.xml` inside the `_meta.sip`.
+- **Platform and product type**: `.dim` `MISSION` + `MISSION_INDEX`
+  (`BEIJING` / `1` -> `BJ1`, Beijing-1); `GEOMETRIC_PROCESSING` code before
+  the first `_`: `1R` -> `L1R` -> `L1_OPT_MS_`, `1T` -> `L1T` -> `L1_ORT_MS_`
+  (the rest, e.g. `_FI`, `_EPSG_4258_FI`, `_QL_EPSG_2393_FI`, is region /
+  CRS / QL). The NigeriaSat-1 / UK-DMC-1 `MISSION` values are not known yet
+  (no sample): such products fail with "unsupported MISSION".
+- **Package name counter**: the variants of one acquisition (`p` / `s`
+  view, region `_FI` / `_SE` / `_NO`, CRS, reduced-resolution `QL` copy,
+  converted as a normal product) share platform, level and scene time.
+  `<bbvv>` = `00` + a counter [01..99]: the first native product to need a
+  name gets `01`, the next one with the same name `02`, and so on, in
+  processing order (alphabetical by zip name within a run). The names given
+  are kept in the registry `TDS/DMC/dmc_names.json` (cfg
+  `DMC_NAME_REGISTRY`), {native `DATASET_NAME`: package name}: a product
+  converted again gets its name back. Keep that file with the outputs;
+  deleting it lets a name be given again (`dmc_json/name_registry.py`).
+- **Footprint**: the `Dataset_Frame` corners, `FRAME_LON` / `FRAME_LAT` when
+  present (projected products, whose `FRAME_X` / `FRAME_Y` are metres), else
+  `FRAME_X` / `FRAME_Y` in degrees; used as delivered, without coordinate
+  conversion (ETRS89 is within 1 m of WGS 84, and projected products give
+  their corners in degrees on the same basis).
+- **Overview**: the JPEG named by the `.dim` `DATASET_QL_PATH`, re-encoded
+  by the packager as `previews/overviews/<ID>.PNG` (plural, as this
+  specialization writes it).
+- **Manifest choices**: begin = end = `SCENE_CENTER_TIME`, taken as UTC,
+  milliseconds `.000`; `processingDate` = `.dim` `DATASET_PRODUCTION_DATE`
+  (the `repository.xml` date differs and is not used); measurements link and
+  lineage source = the `.dim` (`application/xml`); `cloudCover` only when
+  `repository.xml` fills it; `VIEWING_ANGLE` not mapped (the `.dim` does not
+  say along or across track); no orbit fields. The readings chosen where
+  the spec tables and its example differ are listed in `json_emitter.py`.
+- **Validated** on seven real Beijing-1 products (2007): five L1R (regions
+  FI / SE / NO) end to end, two L1T (one of them QL) through extraction and
+  naming; the tests use synthetic fixtures, see
+  `dmc_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`.
+- **A zip with no `.dim`** (e.g. a zip of zips) is neither converted nor
+  counted as a failure: it stays in `TMPSPACE/STAGE_*`. This holds for every
+  mission whose zip the runner unpacks; check TMPSPACE after a run.
 
 ## Pleiades specifics (`pleiades_json`)
 

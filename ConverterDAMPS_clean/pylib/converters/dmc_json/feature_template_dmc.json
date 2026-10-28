@@ -1,0 +1,95 @@
+{
+  "type": "Feature",
+  "id": "<product id>",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": "<footprint closed ring [[lon,lat],...]>"
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "<product id>",
+    "date": "<beginningDateTime>/<endingDateTime>",
+    "created": "<package creation datetime>",
+    "acquisitionInformation": [{
+      "platform": {
+        "platformShortName": "<platformShortName>",
+        "platformSerialIdentifier": "<platformSerialIdentifier>",
+        "orbitType": "<orbitType>"
+      },
+      "instrument": {
+        "instrumentShortName": "<instrumentShortName>",
+        "sensorType": "<sensorType>"
+      },
+      "acquisitionParameters": [{
+        "beginningDateTime": "<beginningDateTime>",
+        "endingDateTime": "<endingDateTime>",
+        "operationalMode": "<operationalMode>",
+        "resolution": "<resolution (number)>",
+        "acquisitionType": "<acquisitionType>",
+        "acquisitionAngles": {
+          "illuminationAzimuthAngle": "<sun azimuth (number)>",
+          "illuminationElevationAngle": "<sun elevation (number)>"
+        },
+        "wavelengths": "<wavelengths array (spec Tables 13-14)>"
+      }]
+    }],
+    "productInformation": {
+      "size": "<native product size bytes (number)>",
+      "productType": "<typecode>",
+      "processingLevel": "<processingLevel>",
+      "processingDate": "<processing datetime>",
+      "resourceLineage": [{
+        "processStep": [{
+          "description": "<mission converter description>",
+          "stepDateTime": {
+            "created": "<package creation datetime>"
+          },
+          "processor": [{
+            "role": "processor",
+            "party": [{
+              "name": "EOF-EOS External Data Handling",
+              "type": "CI_Organisation"
+            }]
+          }],
+          "reference": [{
+            "title": "<mission spec reference title>",
+            "edition": "<mission spec edition>"
+          }],
+          "source": [{
+            "sourceCitation": {
+              "title": "<native product name>"
+            },
+            "processedLevel": {
+              "code": "<processed level code>"
+            }
+          }],
+          "processingInformation": {
+            "softwareReference": {
+              "title": "<converter software name>",
+              "edition": "<converter software version>"
+            }
+          },
+          "output": [{
+            "sourceCitation": {
+              "title": "<product id>.ZIP"
+            }
+          }]
+        }]
+      }]
+    },
+    "links": {
+      "measurements": [{
+        "href": "/measurements/<native product name>",
+        "type": "<measurements media type>",
+        "title": "Native EO Product",
+        "category": "DATA"
+      }],
+      "previews": [{
+        "href": "/previews/overviews/<product id>.PNG",
+        "type": "image/png",
+        "title": "Preview MS Image",
+        "category": "OVERVIEW"
+      }]
+    }
+  }
+}
