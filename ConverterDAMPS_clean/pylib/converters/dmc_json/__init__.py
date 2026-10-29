@@ -1,8 +1,5 @@
 # EOPF-EOS converter for Beijing-1, NigeriaSat-1 and UK-DMC-1 (SLIM6) products,
 # per "EOPF-EOS Specialization for Beijing-1, Nigeriasat-1 and UK-DMC-1 products" 1.0.
-#
-# Pending items are tagged TODO(DMC-PENDING:<ID>) across this package:
-#   NATIVE-META   NigeriaSat-1 / UK-DMC-1 platform values (no sample yet)
 __version__ = '1.0.0'
 
 EOSIP_CONVERTER_LIBRARY_VERSION_REQ = ">=1.1.0"

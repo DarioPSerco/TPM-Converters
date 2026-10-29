@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="uk_t.xsl"?>
+<Dimap_Document xmlns:dim="http://www.spotimage.fr/Dimap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Metadata_Id>
+        <METADATA_FORMAT version="1.1">DIMAP</METADATA_FORMAT>
+    </Metadata_Id>
+    <Dataset_Id>
+        <DATASET_NAME>DS00004d_L1T_EPSG_2190_EE</DATASET_NAME>
+        <DATASET_QL_PATH href="uk_t_ql.jpg"/>
+    </Dataset_Id>
+    <Production>
+        <DATASET_PRODUCTION_DATE>2009-08-01</DATASET_PRODUCTION_DATE>
+    </Production>
+    <Data_Processing>
+        <GEOMETRIC_PROCESSING>1T_EPSG_2190_EE</GEOMETRIC_PROCESSING>
+    </Data_Processing>
+    <Coordinate_Reference_System>
+        <GEO_TABLES>EPSG</GEO_TABLES>
+        <Horizontal_CS>
+            <HORIZONTAL_CS_CODE>EPSG:2190</HORIZONTAL_CS_CODE>
+            <HORIZONTAL_CS_TYPE>PROJECTED</HORIZONTAL_CS_TYPE>
+        </Horizontal_CS>
+    </Coordinate_Reference_System>
+    <Dataset_Frame>
+        <Vertex>
+            <FRAME_LON unit="DEG">-24.0</FRAME_LON>
+            <FRAME_LAT unit="DEG">39.5</FRAME_LAT>
+            <FRAME_X unit="M">765000.0</FRAME_X>
+            <FRAME_Y unit="M">4366000.0</FRAME_Y>
+        </Vertex>
+        <Vertex>
+            <FRAME_LON unit="DEG">-28.5</FRAME_LON>
+            <FRAME_LAT unit="DEG">38.5</FRAME_LAT>
+            <FRAME_X unit="M">375000.0</FRAME_X>
+            <FRAME_Y unit="M">4277000.0</FRAME_Y>
+        </Vertex>
+        <Vertex>
+            <FRAME_LON unit="DEG">-27.5</FRAME_LON>
+            <FRAME_LAT unit="DEG">36.5</FRAME_LAT>
+            <FRAME_X unit="M">438000.0</FRAME_X>
+            <FRAME_Y unit="M">4036000.0</FRAME_Y>
+        </Vertex>
+        <Vertex>
+            <FRAME_LON unit="DEG">-23.0</FRAME_LON>
+            <FRAME_LAT unit="DEG">37.5</FRAME_LAT>
+            <FRAME_X unit="M">829000.0</FRAME_X>
+            <FRAME_Y unit="M">4124000.0</FRAME_Y>
+        </Vertex>
+    </Dataset_Frame>
+    <Data_Access>
+        <DATA_FILE_FORMAT>GEOTIFF</DATA_FILE_FORMAT>
+        <Data_File>
+            <DATA_FILE_PATH href="uk_t.tif"/>
+        </Data_File>
+    </Data_Access>
+    <Dataset_Sources>
+        <Source_Information>
+            <Scene_Source>
+                <MISSION>UK-DMC</MISSION>
+                <INSTRUMENT>SLIM-6</INSTRUMENT>
+                <VIEWING_ANGLE unit="DEG">0.25</VIEWING_ANGLE>
+                <SUN_AZIMUTH unit="DEG">107.0</SUN_AZIMUTH>
+                <SUN_ELEVATION unit="DEG">50.5</SUN_ELEVATION>
+            </Scene_Source>
+        </Source_Information>
+    </Dataset_Sources>
+    <Data_Strip>
+        <Sensor_Configuration>
+            <Time_Stamp>
+                <SCENE_CENTER_TIME>2009-07-27 11:07:39</SCENE_CENTER_TIME>
+            </Time_Stamp>
+        </Sensor_Configuration>
+    </Data_Strip>
+</Dimap_Document>

@@ -639,7 +639,10 @@ Risultato:
 
 | `.dim` | valore | risultato |
 |---|---|---|
-| `MISSION` / `MISSION_INDEX` | `BEIJING` / `1` | `BJ1`, Beijing-1 |
+| `MISSION` | `BEIJING` | `BJ1`, Beijing-1 |
+| `MISSION` | `NIGERIASAT` | `NG1`, NigeriaSat-1 |
+| `MISSION` | `UK-DMC` | `UK1`, UK-DMC-1 |
+| `MISSION_INDEX` | assente oppure `1` | accettato; un altro valore fa fallire la conversione |
 | `GEOMETRIC_PROCESSING` | `1R_...` | `L1R`, tipo `L1_OPT_MS_` |
 | `GEOMETRIC_PROCESSING` | `1T_...` | `L1T`, tipo `L1_ORT_MS_` |
 

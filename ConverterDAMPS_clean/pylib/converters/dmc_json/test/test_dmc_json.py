@@ -7,8 +7,8 @@ real Beijing-1 L1R / L1T deliveries, synthetic values. Failing products are edit
 copies. Manifest tests against TDS/template/DMC-template.json (the spec
 section 6.1 example) fill the metadata by hand.
 
-TODO(DMC-PENDING:NATIVE-META): add NigeriaSat-1 / UK-DMC-1 products
-once their samples exist.
+Products of the three satellites are covered: Beijing-1 (L1R, L1T, QL),
+NigeriaSat-1 and UK-DMC-1 (L1T, no MISSION_INDEX in the .dim).
 """
 import configparser
 import json
@@ -38,12 +38,16 @@ REF = "l1r_p"
 SIDE = "l1r_s"
 L1T = "l1t_p"
 L1T_QL = "l1t_ql"
+NG_T = "ng_t"
+UK_T = "uk_t"
 REF_DATASET = "DS00001a_000000_010499_p_L1R_AA"
 SIDE_DATASET = "DS00001a_000000_010499_s_L1R_BB"
 REF_EO_NAME = "BJ1_OPER_L1_OPT_MS__20090210T101112_20090210T101112_0001"
 SIDE_EO_NAME = "BJ1_OPER_L1_OPT_MS__20090210T101112_20090210T101112_0002"
 L1T_EO_NAME = "BJ1_OPER_L1_ORT_MS__20090506T070809_20090506T070809_0001"
 L1T_QL_EO_NAME = "BJ1_OPER_L1_ORT_MS__20090506T070809_20090506T070809_0002"
+NG_T_EO_NAME = "NG1_OPER_L1_ORT_MS__20090403T080910_20090403T080910_0001"
+UK_T_EO_NAME = "UK1_OPER_L1_ORT_MS__20090727T110739_20090727T110739_0001"
 
 
 def copy_product(name, dest):
@@ -379,6 +383,55 @@ def test_l1t_product_and_its_ql_copy_get_different_names(tmp_path, work):
     registry = tmp_path / "dmc_names.json"
     names = [name_of(n, tmp_path, work, registry) for n in (L1T, L1T_QL)]
     assert names == [L1T_EO_NAME, L1T_QL_EO_NAME]
+
+
+def test_nigeriasat_product_values(tmp_path, work):
+    prod, met = extract(copy_product(NG_T, tmp_path), work)
+    g = met.getMetadataValue
+    assert (g(M.METADATA_PLATFORM), g(M.METADATA_PLATFORM_ID)) == ("NigeriaSat-1", "1")
+    assert (g(M.METADATA_TYPECODE), g(P.PROCESSED_LEVEL_CODE)) == ("L1_ORT_MS_", "L1T")
+    assert g(M.METADATA_RESOLUTION) == 25.6
+    assert met.getLocalAttributeValue("referenceSystemIdentifier") ==         "http://www.opengis.net/def/crs/EPSG/0/4258"
+
+
+def test_uk_dmc_product_values(tmp_path, work):
+    prod, met = extract(copy_product(UK_T, tmp_path), work)
+    g = met.getMetadataValue
+    assert (g(M.METADATA_PLATFORM), g(M.METADATA_PLATFORM_ID)) == ("UK-DMC-1", "1")
+    assert (g(M.METADATA_TYPECODE), g(P.PROCESSED_LEVEL_CODE)) == ("L1_ORT_MS_", "L1T")
+    # projected CRS: the footprint comes from FRAME_LON / FRAME_LAT
+    assert met.getLocalAttributeValue("referenceSystemIdentifier") ==         "http://www.opengis.net/def/crs/EPSG/0/2190"
+    assert met.getLocalAttributeValue("footprintRing") ==         [[-24.0, 39.5], [-28.5, 38.5], [-27.5, 36.5], [-23.0, 37.5], [-24.0, 39.5]]
+
+
+def test_nigeriasat_and_uk_dmc_package_names(tmp_path, work):
+    registry = tmp_path / "dmc_names.json"
+    assert [name_of(n, tmp_path, work, registry) for n in (NG_T, UK_T)] ==         [NG_T_EO_NAME, UK_T_EO_NAME]
+
+
+def test_mission_index_is_optional(tmp_path, work):
+    # Beijing-1 without MISSION_INDEX: MISSION alone identifies the satellite
+    dim = copy_product(REF, tmp_path)
+    edit_dim(dim, "<MISSION_INDEX>1</MISSION_INDEX>", "")
+    assert extract(dim, work)[1].getMetadataValue(M.METADATA_PLATFORM) == "Beijing-1"
+    # UK-DMC with MISSION_INDEX 1 is UK-DMC-1 as well
+    dim = copy_product(UK_T, tmp_path)
+    edit_dim(dim, "<MISSION>UK-DMC</MISSION>",
+             "<MISSION>UK-DMC</MISSION><MISSION_INDEX>1</MISSION_INDEX>")
+    assert extract(dim, work)[1].getMetadataValue(M.METADATA_PLATFORM) == "UK-DMC-1"
+
+
+@pytest.mark.parametrize("name,mission", [(REF, "BEIJING"), (UK_T, "UK-DMC")])
+def test_mission_index_other_than_1_fails(tmp_path, work, name, mission):
+    # a later satellite of the series is not covered by the spec
+    dim = copy_product(name, tmp_path)
+    text = dim.read_text(encoding="ISO-8859-1")
+    text = re.sub(r"\s*<MISSION_INDEX>[^<]*</MISSION_INDEX>", "", text)
+    text = text.replace("<MISSION>%s</MISSION>" % mission,
+                        "<MISSION>%s</MISSION><MISSION_INDEX>2</MISSION_INDEX>" % mission)
+    dim.write_text(text, encoding="ISO-8859-1")
+    with pytest.raises(Exception, match="unsupported MISSION_INDEX 2"):
+        extract(dim, work)
 
 
 def test_frame_in_metres_only_fails(tmp_path, work):

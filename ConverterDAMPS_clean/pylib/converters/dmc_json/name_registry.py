@@ -14,8 +14,6 @@ name}, so that a native product converted again gets its name back and a
 name is never given to two native products, even after OUTSPACE / PRODUCTS
 have been emptied. The registry path is the cfg [Mission-specific-values]
 DMC_NAME_REGISTRY; the file must be kept with the conversion outputs.
-
-First come, first served numbering (confirmed 2026-10-28).
 """
 import json
 import os

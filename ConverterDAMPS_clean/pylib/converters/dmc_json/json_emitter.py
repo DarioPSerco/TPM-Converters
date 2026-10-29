@@ -8,7 +8,7 @@ generator. Output follows "EOPF-EOS Specialization for Beijing-1, Nigeriasat-1
 and UK-DMC-1 products" 1.0 through its own placeholder template
 (``feature_template_dmc.json``) and matches ``TDS/template/DMC-template.json``.
 
-Spec readings (confirmed 2026-10-28) where the spec tables and its section
+Spec readings where the spec tables and its section
 6.1 example differ:
 - package name: the 10-character type code (Table 1 <TTTTTTTTTT>, e.g.
   ``L1_OPT_MS_``) then the '_' separator (``L1_OPT_MS__2017...``).
@@ -26,12 +26,11 @@ Spec readings (confirmed 2026-10-28) where the spec tables and its section
 
 Other readings:
 - platformSerialIdentifier and cloudCover are written although the spec
-  tables leave them out (they are in the example; the omission is a spec
-  mistake). platformSerialIdentifier comes from product_dmc.PLATFORMS.
+  tables leave them out (they are in the section 6.1 example).
+  platformSerialIdentifier comes from product_dmc.PLATFORMS.
 - cloudCover, orbitNumber, orbitDirection, referenceSystemIdentifier and the
   along / across track incidence angles are written only when the native
-  product carries them (as geoeye1 / quickbird / skysat); cloudCover is
-  optional (confirmed 2026-10-28).
+  product carries them.
 - measurements link: the DIMAP header <dataset>.dim (the entry file, an XML),
   media type ``application/xml``; the whole delivery is in measurements/.
 - processingLevel ``"1"`` (Table 16), processedLevel ``L1R`` / ``L1T``

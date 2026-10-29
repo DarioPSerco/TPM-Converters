@@ -49,8 +49,7 @@ DIM = """<?xml version="1.0" encoding="ISO-8859-1"?>
         <Source_Information>
             <Scene_Source>
                 <MISSION>{mission}</MISSION>
-                <MISSION_INDEX>{mission_index}</MISSION_INDEX>
-                <INSTRUMENT>SLIM-6</INSTRUMENT>
+{mission_index_element}                <INSTRUMENT>SLIM-6</INSTRUMENT>
                 <VIEWING_ANGLE unit="DEG">0.25</VIEWING_ANGLE>
                 <SUN_AZIMUTH unit="DEG">{sun_azimuth}</SUN_AZIMUTH>
                 <SUN_ELEVATION unit="DEG">{sun_elevation}</SUN_ELEVATION>
@@ -74,6 +73,10 @@ CRS = """    <Coordinate_Reference_System>
             <HORIZONTAL_CS_TYPE>{cs_type}</HORIZONTAL_CS_TYPE>
         </Horizontal_CS>
     </Coordinate_Reference_System>
+"""
+
+# Beijing-1 only: NigeriaSat-1 / UK-DMC-1 .dim files have no MISSION_INDEX
+MISSION_INDEX = """                <MISSION_INDEX>{mission_index}</MISSION_INDEX>
 """
 
 # geographic product: the corners in degrees as FRAME_X / FRAME_Y
@@ -129,7 +132,7 @@ PRODUCTS = [
          center_time="2009-05-06 07:08:09", crs=True, epsg=4258, cs_type="GEOGRAPHIC",
          frame=[(24.0, 68.0), (20.0, 67.5), (21.0, 66.0), (25.0, 66.5)],
          resolution="21.9", cloud="", colour=(40, 40, 200)),
-    # its reduced-resolution QL copy: same scene time, counter 03; projected
+    # its reduced-resolution QL copy: same scene time, counter 02; projected
     # CRS, footprint from FRAME_LON / FRAME_LAT, not the metres
     dict(file="l1t_ql", name="DS00002b_000000_010499_p_L1T_QL_EPSG_2393_CC", produced="2009-06-01",
          geometric="1T_QL_EPSG_2393_CC", mission="BEIJING", mission_index="1",
@@ -139,6 +142,23 @@ PRODUCTS = [
          frame_m=[(3400000.0, 7550000.0), (3240000.0, 7500000.0),
                   (3280000.0, 7330000.0), (3440000.0, 7380000.0)],
          resolution="320.0", cloud="", colour=(200, 200, 40)),
+    # NigeriaSat-1: no MISSION_INDEX in the .dim (as the real deliveries)
+    dict(file="ng_t", name="DS00003c_L1T_EPSG_4258_DD", produced="2009-07-01",
+         geometric="1T_EPSG_4258_DD", mission="NIGERIASAT", mission_index=None,
+         sun_azimuth="125.0", sun_elevation="41.0",
+         center_time="2009-04-03 08:09:10", crs=True, epsg=4258, cs_type="GEOGRAPHIC",
+         frame=[(10.0, 55.0), (0.5, 53.5), (1.5, 51.5), (11.0, 53.0)],
+         resolution="25.6", cloud="", colour=(40, 200, 200)),
+    # UK-DMC-1: no MISSION_INDEX; projected CRS, footprint from FRAME_LON /
+    # FRAME_LAT, not the metres
+    dict(file="uk_t", name="DS00004d_L1T_EPSG_2190_EE", produced="2009-08-01",
+         geometric="1T_EPSG_2190_EE", mission="UK-DMC", mission_index=None,
+         sun_azimuth="107.0", sun_elevation="50.5",
+         center_time="2009-07-27 11:07:39", crs=True, epsg=2190, cs_type="PROJECTED",
+         frame=[(-24.0, 39.5), (-28.5, 38.5), (-27.5, 36.5), (-23.0, 37.5)],
+         frame_m=[(765000.0, 4366000.0), (375000.0, 4277000.0),
+                  (438000.0, 4036000.0), (829000.0, 4124000.0)],
+         resolution="32.0", cloud="", colour=(200, 40, 200)),
 ]
 
 
@@ -156,7 +176,9 @@ def write_product(p):
                            for (x, y), (mx, my) in zip(p["frame"], p["frame_m"]))
     else:
         vertices = "".join(VERTEX.format(x=x, y=y) for x, y in p["frame"])
-    values = dict(p, vertices=vertices, crs=CRS.format(**p) if p["crs"] else "")
+    index = (MISSION_INDEX.format(**p) if p["mission_index"] is not None else "")
+    values = dict(p, vertices=vertices, crs=CRS.format(**p) if p["crs"] else "",
+                  mission_index_element=index)
     (folder / (p["file"] + ".dim")).write_text(DIM.format(**values), encoding="ISO-8859-1")
     (folder / (p["file"] + "_ql.jpg")).write_bytes(jpeg_bytes(p["colour"]))
     with zipfile.ZipFile(folder / (p["file"] + "_meta.sip"), "w", zipfile.ZIP_DEFLATED) as zf:

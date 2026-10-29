@@ -88,8 +88,8 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-204 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, CSK 11, PSC 19, RS1 13,
-TSX 18, SSC 27, DMC 54). The
+210 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, CSK 11, PSC 19, RS1 13,
+TSX 18, SSC 27, DMC 60). The
 iceye/pleiades/pneo/cosmoskymed/planetscope/skysat/dmc suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
@@ -288,12 +288,14 @@ products" 1.0, one converter for the three satellites. Run with
 - **Entry file**: the `.dim`. Platform, level, scene time, footprint, sun
   angles, CRS and production date come from it; resolution and cloud cover
   from `repository.xml` inside the `_meta.sip`.
-- **Platform and product type**: `.dim` `MISSION` + `MISSION_INDEX`
-  (`BEIJING` / `1` -> `BJ1`, Beijing-1); `GEOMETRIC_PROCESSING` code before
-  the first `_`: `1R` -> `L1R` -> `L1_OPT_MS_`, `1T` -> `L1T` -> `L1_ORT_MS_`
-  (the rest, e.g. `_FI`, `_EPSG_4258_FI`, `_QL_EPSG_2393_FI`, is region /
-  CRS / QL). The NigeriaSat-1 / UK-DMC-1 `MISSION` values are not known yet
-  (no sample): such products fail with "unsupported MISSION".
+- **Platform and product type**: `.dim` `MISSION`: `BEIJING` -> `BJ1`
+  (Beijing-1), `NIGERIASAT` -> `NG1` (NigeriaSat-1), `UK-DMC` -> `UK1`
+  (UK-DMC-1); any other value fails with "unsupported MISSION".
+  `MISSION_INDEX` is optional (the NigeriaSat-1 / UK-DMC-1 `.dim` files have
+  none); when present it must be `1`, as the spec covers only the -1
+  satellites. `GEOMETRIC_PROCESSING` code before the first `_`: `1R` -> `L1R`
+  -> `L1_OPT_MS_`, `1T` -> `L1T` -> `L1_ORT_MS_` (the rest, e.g. `_FI`,
+  `_EPSG_4258_FI`, `_QL_EPSG_2393_FI`, is region / CRS / QL).
 - **Package name counter**: the variants of one acquisition (`p` / `s`
   view, region `_FI` / `_SE` / `_NO`, CRS, reduced-resolution `QL` copy,
   converted as a normal product) share platform, level and scene time.
@@ -319,9 +321,9 @@ products" 1.0, one converter for the three satellites. Run with
   `repository.xml` fills it; `VIEWING_ANGLE` not mapped (the `.dim` does not
   say along or across track); no orbit fields. The readings chosen where
   the spec tables and its example differ are listed in `json_emitter.py`.
-- **Validated** on seven real Beijing-1 products (2007): five L1R (regions
-  FI / SE / NO) end to end, two L1T (one of them QL) through extraction and
-  naming; the tests use synthetic fixtures, see
+- **Validated** end to end on fifteen real Beijing-1 products (2007; L1R and
+  L1T, regions FI / SE / NO, QL copies, two CRS) and three NigeriaSat-1 /
+  UK-DMC-1 L1T products (one QL copy); the tests use synthetic fixtures, see
   `dmc_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`.
 - **A zip with no `.dim`** (e.g. a zip of zips) is neither converted nor
   counted as a failure: it stays in `TMPSPACE/STAGE_*`. This holds for every

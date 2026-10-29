@@ -28,12 +28,8 @@ the package name is not read here: name_registry assigns it, keyed by the
 A reduced-resolution QL product (GEOMETRIC_PROCESSING 1T_QL_..., e.g. 320 m)
 has the same structure and is converted like any other product.
 
-TODO(DMC-PENDING:NATIVE-META): only Beijing-1 samples (L1R, L1T) seen so far.
-The NigeriaSat-1 / UK-DMC-1 MISSION values are not in NATIVE_PLATFORMS; such
-products fail until added.
 SCENE_CENTER_TIME carries no time zone; it is UTC: repository.xml stores the
-same instant as a Unix time (ms), and Pleiades / PNEO DIMAP times are read
-the same way.
+same instant as a Unix time (ms).
 """
 import os
 import zipfile
@@ -49,7 +45,7 @@ DIM_EXTENSION = ".dim"
 SIP_SUFFIX = "_meta.sip"
 REPOSITORY_XML = "repository.xml"
 
-# custom metadata keys (mission-local, like the other converters')
+# custom metadata keys
 PROCESSED_LEVEL_CODE = 'processed_level_code'
 CREATION_TIME = 'creation_time'
 
@@ -60,12 +56,15 @@ PLATFORMS = {
     'NG1': ('NG', '1', 'NigeriaSat-1'),
     'UK1': ('UK', '1', 'UK-DMC-1'),
 }
-# .dim (MISSION, MISSION_INDEX) -> <MMM> prefix; an unknown value fails the
-# conversion (no guessing)
-# TODO(DMC-PENDING:NATIVE-META): add NigeriaSat-1 / UK-DMC-1 from their samples.
+# .dim MISSION -> <MMM> prefix; an unknown MISSION fails the conversion
 NATIVE_PLATFORMS = {
-    ('BEIJING', '1'): 'BJ1',
+    'BEIJING': 'BJ1',
+    'NIGERIASAT': 'NG1',
+    'UK-DMC': 'UK1',
 }
+# MISSION_INDEX is optional (absent in the NigeriaSat-1 / UK-DMC-1 samples);
+# when present it must be 1: the spec covers only the -1 satellites
+NATIVE_MISSION_INDEX = '1'
 # .dim INSTRUMENT values accepted as SLIM6
 NATIVE_INSTRUMENTS = ('SLIM-6',)
 
@@ -175,9 +174,7 @@ def frame_points(root):
     """Dataset_Frame corners as (lon, lat) in degrees: FRAME_LON / FRAME_LAT
     when present (projected products also carry FRAME_X / FRAME_Y in
     metres), else FRAME_X / FRAME_Y when their unit is DEG; fails otherwise.
-    The degrees are used as delivered: ETRS89 is within 1 m of WGS 84, and
-    projected products give their corners in degrees on the same basis; no
-    coordinate conversion (none of the mission converters converts)."""
+    The degrees are used as delivered, without coordinate conversion."""
     points = []
     for v in root.findall("Dataset_Frame/Vertex"):
         if v.find("FRAME_LON") is not None:
@@ -306,9 +303,12 @@ class Product_DMC(Product_Directory):
         root = ET.parse(self.path).getroot()
         scene = "Dataset_Sources/Source_Information/Scene_Source/"
 
-        mission = (_text(root, scene + "MISSION"), _text(root, scene + "MISSION_INDEX"))
+        mission = _text(root, scene + "MISSION")
         if mission not in NATIVE_PLATFORMS:
-            raise Exception("unsupported MISSION / MISSION_INDEX: %s / %s" % mission)
+            raise Exception("unsupported MISSION: %s" % mission)
+        index = _text(root, scene + "MISSION_INDEX", required=False)
+        if index is not None and index != NATIVE_MISSION_INDEX:
+            raise Exception("unsupported MISSION_INDEX %s for MISSION %s" % (index, mission))
         self.set_platform(NATIVE_PLATFORMS[mission])
         instrument = _text(root, scene + "INSTRUMENT")
         if instrument not in NATIVE_INSTRUMENTS:
@@ -341,8 +341,7 @@ class Product_DMC(Product_Directory):
                 raise Exception("unsupported HORIZONTAL_CS_CODE: %s" % crs)
             met.addLocalAttribute("referenceSystemIdentifier", crs_uri(code))
 
-        # processing date (spec Table 16): the .dim production date, a day
-        # (it matches the delivery zip name date in every sample)
+        # processing date (spec Table 16): the .dim production date (a day)
         produced = _text(root, "Production/DATASET_PRODUCTION_DATE")
         met.setMetadataPair(metadata.METADATA_PROCESSING_TIME,
                             format_utc(datetime.strptime(produced, "%Y-%m-%d")))
@@ -358,7 +357,9 @@ class Product_DMC(Product_Directory):
         met.setMetadataPair(metadata.METADATA_RESOLUTION, float(resolution))
         if cloud:
             met.setMetadataPair(metadata.METADATA_CLOUD_COVERAGE, float(cloud))
-        # no orbit number / direction in the native product: left out
+        # orbitNumber / orbitDirection (optional, spec 5.1.2.3.2) are not
+        # written: the spec names no native source and none of the sample
+        # deliveries (.dim or repository.xml) carries them
 
     def extractQuality(self, helper, met):
         pass
