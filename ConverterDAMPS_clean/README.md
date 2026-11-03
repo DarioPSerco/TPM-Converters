@@ -20,7 +20,7 @@ writes to a flat `log/` or the repo root.
 
 | dir | role |
 |---|---|
-| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc}_json/` | the twelve converters (code + `ingest_*.cfg` + packager + tests) |
+| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,geosat,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc,radarsat2}_json/` | the fourteen converters (code + `ingest_*.cfg` + packager + tests) |
 | `pylib/converters/common/` | mission-agnostic JSON template engine + `feature_template.json` + `spaces.py` |
 | `pylib/converters/run_mission.py` | one-command runner: convert + package + archive per mission |
 | `pylib/eoSip_converter/` | base ingester package — **pruned**: `data/shapefile/` (186 MB) and `proj/` (5 MB) removed, never touched in any trace |
@@ -49,7 +49,7 @@ native products into `TDS/<MISSION>/INBOX/` first (a raw `.zip` in INBOX is
 silently skipped), then:
 
 ```bash
-.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc>
+.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|geosat|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc|radarsat2>
 ```
 
 The runner converts every INBOX product, packages the delivery ZIPs into
@@ -69,8 +69,8 @@ PYTHONPATH="pylib/xml_nodes/v101;pylib/converters" \
 
 | converter                                                | xml_nodes version on PYTHONPATH |
 |----------------------------------------------------------|---------------------------------|
-| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json | `pylib/xml_nodes/v101` |
-| pleiades_json, pneo_json                                 | `pylib/xml_nodes/v100`          |
+| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json, radarsat2_json | `pylib/xml_nodes/v101` |
+| pleiades_json, pneo_json, geosat_json                    | `pylib/xml_nodes/v100`          |
 
 `v200` is used only by the geoeye1/worldview/quickbird test conftests.
 `run_mission.py` sets the right PYTHONPATH itself.
@@ -88,9 +88,9 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-210 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, CSK 11, PSC 19, RS1 13,
-TSX 18, SSC 27, DMC 60). The
-iceye/pleiades/pneo/cosmoskymed/planetscope/skysat/dmc suites read `TDS/template/*.json` via a relative
+293 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, GEOSAT 42, CSK 12, PSC 19, RS1 13,
+TSX 19, SSC 27, DMC 60, RS2 39). The
+iceye/pleiades/pneo/geosat/cosmoskymed/planetscope/skysat/dmc suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
 ## Delivery-ZIP layout (all packagers)
@@ -110,6 +110,8 @@ resolve inside the ZIP — packagers copy the manifest verbatim, no rewrite.
 
 - ICEYE validated on real TDS (SM/SC/SLH). Pleiades and Pleiades NEO: see
   their sections below (PNEO: synthetic fixtures only, no real TDS yet).
+- GEOSAT: synthetic fixtures only, no real TDS yet, see its section below.
+- RADARSAT-2: synthetic fixtures only, no real TDS yet, see its section below.
 - COSMO-SkyMed validated end to end on two real TDS products: CSK HIMAGE
   DGM_B (Level 1B, HDF5 delivery) and CSK WIDEREGION GEC_B (Level 1C,
   GeoTIFF-in-`.tgz` delivery). Open points: no PINGPONG and no Second
@@ -150,9 +152,14 @@ knowing, all in `pylib/converters/cosmoskymed_json/`:
   block is `acquisitionParameters[0].wavelengths[0]` (plural), and the lineage
   source follows the normative Table 16
   (`source[0].sourceCitation.title` + `source[0].processedLevel.code`), not the
-  spec's own example. `resolution` is the worst of range and azimuth
-  resolution; `acquisitionAngles.incidenceAngle` is the mean of the image near
-  and far incidence angles.
+  spec's own example. `wavelengths[0]` holds only `spectralRange` "X" and
+  `discreteWavelengths` `[0.0312284]` (Table 15); `polarisationChannels` is
+  plural (Table 10). `operationalMode` is `HI` / `PP` / `SCW` / `SCH` and
+  `resolution` is fixed per mode by Table 11 (3 / 15 / 30 / 100);
+  `acquisitionAngles.incidenceAngle` is the mean of the image near and far
+  incidence angles.
+- **Overview path**: `previews/overviews/` (plural, spec section on the
+  previews component), both in the manifest href and inside the ZIP.
 
 ## PlanetScope specifics (`planetscope_json`)
 
@@ -412,3 +419,100 @@ Per "EOPF-EOS SPECIALIZATION FOR PLEIADES NEO PRODUCTS" 1.01. Run with
   `pneo_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`; also run end to end
   (`run_mission.py pneo`, convert + package) on synthetic bundle and PSH
   deliveries.
+
+## GEOSAT specifics (`geosat_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR GEOSAT PRODUCTS" 1.01 (GEOSAT-1 ex Deimos-1
+SLIM6, GEOSAT-2 ex Deimos-2 HiRAIS). Run with `run_mission.py geosat`. Same
+code layout as `pneo_json`; the differences, all in
+`pylib/converters/geosat_json/`:
+
+- **Entry file**: the DIMAP delivery `.zip` itself (not unpacked by
+  `run_mission`), holding one `.dim` per product, or one per component (PAN +
+  MS4 bundle, two-view stereo pair), the GeoTIFF image(s) and quicklook(s). A
+  PM4 / STP product described by a single `.dim` is split by its image
+  files (`DE2_PAN_...tif`, `DE2_MS4_...tif`).
+- **Mode / level**: read from `DATASET_NAME` (else the `.dim` or ZIP name):
+  `DE01_SL6_<22P|22S|22T>_<1R|1T|2T>_...` (GEOSAT-1),
+  `DE2_<PAN|MS4|PSH|PS4|PM4|STP>_L<1B|1C|1D>_...` (GEOSAT-2), cross-checked
+  with `Production/PRODUCT_TYPE` and `MISSION_INDEX`.
+- **Product type** (Tables 2/3): GEOSAT-1 1R / 1T / 2T -> `L1_GEO_MS_` /
+  `L1_ORT_MS_` / `L2_ORT_MS_`; GEOSAT-2 PAN `L1BORTRPAN` / `L1CORT_PAN`, MS4
+  `L1BORTRMS_` / `L1CORT_MS_`, PSH (and PS4) `L1BORTRPSH` / `L1CORT_PSH` /
+  `L1DORTEPSH`, bundle `L1BORTRBDL` / `L1CORT_BDL` / `L1DORTEBDL`, stereo
+  `SYNSTERPAN` / `SYNSTERPSH`. Table 3 spells two of them `L1CRPC_PSH` and
+  `L1DORT_PSH`; section 1.1's `L1CORT_PSH` / `L1DORTEPSH` are used (same
+  pattern as the other types). PS3 (3-band pansharpened) has no type: fails.
+- **Package name**: `DE1_` / `DE2_OPER_<type>_<start>_<stop>_0001` (cfg
+  `METADATA_PLATFORM=DEIMOS` + `MISSION_INDEX`).
+- **Levels**: processingLevel L1 (1R, 1T), L2 (2T), L1B / L1C / L1D, SYN
+  (stereo); processedLevel code the native level (L1, L2T, L1B, L1C, L1D).
+- **Orbit**: number mandatory: `*ORBIT_NUMBER` element or `*:ORB` quality
+  parameter, else the `..._DE2_<orbit>_<id>` name part, else the cfg
+  `METADATA_ORBIT` (0) with a WARNING (GEOSAT-1 names carry none). Direction
+  from `GEOSAT:ORD` / `DEIMOS-IMAGING:ORD` / `SPACEMETRIC:HEADING`: mandatory
+  for GEOSAT-2 (missing -> fail), left out for GEOSAT-1 when absent.
+- **Optional values left out when absent**: cloudCover (`GEOSAT:CCP` /
+  `DEIMOS-IMAGING:CCP`, negative = not computed), sun azimuth / elevation,
+  `INCIDENCE_ANGLE`. referenceSystemIdentifier from `HORIZONTAL_CS_CODE`
+  (else the WKT authority); missing on an ortho level (1T, 2T, 1C, 1D) -> fail.
+- **Resolution**: `PIXEL_RESOLUTION_X`, else `THEORETICAL_RESOLUTION`, else
+  the nominal value of Tables 2/3.
+- **Wavelengths**: Table 16 rows by kind (MS3B 3 rows, PAN 1, MS4B / PSH 4);
+  a bundle gets two entries (MS then PAN, both operationalMode `MS`), Table
+  17's five rows split between them.
+- **Manifest shapes** (tables over examples): lineage description `GEOSAT
+  processor`, `source[0].sourceCitation.title` + `processedLevel.code`,
+  output title the package name without extension, link titles `Native EO
+  Product` / `Preview Image`. Overviews: `<ID>.PNG`, `<ID>_MS/_PAN.PNG`
+  (bundle), `<ID>_1/_2.PNG` (stereo); from the quicklook, else from the
+  GeoTIFF.
+- **Not yet validated on a real product**: synthetic fixtures only, see
+  `geosat_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`; also run end to end
+  (`run_mission.py geosat`, convert + package) on synthetic GEOSAT-1, PAN and
+  bundle deliveries.
+
+## RADARSAT-2 specifics (`radarsat2_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR RADARSAT-2 PRODUCTS" 1.0. Run with
+`run_mission.py radarsat2`. Differences worth knowing, all in
+`pylib/converters/radarsat2_json/`:
+
+- **Entry file**: `product.xml` (cfg `[Search] FILES_NAMEPATTERN=^product$`,
+  `FILES_EXTPATTERN=^\.xml$`) inside the MDA product folder
+  `RS2_OK..._PK..._DK..._<beam>_<date>_<time>_<pols>_<type>/`; a ZIP of it in
+  `INBOX/` is unpacked first. Every product has the same entry name, so the
+  lineage citation (and the key the runner and packager use) is the product
+  folder name: `common/spaces.find_native` accepts a folder citation and
+  `run_mission.py` matches an entry by file or folder name.
+- **Operational mode**: `sourceAttributes/beamModeMnemonic` folded on the
+  spec's modes by `product_radarsat2.MODE_RULES`: Standard / Extended High-Low
+  / Standard Quad-Pol -> `BS`; Fine / Ultra-Fine / Fine Quad-Pol -> `BSF`;
+  Wide / Wide Standard Quad-Pol -> `BSW`; Wide Fine / Wide Ultra-Fine /
+  Extra-Fine / Wide Fine Quad-Pol -> `BSWF`; Multi-Look Fine -> `ML`, Wide
+  -> `MLW`; Spotlight -> `SL`; ScanSAR Narrow / Wide -> `SCN` / `SCW`. An
+  unknown beam fails the conversion.
+- **Product type**: `L<level>_<mode field><native type>`, 41 codes
+  (`TYPECODE_MAP`): SLC / SGF / SGX level 1, SSG / SPG level 2; ScanSAR SCN /
+  SCW (plain, `L1_SCN____`), SCF, SCS. `processingLevel` "1" / "2", lineage
+  `processedLevel.code` "L1" / "L2". Polarisation mode S / D / Q from the
+  number of channels, checked against Table 2 (ML / MLW / SL single only,
+  ScanSAR no quad); channels in the schema's order (`"HH, HV"`).
+- **Orbit number**: not in `product.xml`; the leading number of
+  `orbitDataFile` (`13034_DEF.ORB`), else the `Orbit Number` line of a
+  `*.prodReport`, else cfg `METADATA_ORBIT` (0) with a WARNING.
+- **Resolution**: `product.xml` gives none; ground range =
+  c / (2 rangeLookBandwidth sin(incidence)), azimuth = ground speed /
+  azimuthLookBandwidth (state vector speed scaled to the ground);
+  `resolution` the worse of the two. Incidence = mean of near / far range.
+- **CRS**: UTM zone of an SSG / SPG map image (WGS84), else EPSG:4326.
+  Footprint: the 4 corner tie points of the geolocation grid, CCW.
+- **Manifest shapes** (tables over examples): wavelength `C`,
+  `discreteWavelengths` `[0.0554658]` (Table 15; the example's 55.4558E-03
+  is a typo); `source[0].sourceCitation.title` + `processedLevel.code`;
+  `<bbvv>` = `0000` (Table 1 defaults); overview the native
+  `BrowseImage.tif` as PNG.
+- **Not yet validated on a real product**: synthetic fixtures only, see
+  `radarsat2_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`; also run end to
+  end (`run_mission.py radarsat2`, convert + package + move) on the four
+  synthetic products.

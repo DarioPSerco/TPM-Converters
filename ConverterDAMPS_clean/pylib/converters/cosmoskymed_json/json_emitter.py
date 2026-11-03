@@ -18,8 +18,10 @@ template (``feature_template_csk.json``) through the generator's existing
 
 Two spec readings are encoded here:
 - wavelengths: the spec spells the block ``wavelength`` in Table 10 and
-  ``wavelengths`` in the table that defines its content; the plural is used,
-  under ``acquisitionParameters[0]``.
+  ``wavelengths`` in the table that defines its content (Table 15); the
+  plural is used, under ``acquisitionParameters[0]``, with only
+  ``spectralRange`` "X" and ``discreteWavelengths`` (the schema rejects
+  start/stopWavelength).
 - lineage source: Table 16 is normative (``source[0].sourceCitation.title`` +
   ``source[0].processedLevel.code``), not the spec's own example, which nests
   processedLevel inside sourceCitation.
@@ -40,10 +42,9 @@ from cosmoskymed_json import product_cosmoskymed as P
 
 TEMPLATE_PATH = Path(__file__).resolve().parent / "feature_template_csk.json"
 
-# spec Table 14: the X-band SAR-2000 / CSG-SAR wavelength bounds are fixed
-SPECTRAL_RANGE = "X-Band"
-START_WAVELENGTH = 0.028
-STOP_WAVELENGTH = 0.052
+# spec Table 15: X band, one fixed discrete wavelength (metres)
+SPECTRAL_RANGE = "X"
+DISCRETE_WAVELENGTHS = [31.2284E-03]
 
 # COSMO-SkyMed mission-fixed values - template slots constant for this
 # mission, shaped as a partial tree mirroring the template.
@@ -55,8 +56,7 @@ MISSION_VALUES = {
             "acquisitionParameters": [{
                 "wavelengths": [{
                     "spectralRange": SPECTRAL_RANGE,
-                    "startWavelength": START_WAVELENGTH,
-                    "stopWavelength": STOP_WAVELENGTH,
+                    "discreteWavelengths": DISCRETE_WAVELENGTHS,
                 }],
             }],
         }],
@@ -153,11 +153,8 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
                     "rangeResolution": _float_or_none(_la(met, "rangeResolution")),
                     "azimuthResolution": _float_or_none(_la(met, "azimuthResolution")),
                     "resolution": _float_or_none(_la(met, "resolution")),
-                    "wavelengths": [{
-                        "discreteWavelength": _float_or_none(_la(met, "radarWavelength")),
-                    }],
                     "polarisationMode": _gv(met, M.METADATA_POLARISATION_MODE),
-                    "polarisationChannel": _gv(met, M.METADATA_POLARISATION_CHANNELS),
+                    "polarisationChannels": _gv(met, M.METADATA_POLARISATION_CHANNELS),
                     "orbitNumber": _int_or_none(_gv(met, M.METADATA_ORBIT)),
                     "orbitDirection": _gv(met, M.METADATA_ORBIT_DIRECTION),
                     "acquisitionAngles": {"incidenceAngle": incidence},
@@ -182,7 +179,7 @@ def build_layers(met, product, eo_product_name, native_product_name=None):
                     "href": "/measurements/%s" % measurement_file,
                     "type": _la(met, "measurementsMediaType"),
                 }],
-                "previews": [{"href": "/preview/overviews/%s.PNG" % eo_product_name}],
+                "previews": [{"href": "/previews/overviews/%s.PNG" % eo_product_name}],
             },
         },
     }

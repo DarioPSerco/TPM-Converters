@@ -136,7 +136,7 @@ def _measurements_type(native_file):
     if name.endswith(".tif") or name.endswith(".tiff"):
         return "image/tiff; application=geotiff; profile=cloud-optimized"
     if name.endswith(".h5"):
-        return "application/x-hdf5"
+        return "application/vnd.hdfgroup.hdf5"
     return None
 
 

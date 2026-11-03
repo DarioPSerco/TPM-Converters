@@ -16,8 +16,9 @@ Spec readings encoded here:
   those products.
 - operationalMode: the Table 2 codes (BM, BSW, BMF, BS, SCN, SCW), not the
   example's "Standard Beam".
-- wavelengths: one C-band entry, ``discreteWavelength`` (Table 14, a Double)
-  fixed to 56.5646E-03 m, not the example's ``discreteWavelengths`` array.
+- wavelengths: one C-band entry, ``discreteWavelengths`` = [56.5646E-03] m.
+  Table 14 spells it ``discreteWavelength`` (a Double), but the EOPF-EOS
+  schema rejects that key: the example's ``discreteWavelengths`` array is used.
 - resolution: the spec gives no rule; the worse (larger) of the nominal range
   and azimuth resolutions is used, as for COSMO-SkyMed.
 - referenceSystemIdentifier (mandatory): the UTM zone (WGS84) of the geocoded
@@ -57,7 +58,7 @@ MISSION_VALUES = {
             "acquisitionParameters": [{
                 "wavelengths": [{
                     "spectralRange": SPECTRAL_RANGE,
-                    "discreteWavelength": DISCRETE_WAVELENGTH,
+                    "discreteWavelengths": [DISCRETE_WAVELENGTH],
                 }],
             }],
         }],

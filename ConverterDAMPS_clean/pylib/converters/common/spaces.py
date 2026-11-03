@@ -2,11 +2,29 @@ import configparser
 import os
 import re
 import shutil
+import tarfile
 import zipfile
 from pathlib import Path
 
 # [Main] keys, same names/semantics as the base ingester (ingester.py:593-604).
 SPACE_KEYS = ("INBOX", "TMPSPACE", "OUTSPACE", "DONESPACE", "FAILEDSPACE")
+
+# delivery archives expand_zips unpacks when they sit directly in INBOX
+ARCHIVE_SUFFIXES = (".zip", ".tar.gz", ".tgz")
+
+
+def extended_path(p):
+    """Windows extended-length form (\\\\?\\C:\\...) of p: file APIs then accept
+    paths over 260 characters without the LongPathsEnabled registry switch.
+    Unchanged elsewhere."""
+    if os.name != "nt":
+        return Path(p)
+    s = os.path.abspath(str(p))  # \\?\ turns normalisation off: do it first
+    if s.startswith("\\\\?\\"):
+        return Path(s)
+    if s.startswith("\\\\"):
+        return Path("\\\\?\\UNC\\" + s[2:])
+    return Path("\\\\?\\" + s)
 
 
 def read_spaces(cfg_path):
@@ -28,6 +46,13 @@ def read_spaces(cfg_path):
         spaces["PRODUCTS"] = p if p.is_absolute() else root / p
     except (configparser.NoOptionError, configparser.NoSectionError):
         spaces["PRODUCTS"] = spaces["OUTSPACE"].parent / "PRODUCTS"
+    # opt-in per mission: natives whose own folder tree is already close to
+    # 260 characters (TerraSAR-X DIMS deliveries) need the extended form
+    spaces["EXTENDED_PATHS"] = os.name == "nt" and parser.getboolean(
+        "Paths", "WINDOWS_EXTENDED_PATHS", fallback=False)
+    if spaces["EXTENDED_PATHS"]:
+        for key in SPACE_KEYS + ("PRODUCTS",):
+            spaces[key] = extended_path(spaces[key])
     spaces["NAMEPATTERN"] = parser.get("Search", "FILES_NAMEPATTERN", fallback="^.*").strip()
     spaces["EXTPATTERN"] = parser.get("Search", "FILES_EXTPATTERN", fallback="^.*").strip()
     return spaces
@@ -52,12 +77,17 @@ def search_roots(spaces):
 def find_native(marker_name, spaces):
     """Locate the native holding the metadata file named marker_name
     (the manifest's source.citation), wherever it sits. Returns the folder
-    containing the marker. Nesting below each root is arbitrary."""
+    containing the marker. Nesting below each root is arbitrary.
+    A citation naming a folder (RADARSAT-2: every product has the same
+    product.xml, so the citation is the product folder) returns that folder."""
     roots = search_roots(spaces)
     for label, root in roots:
         for hit in sorted(root.rglob(marker_name)):
             if hit.is_file():
                 return hit.parent
+        for hit in sorted(root.rglob(marker_name)):
+            if hit.is_dir():
+                return hit
     raise FileNotFoundError(
         "%s not found; searched: %s"
         % (marker_name, ", ".join(str(r) for _, r in roots) or "no existing space")
@@ -80,48 +110,86 @@ def find_entries(spaces):
     return entries
 
 
-def zip_is_native(spaces):
-    """True when the mission ingests the .zip itself (PLEIADES, PNEO):
-    its [Search] extension pattern already selects .zip files."""
-    return bool(re.compile(spaces["EXTPATTERN"]).match(".zip"))
+def archive_suffix(path):
+    """Archive suffix of path (.zip, .tar.gz, .tgz) or None."""
+    lowered = path.name.lower()
+    return next((s for s in ARCHIVE_SUFFIXES if lowered.endswith(s)), None)
 
 
-def _free_stage(tmpspace, stem):
-    stage = tmpspace / ("STAGE_%s" % stem)
-    n = 0
+def inbox_archives(spaces):
+    """Delivery archives sitting directly in INBOX that expand_zips unpacks:
+    every archive whose extension the mission does not ingest itself (.zip
+    for PLEIADES/PNEO, .tgz for COSMO-SkyMed are native entries)."""
+    if not spaces["INBOX"].is_dir():
+        return []
+    ext_re = re.compile(spaces["EXTPATTERN"])
+    return [p for p in sorted(spaces["INBOX"].glob("*"))
+            if p.is_file() and archive_suffix(p) and not ext_re.match(p.suffix)]
+
+
+def _free_stage(tmpspace):
+    # numbered, not named after the zip: native names are long enough that
+    # STAGE_<stem>/<unit>/<file> breaks the 260-character Windows limit
+    n = 1
+    stage = tmpspace / ("STAGE_%d" % n)
     while stage.exists():
         n += 1
-        stage = tmpspace / ("STAGE_%s_%d" % (stem, n))
+        stage = tmpspace / ("STAGE_%d" % n)
     return stage
 
 
+def _archive_names(zp):
+    if archive_suffix(zp) == ".zip":
+        with zipfile.ZipFile(zp) as zf:
+            names = zf.namelist()
+    else:
+        with tarfile.open(zp, "r:*") as tf:
+            names = tf.getnames()
+    names = [n.replace("\\", "/") for n in names]
+    names = [n[2:] if n.startswith("./") else n for n in names]
+    return [n for n in names if n.strip("/.")]
+
+
+def _extract(zp, dest):
+    if archive_suffix(zp) == ".zip":
+        with zipfile.ZipFile(zp) as zf:
+            zf.extractall(dest)  # extractall drops absolute / ".." parts
+    else:
+        with tarfile.open(zp, "r:*") as tf:
+            members = tf.getmembers()
+            if os.name == "nt":
+                # tarfile joins member names as stored ("a/b"): an extended
+                # \\?\ destination needs native separators, nothing normalises them
+                for m in members:
+                    m.name = os.path.normpath(m.name)
+                    if m.linkname:
+                        m.linkname = os.path.normpath(m.linkname)
+            tf.extractall(dest, members=members, filter="data")  # rejects absolute / ".." / links out
+
+
 def expand_zips(spaces):
-    """Unpack every .zip sitting directly in INBOX into its own
-    TMPSPACE/STAGE_<stem>/ so the folder-based converters see a normal
-    native unit. The original archive is moved next to the unit in the
-    STAGE folder; move_unit deletes it on success (DONESPACE gets only the
-    unzipped native) and archives it with the unit in FAILEDSPACE.
-    No-op for missions whose native format is the zip itself.
-    Returns [(zip_path, unit_path)]; a corrupt zip is left in INBOX."""
-    if zip_is_native(spaces) or not spaces["INBOX"].is_dir():
-        return []
+    """Unpack every delivery archive (.zip, .tar.gz, .tgz) sitting directly
+    in INBOX into its own TMPSPACE/STAGE_<n>/ so the folder-based converters
+    see a normal native unit. The original archive is moved next to the unit
+    in the STAGE folder; move_unit deletes it on success (DONESPACE gets only
+    the unpacked native) and archives it with the unit in FAILEDSPACE.
+    Archives the mission ingests itself are left alone (inbox_archives).
+    Returns [(archive_path, unit_path)]; a corrupt archive is left in INBOX."""
     expanded = []
-    # top level only: a .zip inside an unpacked native is product content
-    for zp in sorted(spaces["INBOX"].glob("*")):
-        if not (zp.is_file() and zp.suffix.lower() == ".zip"):
-            continue
-        stage = _free_stage(spaces["TMPSPACE"], zp.stem)
+    # top level only: an archive inside an unpacked native is product content
+    for zp in inbox_archives(spaces):
+        stem = zp.name[:-len(archive_suffix(zp))]
+        stage = _free_stage(spaces["TMPSPACE"])
         try:
-            with zipfile.ZipFile(zp) as zf:
-                names = [n for n in zf.namelist() if n.strip("/")]
-                tops = {n.split("/", 1)[0] for n in names}
-                # archive already wrapping one folder: that folder is the
-                # unit; otherwise wrap the loose files in <stem>/
-                wrapped = len(tops) == 1 and any("/" in n for n in names)
-                dest = stage if wrapped else stage / zp.stem
-                dest.mkdir(parents=True)
-                zf.extractall(dest)  # extractall drops absolute / ".." parts
-        except (zipfile.BadZipFile, OSError) as e:
+            names = _archive_names(zp)
+            tops = {n.split("/", 1)[0] for n in names}
+            # archive already wrapping one folder: that folder is the
+            # unit; otherwise wrap the loose files in <stem>/
+            wrapped = len(tops) == 1 and any("/" in n.rstrip("/") for n in names)
+            dest = stage if wrapped else stage / stem
+            dest.mkdir(parents=True)
+            _extract(zp, dest)
+        except (zipfile.BadZipFile, tarfile.TarError, EOFError, OSError) as e:
             # never leave a half-extracted unit for the converter to pick up
             shutil.rmtree(stage, ignore_errors=True)
             print("unzip: %s FAILED (%s), left in INBOX" % (zp, e))
@@ -161,16 +229,17 @@ def move_unit(unit, dest_root, keep_zip=True):
     if parent.name.startswith("STAGE_"):
         # original archive left by expand_zips
         rest = list(parent.iterdir())
-        if rest and all(p.is_file() and p.suffix.lower() == ".zip" for p in rest):
+        if rest and all(p.is_file() and archive_suffix(p) for p in rest):
             for zp in rest:
                 if not keep_zip:
                     zp.unlink()
                     continue
                 zdest = dest_root / zp.name
+                suffix = archive_suffix(zp)
                 n = 0
                 while zdest.exists():
                     n += 1
-                    zdest = dest_root / ("%s_%d%s" % (zp.stem, n, zp.suffix))
+                    zdest = dest_root / ("%s_%d%s" % (zp.name[:-len(suffix)], n, suffix))
                 shutil.move(str(zp), str(zdest))
         if not any(parent.iterdir()):
             parent.rmdir()

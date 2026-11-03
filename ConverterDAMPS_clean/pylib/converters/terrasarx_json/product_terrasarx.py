@@ -113,8 +113,8 @@ POLARISATIONS = ("HH", "HV", "VH", "VV")
 
 # measurements link media type, by image data file extension
 MEDIA_TYPES = {
-    ".tif": "image/tiff; application=geotiff",
-    ".tiff": "image/tiff; application=geotiff",
+    ".tif": "image/tiff",
+    ".tiff": "image/tiff",
     # COSAR, the DLR complex SAR binary format: no registered media type
     ".cos": "application/octet-stream",
 }
@@ -191,7 +191,9 @@ class Product_TerraSARX(Product_Directory):
         browse = self.root.find("productComponents/browseImage")
         if browse is None:
             raise Exception("no browseImage in %s" % self.path)
-        path = os.path.join(self.EO_FOLDER, self.component_file(browse))
+        # normpath: the annotation path uses "/", which a \\?\ extended
+        # product folder does not accept
+        path = os.path.normpath(os.path.join(self.EO_FOLDER, self.component_file(browse)))
         if not os.path.isfile(path):
             raise FileNotFoundError("corrupt TerraSAR-X native product (no browse image): %s" % path)
         return path

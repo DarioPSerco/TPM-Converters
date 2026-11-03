@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -21,12 +22,14 @@ MISSIONS = {
     "iceye": ("iceye_json", "ingest_iceye.cfg", "ingester_iceye.py", "v101", "package_iceye_zips.py"),
     "pleiades": ("pleiades_json", "ingest_pleiades.cfg", "ingester_pleiades.py", "v100", "package_pleiades_zips.py"),
     "pneo": ("pneo_json", "ingest_pneo.cfg", "ingester_pneo.py", "v100", "package_pneo_zips.py"),
+    "geosat": ("geosat_json", "ingest_geosat.cfg", "ingester_geosat.py", "v100", "package_geosat_zips.py"),
     "cosmoskymed": ("cosmoskymed_json", "ingest_cosmoskymed.cfg", "ingester_cosmoskymed.py", "v101", "package_cosmoskymed_zips.py"),
     "planetscope": ("planetscope_json", "ingest_planetscope.cfg", "ingester_planetscope.py", "v101", "package_planetscope_zips.py"),
     "radarsat1": ("radarsat1_json", "ingest_radarsat1.cfg", "ingester_radarsat1.py", "v101", "package_radarsat1_zips.py"),
     "terrasarx": ("terrasarx_json", "ingest_terrasarx.cfg", "ingester_terrasarx.py", "v101", "package_terrasarx_zips.py"),
     "skysat": ("skysat_json", "ingest_skysat.cfg", "ingester_skysat.py", "v101", "package_skysat_zips.py"),
     "dmc": ("dmc_json", "ingest_dmc.cfg", "ingester_dmc.py", "v101", "package_dmc_zips.py"),
+    "radarsat2": ("radarsat2_json", "ingest_radarsat2.cfg", "ingester_radarsat2.py", "v101", "package_radarsat2_zips.py"),
 }
 
 
@@ -56,53 +59,111 @@ def unit_of(path, sp):
         except ValueError:
             continue
         # a native folder sitting directly in the root is itself the unit
-        # (RADARSAT-1: INBOX/<scene>/<CEOS files>)
-        if unit is None and path.is_dir():
+        # (RADARSAT-1: INBOX/<scene>/<CEOS files>), and so is a native
+        # archive the mission ingests as is (PLEIADES: INBOX/<delivery>.zip)
+        if unit is None and (path.is_dir() or native_archive(path, sp)):
             return path
         return unit
     return None
 
 
+def native_archive(path, sp):
+    """True for an archive file that is itself the mission's entry (its
+    extension matches the cfg [Search] pattern)."""
+    return (path.is_file() and spaces.archive_suffix(path) is not None
+            and re.match(sp["EXTPATTERN"], path.suffix) is not None)
+
+
+class short_root:
+    """Context manager giving the converter folder a short alias for the
+    ingester runs. With [Paths] WINDOWS_EXTENDED_PATHS on Windows, a free drive
+    letter is mapped onto ROOT (subst, no admin rights needed) and removed on
+    exit: the ingesters and the base library build plain "a/b" paths from the
+    cfg's relative spaces, which then stay far below the 260-character limit
+    wherever the converter is installed. Elsewhere the alias is ROOT itself."""
+
+    def __init__(self, sp):
+        self.wanted = sp["EXTENDED_PATHS"]
+        self.drive = None
+
+    def __enter__(self):
+        if not self.wanted:
+            return ROOT
+        used = set(os.listdrives()) if hasattr(os, "listdrives") else set()
+        for letter in "ZYXWVUTSRQPONMLKJIHGFE":
+            drive = "%s:" % letter
+            if "%s\\" % drive in used or os.path.exists(drive + "\\"):
+                continue
+            if subprocess.run(["subst", drive, str(ROOT)], capture_output=True).returncode == 0:
+                self.drive = drive
+                return Path(drive + "\\")
+        print("convert: no free drive letter for a short path, using %s" % ROOT)
+        return ROOT
+
+    def __exit__(self, *exc):
+        if self.drive:
+            subprocess.run(["subst", self.drive, "/D"], capture_output=True)
+        return False
+
+
+def short_entry(entry, alias):
+    """entry (possibly a \\\\?\\ extended path under ROOT) seen through alias."""
+    if alias == ROOT:
+        return entry
+    return alias / Path(entry).relative_to(spaces.extended_path(ROOT))
+
+
 def convert(mission_dir, cfg, ingester, ver, sp):
-    env = dict(os.environ)
-    env["PYTHONPATH"] = os.pathsep.join(
-        [str(ROOT / "pylib" / "xml_nodes" / ver), str(CONVERTERS)]
-    )
     before = outspace_citations(sp)
     results = []  # (entry, unit, ok, detail)
-    spaces.expand_zips(sp)  # INBOX/*.zip -> TMPSPACE/STAGE_<stem>/
-    # a zip still sitting in INBOX failed to unpack: count it, do not hide it
-    if not spaces.zip_is_native(sp) and sp["INBOX"].is_dir():
-        for zp in sorted(sp["INBOX"].glob("*")):
-            if zp.is_file() and zp.suffix.lower() == ".zip":
-                results.append((zp, None, False, "unzip failed, left in INBOX"))
+    spaces.expand_zips(sp)  # INBOX/*.zip|.tar.gz|.tgz -> TMPSPACE/STAGE_<n>/
+    # an archive still sitting in INBOX failed to unpack: count it, do not hide it
+    for zp in spaces.inbox_archives(sp):
+        results.append((zp, None, False, "unzip failed, left in INBOX"))
     entries = spaces.find_entries(sp)
     if not entries:
         print("convert: no entry files found in %s or %s\\STAGE_*"
               % (sp["INBOX"], sp["TMPSPACE"]))
-    for entry, root in entries:
-        print("convert: %s" % entry)
-        proc = subprocess.run(
-            [sys.executable, str(mission_dir / ingester), "-c", str(mission_dir / cfg), "--single", str(entry)],
-            cwd=str(ROOT), env=env, capture_output=True, text=True,
-            encoding="utf-8", errors="replace",
-        )
-        ok = proc.returncode == 0
-        detail = "rc=%s" % proc.returncode
-        if not ok:
-            tail = (proc.stdout or "").strip().splitlines()[-12:]
-            print("  FAILED (rc=%s); converter output tail:" % proc.returncode)
-            for line in tail:
-                print("  | %s" % line)
-        results.append((entry, spaces.containing_unit(entry, root), ok, detail))
+    with short_root(sp) as alias:
+        for entry, root in entries:
+            print("convert: %s" % entry)
+            proc = run_ingester(alias, mission_dir, cfg, ingester, ver, short_entry(entry, alias))
+            ok = proc.returncode == 0
+            detail = "rc=%s" % proc.returncode
+            if not ok:
+                tail = (proc.stdout or "").strip().splitlines()[-12:]
+                print("  FAILED (rc=%s); converter output tail:" % proc.returncode)
+                for line in tail:
+                    print("  | %s" % line)
+            unit = spaces.containing_unit(entry, root)
+            if unit is None and native_archive(entry, sp):
+                unit = entry  # the archive itself is the native unit
+            results.append((entry, unit, ok, detail))
     after = outspace_citations(sp)
     for i, (entry, unit, ok, detail) in enumerate(results):
-        if ok and entry.name not in after:
+        # the citation is the entry file name, or its folder name when the
+        # entry name is not unique (RADARSAT-2 product.xml)
+        if ok and entry.name not in after and entry.parent.name not in after:
             results[i] = (entry, unit, False, "rc=0 but no JSON with citation %s in OUTSPACE" % entry.name)
     new = [c for c in after if c not in before]
     print("convert: %d entries, %d ok, %d new JSON in OUTSPACE"
           % (len(results), sum(1 for r in results if r[2]), len(new)))
     return results
+
+
+def run_ingester(alias, mission_dir, cfg, ingester, ver, entry):
+    # every path the ingester sees goes through alias (cwd included): its
+    # relative spaces resolve under the short alias, not under ROOT
+    mission = alias / mission_dir.relative_to(ROOT)
+    env = dict(os.environ)
+    env["PYTHONPATH"] = os.pathsep.join(
+        [str(alias / "pylib" / "xml_nodes" / ver), str(alias / "pylib" / "converters")]
+    )
+    return subprocess.run(
+        [sys.executable, str(mission / ingester), "-c", str(mission / cfg), "--single", str(entry)],
+        cwd=str(alias), env=env, capture_output=True, text=True,
+        encoding="utf-8", errors="replace",
+    )
 
 
 def package(mission_dir, packager, sp):

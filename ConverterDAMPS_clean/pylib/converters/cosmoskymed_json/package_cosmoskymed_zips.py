@@ -80,7 +80,7 @@ def package_one(mf):
         out.name, native_id, ptype, browse.name))
     with zipfile.ZipFile(out, "w", zipfile.ZIP_STORED, allowZip64=True) as zf:
         zf.write(mf, "%s.JSON" % product)
-        zf.write(browse, "preview/overviews/%s.PNG" % product)
+        zf.write(browse, "previews/overviews/%s.PNG" % product)
         add_tree(zf, native, "measurements")
     print("   done  %.1f MB" % (out.stat().st_size / 1e6))
     return native

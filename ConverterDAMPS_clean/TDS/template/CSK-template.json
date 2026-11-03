@@ -5,11 +5,26 @@
     "type": "Polygon",
     "coordinates": [
       [
-        [-66.44291264, -24.15261009],
-        [-66.44136086, -24.23036597],
-        [-66.36391186, -24.22904374],
-        [-66.36551048, -24.15129263],
-        [-66.44291264, -24.15261009]
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
       ]
     ]
   },
@@ -33,20 +48,20 @@
             "beginningDateTime": "2017-04-24T13:49:11.806Z",
             "endingDateTime": "2017-04-24T13:50:06.806Z",
             "acquisitionType": "NOMINAL",
-            "operationalMode": "HIM",
+            "operationalMode": "HI",
             "rangeResolution": 23.0,
             "azimuthResolution": 49.0,
-            "resolution": 49.0,
+            "resolution": 3.0,
             "wavelengths": [
               {
-                "spectralRange": "X-Band",
-                "discreteWavelength": 0.0312284,
-                "startWavelength": 0.028,
-                "stopWavelength": 0.052
+                "spectralRange": "X",
+                "discreteWavelengths": [
+                  0.0312284
+                ]
               }
             ],
             "polarisationMode": "S",
-            "polarisationChannel": "HH",
+            "polarisationChannels": "HH",
             "orbitNumber": 355,
             "orbitDirection": "ASCENDING",
             "acquisitionAngles": {
@@ -125,7 +140,7 @@
       ],
       "previews": [
         {
-          "href": "/preview/overviews/CS__OPER_L1ASMU_SCS_20170424T134911_20170424T135006_0001.PNG",
+          "href": "/previews/overviews/CS__OPER_L1ASMU_SCS_20170424T134911_20170424T135006_0001.PNG",
           "type": "image/png",
           "title": "Preview Image",
           "category": "OVERVIEW"

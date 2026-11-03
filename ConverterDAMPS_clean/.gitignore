@@ -15,3 +15,6 @@ _validation/*.json
 # Eccezione: TDS/template/ contiene i template di riferimento letti dai test.
 TDS/*
 !TDS/template/
+
+# Cartelle di build in-tree di pip (pylib/eoSip_converter/pyproject.toml)
+pylib/eoSip_converter/b/

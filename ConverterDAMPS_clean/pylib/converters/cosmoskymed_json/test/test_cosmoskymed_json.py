@@ -124,16 +124,14 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert acq["instrument"]["instrumentShortName"] == "SAR-2000"
     assert acq["instrument"]["sensorType"] == "RADAR"
     assert par["acquisitionType"] == "NOMINAL"
-    assert par["operationalMode"] == "HIM"
+    assert par["operationalMode"] == "HI"
     assert par["rangeResolution"] == 5.0
     assert par["azimuthResolution"] == 5.0
-    assert par["resolution"] == 5.0
-    assert par["wavelengths"][0] == {"spectralRange": "X-Band",
-                                     "discreteWavelength": 0.0312284,
-                                     "startWavelength": 0.028,
-                                     "stopWavelength": 0.052}
+    assert par["resolution"] == 3.0
+    assert par["wavelengths"] == [{"spectralRange": "X",
+                                   "discreteWavelengths": [0.0312284]}]
     assert par["polarisationMode"] == "S"
-    assert par["polarisationChannel"] == "HH"
+    assert par["polarisationChannels"] == "HH"
     assert par["orbitNumber"] == 53764
     assert par["orbitDirection"] == "DESCENDING"
     assert par["acquisitionAngles"]["incidenceAngle"] == pytest.approx(26.601576)
@@ -155,7 +153,7 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert links["measurements"][0]["type"] == "application/vnd.hdfgroup.hdf5"
     assert links["measurements"][0]["title"] == "Native EO Product"
     assert links["measurements"][0]["category"] == "DATA"
-    assert links["previews"][0]["href"] == "/preview/overviews/%s.PNG" % HIM_EO_NAME
+    assert links["previews"][0]["href"] == "/previews/overviews/%s.PNG" % HIM_EO_NAME
     assert links["previews"][0]["type"] == "image/png"
     assert links["previews"][0]["title"] == "Preview Image"
     assert links["previews"][0]["category"] == "OVERVIEW"
@@ -169,13 +167,13 @@ def test_dual_polarisation_and_level_1a(tmp_path):
 
     props = feature["properties"]
     par = props["acquisitionInformation"][0]["acquisitionParameters"][0]
-    assert par["operationalMode"] == "SPP"
+    assert par["operationalMode"] == "PP"
     assert par["polarisationMode"] == "D"
-    assert par["polarisationChannel"] == "HH,VV"
+    assert par["polarisationChannels"] == "HH, VV"
     assert par["rangeResolution"] == 20.0
     assert par["azimuthResolution"] == 15.0
     # single figure: worst of the two directions
-    assert par["resolution"] == 20.0
+    assert par["resolution"] == 15.0
     assert props["acquisitionInformation"][0]["platform"]["platformShortName"] == "COSMO-SkyMed-4"
     assert props["productInformation"]["productType"] == "L1ASMU_SCS"
     assert props["productInformation"]["productType"] in ALLOWED_PRODUCT_TYPES
@@ -199,13 +197,13 @@ def test_geotiff_tgz_delivery_scansar_level_1c(tmp_path):
     assert par["operationalMode"] == "SCW"
     # four subswaths, all HH: one DISTINCT channel, so single polarisation
     assert par["polarisationMode"] == "S"
-    assert par["polarisationChannel"] == "HH"
+    assert par["polarisationChannels"] == "HH"
     assert par["rangeResolution"] == 30.0
     assert par["azimuthResolution"] == 30.0
     assert par["orbitNumber"] == 55911
     assert par["orbitDirection"] == "DESCENDING"
     assert par["acquisitionAngles"]["incidenceAngle"] == pytest.approx(30.409467)
-    assert par["wavelengths"][0]["discreteWavelength"] == 0.031228
+    assert par["wavelengths"][0]["discreteWavelengths"] == [0.0312284]
 
     pinfo = props["productInformation"]
     assert pinfo["productType"] == "L1CSC__GEC"
@@ -259,7 +257,7 @@ def test_typecode_map_is_exactly_the_allowed_product_types():
     families = set(product_cosmoskymed.MODE_FAMILY.values())
     natives = set(product_cosmoskymed.LEVEL_MAP)
 
-    assert modes == {"HIM", "SPP", "SCW", "SCH"}
+    assert modes == {"HI", "PP", "SCW", "SCH"}
     assert families == {"SM", "SC"}
     # every mode/level combination maps, and only to an allowed type
     assert set(product_cosmoskymed.TYPECODE_MAP) == {
@@ -306,3 +304,15 @@ def test_only_json_written_to_output_dir(tmp_path):
     written = [p.name for p in out.iterdir()]
     assert written == ["%s.JSON" % HIM_EO_NAME], written
     assert not any(n.upper().endswith((".XML", ".ZIP")) for n in written), written
+
+
+def test_polarisation_channels_schema_values():
+    """Native channel order is free; the manifest uses the schema's order."""
+    from cosmoskymed_json.product_cosmoskymed import polarisation_channels
+    assert polarisation_channels(["HH"]) == "HH"
+    assert polarisation_channels(["VV", "HH"]) == "HH, VV"
+    assert polarisation_channels(["HV", "HH"]) == "HH, HV"
+    assert polarisation_channels(["VH", "VV"]) == "VH, VV"
+    assert polarisation_channels(["VV", "VH", "HV", "HH"]) == "HH, HV, VH, VV"
+    with pytest.raises(Exception):
+        polarisation_channels(["HH", "VV", "HV"])

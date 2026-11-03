@@ -108,11 +108,52 @@ def build(*layers, template_path=TEMPLATE_PATH):
     return feature
 
 
+# EOPF-EOS schema thesaurus link-types: the only media types a link may carry
+LINK_TYPES = frozenset((
+    "image/png",
+    "image/jpeg",
+    "image/tiff; application=geotiff; profile=cloud-optimized",
+    "text/csv",
+    "application/geo+json",
+    "image/tiff",
+    "application/vnd.hdfgroup.hdf4",
+    "application/vnd.hdfgroup.hdf5",
+    "application/vnd.google-earth.kml+xml",
+    "application/vnd.google-earth.kmz",
+    "application/netcdf",
+    "application/pdf",
+    "application/yaml",
+    "application/xml",
+    "application/vnd.zarr",
+    "application/zip",
+    "text/html",
+    "application/json",
+    "text/plain",
+    "application/octet-stream",
+))
+
+
+def bad_link_types(feature):
+    """[(path, type)] of the links whose type the schema does not allow."""
+    links = feature.get("properties", {}).get("links", {})
+    bad = []
+    for group, entries in sorted(links.items()):
+        for i, link in enumerate(entries if isinstance(entries, list) else []):
+            kind = link.get("type") if isinstance(link, dict) else None
+            if kind is not None and kind not in LINK_TYPES:
+                bad.append(("$.properties.links.%s[%d].type" % (group, i), kind))
+    return bad
+
+
 def validate(feature):
     leftovers = find_placeholders(feature)
     if leftovers:
         raise ValueError("unfilled template placeholders: %s"
                          % "; ".join("%s = %s" % (p, v) for p, v in leftovers))
+    bad = bad_link_types(feature)
+    if bad:
+        raise ValueError("link media types not in the schema link-types: %s"
+                         % "; ".join("%s = %s" % (p, v) for p, v in bad))
     return True
 
 

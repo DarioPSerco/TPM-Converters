@@ -183,7 +183,7 @@ def test_tandemx_spotlight_mgd(tmp_path):
     assert props["acquisitionInformation"][0]["instrument"]["instrumentShortName"] == "TOR"
     assert acq["orbitNumber"] == 61648
     assert acq["resolution"] == 3.909
-    assert props["links"]["measurements"][0]["type"] == "image/tiff; application=geotiff"
+    assert props["links"]["measurements"][0]["type"] == "image/tiff"
 
 
 @pytest.mark.parametrize("xml_path, typecode, epsg, direction", [
@@ -231,3 +231,17 @@ def test_dual_polarisation(tmp_path):
     prod.extractMetadata(met, _ProcessInfoStub(str(tmp_path)))
     assert met.getMetadataValue(M.METADATA_POLARISATION_MODE) == "D"
     assert met.getMetadataValue(M.METADATA_POLARISATION_CHANNELS) == "HH, VV"
+
+
+def test_link_media_type_outside_schema_is_rejected():
+    """The common validate refuses a link type the schema link-types lack."""
+    from common import json_template
+    feature = {"properties": {"links": {
+        "measurements": [{"href": "/measurements/x.tif",
+                          "type": "image/tiff; application=geotiff"}],
+        "previews": [{"href": "/previews/overviews/x.PNG", "type": "image/png"}],
+    }}}
+    with pytest.raises(ValueError, match="link-types"):
+        json_template.validate(feature)
+    feature["properties"]["links"]["measurements"][0]["type"] = "image/tiff"
+    assert json_template.validate(feature)

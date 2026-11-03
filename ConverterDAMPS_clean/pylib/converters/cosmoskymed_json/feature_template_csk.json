@@ -29,12 +29,10 @@
         "resolution": "<resolution (number)>",
         "wavelengths": [{
           "spectralRange": "<spectralRange>",
-          "discreteWavelength": "<discreteWavelength (number)>",
-          "startWavelength": "<startWavelength (number)>",
-          "stopWavelength": "<stopWavelength (number)>"
+          "discreteWavelengths": "<discreteWavelengths (array of number)>"
         }],
         "polarisationMode": "<polarisationMode>",
-        "polarisationChannel": "<polarisationChannel>",
+        "polarisationChannels": "<polarisationChannels>",
         "orbitNumber": "<orbitNumber (number)>",
         "orbitDirection": "<orbitDirection>",
         "acquisitionAngles": {
@@ -97,7 +95,7 @@
       ],
       "previews": [
         {
-          "href": "/preview/overviews/<product id>.PNG",
+          "href": "/previews/overviews/<product id>.PNG",
           "type": "image/png",
           "title": "Preview Image",
           "category": "OVERVIEW"

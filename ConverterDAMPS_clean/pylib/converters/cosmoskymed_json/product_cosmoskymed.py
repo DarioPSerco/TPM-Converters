@@ -67,15 +67,39 @@ PROCESSED_LEVEL_CODE = 'processed_level_code'
 
 # instrument mode: native Acquisition Mode -> operationalMode (spec Table 10)
 MODE_MAP = {
-    'HIMAGE': 'HIM',
-    'PINGPONG': 'SPP',
+    'HIMAGE': 'HI',
+    'PINGPONG': 'PP',
     'WIDEREGION': 'SCW',
     'HUGEREGION': 'SCH',
 }
 
+# polarisationChannels values the EOPF-EOS schema accepts (", " separated,
+# fixed channel order): the native channels are matched as a set
+ALLOWED_POLARISATION_CHANNELS = (
+    "HH", "HV", "VH", "VV",
+    "HH, VV", "HH, VH", "HH, HV", "VH, VV", "VH, HV", "VV, HV", "VV, VH",
+    "HV, VH",
+    "HH, HV, VH, VV",
+)
+
+
+def polarisation_channels(channels):
+    """Native channel list -> the schema value with the same channels."""
+    wanted = set(channels)
+    for value in ALLOWED_POLARISATION_CHANNELS:
+        allowed = value.split(", ")
+        if len(allowed) == len(channels) and set(allowed) == wanted:
+            return value
+    raise Exception("polarisation channels %s not allowed by the schema"
+                    % ",".join(channels))
+
+
 # instrument mode -> product type family used by the spec type codes
 # (the STRIPMAP modes share SM, the SCANSAR modes share SC)
-MODE_FAMILY = {'HIM': 'SM', 'SPP': 'SM', 'SCW': 'SC', 'SCH': 'SC'}
+MODE_FAMILY = {'HI': 'SM', 'PP': 'SM', 'SCW': 'SC', 'SCH': 'SC'}
+
+# operationalMode -> resolution (spec Table 11, fixed per mode)
+MODE_RESOLUTION = {'HI': 3.0, 'PP': 15.0, 'SCW': 30.0, 'SCH': 100.0}
 
 # native product type -> EOPF-EOS processing level / processedLevel code
 LEVEL_MAP = {
@@ -505,7 +529,7 @@ class Product_CosmoSkymed(Product_Directory):
         met.setMetadataPair(metadata.METADATA_POLARISATION_MODE,
                             'S' if len(self.polarisations) == 1 else 'D')
         met.setMetadataPair(metadata.METADATA_POLARISATION_CHANNELS,
-                            ",".join(self.polarisations))
+                            polarisation_channels(self.polarisations))
 
         # look direction (not in the manifest; kept for the conversion log)
         met.setMetadataPair(metadata.METADATA_ANTENNA_LOOK_DIRECTION,
@@ -534,10 +558,12 @@ class Product_CosmoSkymed(Product_Directory):
         if range_resolution <= 0 or azimuth_resolution <= 0:
             raise Exception("invalid resolution: range=%s azimuth=%s"
                             % (range_resolution, azimuth_resolution))
-        resolution = round(max(range_resolution, azimuth_resolution), 3)
         met.addLocalAttribute("rangeResolution", round(range_resolution, 3))
         met.addLocalAttribute("azimuthResolution", round(azimuth_resolution, 3))
-        # single figure the spec also asks for: worst of the two directions
+        # single figure the spec also asks for: fixed per operationalMode
+        # (Table 11), not derived from the two measured resolutions
+        resolution = MODE_RESOLUTION[met.getMetadataValue(
+            metadata.METADATA_SENSOR_OPERATIONAL_MODE)]
         met.addLocalAttribute("resolution", resolution)
         met.setMetadataPair(metadata.METADATA_RESOLUTION, resolution)
 

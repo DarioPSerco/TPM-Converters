@@ -16,10 +16,12 @@ Le missioni supportate sono:
 - ICEYE: `iceye`
 - Pleiades: `pleiades`
 - Pleiades NEO: `pneo`
+- GEOSAT-1 / GEOSAT-2 (ex Deimos): `geosat`
 - COSMO-SkyMed: `cosmoskymed`
 - PlanetScope: `planetscope`
 - SkySat: `skysat`
 - Beijing-1, NigeriaSat-1, UK-DMC-1: `dmc`
+- RADARSAT-2: `radarsat2` (in `INBOX` va la cartella prodotto con `product.xml`, o il suo ZIP)
 
 ## 2. Prerequisiti
 
@@ -96,7 +98,7 @@ Il dataset può essere copiato in `INBOX` come cartella estratta oppure come arc
 
 Un `.zip` posto direttamente in `INBOX` viene estratto dal runner all'inizio dello stage `convert`, in `TMPSPACE\STAGE_<nome zip>\`. Se lo ZIP contiene una sola cartella, quella cartella è il dataset; altrimenti i file vengono raccolti in `STAGE_<nome zip>\<nome zip>\`. A fine run in `DONESPACE` finisce solo il dataset estratto: l'archivio originale viene cancellato. Se la conversione o il packaging falliscono, l'archivio originale viene invece spostato in `FAILEDSPACE` insieme al dataset estratto. Uno ZIP corrotto resta in `INBOX` e il runner stampa `unzip: ... FAILED`. Se lo ZIP estratto non contiene nessun file di ingresso (per esempio uno ZIP che contiene altri ZIP), il dataset non viene convertito né segnalato come failure: resta in `TMPSPACE\STAGE_<nome zip>\` e va controllato a mano.
 
-PLEIADES e PNEO usano già lo ZIP come formato nativo: per queste missioni lo ZIP non viene estratto.
+PLEIADES, PNEO e GEOSAT usano già lo ZIP come formato nativo: per queste missioni lo ZIP non viene estratto.
 
 Copiare l'intera cartella del prodotto (o il suo ZIP), mantenendo i file nativi e i file metadata.
 
@@ -145,10 +147,12 @@ Sostituire `geoeye1` con la missione desiderata:
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py iceye
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py pleiades
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py pneo
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py geosat
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py cosmoskymed
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py planetscope
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py skysat
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py dmc
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py radarsat2
 ```
 
 È possibile usare anche `py` se l'ambiente globale contiene tutte le dipendenze:

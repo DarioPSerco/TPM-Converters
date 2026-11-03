@@ -133,8 +133,13 @@ class ingester_terrasarx(ingester.Ingester):
     # folder is the native product
     #
     def createSourceProduct(self, processInfo):
+        native_path = processInfo.srcPath
         processInfo.srcPath = processInfo.srcPath.replace('\\', '/')
-        product = product_terrasarx.Product_TerraSARX(processInfo.srcPath)
+        # a \\?\ extended path (cfg [Paths] WINDOWS_EXTENDED_PATHS) stops
+        # working once its backslashes become slashes: the product keeps it
+        if not native_path.startswith('\\\\?\\'):
+            native_path = processInfo.srcPath
+        product = product_terrasarx.Product_TerraSARX(native_path)
         if self.test_mode:
             product.setDebug(1)
         processInfo.srcProduct = product

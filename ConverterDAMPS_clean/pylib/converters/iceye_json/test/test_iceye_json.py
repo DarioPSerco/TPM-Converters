@@ -122,7 +122,7 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert lineage["source"][0]["processedLevel"]["code"] == "L1A"
     meas = props["links"]["measurements"][0]
     assert meas["href"] == "/measurements/SYNTH_ICEYE_X1_SLC_SM_20160501T144606.h5"
-    assert meas["type"] == "application/x-hdf5"
+    assert meas["type"] == "application/vnd.hdfgroup.hdf5"
     assert meas["title"] == "Native EO Product"
     assert props["links"]["previews"][0]["title"] == "Preview Image"
 

@@ -115,7 +115,7 @@ def test_wide_sgf_values(tmp_path):
     assert acq["orbitNumber"] == 13866
     assert acq["orbitDirection"] == "ASCENDING"
     assert acq["acquisitionType"] == "NOMINAL"
-    assert acq["wavelengths"] == [{"spectralRange": "C", "discreteWavelength": 0.0565646}]
+    assert acq["wavelengths"] == [{"spectralRange": "C", "discreteWavelengths": [0.0565646]}]
 
     platform = props["acquisitionInformation"][0]["platform"]
     instrument = props["acquisitionInformation"][0]["instrument"]
