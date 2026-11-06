@@ -12,9 +12,9 @@ GEOSAT PRODUCTS" 1.01 through its own placeholder template
 Spec readings encoded here (tables over examples, as for PNEO):
 - lineage: ONE process step, described "GEOSAT processor" (Table 20). Its
   source follows Table 20 (``sourceCitation.title`` + ``processedLevel.code``),
-  not the examples' ``citation``. processingLevel (Table 19) and
-  processedLevel code are values of the allowed list (L1 / L2 / L1B / L1C /
-  L1D / L2T / SYN); the examples' ``1`` / ``1B`` are not.
+  not the examples' ``citation``. processingLevel is a value of the allowed
+  list (0 / 1 / 1A / 1B / 1C / 1D / 2 / 2A / 2B / 2C / 3 / SYN, the
+  examples' bare codes); processedLevel code stays L-prefixed (Table 20).
 - the spec document goes in ``reference`` and the converter in
   ``processingInformation.softwareReference``, as in the examples (Table 20
   puts both under ``softwareReference``).

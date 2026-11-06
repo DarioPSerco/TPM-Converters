@@ -69,12 +69,13 @@ PRODUCT_TYPES = {
 # stereo pairs (spec Table 3), whatever the native level
 STEREO_TYPES = {'PAN': 'SYNSTERPAN', 'PSH': 'SYNSTERPSH'}
 
-# native level -> (processingLevel (spec Table 19), native processedLevel
-# code (spec Table 20)), both from the allowed list L1 / L2 / L1B / L1C /
-# L1D / L2T / SYN. GEOSAT-1 1R / 1T are level 1 products (L1_*), 2T the
-# level 2 one (L2_*) whose native level is L2T.
-LEVELS = {'1R': ('L1', 'L1'), '1T': ('L1', 'L1'), '2T': ('L2', 'L2T'),
-          '1B': ('L1B', 'L1B'), '1C': ('L1C', 'L1C'), '1D': ('L1D', 'L1D')}
+# native level -> (processingLevel (allowed values 0 / 1 / 1A / 1B / 1C /
+# 1D / 2 / 2A / 2B / 2C / 3 / SYN, bare codes without the L prefix), native
+# processedLevel code (spec Table 20, L-prefixed)). GEOSAT-1 1R / 1T are
+# level 1 products (L1_*), 2T the level 2 one (L2_*) whose native level is
+# L2T.
+LEVELS = {'1R': ('1', 'L1'), '1T': ('1', 'L1'), '2T': ('2', 'L2T'),
+          '1B': ('1B', 'L1B'), '1C': ('1C', 'L1C'), '1D': ('1D', 'L1D')}
 STEREO_LEVEL = 'SYN'
 # levels whose product is orthorectified, so geo-referenced: the CRS is
 # mandatory (spec Table 18)
@@ -139,6 +140,24 @@ def normalise_utc(value):
         raise Exception("unexpected GEOSAT datetime format: '%s'" % value)
     date, time, frac = match.groups()
     return "%sT%s.%sZ" % (date, time, (frac or "").ljust(3, "0")[:3])
+
+
+def production_utc(value):
+    """DATASET_PRODUCTION_DATE -> RFC 3339 UTC. GEOSAT-1 deliveries give the
+    date only: the time is not known and is written as midnight. Acquisition
+    times stay strict (normalise_utc)."""
+    if value is not None and re.match(r"^\d{4}-\d{2}-\d{2}$", str(value).strip()):
+        value = "%sT00:00:00" % str(value).strip()
+    return normalise_utc(value)
+
+
+def mission_index_agrees(mission_index, mission, platform):
+    """MISSION_INDEX against the platform of the product name. GEOSAT-2
+    deliveries name their mission 'Deimos 2' and number it 0001 within it."""
+    index = mission_index.strip().lstrip('0')
+    if index == platform:
+        return True
+    return platform == '2' and index == '1' and 'DEIMOS 2' in (mission or '').upper()
 
 
 def wavelengths(kind):
@@ -390,7 +409,7 @@ class Product_Geosat(Product_Directory):
             raise Exception("level %s of the name and PRODUCT_TYPE %s disagree in %s"
                             % (level, _text(root, 'Production/PRODUCT_TYPE'), name))
         mission_index = _text(scene, 'MISSION_INDEX')
-        if mission_index is not None and mission_index.lstrip('0') != platform:
+        if mission_index is not None and not mission_index_agrees(mission_index, _text(scene, 'MISSION'), platform):
             raise Exception("MISSION_INDEX %s and name platform DE%s disagree in %s"
                             % (mission_index, platform, name))
 
@@ -409,7 +428,7 @@ class Product_Geosat(Product_Directory):
         # else the nominal one of the product type (Tables 2 / 3)
         resolution = _float(_text(scene, 'PIXEL_RESOLUTION_X')) or _float(_text(scene, 'THEORETICAL_RESOLUTION'))
 
-        production = normalise_utc(_text(root, 'Production/DATASET_PRODUCTION_DATE'))
+        production = production_utc(_text(root, 'Production/DATASET_PRODUCTION_DATE'))
         if production is None:
             raise Exception("no Production/DATASET_PRODUCTION_DATE in %s" % name)
 

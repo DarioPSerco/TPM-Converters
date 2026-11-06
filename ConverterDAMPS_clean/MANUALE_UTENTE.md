@@ -22,6 +22,7 @@ Le missioni supportate sono:
 - SkySat: `skysat`
 - Beijing-1, NigeriaSat-1, UK-DMC-1: `dmc`
 - RADARSAT-2: `radarsat2` (in `INBOX` va la cartella prodotto con `product.xml`, o il suo ZIP)
+- RapidEye: `rapideye`
 
 ## 2. Prerequisiti
 
@@ -116,6 +117,7 @@ Esempi di file di ingresso:
 | PlanetScope | `<item id>_metadata.json` |
 | SkySat | `<item id>_metadata.json` |
 | Beijing-1 / NigeriaSat-1 / UK-DMC-1 | `<dataset>.dim` |
+| RapidEye | `<prodotto>_metadata.xml` |
 
 Esempio GeoEye:
 
@@ -153,6 +155,7 @@ Sostituire `geoeye1` con la missione desiderata:
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py skysat
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py dmc
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py radarsat2
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py rapideye
 ```
 
 È possibile usare anche `py` se l'ambiente globale contiene tutte le dipendenze:
@@ -661,3 +664,52 @@ nomi assegnati sono registrati in
 `TDS\DMC\dmc_names.json`: un prodotto convertito di nuovo riprende il suo
 nome. Il file va conservato insieme ai risultati: se viene cancellato, un
 nome gia' consegnato puo' essere riassegnato.
+
+## 17. RapidEye
+
+Il prodotto nativo RapidEye e' descritto dal file metadata
+`<prodotto>_metadata.xml`, che e' il file d'ingresso. Fanno parte del prodotto
+tutti i file il cui nome inizia con `<prodotto>`, quindi una cartella di
+consegna puo' contenerne piu' di uno. La cartella va copiata dentro
+`TDS\RAPIDEYE\INBOX`:
+
+```text
+TDS\RAPIDEYE\INBOX\consegna_re\
+  2017-04-24T134911_RE1_3A-NAC_12345678_123456.tif
+  2017-04-24T134911_RE1_3A-NAC_12345678_123456_metadata.xml
+  2017-04-24T134911_RE1_3A-NAC_12345678_123456_udm.tif
+  2012-03-05T101530_RE5_1B-NAC_22334455_778899_band1.ntf  (... band5.ntf)
+  2012-03-05T101530_RE5_1B-NAC_22334455_778899_browse.tif
+  2012-03-05T101530_RE5_1B-NAC_22334455_778899_metadata.xml
+```
+
+Avvio, dalla cartella `ConverterDAMPS_clean`:
+
+```powershell
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py rapideye
+```
+
+Risultati:
+
+- `TDS\RAPIDEYE\OUTSPACE\<ID>.JSON`, il manifest;
+- `TDS\RAPIDEYE\OUTSPACE\<ID>.PNG`, l'overview;
+- `TDS\RAPIDEYE\PRODUCTS\<ID>.ZIP`, il delivery, con l'overview in
+  `previews\overviews\`.
+
+Il tipo di prodotto viene dal livello nativo:
+
+| Livello nativo | Tipo prodotto | Immagine | Bande |
+|---|---|---|---|
+| `L1B` | `L1BOPT_MS_` | `<prodotto>_band<n>.ntf`, una per banda | 5 |
+| `L3A` | `L3_ORT_MS_` | `<prodotto>.tif` | 3 o 5 |
+
+Limiti noti:
+
+- Un prodotto L1B senza `<prodotto>_browse.tif` fallisce: l'overview non si
+  puo' generare dai file NITF.
+- Nessun prodotto RapidEye reale e' stato ancora convertito: la specializzazione
+  non descrive il formato nativo e converter e test sono verificati solo su
+  fixture sintetiche (vedere
+  `rapideye_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`). Al primo prodotto
+  reale controllare il manifest e, se la conversione fallisce per un metadato
+  mancante, segnalare l'errore.

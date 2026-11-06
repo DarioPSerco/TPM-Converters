@@ -20,7 +20,7 @@ writes to a flat `log/` or the repo root.
 
 | dir | role |
 |---|---|
-| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,geosat,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc,radarsat2}_json/` | the fourteen converters (code + `ingest_*.cfg` + packager + tests) |
+| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,geosat,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc,radarsat2,rapideye}_json/` | the fifteen converters (code + `ingest_*.cfg` + packager + tests) |
 | `pylib/converters/common/` | mission-agnostic JSON template engine + `feature_template.json` + `spaces.py` |
 | `pylib/converters/run_mission.py` | one-command runner: convert + package + archive per mission |
 | `pylib/eoSip_converter/` | base ingester package — **pruned**: `data/shapefile/` (186 MB) and `proj/` (5 MB) removed, never touched in any trace |
@@ -49,7 +49,7 @@ native products into `TDS/<MISSION>/INBOX/` first (a raw `.zip` in INBOX is
 silently skipped), then:
 
 ```bash
-.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|geosat|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc|radarsat2>
+.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|geosat|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc|radarsat2|rapideye>
 ```
 
 The runner converts every INBOX product, packages the delivery ZIPs into
@@ -69,7 +69,7 @@ PYTHONPATH="pylib/xml_nodes/v101;pylib/converters" \
 
 | converter                                                | xml_nodes version on PYTHONPATH |
 |----------------------------------------------------------|---------------------------------|
-| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json, radarsat2_json | `pylib/xml_nodes/v101` |
+| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json, radarsat2_json, rapideye_json | `pylib/xml_nodes/v101` |
 | pleiades_json, pneo_json, geosat_json                    | `pylib/xml_nodes/v100`          |
 
 `v200` is used only by the geoeye1/worldview/quickbird test conftests.
@@ -88,9 +88,9 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-293 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, GEOSAT 42, CSK 12, PSC 19, RS1 13,
-TSX 19, SSC 27, DMC 60, RS2 39). The
-iceye/pleiades/pneo/geosat/cosmoskymed/planetscope/skysat/dmc suites read `TDS/template/*.json` via a relative
+328 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, GEOSAT 42, CSK 12, PSC 19, RS1 13,
+TSX 19, SSC 27, DMC 60, RS2 39, RE 35). The
+iceye/pleiades/pneo/geosat/cosmoskymed/planetscope/skysat/dmc/rapideye suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
 ## Delivery-ZIP layout (all packagers)
@@ -516,3 +516,34 @@ Per "EOPF-EOS SPECIALIZATION FOR RADARSAT-2 PRODUCTS" 1.0. Run with
   `radarsat2_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`; also run end to
   end (`run_mission.py radarsat2`, convert + package + move) on the four
   synthetic products.
+
+## RapidEye specifics (`rapideye_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR RAPIDEYE PRODUCTS" 1.01. Run with
+`run_mission.py rapideye`; workspace `TDS/RAPIDEYE/`. Differences worth
+knowing, all in `pylib/converters/rapideye_json/`:
+
+- **Entry file**: the product metadata `<stem>_metadata.xml`
+  (`re:EarthObservation`). The native product is every file named after the
+  stem, so one delivery folder may hold several products.
+- **Product type**: from the XML `eop:productType`, else the file name: `L1B`
+  -> `L1BOPT_MS_` (5 bands, one `<stem>_band<n>.ntf` per band, the first is the
+  measurements link, media type `application/octet-stream`), `L3A` ->
+  `L3_ORT_MS_` (3 or 5 bands, `<stem>.tif`). Any other level is rejected.
+- **Overview**: the native `<stem>_browse.tif`, else rendered from the
+  multiband GeoTIFF. NITF images cannot be rendered, so an L1B product without
+  its browse fails. Stored under `previews/overviews/`.
+- **Manifest shapes chosen where the spec contradicts itself** (tables over
+  the example, full list at the top of `json_emitter.py`): product type
+  `L1BOPT_MS_`, not Table 2's `L1B_OPT_MS`; status `ACQUIRED`, not Table 5's
+  `AQUIRED`; one lineage process step, processedLevel code `L1B`/`L3`;
+  `acrossTrackIncidenceAngle` = native spacecraft view angle, the example's
+  `incidenceAngle` is not written; `discreteWavelengths` band means (657.5 nm,
+  the example says 657); a 3-band product carries the VIS range only.
+  `cloudCover` and `referenceSystemIdentifier` only when available.
+- **Not yet validated on a real product**: the specialization does not describe
+  the native format, so its names and XML are written from memory of the
+  RapidEye documentation; synthetic fixtures only, see
+  `rapideye_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`, which lists what to
+  check first. Also run end to end (`run_mission.py rapideye`, convert +
+  package + move) on the three synthetic products.

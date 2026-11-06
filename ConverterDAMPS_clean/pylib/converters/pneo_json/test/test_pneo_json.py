@@ -183,7 +183,7 @@ def test_multispectral_primary_values(tmp_path):
 
     pinfo = props["productInformation"]
     assert pinfo["productType"] == "L1APRI_MS_"
-    assert pinfo["processingLevel"] == "L1A"
+    assert pinfo["processingLevel"] == "1A"
     assert pinfo["processingDate"] == "2021-05-04T10:12:41.239Z"
     assert pinfo["cloudCover"] == 56.0
     assert "referenceSystemIdentifier" not in pinfo
@@ -230,7 +230,7 @@ def test_product_types(tmp_path, kinds, level, typecode, modes, wavelengths):
     assert pinfo["productType"] == typecode
     assert pinfo["productType"] in product_pneo.PRODUCT_TYPES
     assert eo_name.startswith("PLN_OPER_%s_" % typecode)
-    assert pinfo["processingLevel"] == level
+    assert pinfo["processingLevel"] == level.lstrip("L")
     assert pinfo["resourceLineage"][0]["processStep"][0]["source"][0]["processedLevel"]["code"] == level
     assert [p["operationalMode"] for p in pars] == modes
     assert [p["wavelengths"] for p in pars] == wavelengths

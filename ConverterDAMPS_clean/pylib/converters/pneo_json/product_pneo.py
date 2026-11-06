@@ -23,10 +23,12 @@ PROCESSED_LEVEL_CODE = 'processed_level_code'
 CREATION_TIME = 'creation_time'
 
 # DIMAP DATASET_TYPE -> (product type level part, processingLevel (spec
-# Table 18), native processedLevel code (spec Table 19))
-LEVELS = {'RASTER_SENSOR': ('L1APRI', 'L1A', 'L1A'),
-          'RASTER_PROJECTED': ('L2_PRO', 'L2', 'L2'),
-          'RASTER_ORTHO': ('L3_ORT', 'L3', 'L3')}
+# Table 18, restricted to the eof-eos-schema-strict processing-level-types
+# enum: 0/1/1A/1B/1C/1D/2/2A/2B/2C/3/SYN), native processedLevel code (spec
+# Table 19))
+LEVELS = {'RASTER_SENSOR': ('L1APRI', '1A', 'L1A'),
+          'RASTER_PROJECTED': ('L2_PRO', '2', 'L2'),
+          'RASTER_ORTHO': ('L3_ORT', '3', 'L3')}
 
 # DIMAP SPECTRAL_PROCESSING (before any -FS / -N / -X variant) -> component kind
 SPECTRAL_KINDS = {'P': 'PAN', 'PAN': 'PAN', 'MS': 'MS', 'PMS': 'PSH'}
@@ -248,7 +250,7 @@ class Product_Pneo(Product_Directory):
 
         self.buildTypeCode()
 
-        if self.metadata.getMetadataValue(metadata.METADATA_PROCESSING_LEVEL) != 'L1A':
+        if self.metadata.getMetadataValue(metadata.METADATA_PROCESSING_LEVEL) != '1A':
             # spec Table 17: mandatory for a geo-referenced product
             if first['crs'] is None:
                 raise Exception("geo-referenced product without a CRS: %s" % first['name'])

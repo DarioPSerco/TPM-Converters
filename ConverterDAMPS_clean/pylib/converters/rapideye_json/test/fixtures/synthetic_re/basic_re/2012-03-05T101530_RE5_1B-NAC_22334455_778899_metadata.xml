@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<re:EarthObservation xmlns:re="http://schemas.rapideye.de/products/productMetadata"
+    xmlns:eop="http://earth.esa.int/eop" xmlns:opt="http://earth.esa.int/opt"
+    xmlns:gml="http://www.opengis.net/gml" version="1.2.1">
+  <gml:metaDataProperty>
+    <re:EarthObservationMetaData>
+      <eop:identifier>2012-03-05T101530_RE5_1B-NAC_22334455_778899</eop:identifier>
+      <eop:acquisitionType>NOMINAL</eop:acquisitionType>
+      <eop:productType>L1B</eop:productType>
+      <eop:status>ARCHIVED</eop:status>
+      <eop:archivedIn>
+        <eop:ArchivingInformation>
+          <eop:archivingCenter>Brandenburg</eop:archivingCenter>
+          <eop:archivingDate>2012-03-06T08:30:00Z</eop:archivingDate>
+        </eop:ArchivingInformation>
+      </eop:archivedIn>
+      <re:pixelFormat>16U</re:pixelFormat>
+    </re:EarthObservationMetaData>
+  </gml:metaDataProperty>
+  <gml:validTime>
+    <gml:TimePeriod>
+      <gml:beginPosition>2012-03-05T10:15:30Z</gml:beginPosition>
+      <gml:endPosition>2012-03-05T10:15:42Z</gml:endPosition>
+    </gml:TimePeriod>
+  </gml:validTime>
+  <gml:using>
+    <eop:EarthObservationEquipment>
+      <eop:platform>
+        <eop:Platform>
+          <eop:shortName>RE</eop:shortName>
+          <eop:serialIdentifier>RE-5</eop:serialIdentifier>
+          <eop:orbitType>LEO</eop:orbitType>
+        </eop:Platform>
+      </eop:platform>
+      <eop:instrument>
+        <eop:Instrument>
+          <eop:shortName>MSI</eop:shortName>
+        </eop:Instrument>
+      </eop:instrument>
+      <eop:sensor>
+        <re:Sensor>
+          <eop:sensorType>OPTICAL</eop:sensorType>
+          <eop:resolution uom="m">6.5</eop:resolution>
+          <eop:scanType>PUSHBROOM</eop:scanType>
+        </re:Sensor>
+      </eop:sensor>
+      <eop:acquisitionParameters>
+        <re:Acquisition>
+          <eop:orbitDirection>DESCENDING</eop:orbitDirection>
+          <eop:incidenceAngle uom="deg">8.4</eop:incidenceAngle>
+          <opt:illuminationAzimuthAngle uom="deg">170.0</opt:illuminationAzimuthAngle>
+          <opt:illuminationElevationAngle uom="deg">35.0</opt:illuminationElevationAngle>
+          <re:azimuthAngle uom="deg">101.2</re:azimuthAngle>
+          <re:spaceCraftViewAngle uom="deg">8.1</re:spaceCraftViewAngle>
+          <re:acquisitionDateTime>2012-03-05T10:15:30Z</re:acquisitionDateTime>
+        </re:Acquisition>
+      </eop:acquisitionParameters>
+    </eop:EarthObservationEquipment>
+  </gml:using>
+  <gml:target>
+    <re:Footprint>
+      <re:multiExtentOf>
+        <gml:MultiSurface srsName="EPSG:4326">
+          <gml:surfaceMembers>
+            <gml:Polygon>
+              <gml:outerBoundaryIs>
+                <gml:LinearRing>
+                  <gml:coordinates>9.0,45.0 9.0,45.5 9.5,45.5 9.5,45.0 9.0,45.0</gml:coordinates>
+                </gml:LinearRing>
+              </gml:outerBoundaryIs>
+            </gml:Polygon>
+          </gml:surfaceMembers>
+        </gml:MultiSurface>
+      </re:multiExtentOf>
+    </re:Footprint>
+  </gml:target>
+  <gml:resultOf>
+    <re:EarthObservationResult>
+      <opt:cloudCoverPercentage uom="percentage">12.345</opt:cloudCoverPercentage>
+      <re:unusableDataPercentage uom="percentage">0.0</re:unusableDataPercentage>
+      <eop:product>
+        <re:ProductInformation>
+          <eop:fileName>2012-03-05T101530_RE5_1B-NAC_22334455_778899_band1.ntf</eop:fileName>
+          <re:productFormat>NITF</re:productFormat>
+          <re:numRows>12</re:numRows>
+          <re:numColumns>16</re:numColumns>
+          <re:numBands>5</re:numBands>
+          <re:rowGsd>6.50</re:rowGsd>
+          <re:columnGsd>6.50</re:columnGsd>
+        </re:ProductInformation>
+      </eop:product>
+    </re:EarthObservationResult>
+  </gml:resultOf>
+</re:EarthObservation>

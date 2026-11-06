@@ -9,6 +9,7 @@ pipeline + structure only, NOT value-correctness on real data.
 """
 import io
 import json
+import re
 import zipfile
 from pathlib import Path
 
@@ -203,7 +204,7 @@ def test_geosat2_panchromatic_values(tmp_path):
 
     pinfo = props["productInformation"]
     assert pinfo["productType"] == "L1CORT_PAN"
-    assert pinfo["processingLevel"] == "L1C"
+    assert pinfo["processingLevel"] == "1C"
     assert pinfo["processingDate"] == "2017-04-25T08:12:41.239Z"
     assert pinfo["cloudCover"] == 12.5
     assert pinfo["referenceSystemIdentifier"] == "http://www.opengis.net/def/crs/EPSG/0/32719"
@@ -250,16 +251,16 @@ def test_geosat1_geopositioned_values(tmp_path):
     assert feature["geometry"]["coordinates"] == [RING]
     pinfo = props["productInformation"]
     assert pinfo["productType"] == "L1_GEO_MS_"
-    assert pinfo["processingLevel"] == "L1"
+    assert pinfo["processingLevel"] == "1"
     assert pinfo["referenceSystemIdentifier"] == "http://www.opengis.net/def/crs/EPSG/0/4326"
     assert "cloudCover" not in pinfo
     assert pinfo["resourceLineage"][0]["processStep"][0]["source"][0]["processedLevel"]["code"] == "L1"
 
 
 @pytest.mark.parametrize("level, typecode, processing, code", [
-    ("1R", "L1_GEO_MS_", "L1", "L1"),
-    ("1T", "L1_ORT_MS_", "L1", "L1"),
-    ("2T", "L2_ORT_MS_", "L2", "L2T"),
+    ("1R", "L1_GEO_MS_", "1", "L1"),
+    ("1T", "L1_ORT_MS_", "1", "L1"),
+    ("2T", "L2_ORT_MS_", "2", "L2T"),
 ])
 def test_geosat1_product_types(tmp_path, level, typecode, processing, code):
     prod, met = _extract_de1(tmp_path, level)
@@ -278,13 +279,13 @@ def test_geosat1_without_orbit_direction_leaves_it_out(tmp_path):
 
 
 @pytest.mark.parametrize("mode, level, typecode, opmode, processing, resolution, wl", [
-    ("PAN", "1B", "L1BORTRPAN", "PAN", "L1B", 0.75, PAN_WL),
-    ("PAN", "1C", "L1CORT_PAN", "PAN", "L1C", 0.75, PAN_WL),
-    ("MS4", "1B", "L1BORTRMS_", "MS4B", "L1B", 0.75, MS4_WL),
-    ("MS4", "1C", "L1CORT_MS_", "MS4B", "L1C", 0.75, MS4_WL),
-    ("PSH", "1B", "L1BORTRPSH", "MS4B", "L1B", 0.75, MS4_WL),
-    ("PSH", "1C", "L1CORT_PSH", "MS4B", "L1C", 0.75, MS4_WL),
-    ("PS4", "1D", "L1DORTEPSH", "MS4B", "L1D", 0.75, MS4_WL),
+    ("PAN", "1B", "L1BORTRPAN", "PAN", "1B", 0.75, PAN_WL),
+    ("PAN", "1C", "L1CORT_PAN", "PAN", "1C", 0.75, PAN_WL),
+    ("MS4", "1B", "L1BORTRMS_", "MS4B", "1B", 0.75, MS4_WL),
+    ("MS4", "1C", "L1CORT_MS_", "MS4B", "1C", 0.75, MS4_WL),
+    ("PSH", "1B", "L1BORTRPSH", "MS4B", "1B", 0.75, MS4_WL),
+    ("PSH", "1C", "L1CORT_PSH", "MS4B", "1C", 0.75, MS4_WL),
+    ("PS4", "1D", "L1DORTEPSH", "MS4B", "1D", 0.75, MS4_WL),
 ])
 def test_geosat2_product_types(tmp_path, mode, level, typecode, opmode, processing, resolution, wl):
     _, met, eo_name, feature = _feature(tmp_path, mode, level)
@@ -294,7 +295,7 @@ def test_geosat2_product_types(tmp_path, mode, level, typecode, opmode, processi
     assert pinfo["productType"] == typecode
     assert eo_name.startswith("DE2_OPER_%s_" % typecode)
     assert pinfo["processingLevel"] == processing
-    assert pinfo["resourceLineage"][0]["processStep"][0]["source"][0]["processedLevel"]["code"] == processing
+    assert pinfo["resourceLineage"][0]["processStep"][0]["source"][0]["processedLevel"]["code"] == "L%s" % level
     assert par["operationalMode"] == opmode
     assert par["resolution"] == resolution
     assert par["wavelengths"] == wl
@@ -325,7 +326,7 @@ def test_bundle_two_documents(tmp_path, level, typecode):
     pinfo = feature["properties"]["productInformation"]
     pars = feature["properties"]["acquisitionInformation"][0]["acquisitionParameters"]
     assert pinfo["productType"] == typecode
-    assert pinfo["processingLevel"] == "L%s" % level
+    assert pinfo["processingLevel"] == level
     # the bundle example: two entries, MS first, both operationalMode MS
     assert [p["operationalMode"] for p in pars] == ["MS", "MS"]
     assert [p["wavelengths"] for p in pars] == [MS4_WL, PAN_WL]
@@ -480,6 +481,46 @@ def test_datetime_normalisation():
     assert norm(None) is None
     with pytest.raises(Exception):
         norm("24/04/2017")
+
+
+def _production_date_only(xml):
+    # real GEOSAT-1 deliveries: <DATASET_PRODUCTION_DATE>2016-05-30</...>
+    return re.sub(r"<DATASET_PRODUCTION_DATE>[^<]*<", "<DATASET_PRODUCTION_DATE>2016-05-30<", xml)
+
+
+def test_production_date_without_time_is_midnight_utc(tmp_path):
+    _, met = _extract_de1(tmp_path, edit=_production_date_only)
+    assert met.getMetadataValue(M.METADATA_PROCESSING_TIME) == "2016-05-30T00:00:00.000Z"
+
+
+def test_production_utc_keeps_a_full_datetime():
+    norm = product_geosat.production_utc
+    assert norm("2018-11-19T14:49:46") == "2018-11-19T14:49:46.000Z"
+    assert norm(None) is None
+    with pytest.raises(Exception):
+        norm("30/05/2016")
+
+
+def test_acquisition_time_stays_strict_about_date_only_values():
+    with pytest.raises(Exception):
+        product_geosat.normalise_utc("2016-05-30")
+
+
+def test_deimos2_mission_with_index_0001_is_accepted(tmp_path):
+    # real GEOSAT-2 deliveries: <MISSION>Deimos 2</MISSION> <MISSION_INDEX>0001</MISSION_INDEX>
+    def edit(xml):
+        return (xml.replace("<MISSION>DEIMOS<", "<MISSION>Deimos 2<")
+                .replace("<MISSION_INDEX>2<", "<MISSION_INDEX>0001<"))
+    _, met = _extract(tmp_path, edit=edit)
+    assert met.getMetadataValue(M.METADATA_PLATFORM_ID) == "2"
+
+
+def test_deimos2_mission_does_not_excuse_another_index(tmp_path):
+    def edit(xml):
+        return (xml.replace("<MISSION>DEIMOS<", "<MISSION>Deimos 2<")
+                .replace("<MISSION_INDEX>2<", "<MISSION_INDEX>3<"))
+    with pytest.raises(Exception, match="MISSION_INDEX"):
+        _extract(tmp_path, edit=edit)
 
 
 def test_crs_from_wkt():

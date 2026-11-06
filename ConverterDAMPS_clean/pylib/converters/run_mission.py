@@ -30,6 +30,7 @@ MISSIONS = {
     "skysat": ("skysat_json", "ingest_skysat.cfg", "ingester_skysat.py", "v101", "package_skysat_zips.py"),
     "dmc": ("dmc_json", "ingest_dmc.cfg", "ingester_dmc.py", "v101", "package_dmc_zips.py"),
     "radarsat2": ("radarsat2_json", "ingest_radarsat2.cfg", "ingester_radarsat2.py", "v101", "package_radarsat2_zips.py"),
+    "rapideye": ("rapideye_json", "ingest_rapideye.cfg", "ingester_rapideye.py", "v101", "package_rapideye_zips.py"),
 }
 
 
