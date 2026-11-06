@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC RADARSAT-2 product annotation, NOT real data: see ../../SYNTHETIC_FIXTURE_NOTE.md -->
+<product xmlns="http://www.rsi.ca/rs2/prod/xml/schemas">
+  <productId>PDS_SYNTHETIC</productId>
+  <sourceAttributes>
+    <satellite>RADARSAT-2</satellite>
+    <sensor>SAR</sensor>
+    <beamModeMnemonic>SCWA</beamModeMnemonic>
+    <radarParameters>
+      <acquisitionType>ScanSAR Wide</acquisitionType>
+      <beams>SCWA</beams>
+      <polarizations>VV VH</polarizations>
+      <radarCenterFrequency units="Hz">5.405000454334350e+09</radarCenterFrequency>
+      <antennaPointing>Left</antennaPointing>
+    </radarParameters>
+    <orbitAndAttitude>
+      <orbitInformation>
+        <passDirection>Descending</passDirection>
+        <orbitDataSource>Definitive</orbitDataSource>
+        <orbitDataFile>45110_DEF.ORB</orbitDataFile>
+        <stateVector>
+          <timeStamp>2016-08-12T10:10:10.000000Z</timeStamp>
+          <xPosition units="m">-2.1e+06</xPosition><yPosition units="m">-5.3e+06</yPosition><zPosition units="m">4.4e+06</zPosition>
+          <xVelocity units="m/s">-1.2e+03</xVelocity><yVelocity units="m/s">-4.9e+03</yVelocity><zVelocity units="m/s">-5.5e+03</zVelocity>
+        </stateVector>
+      </orbitInformation>
+    </orbitAndAttitude>
+  </sourceAttributes>
+  <imageGenerationParameters>
+    <generalProcessingInformation>
+      <productType>SCW</productType>
+      <processingFacility>SYNTHETIC</processingFacility>
+      <processingTime>2016-08-12T12:00:00.000000Z</processingTime>
+    </generalProcessingInformation>
+    <sarProcessingInformation>
+      <rangeLookBandwidth units="Hz">1.158000e+07</rangeLookBandwidth>
+      <azimuthLookBandwidth units="Hz">6.000000e+01</azimuthLookBandwidth>
+      <zeroDopplerTimeFirstLine>2016-08-12T10:10:10.000000Z</zeroDopplerTimeFirstLine>
+      <zeroDopplerTimeLastLine>2016-08-12T10:11:40.000000Z</zeroDopplerTimeLastLine>
+      <incidenceAngleNearRange units="deg">20.00</incidenceAngleNearRange>
+      <incidenceAngleFarRange units="deg">49.00</incidenceAngleFarRange>
+      <satelliteHeight units="m">7.98e+05</satelliteHeight>
+    </sarProcessingInformation>
+  </imageGenerationParameters>
+  <imageAttributes>
+    <productFormat>GeoTIFF</productFormat>
+    <fullResolutionImageData pole="VV">imagery_VV.tif</fullResolutionImageData>
+    <fullResolutionImageData pole="VH">imagery_VH.tif</fullResolutionImageData>
+    <geographicInformation>
+      <geolocationGrid>
+        <imageTiePoint><imageCoordinate><line>0</line><pixel>0</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">70.012</latitude><longitude units="deg">20.101</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+        <imageTiePoint><imageCoordinate><line>0</line><pixel>9999</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">69.512</latitude><longitude units="deg">32.012</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+        <imageTiePoint><imageCoordinate><line>11999</line><pixel>9999</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">65.201</latitude><longitude units="deg">30.512</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+        <imageTiePoint><imageCoordinate><line>11999</line><pixel>0</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">65.801</latitude><longitude units="deg">19.312</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+      </geolocationGrid>
+      <referenceEllipsoidParameters><ellipsoidName>WGS 1984</ellipsoidName></referenceEllipsoidParameters>
+    </geographicInformation>
+  </imageAttributes>
+</product>

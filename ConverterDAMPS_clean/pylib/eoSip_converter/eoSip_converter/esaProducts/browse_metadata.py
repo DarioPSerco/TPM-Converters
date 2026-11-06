@@ -1,0 +1,79 @@
+# -*- coding: cp1252 -*-
+#
+# this class encapsulate the metadata info for browse 
+#
+#
+import sys
+import traceback
+
+#
+from . import base_metadata
+from .base_metadata import Base_Metadata
+
+# BROWSE_METADATA_BROWSE_CHOICE='BROWSE_METADATA_BROWSE_CHOICE'
+BROWSE_METADATA_IDENTIFIER = 'BROWSE_METADATA_IDENTIFIER'
+BROWSE_METADATA_FILENAME = 'BROWSE_METADATA_FILENAME'
+BROWSE_METADATA_THUMBNAIL = 'BROWSE_METADATA_THUMBNAIL'
+BROWSE_METADATA_NAME = 'BROWSE_METADATA_NAME'
+BROWSE_METADATA_REPORT_NAME = 'BROWSE_METADATA_REPORT_NAME'
+BROWSE_METADATA_IMAGE_TYPE = 'BROWSE_METADATA_IMAGE_TYPE'
+BROWSE_METADATA_IMAGE_RESOLUTION = 'BROWSE_METADATA_IMAGE_RESOLUTION'
+BROWSE_METADATA_START_DATE = 'BROWSE_METADATA_START_DATE'
+BROWSE_METADATA_START_TIME = 'BROWSE_METADATA_START_TIME'
+BROWSE_METADATA_STOP_DATE = 'BROWSE_METADATA_STOP_DATE'
+BROWSE_METADATA_STOP_TIME = 'BROWSE_METADATA_STOP_TIME'
+BROWSE_METADATA_BROWSE_TYPE = 'BROWSE_METADATA_BROWSE_TYPE'
+BROWSE_METADATA_RECT_COORDLIST = 'BROWSE_METADATA_RECT_COORDLIST'
+BROWSE_METADATA_FOOTPRINT_NUMBER_NODES = 'BROWSE_METADATA_FOOTPRINT_NUMBER_NODES'
+# this contains the footprint xml block, it can have 5 different forms: posList, curtain, etc...
+BROWSE_METADATA_BROWSE_CHOICE = 'BROWSE_METADATA_BROWSE_CHOICE'
+
+
+class Browse_Metadata(Base_Metadata):
+    METADATA_FIELDS = [BROWSE_METADATA_IDENTIFIER, BROWSE_METADATA_FILENAME, BROWSE_METADATA_IMAGE_TYPE,
+                       BROWSE_METADATA_START_DATE, BROWSE_METADATA_START_TIME,
+                       BROWSE_METADATA_STOP_DATE, BROWSE_METADATA_STOP_TIME, BROWSE_METADATA_BROWSE_TYPE]
+
+    def __init__(self, defaults=None):
+        Base_Metadata.__init__(self)
+        self.dict['__METADATATYPE__'] = base_metadata.METADATATYPE_BROWSE
+        for item in self.METADATA_FIELDS:
+            self.dict[item] = None
+        if defaults is not None:
+            for item in defaults.keys():
+                self.dict[item] = defaults[item]
+        print(' init Browse_Metadata done')
+
+    def eval(self, expr):
+        try:
+            if not expr[0:5] == 'self.':
+                expr = "self.%s" % expr
+            res = eval(expr)
+        except:
+            xc_type, exc_obj, exc_tb = sys.exc_info()
+            res = "%s%s%s" % (xc_type, exc_obj, exc_tb)
+            traceback.print_exc(file=sys.stdout)
+        return res
+
+    def setMetadataPair(self, name=None, value=None):
+        self.dict[name] = value
+
+    def getMetadataValue(self, name=None, needed=False):
+        if name in self.dict:
+            return self.dict[name]
+        else:
+            return base_metadata.VALUE_NOT_PRESENT
+
+    def getNextCounter(self):
+        self.counter = self.counter + 1
+        return self.counter
+
+
+if __name__ == '__main__':
+    met = Browse_Metadata()
+    met.dump()
+    met.setMetadataPair('a', 'aaa')
+    print("set a=aaa")
+    met.dump()
+    print("get a:%s" % met.getMetadataValue('a'))
+    print("get b:%s" % met.getMetadataValue('b'))

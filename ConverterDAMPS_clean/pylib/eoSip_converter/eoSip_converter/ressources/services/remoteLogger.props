@@ -1,0 +1,9 @@
+
+
+[GLOBAL]
+
+#
+DEBUG=False
+SETTING_HOST=localhost
+SETTING_PORT=9999
+SETTING_NAME=remoteLogger

@@ -1,0 +1,12 @@
+
+
+[GLOBAL]
+
+#
+DEBUG=False
+
+dataFolder=/home/gilles/tleData
+dataProviderUrl=https://celestrak.com/NORAD/elements/engineering.txt
+satelliteId=26958U
+# in sec:
+updateTimeInterval=600

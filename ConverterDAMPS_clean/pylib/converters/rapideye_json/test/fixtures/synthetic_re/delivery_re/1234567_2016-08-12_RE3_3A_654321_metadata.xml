@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<re:EarthObservation xmlns:re="http://schemas.rapideye.de/products/productMetadataGeocorrected"
+    xmlns:eop="http://earth.esa.int/eop" xmlns:opt="http://earth.esa.int/opt"
+    xmlns:gml="http://www.opengis.net/gml" version="1.2.1">
+  <gml:metaDataProperty>
+    <re:EarthObservationMetaData>
+      <eop:identifier>1234567_2016-08-12_RE3_3A_654321</eop:identifier>
+      <eop:acquisitionType>NOMINAL</eop:acquisitionType>
+      <eop:productType>L3A</eop:productType>
+      <eop:status>ARCHIVED</eop:status>
+      <eop:archivedIn>
+        <eop:ArchivingInformation>
+          <eop:archivingCenter>Brandenburg</eop:archivingCenter>
+          <eop:archivingDate>2016-08-13T01:00:00.250+00:00</eop:archivingDate>
+        </eop:ArchivingInformation>
+      </eop:archivedIn>
+      <re:pixelFormat>16U</re:pixelFormat>
+    </re:EarthObservationMetaData>
+  </gml:metaDataProperty>
+  <gml:validTime>
+    <gml:TimePeriod>
+      <gml:beginPosition>2016-08-12T10:05:00.500+00:00</gml:beginPosition>
+      <gml:endPosition></gml:endPosition>
+    </gml:TimePeriod>
+  </gml:validTime>
+  <gml:using>
+    <eop:EarthObservationEquipment>
+      <eop:platform>
+        <eop:Platform>
+          <eop:shortName>RE</eop:shortName>
+          <eop:serialIdentifier>RE-3</eop:serialIdentifier>
+          <eop:orbitType>LEO</eop:orbitType>
+        </eop:Platform>
+      </eop:platform>
+      <eop:instrument>
+        <eop:Instrument>
+          <eop:shortName>MSI</eop:shortName>
+        </eop:Instrument>
+      </eop:instrument>
+      <eop:sensor>
+        <re:Sensor>
+          <eop:sensorType>OPTICAL</eop:sensorType>
+          <eop:resolution uom="m">6.5</eop:resolution>
+          <eop:scanType>PUSHBROOM</eop:scanType>
+        </re:Sensor>
+      </eop:sensor>
+      <eop:acquisitionParameters>
+        <re:Acquisition>
+          <eop:orbitDirection>ASCENDING</eop:orbitDirection>
+          <eop:incidenceAngle uom="deg">3.2</eop:incidenceAngle>
+          <opt:illuminationAzimuthAngle uom="deg">155.5</opt:illuminationAzimuthAngle>
+          <opt:illuminationElevationAngle uom="deg">51.25</opt:illuminationElevationAngle>
+          <re:azimuthAngle uom="deg">101.2</re:azimuthAngle>
+          <re:acquisitionDateTime>2016-08-12T10:05:00.500+00:00</re:acquisitionDateTime>
+        </re:Acquisition>
+      </eop:acquisitionParameters>
+    </eop:EarthObservationEquipment>
+  </gml:using>
+  <gml:target>
+    <re:Footprint>
+      <re:multiExtentOf>
+        <gml:MultiSurface srsName="EPSG:4326">
+          <gml:surfaceMembers>
+            <gml:Polygon>
+              <gml:outerBoundaryIs>
+                <gml:LinearRing>
+                  <gml:coordinates>12.0,41.0 12.2,41.0 12.2,41.2 12.0,41.2 12.0,41.0</gml:coordinates>
+                </gml:LinearRing>
+              </gml:outerBoundaryIs>
+            </gml:Polygon>
+          </gml:surfaceMembers>
+        </gml:MultiSurface>
+      </re:multiExtentOf>
+    </re:Footprint>
+  </gml:target>
+  <gml:resultOf>
+    <re:EarthObservationResult>
+      <opt:cloudCoverPercentage uom="percentage">-1</opt:cloudCoverPercentage>
+      <re:unusableDataPercentage uom="percentage">0.0</re:unusableDataPercentage>
+      <eop:product>
+        <re:ProductInformation>
+          <eop:fileName>1234567_2016-08-12_RE3_3A_654321.tif</eop:fileName>
+          <re:productFormat>GeoTIFF</re:productFormat>
+          <re:spatialReferenceSystem>
+            <re:epsgCode>32633</re:epsgCode>
+          </re:spatialReferenceSystem>
+          <re:numRows>12</re:numRows>
+          <re:numColumns>16</re:numColumns>
+          <re:numBands>3</re:numBands>
+          <re:rowGsd>5.00</re:rowGsd>
+          <re:columnGsd>5.00</re:columnGsd>
+        </re:ProductInformation>
+      </eop:product>
+    </re:EarthObservationResult>
+  </gml:resultOf>
+</re:EarthObservation>

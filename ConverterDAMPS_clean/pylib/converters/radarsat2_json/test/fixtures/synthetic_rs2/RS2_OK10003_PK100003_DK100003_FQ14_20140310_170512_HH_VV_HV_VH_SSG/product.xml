@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC RADARSAT-2 product annotation, NOT real data: see ../../SYNTHETIC_FIXTURE_NOTE.md -->
+<product xmlns="http://www.rsi.ca/rs2/prod/xml/schemas">
+  <productId>PDS_SYNTHETIC</productId>
+  <sourceAttributes>
+    <satellite>RADARSAT-2</satellite>
+    <sensor>SAR</sensor>
+    <beamModeMnemonic>FQ14</beamModeMnemonic>
+    <radarParameters>
+      <acquisitionType>Fine Quad Polarization</acquisitionType>
+      <beams>FQ14</beams>
+      <polarizations>HH VV HV VH</polarizations>
+      <radarCenterFrequency units="Hz">5.405000454334350e+09</radarCenterFrequency>
+      <antennaPointing>Right</antennaPointing>
+    </radarParameters>
+    <orbitAndAttitude>
+      <orbitInformation>
+        <passDirection>Ascending</passDirection>
+        <orbitDataSource>Definitive</orbitDataSource>
+        <orbitDataFile>32850_DEF.ORB</orbitDataFile>
+        <stateVector>
+          <timeStamp>2014-03-10T17:05:12.000100Z</timeStamp>
+          <xPosition units="m">-2.1e+06</xPosition><yPosition units="m">-5.3e+06</yPosition><zPosition units="m">4.4e+06</zPosition>
+          <xVelocity units="m/s">-1.2e+03</xVelocity><yVelocity units="m/s">-4.9e+03</yVelocity><zVelocity units="m/s">-5.5e+03</zVelocity>
+        </stateVector>
+      </orbitInformation>
+    </orbitAndAttitude>
+  </sourceAttributes>
+  <imageGenerationParameters>
+    <generalProcessingInformation>
+      <productType>SSG</productType>
+      <processingFacility>SYNTHETIC</processingFacility>
+      <processingTime>2014-03-11T08:00:00.000000Z</processingTime>
+    </generalProcessingInformation>
+    <sarProcessingInformation>
+      <rangeLookBandwidth units="Hz">3.000000e+07</rangeLookBandwidth>
+      <azimuthLookBandwidth units="Hz">9.200000e+02</azimuthLookBandwidth>
+      <zeroDopplerTimeFirstLine>2014-03-10T17:05:12.000100Z</zeroDopplerTimeFirstLine>
+      <zeroDopplerTimeLastLine>2014-03-10T17:05:15.500100Z</zeroDopplerTimeLastLine>
+      <incidenceAngleNearRange units="deg">33.20</incidenceAngleNearRange>
+      <incidenceAngleFarRange units="deg">34.90</incidenceAngleFarRange>
+      <satelliteHeight units="m">7.98e+05</satelliteHeight>
+    </sarProcessingInformation>
+  </imageGenerationParameters>
+  <imageAttributes>
+    <productFormat>GeoTIFF</productFormat>
+    <fullResolutionImageData pole="HH">imagery_HH.tif</fullResolutionImageData>
+    <fullResolutionImageData pole="VV">imagery_VV.tif</fullResolutionImageData>
+    <fullResolutionImageData pole="HV">imagery_HV.tif</fullResolutionImageData>
+    <fullResolutionImageData pole="VH">imagery_VH.tif</fullResolutionImageData>
+    <geographicInformation>
+      <geolocationGrid>
+        <imageTiePoint><imageCoordinate><line>0</line><pixel>0</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">41.95</latitude><longitude units="deg">12.402</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+        <imageTiePoint><imageCoordinate><line>0</line><pixel>4999</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">41.981</latitude><longitude units="deg">12.661</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+        <imageTiePoint><imageCoordinate><line>5999</line><pixel>4999</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">41.781</latitude><longitude units="deg">12.7</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+        <imageTiePoint><imageCoordinate><line>5999</line><pixel>0</pixel></imageCoordinate><geodeticCoordinate><latitude units="deg">41.751</latitude><longitude units="deg">12.441</longitude><height units="m">100.0</height></geodeticCoordinate></imageTiePoint>
+      </geolocationGrid>
+      <referenceEllipsoidParameters><ellipsoidName>WGS 1984</ellipsoidName></referenceEllipsoidParameters>
+      <mapProjection><mapProjectionDescriptor>UTM 33N WGS 1984</mapProjectionDescriptor><utmProjectionParameters><utmZone>33</utmZone><hemisphere>North</hemisphere></utmProjectionParameters></mapProjection>
+    </geographicInformation>
+  </imageAttributes>
+</product>

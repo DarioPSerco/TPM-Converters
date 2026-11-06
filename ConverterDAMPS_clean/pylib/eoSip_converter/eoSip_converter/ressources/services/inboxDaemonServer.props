@@ -1,0 +1,18 @@
+
+
+[GLOBAL]
+#
+# the inbox/outbox/failure folders
+#
+INBOX=/home/gilles/shared2/Datasets/old/Ikonos/0
+OUTBOX=/home/gilles/shared2/converter_workspace/outspace
+FAILUREBOX=/nfsdata/nfsdata02/done/Ikonos/failure/
+
+#
+# the exclusions: regex, | separated
+#
+EXCLUSIONS=^.*.part|^.*.txt
+
+
+#
+DEBUG=True

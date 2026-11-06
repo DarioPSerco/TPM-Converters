@@ -1,0 +1,30 @@
+         RADARSAT 1 SCENE DESCRIPTION
+                    
+SCENE_ID           m8112110
+MDA ORDER NUMBER   20-00097-001
+GEOGRAPHICAL AREA  Peru
+SCENE START TIME   DEC 08 1999 10:30:08.070
+SCENE STOP TIME    DEC 08 1999 10:30:08.070
+ORBIT              21364 DESCENDING
+ORBIT DATA TYPE    DEFINITIVE
+APPLICATION LUT    MIXED
+BEAM MODE          SAR STANDARD 7
+PRODUCT TYPE       SYSTEMATIC GEOCODED (SSG)
+MAP PROJECTION     
+FORMAT             RADARSAT CEOS
+# OF IMAGE LINES   10879
+# OF IMAGE PIXELS  10863
+PIXEL SPACING      12.500 m
+SCENE CENTRE       08°40'S 075°15'W
+CORNER COORDINATES:
+                    
+        7°46'47" S       7°46'48" S
+       75°46'12" W      74°32'19" W
+  
+        9°00'34" S       9°00'36" S
+       75°46'21" W      74°32'14" W
+  
+For information on RADARSAT CEOS format see README.TXT
+(c) Canadian Space Agency 1999 Agence spatiale canadienne. Processed and distributed by MDA Geospatial Services Inc.
+
+Use of the data and the trademarks associated herewith are governed by the MDA GSI General Terms of Use and the LicenseAgreement and is subject to the applicable satellite copyrights. Please see http://gs.mdacorporation.com/about/legal/licence.asp

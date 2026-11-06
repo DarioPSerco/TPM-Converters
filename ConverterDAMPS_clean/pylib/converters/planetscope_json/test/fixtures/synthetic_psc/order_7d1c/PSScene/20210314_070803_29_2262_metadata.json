@@ -1,0 +1,46 @@
+{
+  "type": "Feature",
+  "id": "20210314_070803_29_2262",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          9.1,
+          45.4
+        ],
+        [
+          9.4,
+          45.4
+        ],
+        [
+          9.4,
+          45.6
+        ],
+        [
+          9.1,
+          45.6
+        ],
+        [
+          9.1,
+          45.4
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2021-03-14T07:08:03.311795Z",
+    "item_type": "PSScene",
+    "instrument": "PSB.SD",
+    "satellite_id": "2262",
+    "provider": "planetscope",
+    "pixel_resolution": 3.0,
+    "gsd": 3.9,
+    "sun_azimuth": 141.7,
+    "sun_elevation": 38.6,
+    "view_angle": 4.6,
+    "cloud_cover": 0.12,
+    "cloud_percent": 12,
+    "published": "2021-03-14T12:30:00.000Z"
+  }
+}

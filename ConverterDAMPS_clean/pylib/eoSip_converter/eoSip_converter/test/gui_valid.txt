@@ -1,0 +1,2505 @@
+validating xml...use external schema:C:\Users\glavaux\LITE\OGC_Schemas\opt.xsd
+
+ document builder error:cvc-elt.1: Cannot find the declaration of element 'opt:EarthObservation'.; at line:1  column:413
+
+ --> xml is valid
+SchemaFactory is of type:org.apache.xerces.jaxp.validation.XMLSchemaFactory
+
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='file:/C:/Users/glavaux/LITE/OGC_Schemas/opt.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    baseUrl is local, but systemId is remote. will use just systemId
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    publicId='null'  systemId='dynamicFeature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dynamicFeature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dynamicFeature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/dynamicFeature.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/dynamicFeature.xsd'
+    publicId='null'  systemId='feature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~feature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~feature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/feature.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/feature.xsd'
+    publicId='null'  systemId='geometryAggregates.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryAggregates.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryAggregates.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd'
+    publicId='null'  systemId='geometryPrimitives.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryPrimitives.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryPrimitives.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd'
+    publicId='null'  systemId='geometryBasic2d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic2d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic2d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryBasic2d.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryBasic2d.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd'
+    publicId='null'  systemId='measures.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~measures.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~measures.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/measures.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/measures.xsd'
+    publicId='null'  systemId='units.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~units.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~units.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/units.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/units.xsd'
+    publicId='null'  systemId='dictionary.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dictionary.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dictionary.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/dictionary.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/dictionary.xsd'
+    publicId='null'  systemId='gmlBase.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gmlBase.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gmlBase.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gmlBase.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gmlBase.xsd'
+    publicId='null'  systemId='basicTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~basicTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~basicTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/basicTypes.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.w3.org/1999/xlink'  baseURI='http://schemas.opengis.net/gml/3.2.1/gmlBase.xsd'
+    publicId='null'  systemId='http://www.w3.org/1999/xlink.xsd'
+    remote:'true'
+    mapKey:http_~~www.w3.org~1999~xlink@http_~~www.w3.org~1999~xlink.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.w3.org~1999~xlink@http_~~www.w3.org~1999~xlink.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.w3.org/XML/1998/namespace'  baseURI='http://www.w3.org/1999/xlink.xsd'
+    publicId='null'  systemId='http://www.w3.org/2001/xml.xsd'
+    remote:'true'
+    mapKey:http_~~www.w3.org~XML~1998~namespace@http_~~www.w3.org~2001~xml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.w3.org~XML~1998~namespace@http_~~www.w3.org~2001~xml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/feature.xsd'
+    publicId='null'  systemId='temporal.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporal.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporal.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/temporal.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/temporal.xsd'
+    publicId='null'  systemId='gmlBase.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gmlBase.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gmlBase.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/dynamicFeature.xsd'
+    publicId='null'  systemId='direction.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~direction.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~direction.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/direction.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/direction.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    publicId='null'  systemId='topology.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~topology.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~topology.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/topology.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/topology.xsd'
+    publicId='null'  systemId='geometryComplexes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryComplexes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryComplexes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryComplexes.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/geometryComplexes.xsd'
+    publicId='null'  systemId='geometryAggregates.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryAggregates.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryAggregates.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    publicId='null'  systemId='coverage.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coverage.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coverage.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coverage.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coverage.xsd'
+    publicId='null'  systemId='feature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~feature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~feature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coverage.xsd'
+    publicId='null'  systemId='valueObjects.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~valueObjects.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~valueObjects.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/valueObjects.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/valueObjects.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/valueObjects.xsd'
+    publicId='null'  systemId='temporal.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporal.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporal.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coverage.xsd'
+    publicId='null'  systemId='grids.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~grids.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~grids.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/grids.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/grids.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coverage.xsd'
+    publicId='null'  systemId='geometryAggregates.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryAggregates.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~geometryAggregates.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    publicId='null'  systemId='coordinateReferenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coordinateReferenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coordinateReferenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='coordinateSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coordinateSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coordinateSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateSystems.xsd'
+    publicId='null'  systemId='referenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~referenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~referenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/referenceSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/referenceSystems.xsd'
+    publicId='null'  systemId='dictionary.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dictionary.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dictionary.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/gml/3.2.1/referenceSystems.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd'
+    publicId='null'  systemId='metadataApplication.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataApplication.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataApplication.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gco'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataApplication.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/iso/19139/20070417/gco/gco.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gco.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gco.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gco'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gco/gco.xsd'
+    publicId='null'  systemId='basicTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~basicTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~basicTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gco'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gco/basicTypes.xsd'
+    publicId='null'  systemId='gco.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gco.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gco.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gco'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gco/basicTypes.xsd'
+    publicId='null'  systemId='gcoBase.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gcoBase.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gcoBase.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gco'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gco/gcoBase.xsd'
+    publicId='null'  systemId='gco.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gco.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gco@http_~~schemas.opengis.net~iso~19139~20070417~gco~gco.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataApplication.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataApplication.xsd'
+    publicId='null'  systemId='metadataEntity.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataEntity.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataEntity.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='spatialRepresentation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~spatialRepresentation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~spatialRepresentation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gss'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/spatialRepresentation.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/iso/19139/20070417/gss/gss.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gss@http_~~schemas.opengis.net~iso~19139~20070417~gss~gss.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gss@http_~~schemas.opengis.net~iso~19139~20070417~gss~gss.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gss'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gss/gss.xsd'
+    publicId='null'  systemId='geometry.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gss@http_~~schemas.opengis.net~iso~19139~20070417~gss~geometry.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gss@http_~~schemas.opengis.net~iso~19139~20070417~gss~geometry.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gss'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gss/geometry.xsd'
+    publicId='null'  systemId='gss.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gss@http_~~schemas.opengis.net~iso~19139~20070417~gss~gss.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gss@http_~~schemas.opengis.net~iso~19139~20070417~gss~gss.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/spatialRepresentation.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/spatialRepresentation.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/citation.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/citation.xsd'
+    publicId='null'  systemId='referenceSystem.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~referenceSystem.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~referenceSystem.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/referenceSystem.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/referenceSystem.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/referenceSystem.xsd'
+    publicId='null'  systemId='extent.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~extent.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~extent.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gts'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/extent.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/iso/19139/20070417/gts/gts.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gts@http_~~schemas.opengis.net~iso~19139~20070417~gts~gts.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gts@http_~~schemas.opengis.net~iso~19139~20070417~gts~gts.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gts'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gts/gts.xsd'
+    publicId='null'  systemId='temporalObjects.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gts@http_~~schemas.opengis.net~iso~19139~20070417~gts~temporalObjects.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gts@http_~~schemas.opengis.net~iso~19139~20070417~gts~temporalObjects.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gts'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gts/temporalObjects.xsd'
+    publicId='null'  systemId='gts.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gts@http_~~schemas.opengis.net~iso~19139~20070417~gts~gts.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gts@http_~~schemas.opengis.net~iso~19139~20070417~gts~gts.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gsr'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/extent.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/iso/19139/20070417/gsr/gsr.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gsr@http_~~schemas.opengis.net~iso~19139~20070417~gsr~gsr.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gsr@http_~~schemas.opengis.net~iso~19139~20070417~gsr~gsr.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gsr'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gsr/gsr.xsd'
+    publicId='null'  systemId='spatialReferencing.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gsr@http_~~schemas.opengis.net~iso~19139~20070417~gsr~spatialReferencing.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gsr@http_~~schemas.opengis.net~iso~19139~20070417~gsr~spatialReferencing.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gsr'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gsr/spatialReferencing.xsd'
+    publicId='null'  systemId='gsr.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gsr@http_~~schemas.opengis.net~iso~19139~20070417~gsr~gsr.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gsr@http_~~schemas.opengis.net~iso~19139~20070417~gsr~gsr.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/extent.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/extent.xsd'
+    publicId='null'  systemId='referenceSystem.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~referenceSystem.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~referenceSystem.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='metadataExtension.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataExtension.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataExtension.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataExtension.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataExtension.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='content.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~content.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~content.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/content.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/content.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='metadataApplication.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataApplication.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~metadataApplication.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='applicationSchema.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~applicationSchema.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~applicationSchema.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/applicationSchema.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/applicationSchema.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='portrayalCatalogue.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~portrayalCatalogue.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~portrayalCatalogue.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/portrayalCatalogue.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/portrayalCatalogue.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='dataQuality.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~dataQuality.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~dataQuality.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/dataQuality.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/dataQuality.xsd'
+    publicId='null'  systemId='identification.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~identification.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~identification.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/identification.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/identification.xsd'
+    publicId='null'  systemId='constraints.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~constraints.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~constraints.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/constraints.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/identification.xsd'
+    publicId='null'  systemId='distribution.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~distribution.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~distribution.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/distribution.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/distribution.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/identification.xsd'
+    publicId='null'  systemId='maintenance.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~maintenance.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~maintenance.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/maintenance.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/maintenance.xsd'
+    publicId='null'  systemId='citation.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~citation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd'
+    publicId='null'  systemId='freeText.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~freeText.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~freeText.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/freeText.xsd'
+    publicId='null'  systemId='gmd.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~gmd.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.isotc211.org/2005/gmd'  baseURI='http://schemas.opengis.net/iso/19139/20070417/gmd/freeText.xsd'
+    publicId='null'  systemId='identification.xsd'
+    remote:'true'
+    mapKey:http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~identification.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.isotc211.org~2005~gmd@http_~~schemas.opengis.net~iso~19139~20070417~gmd~identification.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='datums.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~datums.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~datums.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/datums.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/datums.xsd'
+    publicId='null'  systemId='referenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~referenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~referenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/datums.xsd'
+    publicId='null'  systemId='measures.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~measures.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~measures.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='coordinateOperations.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coordinateOperations.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~coordinateOperations.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateOperations.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateOperations.xsd'
+    publicId='null'  systemId='referenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~referenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~referenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/coordinateOperations.xsd'
+    publicId='null'  systemId='measures.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~measures.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~measures.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    publicId='null'  systemId='observation.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~observation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~observation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/observation.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/observation.xsd'
+    publicId='null'  systemId='feature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~feature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~feature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/observation.xsd'
+    publicId='null'  systemId='direction.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~direction.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~direction.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/observation.xsd'
+    publicId='null'  systemId='valueObjects.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~valueObjects.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~valueObjects.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    publicId='null'  systemId='temporalReferenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporalReferenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporalReferenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/temporalReferenceSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/temporalReferenceSystems.xsd'
+    publicId='null'  systemId='temporalTopology.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporalTopology.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporalTopology.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/temporalTopology.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/temporalTopology.xsd'
+    publicId='null'  systemId='temporal.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporal.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~temporal.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/temporalReferenceSystems.xsd'
+    publicId='null'  systemId='dictionary.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dictionary.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~dictionary.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/gml.xsd'
+    publicId='null'  systemId='deprecatedTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~deprecatedTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~deprecatedTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml/3.2'  baseURI='http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml~3.2@http_~~schemas.opengis.net~gml~3.2.1~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/eop/2.1'  baseURI='file:/C:/Users/glavaux/LITE/OGC_Schemas/opt.xsd'
+    publicId='null'  systemId='eop.xsd'
+    local  baseURI parent:'C:/Users/glavaux/LITE/OGC_Schemas'
+    remote:'false'
+    resource will be loaded locally at path:C:/Users/glavaux/LITE/OGC_Schemas/eop.xsd
+    resource tagged with:
+     systemId:eop.xsd
+     baseURI:file:/C:/Users/glavaux/LITE/OGC_Schemas/opt.xsd
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='file:/C:/Users/glavaux/LITE/OGC_Schemas/eop.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/ows/2.0/owsAll.xsd'
+    baseUrl is local, but systemId is remote. will use just systemId
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAll.xsd'
+    publicId='null'  systemId='owsGetResourceByID.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsGetResourceByID.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsGetResourceByID.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsGetResourceByID.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsGetResourceByID.xsd'
+    publicId='null'  systemId='owsDataIdentification.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsDataIdentification.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsDataIdentification.xsd'
+    publicId='null'  systemId='owsCommon.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsCommon.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsDataIdentification.xsd'
+    publicId='null'  systemId='ows19115subset.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/ows19115subset.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsGetResourceByID.xsd'
+    publicId='null'  systemId='owsGetCapabilities.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsGetCapabilities.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsGetCapabilities.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsGetCapabilities.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsGetCapabilities.xsd'
+    publicId='null'  systemId='owsServiceIdentification.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsServiceIdentification.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsServiceIdentification.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsServiceIdentification.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsServiceIdentification.xsd'
+    publicId='null'  systemId='owsDataIdentification.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsGetCapabilities.xsd'
+    publicId='null'  systemId='owsServiceProvider.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsServiceProvider.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsServiceProvider.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsServiceProvider.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsServiceProvider.xsd'
+    publicId='null'  systemId='ows19115subset.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsGetCapabilities.xsd'
+    publicId='null'  systemId='owsOperationsMetadata.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsOperationsMetadata.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsOperationsMetadata.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsOperationsMetadata.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsOperationsMetadata.xsd'
+    publicId='null'  systemId='owsCommon.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsOperationsMetadata.xsd'
+    publicId='null'  systemId='ows19115subset.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsOperationsMetadata.xsd'
+    publicId='null'  systemId='owsDomainType.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDomainType.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDomainType.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsDomainType.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsDomainType.xsd'
+    publicId='null'  systemId='owsCommon.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAll.xsd'
+    publicId='null'  systemId='owsExceptionReport.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsExceptionReport.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsExceptionReport.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsExceptionReport.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAll.xsd'
+    publicId='null'  systemId='owsDomainType.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDomainType.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDomainType.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAll.xsd'
+    publicId='null'  systemId='owsContents.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsContents.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsContents.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsContents.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsContents.xsd'
+    publicId='null'  systemId='owsDataIdentification.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAll.xsd'
+    publicId='null'  systemId='owsInputOutputData.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsInputOutputData.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsInputOutputData.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsInputOutputData.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsInputOutputData.xsd'
+    publicId='null'  systemId='owsManifest.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsManifest.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsManifest.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsManifest.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsManifest.xsd'
+    publicId='null'  systemId='owsDataIdentification.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDataIdentification.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAll.xsd'
+    publicId='null'  systemId='owsAdditionalParameters.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAdditionalParameters.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAdditionalParameters.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAdditionalParameters.xsd'
+    publicId='null'  systemId='owsAll.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsAll.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAdditionalParameters.xsd'
+    publicId='null'  systemId='owsCommon.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsCommon.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAdditionalParameters.xsd'
+    publicId='null'  systemId='ows19115subset.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~ows19115subset.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/ows/2.0'  baseURI='http://schemas.opengis.net/ows/2.0/owsAdditionalParameters.xsd'
+    publicId='null'  systemId='owsDomainType.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDomainType.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~ows~2.0@http_~~schemas.opengis.net~ows~2.0~owsDomainType.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/om/2.0'  baseURI='file:/C:/Users/glavaux/LITE/OGC_Schemas/eop.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/om/2.0/observation.xsd'
+    baseUrl is local, but systemId is remote. will use just systemId
+    remote:'true'
+    mapKey:http_~~www.opengis.net~om~2.0@http_~~schemas.opengis.net~om~2.0~observation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~om~2.0@http_~~schemas.opengis.net~om~2.0~observation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='file:/C:/Users/glavaux/LITE/OGC_Schemas/eop.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/sweCommon/1.0.0/phenomenon.xsd'
+    baseUrl is local, but systemId is remote. will use just systemId
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~phenomenon.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~phenomenon.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/phenomenon.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    publicId='null'  systemId='dynamicFeature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dynamicFeature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dynamicFeature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/dynamicFeature.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/dynamicFeature.xsd'
+    publicId='null'  systemId='feature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~feature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~feature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/feature.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/feature.xsd'
+    publicId='null'  systemId='geometryBasic2d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic2d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic2d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryBasic2d.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryBasic2d.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryBasic0d1d.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryBasic0d1d.xsd'
+    publicId='null'  systemId='measures.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~measures.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~measures.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/measures.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/measures.xsd'
+    publicId='null'  systemId='units.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~units.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~units.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/units.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/units.xsd'
+    publicId='null'  systemId='dictionary.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dictionary.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dictionary.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/dictionary.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/dictionary.xsd'
+    publicId='null'  systemId='gmlBase.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gmlBase.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gmlBase.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gmlBase.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gmlBase.xsd'
+    publicId='null'  systemId='basicTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~basicTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~basicTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/basicTypes.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/feature.xsd'
+    publicId='null'  systemId='temporal.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/temporal.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/temporal.xsd'
+    publicId='null'  systemId='gmlBase.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gmlBase.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gmlBase.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/dynamicFeature.xsd'
+    publicId='null'  systemId='direction.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~direction.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~direction.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/direction.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/direction.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    publicId='null'  systemId='topology.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~topology.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~topology.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/topology.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/topology.xsd'
+    publicId='null'  systemId='geometryComplexes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryComplexes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryComplexes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryComplexes.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryComplexes.xsd'
+    publicId='null'  systemId='geometryAggregates.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryAggregates.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryAggregates.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryAggregates.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryAggregates.xsd'
+    publicId='null'  systemId='geometryPrimitives.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryPrimitives.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryPrimitives.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryPrimitives.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/geometryPrimitives.xsd'
+    publicId='null'  systemId='geometryBasic2d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic2d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic2d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    publicId='null'  systemId='coverage.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coverage.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coverage.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coverage.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coverage.xsd'
+    publicId='null'  systemId='feature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~feature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~feature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coverage.xsd'
+    publicId='null'  systemId='valueObjects.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~valueObjects.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~valueObjects.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/valueObjects.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/valueObjects.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/valueObjects.xsd'
+    publicId='null'  systemId='temporal.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coverage.xsd'
+    publicId='null'  systemId='grids.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~grids.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~grids.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/grids.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/grids.xsd'
+    publicId='null'  systemId='geometryBasic0d1d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic0d1d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coverage.xsd'
+    publicId='null'  systemId='geometryAggregates.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryAggregates.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryAggregates.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    publicId='null'  systemId='coordinateReferenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coordinateReferenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coordinateReferenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='coordinateSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coordinateSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coordinateSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateSystems.xsd'
+    publicId='null'  systemId='referenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~referenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~referenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/referenceSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/referenceSystems.xsd'
+    publicId='null'  systemId='geometryBasic2d.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic2d.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~geometryBasic2d.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/referenceSystems.xsd'
+    publicId='null'  systemId='temporal.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='datums.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~datums.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~datums.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/datums.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/datums.xsd'
+    publicId='null'  systemId='referenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~referenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~referenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateReferenceSystems.xsd'
+    publicId='null'  systemId='coordinateOperations.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coordinateOperations.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~coordinateOperations.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateOperations.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateOperations.xsd'
+    publicId='null'  systemId='referenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~referenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~referenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/coordinateOperations.xsd'
+    publicId='null'  systemId='dataQuality.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dataQuality.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dataQuality.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/dataQuality.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/dataQuality.xsd'
+    publicId='null'  systemId='units.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~units.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~units.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    publicId='null'  systemId='observation.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~observation.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~observation.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/observation.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/observation.xsd'
+    publicId='null'  systemId='feature.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~feature.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~feature.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/observation.xsd'
+    publicId='null'  systemId='direction.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~direction.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~direction.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/observation.xsd'
+    publicId='null'  systemId='valueObjects.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~valueObjects.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~valueObjects.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    publicId='null'  systemId='defaultStyle.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~defaultStyle.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~defaultStyle.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/defaultStyle.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/defaultStyle.xsd'
+    publicId='null'  systemId='measures.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~measures.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~measures.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.w3.org/2001/SMIL20/'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/defaultStyle.xsd'
+    publicId='null'  systemId='http://schemas.opengis.net/gml/3.1.1/smil/smil20.xsd'
+    remote:'true'
+    mapKey:http_~~www.w3.org~2001~SMIL20~@http_~~schemas.opengis.net~gml~3.1.1~smil~smil20.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.w3.org~2001~SMIL20~@http_~~schemas.opengis.net~gml~3.1.1~smil~smil20.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.w3.org/2001/SMIL20/Language'  baseURI='http://schemas.opengis.net/gml/3.1.1/smil/smil20.xsd'
+    publicId='null'  systemId='smil20-language.xsd'
+    remote:'true'
+    mapKey:http_~~www.w3.org~2001~SMIL20~Language@http_~~schemas.opengis.net~gml~3.1.1~smil~smil20-language.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.w3.org~2001~SMIL20~Language@http_~~schemas.opengis.net~gml~3.1.1~smil~smil20-language.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/gml.xsd'
+    publicId='null'  systemId='temporalReferenceSystems.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporalReferenceSystems.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporalReferenceSystems.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/temporalReferenceSystems.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/temporalReferenceSystems.xsd'
+    publicId='null'  systemId='temporalTopology.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporalTopology.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporalTopology.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/temporalTopology.xsd'
+    publicId='null'  systemId='gml.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~gml.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/temporalTopology.xsd'
+    publicId='null'  systemId='temporal.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~temporal.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/gml'  baseURI='http://schemas.opengis.net/gml/3.1.1/base/temporalReferenceSystems.xsd'
+    publicId='null'  systemId='dictionary.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dictionary.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~gml@http_~~schemas.opengis.net~gml~3.1.1~base~dictionary.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/phenomenon.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/swe.xsd'
+    publicId='null'  systemId='./positionTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~positionTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~positionTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/positionTypes.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/positionTypes.xsd'
+    publicId='null'  systemId='./aggregateTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~aggregateTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~aggregateTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/aggregateTypes.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/aggregateTypes.xsd'
+    publicId='null'  systemId='./simpleTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~simpleTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~simpleTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/simpleTypes.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/simpleTypes.xsd'
+    publicId='null'  systemId='./basicTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~basicTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~basicTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/basicTypes.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/aggregateTypes.xsd'
+    publicId='null'  systemId='./encoding.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~encoding.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~encoding.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/encoding.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/swe.xsd'
+    publicId='null'  systemId='./curveTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~curveTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~curveTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/curveTypes.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/curveTypes.xsd'
+    publicId='null'  systemId='./aggregateTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~aggregateTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~aggregateTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/swe.xsd'
+    publicId='null'  systemId='./data.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~data.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~data.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/data.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/data.xsd'
+    publicId='null'  systemId='./aggregateTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~aggregateTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~aggregateTypes.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/swe.xsd'
+    publicId='null'  systemId='./temporalAggregates.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~temporalAggregates.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~temporalAggregates.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/temporalAggregates.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/swe.xsd'
+    publicId='null'  systemId='./phenomenon.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~phenomenon.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~phenomenon.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/swe.xsd'
+    publicId='null'  systemId='./xmlData.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~xmlData.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~xmlData.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/xmlData.xsd'
+    publicId='null'  systemId='./swe.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~swe.xsd
+    cache hit!!
+
+
+resource resolver is looking for:
+    type='http://www.w3.org/2001/XMLSchema'  namespaceURI='http://www.opengis.net/swe/1.0'  baseURI='http://schemas.opengis.net/sweCommon/1.0.0/phenomenon.xsd'
+    publicId='null'  systemId='./basicTypes.xsd'
+    remote:'true'
+    mapKey:http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~basicTypes.xsd
+    test cache hit at path:C:/Users/glavaux/.XmlTransformator/cache/http_~~www.opengis.net~swe~1.0@http_~~schemas.opengis.net~sweCommon~1.0.0~.~basicTypes.xsd
+    cache hit!!
+
+Custom resource resolver total errors=0 on 276 resource resolved. Ressouce local=1
+  http loaded:0; cache hits:275; cache loaded:115
+
+-->#document
+xml validated. Using schema:C:\Users\glavaux\LITE\OGC_Schemas\opt.xsd
+done in 15 mSec 1406300953041  1406300953056
+

@@ -1,0 +1,170 @@
+{
+  "type": "Feature",
+  "id": "RE__OPER_L3_ORT_MS__20170424T134911_20170424T135111_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "RE__OPER_L3_ORT_MS__20170424T134911_20170424T135111_0001",
+    "date": "2017-04-24T13:49:11.000Z/2017-04-24T13:51:11.000Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "RapidEye-1",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "REIS",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2017-04-24T13:49:11.000Z",
+            "endingDateTime": "2017-04-24T13:51:11.000Z",
+            "acquisitionType": "NOMINAL",
+            "operationalMode": "MS",
+            "resolution": 5.0,
+            "orbitDirection": "DESCENDING",
+            "wavelengths": [
+              {
+                "spectralRange": "VIS",
+                "startWavelength": 4.4e-07,
+                "endWavelength": 6.85e-07,
+                "discreteWavelengths": [
+                  4.75e-07,
+                  5.55e-07,
+                  6.575e-07
+                ]
+              },
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 6.9e-07,
+                "endWavelength": 7.3e-07,
+                "discreteWavelengths": [
+                  7.1e-07
+                ]
+              },
+              {
+                "spectralRange": "NIR",
+                "startWavelength": 7.6e-07,
+                "endWavelength": 8.5e-07,
+                "discreteWavelengths": [
+                  8.05e-07
+                ]
+              }
+            ],
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "acrossTrackIncidenceAngle": -0.7
+            }
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 627642676,
+      "productType": "L3_ORT_MS_",
+      "processingDate": "2017-04-25T02:10:33.000Z",
+      "processingLevel": "3",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for Rapideye",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for Rapideye products",
+                  "edition": "1.01"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "2017-04-24T134911_RE1_3A-NAC_12345678_123456_metadata.xml"
+                  },
+                  "processedLevel": {
+                    "code": "L3"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for Rapideye",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "RE__OPER_L3_ORT_MS__20170424T134911_20170424T135111_0001.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cloudCover": 0.0,
+      "referenceSystemIdentifier": "http://www.opengis.net/def/crs/EPSG/0/32719"
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/2017-04-24T134911_RE1_3A-NAC_12345678_123456.tif",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/RE__OPER_L3_ORT_MS__20170424T134911_20170424T135111_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

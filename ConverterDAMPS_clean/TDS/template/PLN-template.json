@@ -1,0 +1,137 @@
+{
+  "type": "Feature",
+  "id": "PLN_OPER_L1APRI_PAN_20210503T104900_20210503T105500_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-66.44291264, -24.15261009],
+        [-66.44136086, -24.23036597],
+        [-66.36391186, -24.22904374],
+        [-66.36551048, -24.15129263],
+        [-66.44291264, -24.15261009]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "PLN_OPER_L1APRI_PAN_20210503T104900_20210503T105500_0001",
+    "date": "2021-05-03T10:49:00.806Z/2021-05-03T10:55:00.806Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "Pleiades Neo-3",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "PNEO",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2021-05-03T10:49:00.806Z",
+            "endingDateTime": "2021-05-03T10:55:00.806Z",
+            "operationalMode": "PAN",
+            "resolution": 0.3,
+            "acquisitionType": "NOMINAL",
+            "acquisitionAngles": {
+              "incidenceAngle": 20.1,
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "acrossTrackIncidenceAngle": 0.7,
+              "alongTrackIncidenceAngle": 20
+            },
+            "wavelengths": [
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 450E-09,
+                "endWavelength": 800E-09,
+                "discreteWavelengths": [625E-09]
+              }
+            ],
+            "orbitNumber": 56,
+            "orbitDirection": "DESCENDING"
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 627642676,
+      "cloudCover": 56.0,
+      "productType": "L1APRI_PAN",
+      "processingLevel": "L1A",
+      "processingDate": "2021-05-04T10:12:41.239Z",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for PLEIADES NEO",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for PLEIADES NEO products",
+                  "edition": "1.01"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "<Native product name>"
+                  },
+                  "processedLevel": {
+                    "code": "L1A"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "<EOPF-EOS Converter name>",
+                  "edition": "<EOPF-EOS Converter version>"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "PLN_OPER_L1APRI_PAN_20210503T104900_20210503T105500_0001.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/<native_product>",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/PLN_OPER_L1APRI_PAN_20210503T104900_20210503T105500_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

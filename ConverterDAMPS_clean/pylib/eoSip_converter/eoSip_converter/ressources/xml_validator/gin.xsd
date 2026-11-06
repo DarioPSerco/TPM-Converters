@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+        xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:eop="http://www.opengis.net/eop/2.1"
+        xmlns:gin="http://www.esa.int/gin/1.0" targetNamespace="http://www.esa.int/gin/1.0"
+        elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+    <annotation>
+        <documentation>Generic Instrument Products application schema. Copyright (c) 2019 European Space Agency.
+        </documentation>
+    </annotation>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/eop/2.1"
+            schemaLocation="http://schemas.opengis.net/eompom/1.1/xsd/eop.xsd"/>
+    <import namespace="http://www.opengis.net/ows/2.0" schemaLocation="http://schemas.opengis.net/ows/2.0/owsAll.xsd"/>
+
+    <!-- **************************************************************************** -->
+    <!-- Extension in order for a Generic Instrument EarthObservation tag -->
+    <element name="EarthObservation" substitutionGroup="eop:EarthObservation" type="gin:EarthObservationType">
+        <annotation>
+            <documentation>eop root element for Generic Instrument Product description</documentation>
+        </annotation>
+    </element>
+    <complexType name="EarthObservationType">
+        <complexContent>
+            <extension base="eop:EarthObservationType"/>
+        </complexContent>
+    </complexType>
+    <complexType name="EarthObservationPropertyType">
+        <sequence minOccurs="0">
+            <element ref="gin:EarthObservation"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </complexType>
+    <!-- **************************************************************************** -->
+
+    <!-- **************************************************************************** -->
+    <!-- Extension for a Generic Instrument Footprint -->
+    <element name="Footprint" type="gin:FootprintType" substitutionGroup="eop:Footprint">
+        <annotation>
+            <documentation>Extends the EOP Footprint for Generic INstrument.</documentation>
+        </annotation>
+    </element>
+    <complexType name="FootprintType">
+        <complexContent>
+            <extension base="eop:FootprintType">
+                <sequence>
+                    <element name="groundTrack" type="gin:FootprintGeometryType" minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation>Generic Footprint which can include different types of Earth tracks as, for
+                                example: Multi Point, Multi Curves etc.
+                            </documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="FootprintPropertyType">
+        <sequence minOccurs="0">
+            <element ref="gin:Footprint"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </complexType>
+
+    <complexType name="FootprintGeometryType">
+        <sequence>
+            <choice>
+                <!-- This property element contains a list of curves. The order f the elements is significant and shall be preserved when processing the array -->
+                <element ref="gml:MultiCurve"/>
+                <!-- A Point is defined by a single cordinate tuple. The direct position of a point is specified by the pos element which is of type DirectPositionType	-->
+                <element ref="gml:MultiPoint"/>
+                <!-- Other elements can be added here -->
+            </choice>
+        </sequence>
+    </complexType>
+    <!-- **************************************************************************** -->
+
+    <!-- **************************************************************************** -->
+    <!-- Extension in order to include Mission Phase and File Class Attributes -->
+    <element name="EarthObservationMetaData" substitutionGroup="eop:EarthObservationMetaData"
+             type="gin:EarthObservationMetaDataType">
+        <annotation>
+            <documentation>EarthObservationMetaData for Generic Instrument Product description, which extends the group
+                by adding the Mission Phase and File Class attributes
+            </documentation>
+        </annotation>
+    </element>
+    <complexType name="EarthObservationMetaDataType">
+        <complexContent>
+            <extension base="eop:EarthObservationMetaDataType">
+                <sequence minOccurs="0">
+                    <element name="missionPhase" type="string" minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation>Mission Phase: string carrying the information on the Mission Phase
+                            </documentation>
+                        </annotation>
+                    </element>
+                    <element name="fileClass" type="string" minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation>File Class</documentation>
+                        </annotation>
+                    </element>
+                    <element name="productQualityIndicator" type="string" minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation>Product Quality Indicator</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="EarthObservationMetaDataPropertyType">
+        <sequence minOccurs="0">
+            <element ref="gin:EarthObservationMetaData"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </complexType>
+    <!-- **************************************************************************** -->
+
+</schema>

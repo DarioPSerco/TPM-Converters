@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC GEOSAT-1 DIMAP document, NOT real data: see ../SYNTHETIC_FIXTURE_NOTE.md -->
+<Dimap_Document name="DE01_SL6_22P_1R_20170424T134911_20170424T135006_DMI_0_5b2c.dim">
+  <Metadata_Id>
+    <METADATA_FORMAT version="1.1">DIMAP</METADATA_FORMAT>
+    <METADATA_PROFILE>GEOSAT-1</METADATA_PROFILE>
+  </Metadata_Id>
+  <Dataset_Id>
+    <DATASET_NAME>DE01_SL6_22P_1R_20170424T134911_20170424T135006_DMI_0_5b2c</DATASET_NAME>
+  </Dataset_Id>
+  <Coordinate_Reference_System>
+    <Horizontal_CS>
+      <HORIZONTAL_CS_TYPE>GEOGRAPHIC</HORIZONTAL_CS_TYPE>
+      <HORIZONTAL_CS_CODE>EPSG:4326</HORIZONTAL_CS_CODE>
+    </Horizontal_CS>
+  </Coordinate_Reference_System>
+  <Production>
+    <DATASET_PRODUCER_NAME>DEIMOS IMAGING</DATASET_PRODUCER_NAME>
+    <DATASET_PRODUCTION_DATE>2017-04-25T08:12:41</DATASET_PRODUCTION_DATE>
+    <PRODUCT_TYPE>L1R</PRODUCT_TYPE>
+  </Production>
+  <Data_Access>
+    <DATA_FILE_FORMAT>GEOTIFF</DATA_FILE_FORMAT>
+    <Data_File>
+      <DATA_FILE_PATH href="DE01_SL6_22P_1R_20170424T134911_20170424T135006_DMI_0_5b2c.tif"/>
+    </Data_File>
+  </Data_Access>
+  <Dataset_Sources>
+    <Source_Information>
+      <SOURCE_ID>DE01_SL6_22P_1R_20170424T134911_20170424T135006_DMI_0_5b2c</SOURCE_ID>
+      <Source_Frame>
+        <Vertex><FRAME_LON>-66.44291264</FRAME_LON><FRAME_LAT>-24.15261009</FRAME_LAT></Vertex>
+        <Vertex><FRAME_LON>-66.44136086</FRAME_LON><FRAME_LAT>-24.23036597</FRAME_LAT></Vertex>
+        <Vertex><FRAME_LON>-66.36391186</FRAME_LON><FRAME_LAT>-24.22904374</FRAME_LAT></Vertex>
+        <Vertex><FRAME_LON>-66.36551048</FRAME_LON><FRAME_LAT>-24.15129263</FRAME_LAT></Vertex>
+      </Source_Frame>
+      <Scene_Source>
+        <MISSION>DEIMOS</MISSION>
+        <MISSION_INDEX>1</MISSION_INDEX>
+        <INSTRUMENT>SLIM-6-22</INSTRUMENT>
+        <IMAGING_DATE>2017-04-24</IMAGING_DATE>
+        <IMAGING_TIME>13:49:11</IMAGING_TIME>
+        <START_TIME>2017-04-24T13:49:11</START_TIME>
+        <STOP_TIME>2017-04-24T13:50:06</STOP_TIME>
+        <INCIDENCE_ANGLE>7.2</INCIDENCE_ANGLE>
+        <SUN_AZIMUTH>33.3</SUN_AZIMUTH>
+        <SUN_ELEVATION>44.1</SUN_ELEVATION>
+        <THEORETICAL_RESOLUTION>22</THEORETICAL_RESOLUTION>
+      </Scene_Source>
+      <Quality_Assessment>
+        <Quality_Parameter>
+          <QUALITY_PARAMETER_CODE>SPACEMETRIC:HEADING</QUALITY_PARAMETER_CODE>
+          <QUALITY_PARAMETER_VALUE>A</QUALITY_PARAMETER_VALUE>
+        </Quality_Parameter>
+      </Quality_Assessment>
+    </Source_Information>
+  </Dataset_Sources>
+</Dimap_Document>

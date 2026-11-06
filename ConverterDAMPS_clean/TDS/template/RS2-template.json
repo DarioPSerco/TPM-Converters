@@ -1,0 +1,153 @@
+{
+  "type": "Feature",
+  "id": "RS2_OPER_L1_BSWFSLC_20100527T231608_20100527T231612_0000",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -73.701,
+          45.512
+        ],
+        [
+          -73.587,
+          45.031
+        ],
+        [
+          -72.901,
+          45.112
+        ],
+        [
+          -73.012,
+          45.598
+        ],
+        [
+          -73.701,
+          45.512
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "RS2_OPER_L1_BSWFSLC_20100527T231608_20100527T231612_0000",
+    "date": "2010-05-27T23:16:08.123Z/2010-05-27T23:16:12.987Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "RADARSAT-2",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "SAR",
+          "sensorType": "RADAR"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2010-05-27T23:16:08.123Z",
+            "endingDateTime": "2010-05-27T23:16:12.987Z",
+            "acquisitionType": "NOMINAL",
+            "operationalMode": "BSWF",
+            "polarisationMode": "D",
+            "polarisationChannels": "HH, HV",
+            "antennaLookDirection": "RIGHT",
+            "azimuthResolution": 7.369,
+            "rangeResolution": 8.208,
+            "resolution": 8.208,
+            "acquisitionAngles": {
+              "incidenceAngle": 37.5
+            },
+            "orbitNumber": 13034,
+            "orbitDirection": "ASCENDING",
+            "wavelengths": [
+              {
+                "spectralRange": "C",
+                "discreteWavelengths": [
+                  0.0554658
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 5464,
+      "productType": "L1_BSWFSLC",
+      "referenceSystemIdentifier": "http://www.opengis.net/def/crs/EPSG/0/4326",
+      "processingDate": "2010-05-28T02:11:45.000Z",
+      "processingLevel": "1",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for RADARSAT-2",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for RADARSAT-2 products",
+                  "edition": "1.0"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "RS2_OK10001_PK100001_DK100001_F0W2_20100527_231608_HH_HV_SLC"
+                  },
+                  "processedLevel": {
+                    "code": "L1"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for RADARSAT-2",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "RS2_OPER_L1_BSWFSLC_20100527T231608_20100527T231612_0000.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/RS2_OK10001_PK100001_DK100001_F0W2_20100527_231608_HH_HV_SLC/imagery_HH.tif",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/RS2_OPER_L1_BSWFSLC_20100527T231608_20100527T231612_0000.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

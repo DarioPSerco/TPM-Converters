@@ -1,0 +1,51 @@
+{
+  "type": "Feature",
+  "id": "20180428_125611_ssc3d2_0017",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "acquired": "2018-04-28T12:56:11.806371Z",
+    "item_type": "SkySatScene",
+    "satellite_id": "SSC3",
+    "camera_id": "d2",
+    "strip_id": "s3_20180428T125611Z",
+    "provider": "skysat",
+    "pixel_resolution": 0.5,
+    "gsd": 0.8,
+    "sun_azimuth": 33.3,
+    "sun_elevation": 44.1,
+    "view_angle": 0.7,
+    "satellite_azimuth": 99.1,
+    "cloud_cover": 0.56,
+    "cloud_percent": 56,
+    "quality_category": "standard",
+    "ground_control": true,
+    "published": "2018-04-29T02:10:33.000Z",
+    "updated": "2018-05-02T10:11:12.000Z"
+  }
+}

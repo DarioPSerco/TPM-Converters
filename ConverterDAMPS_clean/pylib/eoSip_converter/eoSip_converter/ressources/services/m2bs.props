@@ -1,0 +1,17 @@
+
+
+[GLOBAL]
+#
+# the pattern using to build the http call to the remote m2bs server
+#
+URL_PATTERN=http://eoliserv.eo.esa.int/browse/
+
+# typecode lut ; separated. Typecode -> url path mapping
+TYPECODES_LUT=ASA_IM__0P|ASARz0IM;ASA_WS__0P|ASARz0WS;ASA_APC_0S|ASARz0AP;ASA_APC_0P|ASARz0AP;ASA_APH_0P|ASARz0AP;SAR_IM__0P|AMIz0SARz0Image
+
+PLATFORMS_LUT=Envisat1|ENVISAT_1;ERS1|ERS_1;ERS2|ERS_2
+
+#
+DEBUG=False
+TIMEOUT=60
+#PROXY=localhost:8084

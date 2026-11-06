@@ -1,0 +1,153 @@
+{
+  "type": "Feature",
+  "id": "DE2_OPER_L1CORT_PAN_20170424T134911_20170424T135006_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "DE2_OPER_L1CORT_PAN_20170424T134911_20170424T135006_0001",
+    "date": "2017-04-24T13:49:11.806Z/2017-04-24T13:50:06.806Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "GEOSAT-2",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "HiRAIS",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2017-04-24T13:49:11.806Z",
+            "endingDateTime": "2017-04-24T13:50:06.806Z",
+            "operationalMode": "PAN",
+            "resolution": 0.75,
+            "acquisitionType": "NOMINAL",
+            "orbitNumber": 15423,
+            "orbitDirection": "ASCENDING",
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "incidenceAngle": 12.5
+            },
+            "wavelengths": [
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 5.6e-07,
+                "endWavelength": 9e-07,
+                "discreteWavelengths": [
+                  7.3e-07
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 4675,
+      "productType": "L1CORT_PAN",
+      "processingLevel": "L1C",
+      "processingDate": "2017-04-25T08:12:41.239Z",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "GEOSAT processor",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for GEOSAT products",
+                  "edition": "1.01"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "DE2_PAN_L1C_000000_20170424T134911_20170424T135006_DE2_15423_7A3F.zip"
+                  },
+                  "processedLevel": {
+                    "code": "L1C"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for GEOSAT",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "DE2_OPER_L1CORT_PAN_20170424T134911_20170424T135006_0001"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cloudCover": 12.5,
+      "referenceSystemIdentifier": "http://www.opengis.net/def/crs/EPSG/0/32719"
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/DE2_PAN_L1C_000000_20170424T134911_20170424T135006_DE2_15423_7A3F/DE2_PAN_L1C_000000_20170424T134911_20170424T135006_DE2_15423_7A3F.tif",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/DE2_OPER_L1CORT_PAN_20170424T134911_20170424T135006_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

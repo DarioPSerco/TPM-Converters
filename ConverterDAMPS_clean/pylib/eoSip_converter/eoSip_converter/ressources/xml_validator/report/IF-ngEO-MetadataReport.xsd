@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:rep="http://ngeo.eo.esa.int/schema/metadataReport" xmlns:gml="http://www.opengis.net/gml/3.2"
+           xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:eop="http://www.opengis.net/eop/2.0"
+           xmlns:opt="http://www.opengis.net/opt/2.0" xmlns:lmb="http://www.opengis.net/lmb/2.0"
+           xmlns:ssp="http://www.opengis.net/ssp/2.0" xmlns:alt="http://www.opengis.net/alt/2.0"
+           xmlns:sar="http://www.opengis.net/sar/2.0" xmlns:atm="http://www.opengis.net/atm/2.0"
+           xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ngeo.eo.esa.int/schema/metadataReport" elementFormDefault="qualified"
+           attributeFormDefault="unqualified" version="1.3">
+    <xs:import namespace="http://www.opengis.net/gml/3.2"
+               schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xs:import namespace="http://www.opengis.net/eop/2.0" schemaLocation="../ogc/eop.xsd"/>
+    <xs:import namespace="http://www.opengis.net/opt/2.0" schemaLocation="../ogc/opt.xsd"/>
+    <xs:import namespace="http://www.opengis.net/sar/2.0" schemaLocation="../ogc/sar.xsd"/>
+    <xs:import namespace="http://www.opengis.net/atm/2.0" schemaLocation="../ogc/atm.xsd"/>
+    <xs:import namespace="http://www.opengis.net/lmb/2.0" schemaLocation="../ogc/lmb.xsd"/>
+    <xs:import namespace="http://www.opengis.net/alt/2.0" schemaLocation="../ogc/alt.xsd"/>
+    <xs:import namespace="http://www.opengis.net/ssp/2.0" schemaLocation="../ogc/ssp.xsd"/>
+    <xs:import namespace="http://www.opengis.net/ows/2.0"
+               schemaLocation="http://schemas.opengis.net/ows/2.0/owsAll.xsd"/>
+    <!--======================================-->
+    <!--==== ngEO Root Elements ===============-->
+    <!--======================================-->
+    <xs:element name="metadataReport" type="rep:metadataReportType">
+        <xs:annotation>
+            <xs:documentation>ngEO Metatata Product Report Type</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <!--=======================================-->
+    <!--==== ngEO Complex Types Section ========-->
+    <!--=======================================-->
+    <xs:complexType name="metadataReportType">
+        <xs:annotation>
+            <xs:documentation>Report Data Structure</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="responsibleOrgName" type="xs:string" nillable="false" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Entity issuing the report file</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="reportType" type="rep:reportEnumType">
+                <xs:annotation>
+                    <xs:documentation>Report Type</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Report Date Time</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="orderReference" type="xs:string" nillable="false" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Order Reference</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="source" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Source of meta data</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="replacementHeader" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Metadata Replacement needed for Bulk Replace</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="beginDate" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Begin Date of the Metadata Replacement</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="endDate" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>End Date of the Metadata Replacement</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="dateType">
+                            <xs:annotation>
+                                <xs:documentation>Acquisition Time or Ingestion Time to be used as the date criteria
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="INGESTION_TIME"/>
+                                    <xs:enumeration value="ACQUISITION_TIME"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="targetProductType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>This element provides the mission/sensor/sensorMode/productType for
+                                    every group of products in the scope of the Bulk Update
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="platformShortName" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Platform (i.e. mission) identifier
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="instrumentShortName" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Instrument (i.e. sensor) identifier
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="operationalMode" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Also known as imaging mode, sensor mode or acquisition
+                                                mode
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="productType" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Product type.</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="eop:EarthObservation" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="version" type="xs:string" use="required" fixed="1.2"/>
+    </xs:complexType>
+    <!--===========================================-->
+    <!--==== Simple Types Section   =====-->
+    <!--===========================================-->
+    <xs:simpleType name="reportEnumType">
+        <xs:annotation>
+            <xs:documentation>Type of Report</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PLANNING"/>
+            <xs:enumeration value="ARCHIVING"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="nonNullStringType">
+        <xs:annotation>
+            <xs:documentation>This represents a non null string type.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="originatorIdentifier" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Identifier for metadata item. urn:eop:GS:CollectionId:ProductId:Version</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:simpleType name="orgNameType">
+        <xs:annotation>
+            <xs:documentation>This represents the Organization Type based on a non null string</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="rep:nonNullStringType">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

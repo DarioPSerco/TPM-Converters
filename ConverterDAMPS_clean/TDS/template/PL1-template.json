@@ -1,0 +1,135 @@
+{
+  "type": "Feature",
+  "id": "PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-66.44291264, -24.15261009],
+        [-66.44136086, -24.23036597],
+        [-66.36391186, -24.22904374],
+        [-66.36551048, -24.15129263],
+        [-66.44291264, -24.15261009]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001",
+    "date": "2017-04-24T13:49:11.806Z/2017-04-24T13:50:06.806Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "Pleiades-1A",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "HiRI",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2017-04-24T13:49:11.806Z",
+            "endingDateTime": "2017-04-24T13:50:06.806Z",
+            "operationalMode": "PAN",
+            "resolution": 0.5,
+            "acquisitionType": "NOMINAL",
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "acrossTrackIncidenceAngle": 0.7,
+              "alongTrackIncidenceAngle": 20
+            },
+            "wavelengths": [
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 480E-09,
+                "endWavelength": 820E-09,
+                "discreteWavelengths": [650E-09]
+              }
+            ],
+            "orbitNumber": 33,
+            "orbitDirection": "ASCENDING"
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 627642676,
+      "productType": "L1APRI_PAN",
+      "processingLevel": "1A",
+      "processingDate": "2017-04-25T10:12:41.239Z",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for PLEIADES",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for PLEIADES products",
+                  "edition": "1.01"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "<Native product name>"
+                  },
+                  "processedLevel": {
+                    "code": "L1A"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "<EOPF-EOS Converter name>",
+                  "edition": "<EOPF-EOS Converter version>"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/<native_product>",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/PL1_OPER_L1APRI_PAN_20010415T105400_20010415T105500_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ps:EarthObservation xmlns:ps="http://schemas.planet.com/ps/v1/planet_product_metadata_geocorrected_level"
+    xmlns:eop="http://earth.esa.int/eop" xmlns:opt="http://earth.esa.int/opt"
+    xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
+  <gml:metaDataProperty>
+    <ps:EarthObservationMetaData>
+      <eop:identifier>20190801_093015_1018_1B_AnalyticMS</eop:identifier>
+      <eop:acquisitionType>NOMINAL</eop:acquisitionType>
+      <eop:productType>L1B</eop:productType>
+      <eop:status>ARCHIVED</eop:status>
+      <eop:processing>
+        <eop:ProcessingInformation>
+          <eop:processorName>Planet Basic Processor</eop:processorName>
+          <eop:processorVersion>3.9.0</eop:processorVersion>
+          <eop:nativeProductFormat>GeoTIFF</eop:nativeProductFormat>
+        </eop:ProcessingInformation>
+      </eop:processing>
+      <ps:pixelFormat>16U</ps:pixelFormat>
+    </ps:EarthObservationMetaData>
+  </gml:metaDataProperty>
+  <gml:validTime>
+    <gml:TimePeriod>
+      <gml:beginPosition>2019-08-01T09:30:15.500000+00:00</gml:beginPosition>
+      <gml:endPosition>2019-08-01T09:30:16.250000+00:00</gml:endPosition>
+    </gml:TimePeriod>
+  </gml:validTime>
+  <gml:using>
+    <eop:EarthObservationEquipment>
+      <eop:platform>
+        <eop:Platform>
+          <eop:shortName>PlanetScope</eop:shortName>
+          <eop:serialIdentifier>1018</eop:serialIdentifier>
+          <eop:orbitType>LEO</eop:orbitType>
+        </eop:Platform>
+      </eop:platform>
+      <eop:instrument>
+        <eop:Instrument>
+          <eop:shortName>PS2.SD</eop:shortName>
+        </eop:Instrument>
+      </eop:instrument>
+      <eop:sensor>
+        <ps:Sensor>
+          <eop:sensorType>OPTICAL</eop:sensorType>
+          <eop:resolution uom="m">3.7</eop:resolution>
+          <eop:scanType>FRAME</eop:scanType>
+        </ps:Sensor>
+      </eop:sensor>
+      <eop:acquisitionParameters>
+        <ps:Acquisition>
+          <eop:orbitDirection>DESCENDING</eop:orbitDirection>
+          <eop:incidenceAngle uom="deg">3.1</eop:incidenceAngle>
+          <opt:illuminationAzimuthAngle uom="deg">135.0</opt:illuminationAzimuthAngle>
+          <opt:illuminationElevationAngle uom="deg">55.5</opt:illuminationElevationAngle>
+          <ps:azimuthAngle uom="deg">99.0</ps:azimuthAngle>
+          <ps:spaceCraftViewAngle uom="deg">2.8</ps:spaceCraftViewAngle>
+          <ps:acquisitionDateTime>2019-08-01T09:30:15.500000+00:00</ps:acquisitionDateTime>
+        </ps:Acquisition>
+      </eop:acquisitionParameters>
+    </eop:EarthObservationEquipment>
+  </gml:using>
+  <gml:resultOf>
+    <ps:EarthObservationResult>
+      <eop:product>
+        <ps:ProductInformation>
+          <eop:fileName>20190801_093015_1018_1B_AnalyticMS.tif</eop:fileName>
+          <ps:productFormat>GeoTIFF</ps:productFormat>
+          <ps:numRows>12</ps:numRows>
+          <ps:numColumns>16</ps:numColumns>
+          <ps:numBands>4</ps:numBands>
+          <ps:rowGsd>3.7</ps:rowGsd>
+          <ps:columnGsd>3.7</ps:columnGsd>
+        </ps:ProductInformation>
+      </eop:product>
+    </ps:EarthObservationResult>
+  </gml:resultOf>
+</ps:EarthObservation>

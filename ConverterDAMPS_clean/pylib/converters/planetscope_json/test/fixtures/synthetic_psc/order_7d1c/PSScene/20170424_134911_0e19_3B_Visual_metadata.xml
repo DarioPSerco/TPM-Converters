@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ps:EarthObservation xmlns:ps="http://schemas.planet.com/ps/v1/planet_product_metadata_geocorrected_level"
+    xmlns:eop="http://earth.esa.int/eop" xmlns:opt="http://earth.esa.int/opt"
+    xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
+  <gml:metaDataProperty>
+    <ps:EarthObservationMetaData>
+      <eop:identifier>20170424_134911_0e19_3B_Visual</eop:identifier>
+      <eop:acquisitionType>NOMINAL</eop:acquisitionType>
+      <eop:productType>L3B</eop:productType>
+      <eop:status>ARCHIVED</eop:status>
+      <eop:processing>
+        <eop:ProcessingInformation>
+          <eop:processorName>Planet Ortho Processor</eop:processorName>
+          <eop:processorVersion>4.1.0</eop:processorVersion>
+          <eop:nativeProductFormat>GeoTIFF</eop:nativeProductFormat>
+        </eop:ProcessingInformation>
+      </eop:processing>
+      <ps:pixelFormat>8U</ps:pixelFormat>
+    </ps:EarthObservationMetaData>
+  </gml:metaDataProperty>
+  <gml:validTime>
+    <gml:TimePeriod>
+      <gml:beginPosition>2017-04-24T13:49:11+00:00</gml:beginPosition>
+      <gml:endPosition>2017-04-24T13:51:11+00:00</gml:endPosition>
+    </gml:TimePeriod>
+  </gml:validTime>
+  <gml:using>
+    <eop:EarthObservationEquipment>
+      <eop:platform>
+        <eop:Platform>
+          <eop:shortName>PlanetScope</eop:shortName>
+          <eop:serialIdentifier>0e19</eop:serialIdentifier>
+          <eop:orbitType>LEO</eop:orbitType>
+        </eop:Platform>
+      </eop:platform>
+      <eop:instrument>
+        <eop:Instrument>
+          <eop:shortName>PS2</eop:shortName>
+        </eop:Instrument>
+      </eop:instrument>
+      <eop:sensor>
+        <ps:Sensor>
+          <eop:sensorType>OPTICAL</eop:sensorType>
+          <eop:resolution uom="m">3.7</eop:resolution>
+          <eop:scanType>FRAME</eop:scanType>
+        </ps:Sensor>
+      </eop:sensor>
+      <eop:acquisitionParameters>
+        <ps:Acquisition>
+          <eop:orbitDirection>DESCENDING</eop:orbitDirection>
+          <eop:incidenceAngle uom="deg">0.7</eop:incidenceAngle>
+          <opt:illuminationAzimuthAngle uom="deg">33.3</opt:illuminationAzimuthAngle>
+          <opt:illuminationElevationAngle uom="deg">44.1</opt:illuminationElevationAngle>
+          <ps:azimuthAngle uom="deg">98.2</ps:azimuthAngle>
+          <ps:spaceCraftViewAngle uom="deg">0.6</ps:spaceCraftViewAngle>
+          <ps:acquisitionDateTime>2017-04-24T13:49:11+00:00</ps:acquisitionDateTime>
+        </ps:Acquisition>
+      </eop:acquisitionParameters>
+    </eop:EarthObservationEquipment>
+  </gml:using>
+  <gml:resultOf>
+    <ps:EarthObservationResult>
+      <eop:product>
+        <ps:ProductInformation>
+          <eop:fileName>20170424_134911_0e19_3B_Visual.tif</eop:fileName>
+          <ps:productFormat>GeoTIFF</ps:productFormat>
+          <ps:spatialReferenceSystem>
+            <ps:epsgCode>32719</ps:epsgCode>
+            <ps:geodeticDatum>WGS_1984</ps:geodeticDatum>
+          </ps:spatialReferenceSystem>
+          <ps:numRows>12</ps:numRows>
+          <ps:numColumns>16</ps:numColumns>
+          <ps:numBands>3</ps:numBands>
+          <ps:rowGsd>3.7</ps:rowGsd>
+          <ps:columnGsd>3.7</ps:columnGsd>
+        </ps:ProductInformation>
+      </eop:product>
+    </ps:EarthObservationResult>
+  </gml:resultOf>
+</ps:EarthObservation>

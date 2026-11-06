@@ -1,0 +1,13 @@
+#instrument shortname|sensor type|sensor mode|acquisition|typecode|QR|level
+STR|other: StarTracker|N/A|NOMINAL|STR1DAT_0_|QR|other:L0
+STR|other: StarTracker|N/A|NOMINAL|STR2DAT_0_|QR|other:L0
+STR|other: StarTracker|N/A|NOMINAL|STR3DAT_0_|QR|other:L0
+STR|other: StarTracker|N/A|NOMINAL|STR1ATT_0_|QR|other:L0
+STR|other: StarTracker|N/A|NOMINAL|STR2ATT_0_|QR|other:L0
+STR|other: StarTracker|N/A|NOMINAL|STR3ATT_0_|QR|other:L0
+DORIS|other: DORIS|N/A|NOMINAL|DOR_NAV_0_|NO-QR|other:L0
+DORIS|other: DORIS|N/A|NOMINAL|DOR_DOP_0_|NO-QR|other:L0
+DORIS|other: DORIS|N/A|NOMINAL|DOR_DAT_0_|NO-QR|other:L0
+DORIS|other: DORIS|N/A|OTHER|DOR_JAM_0_|NO-QR|other:L0
+DORIS|other: DORIS|N/A|OTHER|DOR_TST_0_|NO-QR|other:L0
+STR|other: StarTracker|N/A|NOMINAL|STR_ATTREF|NO-QR|1B

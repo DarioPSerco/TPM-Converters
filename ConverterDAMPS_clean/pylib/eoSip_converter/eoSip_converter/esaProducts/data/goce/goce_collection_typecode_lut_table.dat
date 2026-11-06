@@ -1,0 +1,24 @@
+GOCE_COLLECTION_TYPECODE_LUT={
+#
+'GOCE Telemetry': ['T_XXXXXXXX'],
+#
+'GOCE Level 1': ['EGG_NOM_1b', 'STR_VC2_1b', 'STR_VC3_1b', 'SST_NOM_1b', 'SST_RIN_1b', 'MGM_GO1_1B', 'MGM_GO2_1B', 'MGM_GO3_1B', 'MTR_GOC_1B', 'ACC_DF1_1B', 'ACC_DF2_1B', 'ACC_DF3_1B', 'ACC_DF4_1B', 'ACC_DF5_1B', 'ACC_DF6_1B'],
+#
+'GOCE Level 2': ['EGG_NOM_2_', 'EGG_TRF_2_', 'SST_PSO_2_', 'SST_AUX_2_'], 
+#
+'GOCE Global Gravity Field Models and Grids': ['EGM_QLK_2I', 'EGM_GCF_2_', 'EGM_GOC_2_', 'EGM_GVC_2_', 'GRD_SPW_2_', 'GRC_SPW_2_', 'GGC_GRF_2_', 'GGC_TRF_2_', 'GGG_225_2_', 'GGG_255_2_', 'TGG_225_2_', 'TGG_255_2_', 'GRF_GOC_2_', 'TRF_GOC_2_', 'MGG_NTC_2_', 'MGG_WTC_2_'],
+#
+'GOCE Thermosphere Data': ['TDC_GOC_2_'],
+#
+'GOCE TEC and ROTI': ['TEC_TMS_2_'],
+#
+'VT GOCE Data':['SLA_GOC_2_', 'VTGOCE_DS_'],
+
+#
+# Level 0
+#
+'GOCE Level 0':['AUX_NOM_0_', 'STR_VC2_0_', 'STR_VC3_0_', 'SST_TOT_0_', 'SST_NOM_0_', 'GRF_LOR_0_', 'EGG_AUX_0_', 'EGG_NOM_0_', 'EGG_TOT_0_',
+    'DFC_F01_0_', 'DFC_F10_0_', 'EGG_ICM_0_', 'SST_ICB_0_']
+}
+	
+	

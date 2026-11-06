@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by CORABOEUF Isabelle (Réalix) -->
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Magellium (MAGELLIUM) -->
+<xs:schema xmlns:rep="http://ngeo.eo.esa.int/schema/metadataUpdateReport" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ngeo.eo.esa.int/schema/metadataUpdateReport" elementFormDefault="qualified"
+           attributeFormDefault="unqualified" version="1.3">
+    <!--======================================-->
+    <!--==== ngEO Root Elements ===============-->
+    <!--======================================-->
+    <xs:element name="metadataUpdateReport" type="rep:metadataUpdateReportType">
+        <xs:annotation>
+            <xs:documentation>ngEO Update Metadata Report Type</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <!--=======================================-->
+    <!--==== ngEO Complex Types Section ========-->
+    <!--=======================================-->
+    <xs:complexType name="metadataUpdateReportType">
+        <xs:annotation>
+            <xs:documentation>ngEO Update Metadata Report Data Structure</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="responsibleOrgName" type="xs:string" nillable="false" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Entity issuing the Update Metadata Report file</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Update Metadata Report date time</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="source" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Source of meta data</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:choice>
+                <xs:element name="productUpdateGroup" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:sequence>
+                                <xs:annotation>
+                                    <xs:documentation>This group of information is mandatory for ingesting purposes.
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:element name="platformShortName" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Platform (i.e. mission) identifier
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="instrumentShortName" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Instrument (i.e. sensor) identifier
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="operationalMode" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Also known as imaging mode, sensor mode or acquisition mode
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="productType" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Product type.</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:element name="productUpdateItem" type="rep:productUpdateItemType" minOccurs="0"
+                                        maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Element used to update attributes (except dataset associations)
+                                        for a product
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="associationInsertionItem" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Element used to insert one or more new dataset/collection
+                                        associations for a product
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="productIdentifier" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Identifier for metadata item, includes ground segment
+                                                    namespace to guarantee uniqueness within EOP.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="parentIdentifier" type="xs:string" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>Dataset/collection identifier to take into account
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="associationRemovalItem" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Element used to remove one or more dataset/collection associations
+                                        for a product
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="productIdentifier" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Identifier for metadata item, includes ground segment
+                                                    namespace to guarantee uniqueness within EOP.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="parentIdentifier" type="xs:string" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>Dataset/collection identifier to remove
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="productBulkUpdateGroup" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:sequence>
+                                <xs:annotation>
+                                    <xs:documentation>This group of information is mandatory for ingesting purposes.
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:element name="platformShortName" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Platform (i.e. mission) identifier
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="instrumentShortName" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Instrument (i.e. sensor) identifier
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="operationalMode" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Also known as imaging mode, sensor mode or acquisition mode
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="productType" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>Product type.</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:sequence>
+                                <xs:annotation>
+                                    <xs:documentation>Provides the date period and type to perform the bulk udpdate
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:element name="beginDate" type="xs:dateTime">
+                                    <xs:annotation>
+                                        <xs:documentation>Begin Date of the Metadata to delete</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="endDate" type="xs:dateTime">
+                                    <xs:annotation>
+                                        <xs:documentation>End Date of the Metadata to delete</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                                <xs:element name="dateType">
+                                    <xs:annotation>
+                                        <xs:documentation>Acquisition Time or Ingestion Time to be used as the date
+                                            criteria
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="INGESTION_TIME"/>
+                                            <xs:enumeration value="ACQUISITION_TIME"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:element name="metadataAttributes" type="rep:metadataAttributesType"
+                                        maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="version" type="xs:string" use="required" fixed="1.2"/>
+    </xs:complexType>
+    <!--=======================================-->
+    <xs:complexType name="productUpdateItemType">
+        <xs:annotation>
+            <xs:documentation>Product Update Item</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="productIdentifier" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Identifier for Metadata item, includes ground segment namespace to guarantee
+                        uniqueness within EOP.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="metadataAttributes" type="rep:metadataAttributesType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--=======================================-->
+    <xs:complexType name="metadataAttributesType">
+        <xs:annotation>
+            <xs:documentation>Metadata Attribute</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="AttributeName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The id of the Metadata Attribute to be updated</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AttributeValue" type="xs:anyType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>The value of Metadata Attribute to be updated. Existing values are replaced.
+
+                        If not provided, this means that all values are removed for this attribute.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
