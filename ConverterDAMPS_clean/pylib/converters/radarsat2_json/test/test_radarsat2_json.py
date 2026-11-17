@@ -70,9 +70,9 @@ def _extract(xml_path, work_folder):
 
 def _feature(xml_path, work_folder, eo_name="RS2_OPER_TEST"):
     prod, met = _extract(xml_path, work_folder)
-    # the ingester passes the product folder name, as here
+    # the ingester passes the product annotation file with its folder, as here
     mission, dynamic = json_emitter.build_layers(
-        met, prod, eo_name, native_product_name=prod.productName)
+        met, prod, eo_name, native_product_name=prod.nativeFileName)
     feature = json_template.build(mission, dynamic, template_path=json_emitter.TEMPLATE_PATH)
     return prod, met, feature
 
@@ -169,7 +169,8 @@ def test_wide_fine_slc_values(tmp_path):
     assert step["description"] == "EOPF-EOS Converter for RADARSAT-2"
     assert step["reference"] == [{"title": "EOPF-EOS Specialization for RADARSAT-2 products",
                                   "edition": "1.0"}]
-    assert step["source"][0]["sourceCitation"]["title"] == FW_SLC.parent.name
+    # a file of the native product, not the product folder
+    assert step["source"][0]["sourceCitation"]["title"] == "%s/product.xml" % FW_SLC.parent.name
     assert step["source"][0]["processedLevel"]["code"] == "L1"
     assert step["stepDateTime"]["created"] == props["created"]
     assert step["output"][0]["sourceCitation"]["title"] == "RS2_OPER_TEST.ZIP"
@@ -293,8 +294,8 @@ def test_quicklook_png(xml_path, tmp_path):
         assert image.size == browse.size
 
 
-def test_packager_finds_native_by_folder_citation(tmp_path, monkeypatch):
-    """The citation is the product folder name: the packager stores that
+def test_packager_finds_native_by_file_citation(tmp_path, monkeypatch):
+    """The citation is <product folder>/product.xml: the packager stores that
     folder under measurements/ and the overview under previews/overviews/."""
     from radarsat2_json import package_radarsat2_zips as pkg
     from common import spaces
@@ -315,7 +316,7 @@ def test_packager_finds_native_by_folder_citation(tmp_path, monkeypatch):
     monkeypatch.setattr(pkg, "SPACES", dict(pkg.SPACES, **roots))
     monkeypatch.setattr(pkg, "OUTSPACE", out)
     monkeypatch.setattr(pkg, "PRODUCTS", products)
-    assert spaces.find_native(FW_SLC.parent.name, pkg.SPACES) == target.parent
+    assert spaces.find_native("%s/product.xml" % FW_SLC.parent.name, pkg.SPACES) == target.parent
 
     native = pkg.package_one(out / "RS2_OPER_TEST.JSON")
     assert native == target.parent

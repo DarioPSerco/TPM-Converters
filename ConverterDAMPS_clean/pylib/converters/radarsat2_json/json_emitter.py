@@ -22,8 +22,9 @@ Spec readings encoded here:
   (SSG / SPG); EPSG:4326 for the others, whose geolocation grid is geodetic.
 - lineage source: Table 18 is normative (``source[0].sourceCitation.title`` =
   native product name, ``source[0].processedLevel.code``), not the example
-  (``source[0].citation`` with processedLevel inside). The native product
-  name is the product folder name.
+  (``source[0].citation`` with processedLevel inside). The citation is a
+  file of the native product: the product annotation, with its folder since
+  every product has the same one (``<product folder>/product.xml``).
 - lineage output title: the package name with ``.ZIP``, as in the example
   (the Table 18 example omits the extension).
 - links: titles fixed by Tables 20-21 ("Native EO Product", "Preview Image",
@@ -111,10 +112,10 @@ def _polygon_coordinates(footprint):
 
 def build_layers(met, product, eo_product_name, native_product_name=None):
     """RADARSAT-2 per-product dynamic values, from this mission's extraction."""
-    # lineage citation: the product folder name; measurements link: the
-    # first image file inside it
+    # lineage citation: <product folder>/product.xml; measurements link:
+    # the first image file of the folder
     native_name = (native_product_name
-                   or getattr(product, "productName", None)
+                   or getattr(product, "nativeFileName", None)
                    or eo_product_name)
     measurement_file = _la(met, "nativeDataFile") or native_name
     typecode = _gv(met, M.METADATA_TYPECODE)

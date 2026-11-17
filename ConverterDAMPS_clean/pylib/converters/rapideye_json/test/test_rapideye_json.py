@@ -344,6 +344,37 @@ def test_product_without_image_is_rejected(tmp_path):
         product_rapideye.Product_Rapideye(str(folder / L3_XML.name))
 
 
+def test_planet_order_layout(tmp_path):
+    """Planet order delivery: metadata in <asset>_xml/, image in <asset>/.
+    The product root is the delivery folder, the measurements href keeps the
+    sub-folder and the packager selects the same files."""
+    import importlib
+    packager = importlib.import_module("rapideye_json.package_rapideye_zips")
+    delivery = tmp_path / "20170424_134911_RapidEye-1_REOrthoTile"
+    (delivery / "analytic_xml").mkdir(parents=True)
+    (delivery / "analytic").mkdir()
+    for p in DELIVERY_DIR.glob(L3_STEM + "*"):
+        sub = "analytic_xml" if p.name.endswith("_metadata.xml") else "analytic"
+        shutil.copy(p, delivery / sub / p.name)
+    entry = delivery / "analytic_xml" / L3_XML.name
+    prod = product_rapideye.Product_Rapideye(str(entry))
+    assert prod.EO_FOLDER == str(delivery)
+    assert prod.measurement_href() == "analytic/%s.tif" % L3_STEM
+    native = packager.product_root(entry.parent)
+    assert native == delivery
+    assert [str(p) for p in packager.product_files(native, L3_STEM)] == prod.files
+
+
+def test_visual_entry_is_skipped():
+    import configparser, re
+    cfg = configparser.ConfigParser(interpolation=None)
+    cfg.read(Path(product_rapideye.__file__).resolve().parent / "ingest_rapideye.cfg")
+    pattern = re.compile(cfg.get("Search", "FILES_NAMEPATTERN"))
+    assert pattern.match("2745902_2012-02-05_RE3_3A_Analytic_metadata")
+    assert pattern.match(L3_STEM + "_metadata")
+    assert not pattern.match("2745902_2012-02-05_RE3_3A_Visual_metadata")
+
+
 def test_datetime_normalisation():
     norm = product_rapideye.normalise_utc
     assert norm("2021-03-14T07:08:03.311795Z") == "2021-03-14T07:08:03.311Z"

@@ -13,21 +13,6 @@ OUTSPACE = SPACES["OUTSPACE"]
 PRODUCTS = SPACES["PRODUCTS"]
 
 
-def find_native_file(marker_name, sp):
-    # file-native variant of spaces.find_native: the citation IS the delivery
-    # ZIP itself (origName = basename of the .zip entry), not a marker inside
-    # a folder - return the file, not its parent
-    roots = spaces.search_roots(sp)
-    for label, root in roots:
-        for hit in sorted(root.rglob(marker_name)):
-            if hit.is_file():
-                return hit
-    raise FileNotFoundError(
-        "%s not found; searched: %s"
-        % (marker_name, ", ".join(str(r) for _, r in roots) or "no existing space")
-    )
-
-
 def package_one(mf):
     d = json.loads(mf.read_text(encoding="utf-8"))
     product = d["id"]
@@ -35,7 +20,9 @@ def package_one(mf):
     ptype = pinfo["productType"]
     links = d["properties"]["links"]
     citation = json_template.lineage_citation(d)
-    native = find_native_file(citation, SPACES)
+    # the citation is a DIMAP document of the product: the native is the
+    # delivery ZIP holding it
+    native = spaces.find_native_archive(citation, SPACES)
 
     # The delivery ZIP is unpacked into measurements/ (spec section 3.3),
     # its layout kept, so the manifest's measurements hrefs resolve inside

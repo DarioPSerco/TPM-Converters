@@ -99,7 +99,8 @@ def test_sar_values_present_and_no_placeholder(tmp_path):
     assert acq["platform"]["orbitType"] == "LEO"
     assert acq["instrument"]["instrumentShortName"] == "SAR"
     assert acq["instrument"]["sensorType"] == "RADAR"
-    assert acq["platform"]["platformSerialIdentifier"] == "1"
+    assert acq["platform"]["platformSerialIdentifier"] == 1
+    assert isinstance(acq["platform"]["platformSerialIdentifier"], int)
     assert par["operationalMode"] == "SM"
     assert par["orbitNumber"] == 53
     assert par["orbitDirection"] == "ASCENDING"

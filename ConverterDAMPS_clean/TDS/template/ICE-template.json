@@ -22,7 +22,7 @@
       {
         "platform": {
         "platformShortName": "ICEYE",
-        "platformSerialIdentifier": "1",
+        "platformSerialIdentifier": 1,
         "orbitType": "LEO"
       },
       "instrument": {

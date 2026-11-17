@@ -24,6 +24,14 @@ def product_files(folder, stem):
     return sorted(found, key=lambda p: p.relative_to(folder).as_posix())
 
 
+def product_root(folder):
+    """Folder holding the metadata file -> folder the product files are
+    searched under (same rule as product_rapideye.product_root): a Planet
+    order delivery keeps the metadata in <asset>_xml/, the image in <asset>/."""
+    folder = Path(folder)
+    return folder.parent if folder.name.lower().endswith("_xml") else folder
+
+
 SPACES = spaces.read_spaces(BASE.parent / "ingest_rapideye.cfg")
 OUTSPACE = SPACES["OUTSPACE"]
 PRODUCTS = SPACES["PRODUCTS"]
@@ -37,7 +45,7 @@ def package_one(mf):
     if not citation.endswith(METADATA_SUFFIX):
         raise Exception("lineage citation is not a product metadata file: %s" % citation)
     stem = citation[:-len(METADATA_SUFFIX)]
-    native = spaces.find_native(citation, SPACES)
+    native = product_root(spaces.find_native(citation, SPACES))
 
     # Only the product's own files: a delivery folder may hold several
     # products. Their layout below the entry folder is kept, so the manifest's

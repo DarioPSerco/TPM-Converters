@@ -23,6 +23,7 @@ Le missioni supportate sono:
 - Beijing-1, NigeriaSat-1, UK-DMC-1: `dmc`
 - RADARSAT-2: `radarsat2` (in `INBOX` va la cartella prodotto con `product.xml`, o il suo ZIP)
 - RapidEye: `rapideye`
+- KOMPSAT-1 / KOMPSAT-2: `kompsat`
 
 ## 2. Prerequisiti
 
@@ -108,7 +109,7 @@ Esempi di file di ingresso:
 | Missione | File individuato |
 |---|---|
 | GeoEye-1 | `*_README.XML` |
-| WorldView | secondo il pattern configurato nella missione |
+| WorldView | `*_README.XML` dell'ordine (un solo prodotto per ordine, componenti PAN e MUL insieme) |
 | QuickBird-2 | secondo il pattern configurato nella missione |
 | ICEYE | `*.xml` |
 | Pleiades | secondo il pattern configurato nella missione |
@@ -118,6 +119,7 @@ Esempi di file di ingresso:
 | SkySat | `<item id>_metadata.json` |
 | Beijing-1 / NigeriaSat-1 / UK-DMC-1 | `<dataset>.dim` |
 | RapidEye | `<prodotto>_metadata.xml` |
+| KOMPSAT-1 / KOMPSAT-2 | `EOC_*.txt`; `MSC_*PN*_1R.txt` / `MSC_*PN*_1G.txt` |
 
 Esempio GeoEye:
 
@@ -156,6 +158,7 @@ Sostituire `geoeye1` con la missione desiderata:
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py dmc
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py radarsat2
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py rapideye
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py kompsat
 ```
 
 È possibile usare anche `py` se l'ambiente globale contiene tutte le dipendenze:
@@ -711,5 +714,55 @@ Limiti noti:
   non descrive il formato nativo e converter e test sono verificati solo su
   fixture sintetiche (vedere
   `rapideye_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`). Al primo prodotto
+  reale controllare il manifest e, se la conversione fallisce per un metadato
+  mancante, segnalare l'errore.
+
+## 18. KOMPSAT-1 / KOMPSAT-2
+
+Il file d'ingresso e' il metadata ASCII `<immagine>.txt` (righe
+`AUX_<NOME> <valore>`). Per KOMPSAT-2 e' quello della componente PAN (token
+`PN` nel nome): la componente MS dello stesso bundle (token `MS`, oppure
+`M1`..`M4` con un'immagine per banda) entra nello stesso pacchetto. Le due
+componenti possono stare nella stessa cartella o in due sottocartelle della
+stessa scena. La cartella (o il suo ZIP) va copiata dentro
+`TDS\KOMPSAT\INBOX`:
+
+```text
+TDS\KOMPSAT\INBOX\MSC_100607044108_21000_10731074_1G\
+  MSC_100607044108_21000_10731074PN11_1G.tif
+  MSC_100607044108_21000_10731074PN11_1G.txt
+  MSC_100607044108_21000_10731074MS11_1G.tif
+  MSC_100607044108_21000_10731074MS11_1G.txt
+TDS\KOMPSAT\INBOX\EOC_020101121314_00042_L1B\
+  EOC_020101121314_00042_L1B.tif
+  EOC_020101121314_00042_L1B.txt
+```
+
+Avvio, dalla cartella `ConverterDAMPS_clean`:
+
+```powershell
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py kompsat
+```
+
+Risultati in `TDS\KOMPSAT\OUTSPACE\` (manifest e overview) e
+`TDS\KOMPSAT\PRODUCTS\` (delivery ZIP, overview in `previews\overviews\`).
+
+| Satellite | Livello nativo | Tipo prodotto | Componenti |
+|---|---|---|---|
+| KOMPSAT-1 (EOC) | L1B | `L1BORT_PAN` | PAN 6.6 m |
+| KOMPSAT-2 (MSC) | 1R | `L1_OPT_BDL` | PAN 1 m + MS4B 4 m |
+| KOMPSAT-2 (MSC) | 1G | `L1_GEO_BDL` | PAN 1 m + MS4B 4 m |
+
+Limiti noti:
+
+- Un bundle KOMPSAT-2 senza componente MS fallisce; un prodotto con la sola
+  componente MS non viene selezionato.
+- Direzione d'orbita e coordinate dei quattro angoli del footprint sono
+  obbligatorie: se mancano nel file AUX la conversione fallisce. Per
+  KOMPSAT-1 serve almeno un angolo di acquisizione (sole o incidenza).
+- Nessun prodotto KOMPSAT reale e' stato ancora convertito: la specializzazione
+  non descrive il formato nativo e converter e test sono verificati solo su
+  fixture sintetiche (vedere
+  `kompsat_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`). Al primo prodotto
   reale controllare il manifest e, se la conversione fallisce per un metadato
   mancante, segnalare l'errore.

@@ -195,7 +195,8 @@ def test_multispectral_primary_values(tmp_path):
         {"name": "EOF-EOS External Data Handling", "type": "CI_Organisation"}]}]
     assert step["reference"] == [{"title": "EOPF-EOS Specialization for PLEIADES NEO products",
                                   "edition": "1.01"}]
-    assert step["source"] == [{"sourceCitation": {"title": NATIVE_ZIP_NAME},
+    # a file of the native product, not the delivery ZIP
+    assert step["source"] == [{"sourceCitation": {"title": "DIM_PNEO3_MS_SYNTH.XML"},
                                "processedLevel": {"code": "L1A"}}]
     assert step["processingInformation"]["softwareReference"]["title"] == "EOPF-EOS Converter for PLEIADES NEO"
     assert step["output"] == [{"sourceCitation": {"title": "%s.ZIP" % eo_name}}]

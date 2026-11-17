@@ -18,6 +18,10 @@ Spec readings encoded here (tables over examples, as for PNEO):
 - the spec document goes in ``reference`` and the converter in
   ``processingInformation.softwareReference``, as in the examples (Table 20
   puts both under ``softwareReference``).
+- the lineage source cites a file of the native product: the DIMAP
+  document (``.dim``) of the first component (the MS one in a bundle). The
+  packager and the runner find the delivery ZIP again from it
+  (``common.spaces.find_native_archive``).
 - output sourceCitation: the package name without extension (Table 20 and
   both examples).
 - processingDate: mandatory in Table 19 although the examples leave it out.
@@ -110,7 +114,7 @@ def _acquisition_parameters(components):
 def build_layers(met, product, eo_product_name, native_product_name=None):
     """GEOSAT per-product dynamic values, from this mission's extraction."""
     native_name = (native_product_name
-                   or getattr(product, "origName", None)
+                   or getattr(product, "nativeFileName", None)
                    or eo_product_name)
     created = _gv(met, P.CREATION_TIME)
     begin = _gv(met, M.METADATA_START_DATE_TIME)

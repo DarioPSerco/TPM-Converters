@@ -20,7 +20,7 @@ writes to a flat `log/` or the repo root.
 
 | dir | role |
 |---|---|
-| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,geosat,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc,radarsat2,rapideye}_json/` | the fifteen converters (code + `ingest_*.cfg` + packager + tests) |
+| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,geosat,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc,radarsat2,rapideye,kompsat}_json/` | the sixteen converters (code + `ingest_*.cfg` + packager + tests) |
 | `pylib/converters/common/` | mission-agnostic JSON template engine + `feature_template.json` + `spaces.py` |
 | `pylib/converters/run_mission.py` | one-command runner: convert + package + archive per mission |
 | `pylib/eoSip_converter/` | base ingester package — **pruned**: `data/shapefile/` (186 MB) and `proj/` (5 MB) removed, never touched in any trace |
@@ -49,7 +49,7 @@ native products into `TDS/<MISSION>/INBOX/` first (a raw `.zip` in INBOX is
 silently skipped), then:
 
 ```bash
-.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|geosat|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc|radarsat2|rapideye>
+.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|geosat|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc|radarsat2|rapideye|kompsat>
 ```
 
 The runner converts every INBOX product, packages the delivery ZIPs into
@@ -69,7 +69,7 @@ PYTHONPATH="pylib/xml_nodes/v101;pylib/converters" \
 
 | converter                                                | xml_nodes version on PYTHONPATH |
 |----------------------------------------------------------|---------------------------------|
-| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json, radarsat2_json, rapideye_json | `pylib/xml_nodes/v101` |
+| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json, radarsat2_json, rapideye_json, kompsat_json | `pylib/xml_nodes/v101` |
 | pleiades_json, pneo_json, geosat_json                    | `pylib/xml_nodes/v100`          |
 
 `v200` is used only by the geoeye1/worldview/quickbird test conftests.
@@ -88,9 +88,9 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-328 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, GEOSAT 42, CSK 12, PSC 19, RS1 13,
-TSX 19, SSC 27, DMC 60, RS2 39, RE 35). The
-iceye/pleiades/pneo/geosat/cosmoskymed/planetscope/skysat/dmc/rapideye suites read `TDS/template/*.json` via a relative
+365 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, GEOSAT 47, CSK 12, PSC 19, RS1 13,
+TSX 19, SSC 27, DMC 60, RS2 39, RE 37, KO 30). The
+iceye/pleiades/pneo/geosat/cosmoskymed/planetscope/skysat/dmc/rapideye/kompsat suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
 ## Delivery-ZIP layout (all packagers)
@@ -112,6 +112,7 @@ resolve inside the ZIP — packagers copy the manifest verbatim, no rewrite.
   their sections below (PNEO: synthetic fixtures only, no real TDS yet).
 - GEOSAT: synthetic fixtures only, no real TDS yet, see its section below.
 - RADARSAT-2: synthetic fixtures only, no real TDS yet, see its section below.
+- KOMPSAT-1 / KOMPSAT-2: synthetic fixtures only, no real TDS yet, see its section below.
 - COSMO-SkyMed validated end to end on two real TDS products: CSK HIMAGE
   DGM_B (Level 1B, HDF5 delivery) and CSK WIDEREGION GEC_B (Level 1C,
   GeoTIFF-in-`.tgz` delivery). Open points: no PINGPONG and no Second
@@ -366,8 +367,12 @@ Per "EOPF-EOS SPECIALIZATION FOR PLEIADES PRODUCTS" 1.01. Run with
 - **Overview**: the component `DATASET_QL_PATH` quicklook as PNG, written
   next to the manifest; the packager stores it under `previews/overviews/`.
 - **Manifest shapes chosen where the spec contradicts itself or is silent**:
-  one lineage step, source per Table 19 (`sourceCitation.title` = the
-  delivery ZIP name, processedLevel `L1A`/`L2`/`L3`); processingLevel
+  one lineage step, source per Table 19 (`sourceCitation.title` = a file of
+  the native product, the DIMAP document `DIM_PHR1*.XML` of the first
+  component - the MS one in a bundle; same rule for PNEO with
+  `DIM_PNEO*.XML` and for GEOSAT with the `.dim`; the runner and the
+  packagers find the delivery ZIP again with
+  `common/spaces.find_native_archive`; processedLevel `L1A`/`L2`/`L3`); processingLevel
   `1A`/`2`/`3`; `processingDate` = DIMAP `PRODUCTION_DATE`; `created` =
   conversion time; angles from the `Center` located values, each left out
   when absent; resolution = `RESAMPLING_SPACING`; wavelengths per Tables
@@ -482,9 +487,10 @@ Per "EOPF-EOS SPECIALIZATION FOR RADARSAT-2 PRODUCTS" 1.0. Run with
   `FILES_EXTPATTERN=^\.xml$`) inside the MDA product folder
   `RS2_OK..._PK..._DK..._<beam>_<date>_<time>_<pols>_<type>/`; a ZIP of it in
   `INBOX/` is unpacked first. Every product has the same entry name, so the
-  lineage citation (and the key the runner and packager use) is the product
-  folder name: `common/spaces.find_native` accepts a folder citation and
-  `run_mission.py` matches an entry by file or folder name.
+  lineage citation (and the key the runner and packager use) is the entry
+  file with its folder, `<product folder>/product.xml`:
+  `common/spaces.find_native` returns the folder of the cited file and
+  `run_mission.py` matches an entry by file name or by folder/file name.
 - **Operational mode**: `sourceAttributes/beamModeMnemonic` folded on the
   spec's modes by `product_radarsat2.MODE_RULES`: Standard / Extended High-Low
   / Standard Quad-Pol -> `BS`; Fine / Ultra-Fine / Fine Quad-Pol -> `BSF`;
@@ -547,3 +553,45 @@ knowing, all in `pylib/converters/rapideye_json/`:
   `rapideye_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`, which lists what to
   check first. Also run end to end (`run_mission.py rapideye`, convert +
   package + move) on the three synthetic products.
+
+## KOMPSAT-1 / KOMPSAT-2 specifics (`kompsat_json`)
+
+Per "EOPF-EOS SPECIALIZATION FOR KOMPSAT PRODUCTS" 1.0. Run with
+`run_mission.py kompsat`; workspace `TDS/KOMPSAT/`. Differences worth
+knowing, all in `pylib/converters/kompsat_json/`:
+
+- **Entry file**: the ASCII AUX metadata `<image stem>.txt` (`AUX_<NAME>
+  <value>` lines, optional `BEGIN_`/`END_` groups). KOMPSAT-1: `EOC_*.txt`.
+  KOMPSAT-2: only the PAN component metadata
+  (`MSC_<yymmddhhmmss>_<orbit>_<path/row>PN<nn>_<1R|1G>.txt`); the MS
+  component (mode `MS`, or `M1`..`M4` one image per band) goes in the same
+  package. `_rpc` / `_readme` texts are not entries.
+- **Native product**: KOMPSAT-2, every file of the scene (any mode token, same
+  level) in the entry folder, or in the folder above when the bundle is split
+  in sibling `PAN/` + `MS/` folders; KOMPSAT-1, the files named after the
+  metadata stem. Layout kept under `measurements/`. The shared rules live in
+  `kompsat_files.py` (no eoSip import), used by product class and packager.
+- **Product type**: KOMPSAT-1 -> `L1BORT_PAN` (processing level `1B`, code
+  `L1B`); KOMPSAT-2 level `1R` -> `L1_OPT_BDL`, `1G` -> `L1_GEO_BDL`
+  (processing level `1`, codes `L1R` / `L1G`). Package names `KO1_` / `KO2_`,
+  `<bbvv>` = `0000` (spec Table 1: version 00, counter from 00).
+- **Bundle**: two `acquisitionParameters` entries, PAN then MS4B, each with its
+  own times when its component has an AUX file. A KOMPSAT-2 entry without MS
+  component is rejected.
+- **Overview**: the native browse (`*_br|_browse|_ql.*`) as delivered, else
+  rendered from the MS component (R, G, B), else the PAN image (grey). Stored
+  under `previews/overviews/`.
+- **Manifest shapes chosen where the spec contradicts itself** (tables over the
+  examples, full list at the top of `json_emitter.py`): `id` without `.ZIP`;
+  resolution from Table 2 (6.6 / 1 / 4 m), not the examples' 0.5;
+  processingLevel `1B` for `L1BORT_PAN`; `wavelengths` key (Table 10 misspells
+  it); lineage source `sourceCitation.title`; link titles of Tables 22/23.
+  `referenceSystemIdentifier` always the EPSG:4326 URI (Table 17). Acquisition
+  angles each written when available, at least one mandatory for KOMPSAT-1.
+  `cloudCover` only when 0-100. Processing date falls back on the start of
+  sensing (Table 18); orbit number on the file name.
+- **Not yet validated on a real product**: the specialization does not describe
+  the native format; synthetic fixtures only, see
+  `kompsat_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`, which lists what to
+  check first. Also run end to end (`run_mission.py kompsat`, convert +
+  package + move, one bundle as `.zip`) on the three synthetic products.

@@ -1,7 +1,10 @@
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 EOSIP_CONVERTER_LIBRARY_VERSION_REQ = ">=1.1.0"
-VERSION_CHANGES = {}
+VERSION_CHANGES = {
+    '1.0.0': 'First issue, per EOPF-EOS Specialization for RADARSAT-2 products 1.0',
+    '1.0.1': 'Lineage source citation: the product annotation file (<product folder>/product.xml) instead of the product folder name',
+}
 
 def ensure_eosip_converter_version_is_valid(required_version):
     from packaging.version import Version

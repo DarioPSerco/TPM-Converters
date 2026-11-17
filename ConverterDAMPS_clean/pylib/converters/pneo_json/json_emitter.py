@@ -20,9 +20,10 @@ Spec readings encoded here:
   ``1A`` is not one of Table 18's allowed values).
 - processingDate: mandatory in Table 18 although the examples leave it out.
 - cloudCover: mandatory (Table 20).
-- the native product name is the delivery ZIP the conversion starts from,
-  so the packager and the runner can find the native product again from
-  the manifest.
+- the lineage source cites a file of the native product: the DIMAP
+  document (``DIM_PNEO*.XML``) of the first component (the MS one in a
+  bundle). The packager and the runner find the delivery ZIP again from it
+  (``common.spaces.find_native_archive``).
 - acquisitionParameters: one entry per component - one outside the bundle,
   MS then PAN for a bundle (the example's order). Orbit number / direction
   sit in each entry, as in the examples.
@@ -108,7 +109,7 @@ def _acquisition_parameters(components):
 def build_layers(met, product, eo_product_name, native_product_name=None):
     """PLEIADES NEO per-product dynamic values, from this mission's extraction."""
     native_name = (native_product_name
-                   or getattr(product, "origName", None)
+                   or getattr(product, "nativeFileName", None)
                    or eo_product_name)
     created = _gv(met, P.CREATION_TIME)
     begin = _gv(met, M.METADATA_START_DATE_TIME)

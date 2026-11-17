@@ -1,8 +1,9 @@
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 EOSIP_CONVERTER_LIBRARY_VERSION_REQ = ">=1.1.0"
 VERSION_CHANGES = {
     '0.9.2': "Standalone shared (GeoEye-1, Quickbird, Worldview 123) Python 2 converter",
-    '1.0.0': "Worldview v2.0 EOSIP specification (Worldview legion) and centralised for use with eoSip_converter common library"
+    '1.0.0': "Worldview v2.0 EOSIP specification (Worldview legion) and centralised for use with eoSip_converter common library",
+    '1.0.1': "One EOPF-EOS product per native order (entry = order-level README): PAN and MUL components and the order-level files in one package"
 }
 
 

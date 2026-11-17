@@ -78,8 +78,10 @@ def find_native(marker_name, spaces):
     """Locate the native holding the metadata file named marker_name
     (the manifest's source.citation), wherever it sits. Returns the folder
     containing the marker. Nesting below each root is arbitrary.
-    A citation naming a folder (RADARSAT-2: every product has the same
-    product.xml, so the citation is the product folder) returns that folder."""
+    A citation may carry the folder of the marker (RADARSAT-2: every
+    product has the same product.xml, so the citation is
+    <product folder>/product.xml). A citation naming a folder returns that
+    folder."""
     roots = search_roots(spaces)
     for label, root in roots:
         for hit in sorted(root.rglob(marker_name)):
@@ -92,6 +94,33 @@ def find_native(marker_name, spaces):
         "%s not found; searched: %s"
         % (marker_name, ", ".join(str(r) for _, r in roots) or "no existing space")
     )
+
+
+def find_native_archive(member_name, spaces):
+    """Locate the native delivery ZIP holding a file named member_name (the
+    manifest's source citation of the missions that ingest the delivery ZIP
+    as it is: PLEIADES, PNEO, GEOSAT). Returns the ZIP path."""
+    roots = search_roots(spaces)
+    for label, root in roots:
+        for zp in sorted(root.rglob("*")):
+            if not (zp.is_file() and zp.suffix.lower() == ".zip"):
+                continue
+            if member_name in archive_member_names(zp):
+                return zp
+    raise FileNotFoundError(
+        "no delivery ZIP holding %s; searched: %s"
+        % (member_name, ", ".join(str(r) for _, r in roots) or "no existing space")
+    )
+
+
+def archive_member_names(zp):
+    """Base names of the files inside the ZIP zp (empty when unreadable)."""
+    try:
+        with zipfile.ZipFile(zp) as zf:
+            names = zf.namelist()
+    except (zipfile.BadZipFile, OSError):
+        return set()
+    return {n.replace("\\", "/").rstrip("/").rsplit("/", 1)[-1] for n in names}
 
 
 def find_entries(spaces):

@@ -44,7 +44,7 @@ class ingester_geosat(ingester.Ingester):
             processInfo.srcProduct,
             eoName,
             outDir,
-            native_product_name=processInfo.srcProduct.origName,
+            native_product_name=processInfo.srcProduct.nativeFileName,
         )
         processInfo.addLog("  JSON metadata manifest written: %s" % jsonPath)
         self.logger.info("  JSON metadata manifest written: %s" % jsonPath)

@@ -31,6 +31,7 @@ MISSIONS = {
     "dmc": ("dmc_json", "ingest_dmc.cfg", "ingester_dmc.py", "v101", "package_dmc_zips.py"),
     "radarsat2": ("radarsat2_json", "ingest_radarsat2.cfg", "ingester_radarsat2.py", "v101", "package_radarsat2_zips.py"),
     "rapideye": ("rapideye_json", "ingest_rapideye.cfg", "ingester_rapideye.py", "v101", "package_rapideye_zips.py"),
+    "kompsat": ("kompsat_json", "ingest_kompsat.cfg", "ingester_kompsat.py", "v101", "package_kompsat_zips.py"),
 }
 
 
@@ -47,6 +48,27 @@ def outspace_citations(sp):
         except Exception:
             pass
     return m
+
+
+def native_of(citation, sp):
+    """Native a citation points at: the folder holding the cited file, or
+    the delivery ZIP holding it (missions ingesting the ZIP as it is)."""
+    try:
+        return spaces.find_native(citation, sp)
+    except FileNotFoundError:
+        return spaces.find_native_archive(citation, sp)
+
+
+def cited(entry, citations, sp):
+    """True when one of the manifests cites entry: by its file name, by
+    <folder>/<file name> when the name is not unique (RADARSAT-2
+    product.xml), or - entry being a delivery ZIP the mission ingests as it
+    is - by the name of a file inside it."""
+    if entry.name in citations or "%s/%s" % (entry.parent.name, entry.name) in citations:
+        return True
+    if native_archive(entry, sp) and entry.suffix.lower() == ".zip":
+        return any(name in citations for name in spaces.archive_member_names(entry))
+    return False
 
 
 def unit_of(path, sp):
@@ -142,9 +164,7 @@ def convert(mission_dir, cfg, ingester, ver, sp):
             results.append((entry, unit, ok, detail))
     after = outspace_citations(sp)
     for i, (entry, unit, ok, detail) in enumerate(results):
-        # the citation is the entry file name, or its folder name when the
-        # entry name is not unique (RADARSAT-2 product.xml)
-        if ok and entry.name not in after and entry.parent.name not in after:
+        if ok and not cited(entry, after, sp):
             results[i] = (entry, unit, False, "rc=0 but no JSON with citation %s in OUTSPACE" % entry.name)
     new = [c for c in after if c not in before]
     print("convert: %d entries, %d ok, %d new JSON in OUTSPACE"
@@ -205,7 +225,7 @@ def move(conv_results, pkg_results, sp):
             # native unresolved by the packager; best effort via the manifest
             mf = sp["OUTSPACE"] / name
             try:
-                touch(unit_of(spaces.find_native(citation_of(mf), sp), sp), False)
+                touch(unit_of(native_of(citation_of(mf), sp), sp), False)
             except Exception:
                 print("move: cannot map failed %s to a native unit (nothing moved)" % name)
 
@@ -230,7 +250,7 @@ def move_standalone(sp):
         product = json.loads(mf.read_text(encoding="utf-8"))["id"]
         if (sp["PRODUCTS"] / ("%s.ZIP" % product)).exists():
             try:
-                native = spaces.find_native(citation, sp)
+                native = native_of(citation, sp)
             except FileNotFoundError:
                 continue
             pkg.append((mf.name, native, True, ""))

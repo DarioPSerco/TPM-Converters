@@ -216,7 +216,8 @@ def test_geosat2_panchromatic_values(tmp_path):
         {"name": "EOF-EOS External Data Handling", "type": "CI_Organisation"}]}]
     assert step["reference"] == [{"title": "EOPF-EOS Specialization for GEOSAT products",
                                   "edition": "1.01"}]
-    assert step["source"] == [{"sourceCitation": {"title": "%s.zip" % _de2_name("PAN")},
+    # a file of the native product, not the delivery ZIP
+    assert step["source"] == [{"sourceCitation": {"title": "%s.dim" % _de2_name("PAN")},
                                "processedLevel": {"code": "L1C"}}]
     assert step["processingInformation"]["softwareReference"]["title"] == "EOPF-EOS Converter for GEOSAT"
     assert step["output"] == [{"sourceCitation": {"title": eo_name}}]
@@ -336,6 +337,9 @@ def test_bundle_two_documents(tmp_path, level, typecode):
         "/measurements/BUNDLE/%s.tif" % _de2_name("PAN", level)]
     assert [p["href"] for p in links["previews"]] == [
         "/previews/overviews/%s_MS.PNG" % eo_name, "/previews/overviews/%s_PAN.PNG" % eo_name]
+    # bundle: the lineage source cites the DIMAP document of the first (MS) component
+    source = pinfo["resourceLineage"][0]["processStep"][0]["source"]
+    assert source[0]["sourceCitation"]["title"] == "%s.dim" % _de2_name("MS4", level)
 
 
 def test_bundle_one_document_split_by_image(tmp_path):

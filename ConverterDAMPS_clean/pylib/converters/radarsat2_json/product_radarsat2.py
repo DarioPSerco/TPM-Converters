@@ -11,9 +11,10 @@ holding:
 - ``lutBeta.xml`` / ``lutSigma.xml`` / ``lutGamma.xml``, ``product.kml``,
   ``productPreview.html``, ``schemas/``
 
-Every product has the same entry file name, so the native product name -
-the lineage citation, which run_mission.py and the packager use to find the
-product back - is the product folder name.
+The lineage citation - which run_mission.py and the packager use to find
+the product back - is the entry file. Every product has the same entry file
+name, so it is cited with its folder: ``<product folder>/product.xml``, its
+path below ``measurements/`` in the package.
 
 Where each value is read (``product.xml``, default namespace stripped):
 
@@ -195,6 +196,8 @@ class Product_Radarsat2(Product_Directory):
 
         self.EO_FOLDER = os.path.dirname(self.path)
         self.productName = os.path.basename(os.path.normpath(self.EO_FOLDER))
+        # lineage source citation: a file of the native product
+        self.nativeFileName = "%s/%s" % (self.productName, ENTRY_NAME)
         self.preview_path = None
         self.tmpSize = 0
 

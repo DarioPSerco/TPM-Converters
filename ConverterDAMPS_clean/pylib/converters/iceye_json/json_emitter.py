@@ -26,8 +26,8 @@ Spec readings encoded here:
 - wavelengths: one X-band entry, ``discreteWavelengths`` (a one-value
   array, fixed by Table 14): the EOF-EOS strict schema rejects the singular
   ``discreteWavelength``.
-- platformSerialIdentifier: a string ("X55" -> "55"); Table 8 reads it as an
-  Integer, but the strict schema types it ``string``.
+- platformSerialIdentifier: an integer ("X55" -> 55), as Table 8 defines it
+  (Range: Integer); the spec example shows a string, the table is normative.
 - processingLevel / processedLevel: SLC -> 1A / L1A, GRD -> 1B / L1B.
 - referenceSystemIdentifier: written when the native geo_ref_system is
   WGS84; Table 14 makes it mandatory for GRD - a missing CRS there fails.
@@ -109,12 +109,12 @@ def _float_or_none(value):
 
 
 def _serial_or_none(value):
-    """platformSerialIdentifier, digits only as a string ("X2" -> "2"):
-    the strict schema types it string."""
+    """platformSerialIdentifier, digits only as an integer ("X2" -> 2):
+    spec Table 8 defines it as Integer."""
     if value is None:
         return None
     match = re.search(r"\d+", str(value))
-    return str(int(match.group())) if match else None
+    return int(match.group()) if match else None
 
 
 def _native_image(product):

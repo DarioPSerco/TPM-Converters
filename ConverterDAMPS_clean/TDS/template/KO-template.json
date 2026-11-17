@@ -1,0 +1,189 @@
+{
+  "type": "Feature",
+  "id": "KO2_OPER_L1_GEO_BDL_20100607T044108_20100607T044112_0000",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "KO2_OPER_L1_GEO_BDL_20100607T044108_20100607T044112_0000",
+    "date": "2010-06-07T04:41:08.800Z/2010-06-07T04:41:12.300Z",
+    "created": "2026-11-10T11:25:48.021Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "KOMPSAT-2",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "MSC",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2010-06-07T04:41:08.800Z",
+            "endingDateTime": "2010-06-07T04:41:12.300Z",
+            "acquisitionType": "NOMINAL",
+            "operationalMode": "PAN",
+            "resolution": 1.0,
+            "orbitDirection": "DESCENDING",
+            "orbitNumber": 21000,
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "alongTrackIncidenceAngle": 0.7,
+              "acrossTrackIncidenceAngle": 0.8
+            },
+            "wavelengths": [
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 5e-07,
+                "endWavelength": 9e-07,
+                "discreteWavelengths": [
+                  7e-07
+                ]
+              }
+            ]
+          },
+          {
+            "beginningDateTime": "2010-06-07T04:41:08.900Z",
+            "endingDateTime": "2010-06-07T04:41:12.400Z",
+            "acquisitionType": "NOMINAL",
+            "operationalMode": "MS4B",
+            "resolution": 4.0,
+            "orbitDirection": "DESCENDING",
+            "orbitNumber": 21000,
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1,
+              "alongTrackIncidenceAngle": 0.7,
+              "acrossTrackIncidenceAngle": 0.8
+            },
+            "wavelengths": [
+              {
+                "spectralRange": "VIS",
+                "startWavelength": 4.5e-07,
+                "endWavelength": 6.9e-07,
+                "discreteWavelengths": [
+                  4.85e-07,
+                  5.6e-07,
+                  6.6e-07
+                ]
+              },
+              {
+                "spectralRange": "NIR",
+                "startWavelength": 7.6e-07,
+                "endWavelength": 9e-07,
+                "discreteWavelengths": [
+                  8.3e-07
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 4932,
+      "productType": "L1_GEO_BDL",
+      "referenceSystemIdentifier": "http://www.opengis.net/def/crs/EPSG/0/4326",
+      "processingDate": "2010-06-08T10:20:30.000Z",
+      "processingLevel": "1",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for KOMPSAT",
+              "stepDateTime": {
+                "created": "2026-11-10T11:25:48.021Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for KOMPSAT products",
+                  "edition": "1.0"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "MSC_100607044108_21000_10731074PN11_1G.txt"
+                  },
+                  "processedLevel": {
+                    "code": "L1G"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for KOMPSAT",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "KO2_OPER_L1_GEO_BDL_20100607T044108_20100607T044112_0000.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cloudCover": 10.0
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/MSC_100607044108_21000_10731074PN11_1G.tif",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/KO2_OPER_L1_GEO_BDL_20100607T044108_20100607T044112_0000.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}

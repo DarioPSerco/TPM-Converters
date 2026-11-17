@@ -60,9 +60,9 @@ class ingester_radarsat2(ingester.Ingester):
             processInfo.srcProduct,
             eoName,
             outDir,
-            # every product has the same product.xml: the native product
-            # name is the product folder name
-            native_product_name=processInfo.srcProduct.productName,
+            # the product annotation file; every product has the same
+            # product.xml, so it is cited with its folder
+            native_product_name=processInfo.srcProduct.nativeFileName,
         )
         processInfo.addLog("  JSON metadata manifest written: %s" % jsonPath)
         self.logger.info("  JSON metadata manifest written: %s" % jsonPath)

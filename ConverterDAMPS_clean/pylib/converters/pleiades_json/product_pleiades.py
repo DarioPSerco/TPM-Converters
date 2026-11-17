@@ -130,6 +130,7 @@ class Product_Pleiades(Product_Directory):
         # LINEAGE/STRIP_DS_* documents, by path inside the ZIP: they carry the orbit
         self.stripContent = {}
         self.components = []
+        self.nativeFileName = None
         if self.debug != 0:
             print(" init class Product_Pleiades")
 
@@ -197,6 +198,9 @@ class Product_Pleiades(Product_Directory):
                       for name, data in zip(self.metContentName, self.metContent)]
         self.components = self.orderComponents(components)
         first = self.components[0]
+        # lineage source citation: a file of the native product, the DIMAP
+        # document of the first component (the MS one in a bundle)
+        self.nativeFileName = posixpath.basename(first['name'])
 
         # src size
         self.size = os.stat(self.path).st_size

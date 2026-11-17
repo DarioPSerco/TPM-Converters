@@ -101,6 +101,17 @@ def product_stem_of(entry_name):
     return name[:-len(METADATA_SUFFIX)]
 
 
+def product_root(entry):
+    """Folder the product files are searched under. Flat delivery: the folder
+    of the metadata file. Planet order delivery (REOrthoTile): the metadata
+    sits in <asset>_xml/ and its image in the sibling <asset>/ folder
+    (analytic_xml/ + analytic/), so the root is the delivery folder above."""
+    folder = os.path.dirname(os.path.abspath(str(entry)))
+    if os.path.basename(folder).lower().endswith("_xml"):
+        return os.path.dirname(folder)
+    return folder
+
+
 def product_files(folder, stem):
     """Every file under folder belonging to the product: its name is the stem
     followed by '_' or '.'. Sorted by relative path."""
@@ -166,7 +177,7 @@ class Product_Rapideye(Product_Directory):
     def __init__(self, path=None):
         super().__init__(path)
         self.stem = product_stem_of(self.path)
-        self.EO_FOLDER = os.path.dirname(self.path)
+        self.EO_FOLDER = product_root(self.path)
         self.productFolderName = os.path.basename(self.EO_FOLDER)
         self.preview_path = None
         self.tmpSize = 0

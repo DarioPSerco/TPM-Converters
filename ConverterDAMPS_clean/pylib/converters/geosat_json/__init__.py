@@ -1,8 +1,9 @@
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 EOSIP_CONVERTER_LIBRARY_VERSION_REQ = ">=1.1.0"
 
 VERSION_CHANGES = {
     '1.0.0': 'EOPF-EOS Specialization for GEOSAT products 1.01',
+    '1.0.1': 'Lineage source citation: the DIMAP document (.dim) of the native product instead of the delivery ZIP name',
 }
 
 def ensure_eosip_converter_version_is_valid(required_version):

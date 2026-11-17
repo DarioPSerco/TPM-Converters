@@ -180,7 +180,8 @@ def test_multispectral_primary_values(tmp_path):
         {"name": "EOF-EOS External Data Handling", "type": "CI_Organisation"}]}]
     assert step["reference"] == [{"title": "EOPF-EOS Specialization for PLEIADES products",
                                   "edition": "1.01"}]
-    assert step["source"] == [{"sourceCitation": {"title": NATIVE_ZIP_NAME},
+    # a file of the native product, not the delivery ZIP
+    assert step["source"] == [{"sourceCitation": {"title": "DIM_PHR1A_MS_SYNTH.XML"},
                                "processedLevel": {"code": "L1A"}}]
     assert step["processingInformation"]["softwareReference"]["title"] == "EOPF-EOS Converter for PLEIADES"
     assert step["output"] == [{"sourceCitation": {"title": "%s.ZIP" % eo_name}}]
@@ -235,6 +236,9 @@ def test_bundle_links_one_per_component(tmp_path):
     assert [p["resolution"] for p in pars] == [2.0, 0.5]
     assert all(p["acquisitionType"] == "NOMINAL" for p in pars)
     assert all(p["orbitNumber"] == 33 for p in pars)
+    # bundle: the lineage source cites the DIMAP document of the first (MS) component
+    source = feature["properties"]["productInformation"]["resourceLineage"][0]["processStep"][0]["source"]
+    assert source[0]["sourceCitation"]["title"] == "DIM_PHR1A_MS_SYNTH.XML"
 
 
 def test_tiled_image_links_the_dimap_document(tmp_path):

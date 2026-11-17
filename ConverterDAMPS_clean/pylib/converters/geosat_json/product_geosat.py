@@ -246,6 +246,7 @@ class Product_Geosat(Product_Directory):
         self.imageNames = []
         self.quicklookNames = []
         self.components = []
+        self.nativeFileName = None
         if self.debug != 0:
             print(" init class Product_Geosat")
 
@@ -312,6 +313,9 @@ class Product_Geosat(Product_Directory):
                      for name, data in zip(self.metContentName, self.metContent)]
         self.components = self.buildComponents(documents)
         first = self.components[0]
+        # lineage source citation: a file of the native product, the DIMAP
+        # document (.dim) of the first component (the MS one in a bundle)
+        self.nativeFileName = posixpath.basename(first['document'])
 
         # spec Table 14: orbitDirection mandatory for GEOSAT-2 only
         if first['platform'] == '2':

@@ -26,9 +26,9 @@ def package_one(mf):
     pinfo = d["properties"]["productInformation"]
     ptype = pinfo["productType"]
     citation = json_template.lineage_citation(d)
-    # the citation is the product folder name (every RADARSAT-2 product has
-    # the same product.xml): the folder is stored under its own name in
-    # measurements/
+    # the citation is <product folder>/product.xml (every RADARSAT-2
+    # product has the same product.xml): find_native returns the folder,
+    # stored under its own name in measurements/
     native = spaces.find_native(citation, SPACES)
     native_id = native.name
 

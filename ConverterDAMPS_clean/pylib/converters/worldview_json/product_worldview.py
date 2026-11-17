@@ -65,6 +65,22 @@ def testResolution(aRes):
         print(("testResolution: param is not str but:%s" % type(aRes)))
 
 
+def satid_of(xml_text):
+    """<SATID> value of a Maxar metadata XML, None when absent."""
+    m = re.search(r'<SATID>\s*([^<]*?)\s*</SATID>', xml_text)
+    return m.group(1) if m else None
+
+
+def component_xmls(order_folder):
+    """Component metadata XMLs (<...>_P<nnn>.XML) anywhere below the order
+    folder, sorted (latest timestamp last, as for stereo products)."""
+    pattern = re.compile(r'.*_P[0-9]{3}\.XML$', re.IGNORECASE)
+    found = []
+    for root, _dirs, files in os.walk(order_folder):
+        found.extend(os.path.join(root, f) for f in files if pattern.match(f))
+    return sorted(found, key=os.path.basename)
+
+
 class Product_Worldview(Product_Directory):
     xmlMapping = {}
 
@@ -127,16 +143,21 @@ class Product_Worldview(Product_Directory):
             self.metadata_content = fd.read()
 
         # From metadata, determine if Worldview Legion or not
-        # i.e. <SATID>LG01</SATID> if WV-Legion
-        try:
-            self.is_wv_legion = self.metadata_content[
-                self.metadata_content.index('<SATID>') + 7 :
-                self.metadata_content.index('</SATID>')
-            ].strip().upper().startswith('LG')
-        except ValueError:
+        # i.e. <SATID>LG01</SATID> if WV-Legion. The order-level README of a
+        # real Maxar delivery carries no <SATID>: it is then read from the
+        # component metadata XMLs (<order>_P001_MUL/...P001.XML) below it.
+        sat_id = satid_of(self.metadata_content)
+        if sat_id is None:
+            for component_xml in component_xmls(os.path.dirname(self.path)):
+                with open(component_xml, 'r') as fd:
+                    sat_id = satid_of(fd.read())
+                if sat_id is not None:
+                    break
+        if sat_id is None:
             raise ValueError(
                 "<SATID> element not found in native XML. Can't determine if WV-Legion or not"
             )
+        self.is_wv_legion = sat_id.upper().startswith('LG')
 
         self.preview_path = []
         self.tif_matadata_map = {} # name, path
@@ -145,7 +166,9 @@ class Product_Worldview(Product_Directory):
         self.browseSourceMap = {} # name, path
         self.mulBrowsePath = None
 
-        # the product folder, parent of the *_README.XML used as input
+        # the native order folder, parent of the *_README.XML used as input:
+        # the whole order (PAN + MUL components, order-level README, LAYOUT,
+        # GIS_FILES) is ONE EOPF-EOS product, as for GeoEye-1 and QuickBird
         self.EO_FOLDER = os.path.dirname(path)
         self.useBbox = False
         self.browseIm = None
@@ -223,9 +246,14 @@ class Product_Worldview(Product_Directory):
 
 
     #
-    # GIS_FILES are in ../GIS_FILES/
+    # GIS_FILES/ sits inside the order folder, so it is already part of the
+    # product content walked in extractToPath; only a component-level entry
+    # (legacy layout) would find it one level up.
     #
     def addGisFiles(self):
+        self.contentListGis = []
+        if os.path.isdir(os.path.join(self.EO_FOLDER, "GIS_FILES")):
+            return
         gisFolder = "%s/GIS_FILES" % os.path.dirname(os.path.dirname(self.path))
         print(("## gisFolder:%s" % gisFolder))
 
