@@ -1,0 +1,6 @@
+OID_version=1.0
+
+OID_EM_order_no='00000'
+OID_EM_item_no='1'
+OID_CLIENT_order_ref='SYNTHETIC'
+OID_CLIENT_product_ref='Synthetic'

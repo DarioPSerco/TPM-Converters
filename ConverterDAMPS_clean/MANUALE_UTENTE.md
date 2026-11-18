@@ -24,6 +24,7 @@ Le missioni supportate sono:
 - RADARSAT-2: `radarsat2` (in `INBOX` va la cartella prodotto con `product.xml`, o il suo ZIP)
 - RapidEye: `rapideye`
 - KOMPSAT-1 / KOMPSAT-2: `kompsat`
+- IRS-P5 (Cartosat-1) / IRS-P6: `cartosat`
 
 ## 2. Prerequisiti
 
@@ -120,6 +121,7 @@ Esempi di file di ingresso:
 | Beijing-1 / NigeriaSat-1 / UK-DMC-1 | `<dataset>.dim` |
 | RapidEye | `<prodotto>_metadata.xml` |
 | KOMPSAT-1 / KOMPSAT-2 | `EOC_*.txt`; `MSC_*PN*_1R.txt` / `MSC_*PN*_1G.txt` |
+| IRS-P5 / IRS-P6 | `<consegna>_oid.txt`; `em3d_*_dsm.tif`; `metadata.xml` (IRS-P6) |
 
 Esempio GeoEye:
 
@@ -159,6 +161,7 @@ Sostituire `geoeye1` con la missione desiderata:
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py radarsat2
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py rapideye
 ..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py kompsat
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py cartosat
 ```
 
 È possibile usare anche `py` se l'ambiente globale contiene tutte le dipendenze:
@@ -766,3 +769,79 @@ Limiti noti:
   `kompsat_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`). Al primo prodotto
   reale controllare il manifest e, se la conversione fallisce per un metadato
   mancante, segnalare l'errore.
+
+## 19. IRS-P5 (Cartosat-1) / IRS-P6
+
+Un solo converter per IRS-P5 (Cartosat-1) e IRS-P6 (ResourceSat-1, sensore
+LISS-III), secondo "EOPF-EOS Specialization for IRS-P5 (Cartosat-1)
+products" 1.0, applicata anche a IRS-P6. Ogni consegna arriva come ZIP, da
+copiare cosi' com'e' in `TDS\CARTOSAT\INBOX`. Tre tipi di consegna:
+
+```text
+TDS\CARTOSAT\INBOX\140330P502590214PF_00O4.zip         ortho IRS-P5 (Euro-Maps)
+    140330P502590214PF_00O4\
+        140330P502590214PF_00O4_oid.txt                 file di ingresso
+        140330P502590214PF_00O4_ql.tif / _ql.tfw        quicklook
+        EM_Ortho_Image_1\..._imagery.tif / _metadata.xml
+TDS\CARTOSAT\INBOX\121978P5002E048NPA___G4.zip         tile DSM IRS-P5 (Euro-Maps 3D)
+    121978P5002E048NPA___G4\p5bproductformatter\
+        em3d_121978_20200402_002E048NPA_dsm.tif         file di ingresso
+        em3d_..._acv.tif / _num.tif / _qc.tif / _src.tif
+TDS\CARTOSAT\INBOX\IR06_LI3_ORT_1O_..._PRCS.BIL.ZIP     ortho IRS-P6 (ZIP senza cartella)
+    metadata.xml                                        file di ingresso
+    imagery.bil / .hdr / .blw, geolayer.bil, calib.dat, <scena>_ssd.txt
+```
+
+Conversione completa:
+
+```powershell
+..\..\.venv\Scripts\python.exe pylib\converters\run_mission.py cartosat
+```
+
+Risultato:
+
+- `TDS\CARTOSAT\OUTSPACE\<ID>.JSON`, il manifest, e `<ID>.PNG`, l'overview;
+- `TDS\CARTOSAT\PRODUCTS\<ID>.ZIP`, il delivery: manifest, la consegna
+  estratta in `measurements/` e l'overview in `previews/overviews/<ID>.PNG`;
+- `TDS\CARTOSAT\DONESPACE\<nome>\`, la consegna estratta (lo ZIP originale
+  viene cancellato);
+- `TDS\CARTOSAT\cartosat_names.json`, il registro dei nomi assegnati.
+
+| Consegna | Tipo prodotto | Modo | Risoluzione | Esempio di `<ID>` |
+|---|---|---|---|---|
+| ortho IRS-P5 | `L3_ORT_PAN` | `PAN` | 2.5 m | `IR5_OPER_L3_ORT_PAN_20140330T085820_20140330T085824_0001` |
+| tile DSM IRS-P5 | `L3_DSM____` | `STER` | 2.5 m | `IR5_OPER_L3_DSM_____20200402T000000_20200402T000000_0001` |
+| ortho IRS-P6 | `L3_ORT_PAN` | `PAN` | 20 m | `IR6_OPER_L3_ORT_PAN_20060320T094438_20060320T094500_0001` |
+
+### Valori senza fonte nel prodotto
+
+- Tile DSM: il prodotto non contiene istante di acquisizione, numero e
+  direzione d'orbita. Inizio, fine e data di processing sono la data nel
+  nome em3d alle `00:00:00`; la direzione d'orbita e' `DESCENDING`; il
+  numero d'orbita e' il valore `METADATA_ORBIT` del cfg (`0`) e nel log
+  compare un WARNING.
+- Ortho IRS-P5: la direzione d'orbita non e' nel prodotto e viene ricavata
+  dall'ora solare locale (06-18 = `DESCENDING`).
+- Ortho IRS-P6: angoli solari, footprint e direzione d'orbita vengono dal
+  file `<scena>_ssd.txt`; il sistema di riferimento `CS` del metadata viene
+  scritto come EPSG:3909 (MGI 1901 / Balkans zone 7).
+
+### Contatore del nome
+
+Le tile DSM con la stessa data hanno lo stesso nome fino al contatore: le
+ultime quattro cifre `<bbvv>` le distinguono (`bb` = `00`, `vv` = `01`,
+`02`, ... nell'ordine di elaborazione). I nomi assegnati sono registrati in
+`TDS\CARTOSAT\cartosat_names.json`: un prodotto convertito di nuovo riprende
+il suo nome. Il file va conservato insieme ai risultati: se viene
+cancellato, un nome gia' consegnato puo' essere riassegnato.
+
+Limiti noti:
+
+- Una consegna ortho senza `_oid.txt` non viene selezionata; una tile DSM
+  senza uno dei cinque layer, o in un sistema di riferimento diverso da
+  EPSG:3035, fallisce.
+- Una consegna IRS-P6 senza `<scena>_ssd.txt` non viene riconosciuta; un
+  `PROJECTION` diverso da `CS` fa fallire la conversione.
+- I campioni reali non contengono consegne ortho con piu' immagini
+  (`EM_Ortho_Image_2`, ...): il caso e' verificato solo con fixture
+  sintetiche (`cartosat_json\test\fixtures\SYNTHETIC_FIXTURE_NOTE.md`).

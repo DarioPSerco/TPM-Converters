@@ -20,7 +20,7 @@ writes to a flat `log/` or the repo root.
 
 | dir | role |
 |---|---|
-| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,geosat,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc,radarsat2,rapideye,kompsat}_json/` | the sixteen converters (code + `ingest_*.cfg` + packager + tests) |
+| `pylib/converters/{geoeye1,worldview,quickbird,iceye,pleiades,pneo,geosat,cosmoskymed,planetscope,radarsat1,terrasarx,skysat,dmc,radarsat2,rapideye,kompsat,cartosat}_json/` | the seventeen converters (code + `ingest_*.cfg` + packager + tests) |
 | `pylib/converters/common/` | mission-agnostic JSON template engine + `feature_template.json` + `spaces.py` |
 | `pylib/converters/run_mission.py` | one-command runner: convert + package + archive per mission |
 | `pylib/eoSip_converter/` | base ingester package — **pruned**: `data/shapefile/` (186 MB) and `proj/` (5 MB) removed, never touched in any trace |
@@ -49,7 +49,7 @@ native products into `TDS/<MISSION>/INBOX/` first (a raw `.zip` in INBOX is
 silently skipped), then:
 
 ```bash
-.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|geosat|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc|radarsat2|rapideye|kompsat>
+.venv/Scripts/python pylib/converters/run_mission.py <geoeye1|worldview|quickbird|iceye|pleiades|pneo|geosat|cosmoskymed|planetscope|radarsat1|terrasarx|skysat|dmc|radarsat2|rapideye|kompsat|cartosat>
 ```
 
 The runner converts every INBOX product, packages the delivery ZIPs into
@@ -69,7 +69,7 @@ PYTHONPATH="pylib/xml_nodes/v101;pylib/converters" \
 
 | converter                                                | xml_nodes version on PYTHONPATH |
 |----------------------------------------------------------|---------------------------------|
-| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json, radarsat2_json, rapideye_json, kompsat_json | `pylib/xml_nodes/v101` |
+| geoeye1_json, worldview_json, quickbird_json, iceye_json, cosmoskymed_json, planetscope_json, radarsat1_json, terrasarx_json, skysat_json, dmc_json, radarsat2_json, rapideye_json, kompsat_json, cartosat_json | `pylib/xml_nodes/v101` |
 | pleiades_json, pneo_json, geosat_json                    | `pylib/xml_nodes/v100`          |
 
 `v200` is used only by the geoeye1/worldview/quickbird test conftests.
@@ -88,9 +88,9 @@ The outer `pylib/eoSip_converter/` folder would shadow the installed
 .venv/Scripts/python -m pytest pylib/converters -q
 ```
 
-365 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, GEOSAT 47, CSK 12, PSC 19, RS1 13,
-TSX 19, SSC 27, DMC 60, RS2 39, RE 37, KO 30). The
-iceye/pleiades/pneo/geosat/cosmoskymed/planetscope/skysat/dmc/rapideye/kompsat suites read `TDS/template/*.json` via a relative
+434 tests (GE1 3, WV 2, QB2 3, ICEYE 4, PL1 22, PNEO 28, GEOSAT 47, CSK 12, PSC 19, RS1 13,
+TSX 19, SSC 27, DMC 60, RS2 39, RE 37, KO 30, IR5 69). The
+iceye/pleiades/pneo/geosat/cosmoskymed/planetscope/skysat/dmc/rapideye/kompsat/cartosat suites read `TDS/template/*.json` via a relative
 `parents[4]` hop — keep the tree depth as-is.
 
 ## Delivery-ZIP layout (all packagers)
@@ -113,6 +113,9 @@ resolve inside the ZIP — packagers copy the manifest verbatim, no rewrite.
 - GEOSAT: synthetic fixtures only, no real TDS yet, see its section below.
 - RADARSAT-2: synthetic fixtures only, no real TDS yet, see its section below.
 - KOMPSAT-1 / KOMPSAT-2: synthetic fixtures only, no real TDS yet, see its section below.
+- IRS-P5 (Cartosat-1) / IRS-P6: validated end to end (`run_mission.py cartosat`) on the eight
+  real TDS samples (one IRS-P5 ortho delivery, six DSM tiles, one IRS-P6 delivery); see its
+  section below.
 - COSMO-SkyMed validated end to end on two real TDS products: CSK HIMAGE
   DGM_B (Level 1B, HDF5 delivery) and CSK WIDEREGION GEC_B (Level 1C,
   GeoTIFF-in-`.tgz` delivery). Open points: no PINGPONG and no Second
@@ -595,3 +598,72 @@ knowing, all in `pylib/converters/kompsat_json/`:
   `kompsat_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`, which lists what to
   check first. Also run end to end (`run_mission.py kompsat`, convert +
   package + move, one bundle as `.zip`) on the three synthetic products.
+
+## IRS-P5 (Cartosat-1) / IRS-P6 specifics (`cartosat_json`)
+
+Per "EOPF-EOS Specialization for IRS-P5 (Cartosat-1) products" 1.0, applied
+to IRS-P6 (ResourceSat-1 LISS-III) products as well. Run with
+`run_mission.py cartosat`; workspace `TDS/CARTOSAT/`. Differences worth
+knowing, all in `pylib/converters/cartosat_json/`:
+
+- **Deliveries and entry files**, one entry per delivery (the runner unzips
+  each INBOX zip; the whole delivery folder goes to `measurements/`, layout
+  kept):
+  - IRS-P5 ortho (Euro-Maps): `<delivery>_oid.txt` (entry), `_ql.tif` +
+    `.tfw`, `EM_Ortho_Image_<n>/<...>_imagery.tif` + `_metadata.xml`. All the
+    images of a delivery go in one package, one `acquisitionParameters`
+    entry each.
+  - IRS-P5 DSM (Euro-Maps 3D tile): `p5bproductformatter/em3d_<id>_<yyyymmdd>_<tile>_<layer>.tif`,
+    layers `dsm` (entry), `acv`, `num`, `qc`, `src`, all five required.
+  - IRS-P6 ortho: flat zip unpacked into `<zip stem>/`: `metadata.xml`
+    (entry), `imagery.bil` + `.hdr` + `.blw`, `geolayer.bil`, `calib.dat`,
+    `<scene>_ssd.txt`.
+  Layouts and parsers live in `cartosat_files.py` (no eoSip import), used by
+  product class and packager.
+- **Product types**: IRS-P5 and IRS-P6 orthoimages -> `L3_ORT_PAN` (mode
+  `PAN`), DSM tile -> `L3_DSM____` (mode `STER`); processing level `3`, code
+  `L3`; package names `IR5_` / `IR6_`; platform `IRS-P5` / `IRS-P6`,
+  instrument `PAN`. Resolution 2.5 (IRS-P5, Table 10) / 20 (IRS-P6 pixel
+  size); wavelengths VNIR 500-850 nm (Table 14) / the LISS-III VIS, NIR and
+  SWIR bands.
+- **Where the values come from**:
+  - IRS-P5 ortho: times and orbit from `DATASET_NAME` (orbit checked against
+    `Orbit_no`); sun angles `Sun_azimuth` / `Sun_elevation`; processing date
+    `DATASET_PRODUCTION_DATE` at `T00:00:00.000Z`; orbit direction from the
+    local solar time (06-18 h = `DESCENDING`), the product has none;
+    `Tilt_angle` not mapped (it does not say along or across track).
+  - IRS-P6: times and orbit from `DATASET_NAME`, processing date from
+    `DATASET_PRODUCTION_DATE`; sun angles, footprint (scene corners), orbit
+    (cross-check) and orbit direction (satellite heading, 90-270 deg =
+    `DESCENDING`) from the header record of the `_ssd.txt`.
+  - DSM tile: the product has no sensing time, orbit number or direction.
+    Begin = end = processing date = the em3d name date at `00:00:00`;
+    orbitDirection `DESCENDING`; orbitNumber the cfg `METADATA_ORBIT` (`0`),
+    with a WARNING in the log.
+- **Footprint and CRS**: IRS-P5 from the GeoTIFF raster corners (several
+  images: the rectangle around them), converted from EPSG:3035 by a built-in
+  inverse LAEA (no GDAL / pyproj). The ortho GeoTIFFs carry a user-defined
+  CRS with the EPSG:3035 parameters, accepted as 3035; any other CRS fails.
+  IRS-P6 `PROJECTION` `CS` (no definition in the product) -> EPSG:3909
+  (MGI 1901 / Balkans zone 7), checked against its eastings; the footprint
+  is the ssd scene corners. `referenceSystemIdentifier` is the EPSG URI.
+- **Package name counter**: the DSM tiles of one date share every name
+  field. `<bbvv>` = `00` + a counter [01..99] from the registry
+  `TDS/CARTOSAT/cartosat_names.json` (cfg `CARTOSAT_NAME_REGISTRY`),
+  {lineage citation: package name}, for every product; a product converted
+  again gets its name back. Keep that file with the outputs
+  (`cartosat_json/name_registry.py`).
+- **Lineage and links**: citation = the entry file name, for IRS-P6
+  `<delivery folder>/metadata.xml` (every delivery has the same
+  `metadata.xml`); description "EOPF-EOS Converter for IRS-P5" (Table 17)
+  or "... for IRS-P6". Measurements link: the first orthoimage or the
+  `_dsm.tif` (`image/tiff`), the IRS-P6 `metadata.xml` (`application/xml`).
+  The spec readings are listed at the top of `json_emitter.py`.
+- **Overview**: IRS-P5 ortho `_ql.tif` (else the first orthoimage), DSM the
+  `_dsm.tif`, grey with a 2-98 % stretch; IRS-P6 `imagery.bil` in false
+  colour NIR / red / green; no-data transparent.
+- **Validated** end to end (`run_mission.py cartosat`) on the eight real TDS
+  samples (one IRS-P5 ortho delivery, six DSM tiles, one IRS-P6 delivery);
+  the tests use synthetic fixtures, see
+  `cartosat_json/test/fixtures/SYNTHETIC_FIXTURE_NOTE.md`. The em3d name
+  tokens and the `acv` / `num` / `qc` / `src` layers are not read.

@@ -1,0 +1,7 @@
+BYTEORDER     M
+LAYOUT        BIL
+NROWS         12
+NCOLS         16
+NBANDS        4
+NBITS         8
+SKIPBYTES     0

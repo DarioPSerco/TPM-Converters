@@ -1,0 +1,27 @@
+# Euromap provides this file to help you with IRS products in Super
+# Structure format (SYNTHETIC).
+
+VOLUME DIRECTORY FILE ....
+
+Volume Descriptor Record ....
+
+ 20  113  120 A8   Logical volume creation date            >20070815<
+Header Record ....
+
+  6   21   28 I8   Path Number                             >      36<
+ 14  149  164 F16.7Left top corner geographic location of scene (lat) (deg)>      45.5000000<
+ 15  165  180 F16,7Left top corner geographic location of scene (long) (deg)>      18.5000000<
+ 16  181  188 I8   Left top corner location in scene (line no.)>       1<
+ 18  197  212 F16.7Right top corner geographic location of scene (lat)>      45.2000000<
+ 19  213  228 F16,7Right top corner geographic location of scene (long)>      20.2000000<
+ 22  245  260 F16.7Left bottom corner geographic location of scene (lat)>      44.3000000<
+ 23  261  276 F16,7Left bottom corner geographic location of scene (long)>      18.0000000<
+ 26  293  308 F16.7Right bottom corner geographic location of scene (lat)>      44.0000000<
+ 27  309  324 F16,7Right bottom corner geographic location of scene (long)>      19.7000000<
+ 47  502  517 F16,7Satellite heading angle (deg)           >     200.9000000<
+ 48  518  525 I8   Orbit number                            >   12345<
+ 51  574  589 F16.7Sun angle (Azimuth) (deg)               >     157.2000000<
+ 52  590  605 F16.7Sun angle (elevation) (deg)             >      42.8000000<
+Ephemeries/Attitude Record ....
+
+ 48  518  525 I8   Orbit number                            >   99999<

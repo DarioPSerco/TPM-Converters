@@ -32,6 +32,7 @@ MISSIONS = {
     "radarsat2": ("radarsat2_json", "ingest_radarsat2.cfg", "ingester_radarsat2.py", "v101", "package_radarsat2_zips.py"),
     "rapideye": ("rapideye_json", "ingest_rapideye.cfg", "ingester_rapideye.py", "v101", "package_rapideye_zips.py"),
     "kompsat": ("kompsat_json", "ingest_kompsat.cfg", "ingester_kompsat.py", "v101", "package_kompsat_zips.py"),
+    "cartosat": ("cartosat_json", "ingest_cartosat.cfg", "ingester_cartosat.py", "v101", "package_cartosat_zips.py"),
 }
 
 

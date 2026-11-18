@@ -1,0 +1,151 @@
+{
+  "type": "Feature",
+  "id": "IR5_OPER_L3_ORT_PAN_20100527T231608_20100527T231907_0001",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.44291264,
+          -24.15261009
+        ],
+        [
+          -66.44136086,
+          -24.23036597
+        ],
+        [
+          -66.36391186,
+          -24.22904374
+        ],
+        [
+          -66.36551048,
+          -24.15129263
+        ],
+        [
+          -66.44291264,
+          -24.15261009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "status": "ACQUIRED",
+    "title": "IR5_OPER_L3_ORT_PAN_20100527T231608_20100527T231907_0001",
+    "date": "2010-05-27T23:16:08.000Z/2010-05-27T23:19:07.000Z",
+    "created": "2021-02-01T15:30:23.000Z",
+    "acquisitionInformation": [
+      {
+        "platform": {
+          "platformShortName": "IRS-P5",
+          "orbitType": "LEO"
+        },
+        "instrument": {
+          "instrumentShortName": "PAN",
+          "sensorType": "OPTICAL"
+        },
+        "acquisitionParameters": [
+          {
+            "beginningDateTime": "2010-05-27T23:16:08.000Z",
+            "endingDateTime": "2010-05-27T23:19:07.000Z",
+            "operationalMode": "PAN",
+            "resolution": 2.5,
+            "acquisitionType": "NOMINAL",
+            "orbitNumber": 1234,
+            "orbitDirection": "ASCENDING",
+            "wavelengths": [
+              {
+                "spectralRange": "VNIR",
+                "startWavelength": 500E-09,
+                "endWavelength": 850E-09,
+                "discreteWavelengths": [
+                  675E-09
+                ]
+              }
+            ],
+            "acquisitionAngles": {
+              "illuminationAzimuthAngle": 33.3,
+              "illuminationElevationAngle": 44.1
+            }
+          }
+        ]
+      }
+    ],
+    "productInformation": {
+      "size": 627642676,
+      "productType": "L3_ORT_PAN",
+      "referenceSystemIdentifier": "http://www.opengis.net/def/crs/EPSG/0/3035",
+      "processingLevel": "3",
+      "processingDate": "2010-05-28T00:00:00.000Z",
+      "resourceLineage": [
+        {
+          "processStep": [
+            {
+              "description": "EOPF-EOS Converter for IRS-P5",
+              "stepDateTime": {
+                "created": "2021-02-01T15:30:23.000Z"
+              },
+              "processor": [
+                {
+                  "role": "processor",
+                  "party": [
+                    {
+                      "name": "EOF-EOS External Data Handling",
+                      "type": "CI_Organisation"
+                    }
+                  ]
+                }
+              ],
+              "reference": [
+                {
+                  "title": "EOPF-EOS Specialization for IRS-P5 (Cartosat-1) products",
+                  "edition": "1.0"
+                }
+              ],
+              "source": [
+                {
+                  "sourceCitation": {
+                    "title": "100527P500000000PF_00O4_oid.txt"
+                  },
+                  "processedLevel": {
+                    "code": "L3"
+                  }
+                }
+              ],
+              "processingInformation": {
+                "softwareReference": {
+                  "title": "EOPF-EOS Converter for IRS-P5 and IRS-P6",
+                  "edition": "1.0.0"
+                }
+              },
+              "output": [
+                {
+                  "sourceCitation": {
+                    "title": "IR5_OPER_L3_ORT_PAN_20100527T231608_20100527T231907_0001.ZIP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "links": {
+      "measurements": [
+        {
+          "href": "/measurements/EM_Ortho_Image_1/100527P500000000PF_00O4_imagery.tif",
+          "type": "image/tiff",
+          "title": "Native EO Product",
+          "category": "DATA"
+        }
+      ],
+      "previews": [
+        {
+          "href": "/previews/overviews/IR5_OPER_L3_ORT_PAN_20100527T231608_20100527T231907_0001.PNG",
+          "type": "image/png",
+          "title": "Preview Image",
+          "category": "OVERVIEW"
+        }
+      ]
+    }
+  }
+}
